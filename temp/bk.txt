@@ -1,0 +1,56 @@
+{
+    "dateRandom": "2021-12-05 22:25:58",
+    "Id": "1",
+    "IdStory": "1",
+    "Name": "Black Clover",
+    "Path": "upload\/slider\/slider-1022014962613d7e1eab332.jpg",
+    "Genre": "Action,Comedy,Drama,Fantasy,Shounen,Supernatural,Mystery",
+    "Content": "Aster v\u00e0 Yuno l\u00e0 hai \u0111\u1ee9a tr\u1ebb b\u1ecb b\u1ecf r\u01a1i \u1edf nh\u00e0 th\u1edd v\u00e0 c\u00f9ng nhau l\u1edbn l\u00ean t\u1ea1i \u0111\u00f3. Khi c\u00f2n nh\u1ecf ch\u00fang \u0111\u00e3 h\u1ee9a v\u1edbi nhau xem ai s\u1ebd tr\u1edf th\u00e0nh Ma ph\u00e1p v\u01b0\u01a1ng ti\u1ebfp theo. Th\u1ebf nh\u01b0ng khi c\u1ea3 hai l\u1edbn l\u00ean m\u1ecdi s\u00f4 chuy\u1ec7n \u0111\u00e3 thay \u0111\u1ed5i. Yuno l\u00e0 thi\u00ean t\u00e0i ma ph\u00e1p v\u1edbi s\u1ee9c m\u1ea1nh tuy\u1ec7t \u0111\u1ec9nh trong khi Aster l\u1ea1i kh\u00f4ng th\u1ec3 s\u1eed d\u1ee5ng ma ph\u00e1p v\u00e0 c\u1ed1 g\u1eafng b\u00f9 \u0111\u1eafp b\u1eb1ng th\u1ec3 l\u1ef1c. Khi c\u1ea3 hai \u0111\u01b0\u1ee3c nh\u1eadn s\u00e1ch ph\u00e9p v\u00e0o tu\u1ed5i 15 Yuno \u0111\u00e3 \u0111\u01b0\u1ee3c ban cu\u1ed1n s\u00e1ch ph\u00e9p c\u1ecf b\u1ed1n b\u00e1 (trong khi \u0111a s\u1ed1 l\u00e0 c\u1ecf ba l\u00e1) m\u00e0 Aster l\u1ea1i kh\u00f4ng c\u00f3 cu\u1ed1n n\u00e0o. Tuy nhi\u00ean khi Yuno b\u1ecb \u0111e d\u1ecda s\u1ef1 th\u1eadt v\u1ec1 s\u1ee9c m\u1ea1nh c\u1ee7a Aster \u0111\u00e3 \u0111\u01b0\u1ee3c gi\u1ea3i m\u00e3- c\u1eadu ta \u0111\u01b0\u1ee3c ban cu\u1ed1n s\u00e1ch ph\u00e9p c\u1ecf n\u0103m l\u00e1 cu\u1ed1n s\u00e1ch ph\u00e1 ma thu\u1eadt m\u00e0u \u0111en. B\u1ea5y gi\u1edd hai ng\u01b0\u1eddi b\u1ea1n tr\u1ebb \u0111ang h\u01b0\u1edbng ra th\u1ebf gi\u1edbi c\u00f9ng chung m\u1ee5c ti\u00eau.",
+    "NameUpdate_Chap": "Ch\u01b0\u01a1ng 311",
+    "DateUpdate_Chap": "2021-11-01 01:48:08",
+    "Male": "1"	
+},{
+    "dateRandom": "2021-12-05 22:25:58",
+    "Id": "2",
+    "IdStory": "2",
+    "Name": "\u0110\u1ea1i Chi\u1ebfn Titan",
+    "Path": "upload\/slider\/slider-561177729613d7e03130db.jpg",
+    "Genre": "Action,Shounen,Mystery,Horror,Historical,Tragedy",
+    "Content": "H\u01a1n 100 n\u0103m tr\u01b0\u1edbc gi\u1ed1ng ng\u01b0\u1eddi kh\u1ed5ng l\u1ed3 Titan \u0111\u00e3 t\u1ea5n c\u00f4ng v\u00e0 \u0111\u1ea9y lo\u00e0i ng\u01b0\u1eddi t\u1edbi b\u1edd v\u1ef1c tuy\u1ec7t ch\u1ee7ng. Nh\u1eefng con ng\u01b0\u1eddi s\u1ed1ng s\u00f3t t\u1ee5 t\u1eadp l\u1ea1i x\u00e2y bao quanh m\u00ecnh 1 t\u00f2a th\u00e0nh 3 l\u1edbp ki\u00ean c\u1ed1 v\u00e0 t\u1ef1 nh\u1ed1t m\u00ecnh b\u00ean trong \u0111\u1ec3 tr\u1ed1n tr\u00e1nh nh\u1eefng cu\u1ed9c t\u1ea5n c\u00f4ng c\u1ee7a ng\u01b0\u1eddi kh\u1ed5ng l\u1ed3. H\u1ecd t\u00ecm m\u1ecdi c\u00e1ch \u0111\u1ec3 ti\u00eau di\u1ec7t ng\u01b0\u1eddi kh\u1ed5ng l\u1ed3 nh\u01b0ng kh\u00f4ng th\u00e0nh c\u00f4ng. V\u00e0 sau 1 th\u1ebf k\u1ec9 h\u00f2a b\u00ecnh gi\u1ed1ng kh\u1ed5ng l\u1ed3 \u0111\u00e3 xu\u1ea5t hi\u1ec7n tr\u1edf l\u1ea1i m\u1ed9t l\u1ea7n n\u1eefa \u0111e d\u1ecda s\u1ef1 t\u1ed3n vong c\u1ee7a con ng\u01b0\u1eddi.... \u00a0Elen v\u00e0 Mikasa ph\u1ea3i ch\u1ee9ng ki\u1ebfn m\u1ed9t c\u1ea3nh t\u01b0\u1ee3ng c\u1ef1c kinh kh\u1ee7ng - m\u1eb9 c\u1ee7a m\u00ecnh b\u1ecb \u0103n th\u1ecbt ngay tr\u01b0\u1edbc m\u1eaft. Elen th\u1ec1 r\u1eb1ng c\u1eadu s\u1ebd gi\u1ebft t\u1ea5t c\u1ea3 nh\u1eefng t\u00ean kh\u1ed5ng l\u1ed3 m\u00e0 c\u1eadu g\u1eb7p.....",
+    "NameUpdate_Chap": "Ch\u01b0\u01a1ng 141",
+    "DateUpdate_Chap": "2021-11-01 01:48:08",
+    "Male": "1",	
+},{
+    "dateRandom": "2021-12-05 22:25:58",
+    "Id": "3",
+    "IdStory": "3",
+    "Name": "Kimetsu No Yaiba",
+    "Path": "upload\/slider\/slider-666857411613d7e29dd931.jpg",
+    "Genre": "Drama,Fantasy,Shounen,Romance,Historical",
+    "Content": "Kimetsu no Yaiba \u2013 Tanjirou l\u00e0 con c\u1ea3 c\u1ee7a gia \u0111\u00ecnh v\u1eeba m\u1ea5t cha. M\u1ed9t ng\u00e0y n\u1ecd Tanjirou \u0111\u1ebfn th\u0103m th\u1ecb tr\u1ea5n kh\u00e1c \u0111\u1ec3 b\u00e1n than khi \u0111\u00eam v\u1ec1 c\u1eadu \u1edf ngh\u1ec9 t\u1ea1i nh\u00e0 ng\u01b0\u1eddi kh\u00e1c thay v\u00ec v\u1ec1 nh\u00e0 v\u00ec l\u1eddi \u0111\u1ed3n th\u1ed5i v\u1ec1 \u00e1c qu\u1ef7 lu\u00f4n r\u00ecnh m\u00f2 g\u1ea7n n\u00fai v\u00e0o bu\u1ed5i t\u1ed1i. Khi c\u1eadu v\u1ec1 nh\u00e0 v\u00e0o ng\u00e0y h\u00f4m sau b\u1ecb k\u1ecbch \u0111ang \u0111\u1ee3i ch\u1edd c\u1eadu\u2026",
+    "NameUpdate_Chap": "Ch\u01b0\u01a1ng 205",
+    "DateUpdate_Chap": "2021-11-01 01:48:08",
+    "Male": "1"	
+},{
+    "dateRandom": "2021-12-05 22:25:58",
+    "Id": "4",
+    "IdStory": "4",
+    "Name": "Th\u1ea5t H\u00ecnh \u0110\u1ea1i T\u1ed9i",
+    "Path": "upload\/slider\/slider-52920972613d7e3bb2d46.jpg",
+    "Genre": "Action,Adventure,Comedy,Fantasy,Shounen",
+    "Content": "\u201cTh\u1ea5t \u0111\u1ea1i \u00e1c nh\u00e2n\u201d m\u1ed9t nh\u00f3m chi\u1ebfn binh c\u00f3 tham v\u1ecdng l\u1eadt \u0111\u1ed5 v\u01b0\u01a1ng qu\u1ed1c Britannia \u0111\u01b0\u1ee3c cho l\u00e0 \u0111\u00e3 b\u1ecb ti\u00eau di\u1ec7t b\u1edfi c\u00e1c \u201chi\u1ec7p s\u0129 th\u00e1nh chi\u1ebfn\u201d m\u1eb7c d\u00f9 v\u1eabn c\u00f2n 1 s\u1ed1 ng\u01b0\u1eddi cho r\u1eb1ng h\u1ecd v\u1eabn c\u00f2n s\u1ed1ng. 10 n\u0103m sau C\u00e1c hi\u1ec7p s\u0129 th\u00e1nh chi\u1ebfn \u0111\u00e3 l\u00e0m 1 cu\u1ed9c \u0111\u1ea3o ch\u00ednh v\u00e0 kh\u1ed1ng ch\u1ebf \u0111\u1ee9c vua h\u1ecd tr\u1edf th\u00e0nh ng\u01b0\u1eddi cai tr\u1ecb \u0111\u1ed9c t\u00e0i m\u1edbi c\u1ee7a v\u01b0\u01a1ng qu\u1ed1c. Elizabeth con g\u00e1i duy nh\u1ea5t c\u1ee7a nh\u00e0 vua \u0111\u00e3 l\u00ean \u0111\u01b0\u1eddng t\u00ecm \u201cth\u1ea5t \u0111\u1ea1i \u00e1c nh\u00e2n\u201d \u0111\u1ec3 nh\u1edd h\u1ecd t\u00e1i chi\u1ebfm l\u1ea1i v\u01b0\u01a1ng qu\u1ed1c. C\u00f4ng ch\u00faa c\u00f3 th\u00e0nh c\u00f4ng trong vi\u1ec7c t\u00ecm ki\u1ebfm \u201cth\u1ea5t \u0111\u1ea1i \u00e1c nh\u00e2n\u201d c\u00e1c \u201chi\u1ec7p s\u0129 th\u00e1nh chi\u1ebfn\u201d s\u1ebd l\u00e0m g\u00ec \u0111\u1ec3 ng\u0103n ch\u0103n c\u00f4? xem c\u00e1c chap truy\u1ec7n sau s\u1ebd r\u00f5.",
+    "NameUpdate_Chap": "Ch\u01b0\u01a1ng 346",
+    "DateUpdate_Chap": "2021-11-01 01:48:08",
+    "Male": "1"
+},{
+    "dateRandom": "2021-12-05 22:25:58",
+    "Id": "5",
+    "IdStory": "5",
+    "Name": "Fairy Tail 100 Year Quest",
+    "Path": "upload\/slider\/slider-1803196069613d7e31ef36f.jpg",
+    "Genre": "Action,Adventure,Comedy,Fantasy,Ecchi",
+    "Content": "Tuy\u1ec7n ti\u1ebfp n\u1ed1i chap 545 c\u1ee7a Fairy Tail khi nh\u00f3m Natsu \u0111i l\u00e0m nhi\u1ec7m v\u1ee5 tr\u0103m n\u0103m.",
+    "NameUpdate_Chap": "Ch\u01b0\u01a1ng 93",
+    "DateUpdate_Chap": "2021-11-24 04:48:47",
+    "Male": "1"
+}

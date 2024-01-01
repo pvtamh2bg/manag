@@ -1,0 +1,9 @@
+ 1. file index.php có thể sửa từ dòng 18 -> 21
+
+ 2. file detail.php có thể sửa từ 76 -> 82 
+
+3. file ./page/comment.php có thể sửa dòng 16,17
+
+4 ./page/header/headerDetail.php có thể sửa 
+
+5. cần sửa lại file user.ini trong ./page sao cho giống file user.ini ở ngoài 
