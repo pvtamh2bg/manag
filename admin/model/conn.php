@@ -4,6 +4,7 @@ class config
 	private $_conn;
 	function config()
     {
+			
 		
 		if (!$this->_conn)
 		{			

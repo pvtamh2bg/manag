@@ -98,6 +98,7 @@ class config
 		}
         return $b;	
 	}
+	
 	function check_story_exist($name)
 	{
 		//SUBSTRING(Name,8)

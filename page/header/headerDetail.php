@@ -90,12 +90,13 @@ if ($(window).width() > 1023) {
 }
 });
 </script>
+    <div class="Updates-module_fluidImage_1NMT9"></div>
 	<section class="top-bar <?= $On?>" id="home">
     <div class="container">
         <div class="level">
             <div class="level-left pc">
                 <span class="logo">
-                    <a href="<?= $linkOption?>">Thần Kinh Các </a>
+                    <a href="<?= $linkOption?>"><img src="<?= $linkOption . 'page/frontend/images/web_logo.png' ?>" alt="logo"></a>
                 </span>
                     <!-- /.logo -->
                     <div class="top-search">
