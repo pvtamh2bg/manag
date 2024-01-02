@@ -82,7 +82,7 @@ $(document).ready(function(){
 if ($(window).width() > 1023) {
 	
 	
-	$('<button class="login-btn">Đăng nhập</button><button class="register-btn">Đăng ký</button>').insertAfter("#lg_005");
+	$('<button class="login-btn">Sign in</button><button class="register-btn">Sign up</button>').insertAfter("#lg_005");
    //alert('Less than 960');
 }else{
 	$('#captcha_register').css('width', '87%');
@@ -114,10 +114,10 @@ if ($(window).width() > 1023) {
             <div class="level-right">
                 <ul class="top-links pc">
                     <li>
-                        <a href="<?php echo $linkOption ?>lich-su.html">Lịch sử</a>
+                        <a href="<?php echo $linkOption ?>lich-su.html">History</a>
                     </li>
                     <li>
-                        <a href="<?php echo $linkOption ?>truyen-dang-theo-doi.html">Theo dõi</a>
+                        <a href="<?php echo $linkOption ?>truyen-dang-theo-doi.html">Following</a>
                     </li>
                 </ul>
                 <!-- /.top-links -->
@@ -313,14 +313,14 @@ if ($(window).width() > 1023) {
             <div class="navbar-menu">
                 <div class="navbar-start">
                     <div class="top-search smp">
-                        <input class="text-search" type="text" placeholder="Nhập từ khoá">
+                        <input class="text-search" type="text" placeholder="keyword">
                         <button class="submit-btn btn_search"></button>
                         <div class="list-results">
                         </div>
                     </div>
-                    <a href="<?= $linkOption?>" class="navbar-item">Trang chủ</a>
+                    <a href="<?= $linkOption?>" class="navbar-item">Home</a>
                     <div class="navbar-item has-dropdown is-hoverable is-mega">
-                        <div class="navbar-link">Thể loại</div>
+                        <div class="navbar-link">Type of Story</div>
                         <div class="navbar-dropdown ">
                             <div class="container">
                                 <div class="level">
@@ -337,7 +337,7 @@ if ($(window).width() > 1023) {
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable is-mega">
-                        <div class="navbar-link">Xếp hạng</div>
+                        <div class="navbar-link">Ranking</div>
                         <div class="navbar-dropdown ">
                             <div class="container">
                                 <div class="level">
@@ -352,11 +352,11 @@ if ($(window).width() > 1023) {
                             </div>
                         </div>
                     </div>
-                    <a href="<?= $linkOption."truyen-tranh-hay.html"?>" class="navbar-item">Truyện tranh</a>
-                    <a href="<?= $linkOption."tieu-thuyet-hay.html"?>" class="navbar-item">Truyện chữ</a>
+                    <a href="<?= $linkOption."truyen-tranh-hay.html"?>" class="navbar-item">Comic</a>
+                    <a href="<?= $linkOption."tieu-thuyet-hay.html"?>" class="navbar-item">Novel</a>
 
                     <a rel="nofollow" href="https://www.facebook.com/ThanKinhCac" target="" class="navbar-item">Fanpage</a>
-                    <a href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item">Tìm kiếm nâng cao</a>
+                    <a href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item">Advance Search</a>
                 </div>
             </div>
         </nav>

@@ -24,10 +24,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
 <head>
 	<meta charset="utf-8">
-    <title>Tìm kiếm nâng cao - <?=$domain?></title>
+    <title>Advance Search - <?=$domain?></title>
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <meta property="og:title" content="Tìm kiếm nâng cao - <?=$domain?>">
+    <meta property="og:title" content="Advance Search - <?=$domain?>">
     <meta property="og:description" content="">
     <link href="<?=$linkOption?>tim-kiem-nang-cao.html" rel="canonical">
     <meta property="og:site_name" content="<?=$domain?>">
@@ -56,21 +56,21 @@ if (session_status() == PHP_SESSION_NONE) {
 	?>
 	<section class="main-content">
 		<div class="container story-list">
-			<div class="title-list">Tìm kiếm nâng cao</div>
+			<div class="title-list">Advance Search</div>
 			<div class="story-list-bl01 box">
 				<div class="text-center">
-					<button type="button" class="btn btn-info btn-collapse">
+					<button type="button" class="show-hide--find btn btn-collapse">
 						<?php
 						  	$advsearch="";				
 						   if(isset($_GET["category"])){
 						        $advsearch="hidden";
 							    	
-								echo '<span class="show-text hidden">Hiện </span>';
-						        echo '<span class="hide-text">Ẩn </span>khung tìm kiếm';
+								echo '<span class="show-text hidden">Hide </span>';
+						        echo '<span class="hide-text">Show </span>search box';
 						   }else{
 							 
-							   echo '<span class="show-text">Hiện </span>';
-						       echo '<span class="hide-text hidden">Ẩn </span>khung tìm kiếm';
+							   echo '<span class="show-text">Hide </span>';
+						       echo '<span class="hide-text hidden">Show </span>search box';
 						   }		
 						?>
 						
@@ -78,12 +78,12 @@ if (session_status() == PHP_SESSION_NONE) {
 				</div>
 				<div class="advsearch-form  <?=$advsearch?>">
 					<div class="form-group clearfix">
-						<p><span class="icon-tick"></span> Tìm trong những thể loại này</p>
-						<p><span class="icon-cross"></span> Loại trừ những thể loại này</p>
-						<p><span class="icon-checkbox"></span> Truyện có thể thuộc hoặc không thuộc thể loại này</p>
+						<p><span class="icon-tick"></span> Search within these genres</p>
+						<p><span class="icon-cross"></span> Exclude these genres</p>
+						<p><span class="icon-checkbox"></span> The story may or may not belong to this genre</p>
 					</div>
 					<div class="form-group row text-center">
-						<a class="btn btn-primary btn-sm btn-reset" href="<?php echo $linkOption."tim-kiem-nang-cao.html";?>"><i class="fa fa-repeat"></i> Reset</a>
+						<a class="btn btn-sm btn-reset" href="<?php echo $linkOption."tim-kiem-nang-cao.html";?>"><i class="fa fa-repeat"></i> Reset</a>
 					</div>
 					<div class="form-group row">
 						<label class="col-sm-2 col-form-label">Thể loại truyện</label>

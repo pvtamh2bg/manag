@@ -27,14 +27,11 @@
 	  <meta name="Author" content="<?=$domain?>">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="shortcut icon" href="<?php echo $linkOption1;?>frontend/images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/style.css">	  
+		<link rel="shortcut icon" href="<?php echo $linkOption1;?>frontend/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/fontawesome.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/read.css">	  
-    <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/style.css">	  
+		<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/read.css">	  
     <script src="<?php echo $linkOption1;?>js/main.js"></script>
-
-
-
    </head>
    <body>
       <input type="hidden" id="keyword-default" value="black">
@@ -241,7 +238,7 @@ $ChapSlider=$linkOption.$the_loai.vn_str_filter($NameStory)."-".$muc3['IdStory']
                </div>
                <!-- /.male -->
             </div>
-            <div id="Top" class="scrollTop none" style="display: none;">
+            <div id="Top" class="scrollTop none Updates-module_showBtn_WUpS9">
                <span><a href="index.html"><img src="<?php echo $linkOption1?>frontend/images/back-to-top-icon.png"></a></span>
             </div>
          </section>
