@@ -222,20 +222,6 @@ $ChapSlider=$linkOption.$the_loai.vn_str_filter($NameStory)."-".$muc3['IdStory']
                      <a href="<?php echo $linkOption;?>truyen-tranh-hay/trang-2.html" class="view-more-btn">See More Listings <span> → </span></a>
                   </div>
                </div>
-               <div class="male">
-                  <div class="caption" id="list-male"><a href="<?php echo $linkOption;?>tieu-thuyet-hay.html"><span class="male-icon"></span>Novel</a></div>
-                  <div class="tile is-ancestor">
-                     <div class="tile is-vertical is-parent">
-                        <?php
-						 $arrMaleIndex=$db->GetMaleIndex();
-						 storiesList($arrMaleIndex,$linkOption);						
-						$db->dis_connect();//ngat ket noi mysql	
-						?>
-                        <!-- /.list-stories -->
-                     </div>
-                  </div>
-               </div>
-               <!-- /.male -->
             </div>
             <div id="Top" class="scrollTop none Updates-module_showBtn_WUpS9">
                <span><a href="index.html"><img src="<?php echo $linkOption1?>frontend/images/arrow_up_icon.png"></a></span>

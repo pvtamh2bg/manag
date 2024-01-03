@@ -18,7 +18,7 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
 	$_SESSION['password_new']="";
 	if(!isset($_SESSION['confirm_password_new']))
 	$_SESSION['confirm_password_new']="";
-
+  $domain=$_SERVER['SERVER_NAME'];
 
 ?>
 
@@ -109,11 +109,11 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
           <div class="level">
             <div class="level-left">
               <div class="col-sm-4 text-center" itemscope="" itemtype="http://schema.org/Organization">
-                <a itemprop="url" href="//truyenqq.net">
-                  <img itemprop="logo" src="page/frontend/images/logo.png" alt="TruyenQQ - Truyện tranh Online">
+                <a itemprop="url" href="<?= $domain; ?>">
+                  <img itemprop="logo" width="80" src="page/frontend/images/web_logo.png" alt="Manga plus by shueisha">
                 </a>
               </div>
-              <div class="text-footer">Copyright © 2023 - All Rights Reserved. Quảng cáo: ad.truyenqq@gmail.com</div>
+              <div class="text-footer">Copyright © 2024 - All Rights Reserved.</div>
             </div>
             <div class="level-right"></div>
           </div>

@@ -86,7 +86,7 @@ if (session_status() == PHP_SESSION_NONE) {
 						<a class="btn btn-sm btn-reset" href="<?php echo $linkOption."tim-kiem-nang-cao.html";?>"><i class="fa fa-repeat"></i> Reset</a>
 					</div>
 					<div class="form-group row">
-						<label class="col-sm-2 col-form-label">Thể loại truyện</label>
+						<label class="col-sm-2 col-form-label">Genre of the story</label>
 						<div class="col-sm-10">
 						<?php
 					
@@ -163,7 +163,7 @@ if (session_status() == PHP_SESSION_NONE) {
 					</div>
 
 					<div class="form-group row">
-						<label for="country" class="col-sm-2 col-form-label">Quốc gia</label>
+						<label for="country" class="col-sm-2 col-form-label">Country</label>
 						<div class="col-sm-4">
 							<div class="select select-search is-warning">
 								<select class="custom-select" id="country">
@@ -184,7 +184,7 @@ if (session_status() == PHP_SESSION_NONE) {
 							</div>
 						</div>
 
-						<label for="country" class="col-sm-2 col-form-label">Tình Trạng</label>
+						<label for="country" class="col-sm-2 col-form-label">Status</label>
 						<div class="col-sm-4">
 							<div class="select select-search is-warning">
 								<select class="custom-select" id="status">
@@ -203,7 +203,7 @@ if (session_status() == PHP_SESSION_NONE) {
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="country" class="col-sm-2 col-form-label">Số lượng chương</label>
+						<label for="country" class="col-sm-2 col-form-label">Number of chapters</label>
 						<div class="col-sm-4">
 							<div class="select select-search is-warning">
 								<select class="custom-select" id="minchapter">
@@ -221,7 +221,7 @@ if (session_status() == PHP_SESSION_NONE) {
 							</div>
 						</div>
 
-						<label for="country" class="col-sm-2 col-form-label">Sắp xếp</label>
+						<label for="country" class="col-sm-2 col-form-label">Sort</label>
 						<div class="col-sm-4">
 							<div class="select select-search is-warning">
 								<select class="custom-select" id="sort">

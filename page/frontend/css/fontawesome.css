@@ -25141,11 +25141,16 @@ textarea {
 .main-menu .navbar .navbar-item.is-mega .navbar-dropdown {
 	box-shadow: none;
 	border: none;
-	padding: 0
+	padding: 0;
+	color: var(--color-small-impact);
+}
+
+.main-menu .navbar .navbar-item.is-mega .navbar-dropdown ul.mega-list li a {
+	color: var(--color-small-impact);
 }
 
 .main-menu .navbar .navbar-item.is-mega .navbar-dropdown:before {
-	background-color: #fff;
+	background: var(--color-dark-gray);
 	content: "";
 	position: absolute;
 	top: 0;
@@ -25154,7 +25159,9 @@ textarea {
 	height: 100%;
 	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2);
 	opacity: 0;
-	visibility: hidden
+	visibility: hidden;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
 }
 
 .main-menu .navbar .navbar-item.is-mega .mega-list-wrapper {
@@ -25425,6 +25432,8 @@ textarea {
 .main-content {
 	background-color: var(--color-gray-dk);
 	padding-top: 15px;
+	padding-top: 15px;
+  padding-bottom: 30px
 }
 .main-content .caption {
 	font-size: 24px;
@@ -25585,7 +25594,8 @@ textarea {
 	position: absolute;
 	top: 9px;
 	left: 8px;
-	font-size: 0
+	font-size: 0;
+	display: flex;
 }
 
 .main-content .story-item .top-notice span {
@@ -25596,9 +25606,19 @@ textarea {
 }
 
 .main-content .story-item .top-notice .time-ago {
-	border-radius: 5px;
-	background-color: #56ccf2;
-	margin-right: 5px
+  display:block;
+  font-weight:300;
+  text-transform:uppercase;
+  font-size:10px;
+  letter-spacing:.05rem;
+  border-radius:5px;
+  color:var(--color-white);
+  margin:3px 0 5px 0;
+  padding:0 10px;
+  background:#dc0914;
+  line-height:20px;
+  background:-webkit-gradient(linear,left top,right top,from(rgba(220,9,20,.5)),to(rgba(220,9,20,0)));
+  background:linear-gradient(90deg,rgba(220,9,20,.5),rgba(220,9,20,0));
 }
 
 .main-content .story-item .top-notice .type-label {
@@ -25609,11 +25629,13 @@ textarea {
 }
 
 .main-content .story-item .top-notice .type-label.hot {
-	background-color: #ff2853
+	background-color: #ff2853;
+	padding: 4px 6px;
 }
 
 .main-content .story-item .top-notice .type-label.new {
-	background-color: #fa0
+	background-color: #fa0;
+	padding: 4px 6px;
 }
 
 @-webkit-keyframes pulse {
@@ -25642,7 +25664,7 @@ textarea {
 }
 
 .main-content .story-item .title-book a {
-	color: #000
+	color: #fff;
 }
 
 .main-content .story-item .episode-book {
@@ -25656,7 +25678,7 @@ textarea {
 	line-height: 1.4;
 	letter-spacing: -.5px;
 	text-align: justify;
-	color: #000
+	color: var(--color-gray-lt);
 }
 
 .main-content .story-item .more-info {
@@ -27102,7 +27124,11 @@ textarea {
 }
 
 .story-list .pagination {
-	padding-bottom: 40px
+	/* background: linear-gradient(270deg, rgba(220,9,20,0), rgba(220,9,20,.5), rgba(220,9,20,0)); */
+	background: linear-gradient(270deg, rgba(220,9,20,0) 25%, rgba(220,9,20,.5) 50%, rgba(220,9,20,0) 75%);
+	background: -webkit-linear-gradient(left, rgba(220,9,20,0) 25%, rgba(220,9,20,.5) 50%, rgba(220,9,20,0) 75%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(25%, rgba(220,9,20,0)), color-stop(50%, rgba(220,9,20,.5)), color-stop(75%, rgba(220,9,20,0)));
+
 }
 
 .story-list .pagination a {

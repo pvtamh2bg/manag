@@ -852,16 +852,16 @@ class config
 		$db=new config();
 				$db->config();		
 		date_default_timezone_set("Asia/Ho_Chi_Minh");	
-		$DateComment="1 Phút Trước";
-						
+		$DateComment="1 minute ago";
+				 
 				 $o = json_decode($db->chuyen_timer($str,date('Y-m-d H:i:s')));
 				 if($o->years!=0)
-				  $DateComment=$o->years." Năm Trước";
-				 else if($o->months!=0) $DateComment= $o->months." Tháng Trước";
-				 else if($o->days!=0) $DateComment= $o->days." Ngày Trước";
-				 else if($o->hours!=0) $DateComment= $o->hours." Giờ Trước";
-				 else if($o->minutes!=0) $DateComment= $o->minutes." Phút Trước";
-				 else if($o->seconds!=0) $DateComment= "1 Phút Trước";
+				  $DateComment=$o->years." years ago";
+				 else if($o->months!=0) $DateComment= $o->months." months ago";
+				 else if($o->days!=0) $DateComment= $o->days." days ago";
+				 else if($o->hours!=0) $DateComment= $o->hours." hours ago";
+				 else if($o->minutes!=0) $DateComment= $o->minutes." minutes ago";
+				 else if($o->seconds!=0) $DateComment= "1 minute ago";
 				 return $DateComment;
 	}
 	function GetByDateChap($Id)

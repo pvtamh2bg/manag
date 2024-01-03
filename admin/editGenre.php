@@ -257,12 +257,12 @@ require_once('function/function.php');
             
               <div class="form-group">
                 <label for="inputName">Tên thể loại</label>
-                <input type="text" id="Name" class="form-control" value="<?php echo $arr_Genre[1];?>"/>
+                <input type="text" id="Name_Genre" class="form-control" value="<?php echo $arr_Genre[1];?>"/>
               </div>
              
               <div class="form-group">
                 <label for="inputDescription">Tiêu đề</label>
-                 <input type="text" id="Title" class="form-control" value="<?php echo $arr_Genre[2];?>"/>
+                 <input type="text" id="Title_Genre" class="form-control" value="<?php echo $arr_Genre[2];?>"/>
                
               </div>
 
@@ -276,7 +276,7 @@ require_once('function/function.php');
       </div>
       <div class="row">
         <div class="col-12">
-          <button type="button" class="btn btn-success" id="addGenre" src-image="" src-path="">Lưu</button>
+          <button type="button" class="btn btn-success" id="editGenre" src-image="" src-path="">Lưu</button>
         </div>
       </div>
     </section>
@@ -314,36 +314,27 @@ $db->dis_connect();//ngat ket noi mysql
 <script type="text/javascript" src="frontend/file/jquery-ui-1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript" src="frontend/js/jquery.ui.widget.js"></script>
 <script src="toastr/toastr.min.js"></script>	
-<script type="text/javascript">
-    
-  $(document).ready(function(){ 
-	  $("#addGenre").click(function(){
-		 var Name=$("#Name").val();
-		 var Title=$("#Title").val();
-	   if(Name !=""){
-		 $.ajax({     
-	       url:'ajax/genre/edit.php',
-	       type:'POST',
-	       cache:false,
-	       data:{'Name':Name,"Title":Title},
-	       success:function(kq){
-	       	var o = JSON.parse(kq);
-	                 
-				
-					 alert(o.Error);
-					 location.reload();
-				  
-	           }
-	      })
-		 }else{
-			 alert("Name no Null");
-		  }
-	}); 
+<script>
+ var idGenre=<?php echo json_encode($idGenre)?>;
+ var linkOption12=<?php echo json_encode($linkOption1)?>;
+ var Name_Genre_old=<?php echo json_encode($arr_Genre[1])?>;
+$(document).ready(function(){
 
- 	 
-});  
+	$("#editGenre").click(function(){
+		var Name_Genre=document.getElementById("Name_Genre").value;
+	  var Title_Genre=document.getElementById("Title_Genre").value;
+    $.ajax({     
+      url:linkOption12+'ajax/genre/edit.php',
+      type:'POST',
+      cache:false,
+      data:{'idGenre':idGenre,'Name_Genre':Name_Genre,'Name_Genre_old':Name_Genre_old,'Title_Genre':Title_Genre},
+      success:function(kq){
+            location.reload();
+        }
+      })
+    });	
+});
 </script>
-
 
 </body>
 </html>

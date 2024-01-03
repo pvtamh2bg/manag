@@ -15,6 +15,7 @@
 	}else{
 		header("location:".$linkOption);
 	}
+  $domain=$_SERVER['SERVER_NAME'];
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -82,21 +83,7 @@ require_once('header/headerDetail.php');
         </div>
       </section>
       <!-- /.main-content -->
-      <section class="footer">
-        <div class="container">
-          <div class="level">
-            <div class="level-left">
-              <div class="col-sm-4 text-center" itemscope="" itemtype="http://schema.org/Organization">
-                <a itemprop="url" href="//truyenqqtop.com">
-                  <img itemprop="logo" src="//static.truyenqqtop.com/template/frontend/images/logo.png" alt="TruyenQQ - Truyện tranh Online">
-                </a>
-              </div>
-              <div class="text-footer">Copyright © 2023 - All Rights Reserved. Quảng cáo: ad.truyenqq@gmail.com</div>
-            </div>
-            <div class="level-right"></div>
-          </div>
-        </div>
-      </section>
+      <?php require_once('./footer/footerDetail.php'); ?>
       <!-- /.footer -->
     </div>
   </body>
