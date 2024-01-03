@@ -49,6 +49,6 @@ if(count($arr)>0){
 	echo '</ul>';
 	}else{
 		
-		echo '<div class="warning-list box">Xin lỗi, không tìm thấy kết quả nào!!</div>';
+		echo '<div class="warning-list box">Sorry, no results found!!</div>';
 	}
 ?>

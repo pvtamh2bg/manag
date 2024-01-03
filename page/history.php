@@ -78,7 +78,7 @@
 				  
 				if($totalRecords>0){
 					if($history[0]==""){							
-						 echo '<div class="warning-list box">Xin lỗi, không tìm thấy kết quả nào!!</div>';	
+						 echo '<div class="warning-list box">Sorry, no results found!!</div>';	
 					}else{
 					  $tempPage = ceil($totalRecords / $item_per_page);
 					  $tempString = $totalRecords / $item_per_page;
@@ -101,7 +101,7 @@
 					echo '</ul>';
 					}
 				}else{
-					 echo '<div class="warning-list box">Xin lỗi, không tìm thấy kết quả nào!!</div>';	
+					 echo '<div class="warning-list box">Sorry, no results found!!</div>';	
 				}
 
 				$db->dis_connect();//ngat ket noi mysql	

@@ -24979,9 +24979,15 @@ textarea {
 }
 
 .top-bar .top-buttons .login-btn {
-	background-color: var(--color-gray);
-	margin-right: 10px
+	margin-right: 92px;
+  color: var(--color-small-impact);
+  cursor: pointer;
 }
+
+.top-bar .top-buttons .login-btn:hover {
+  color: var(--color-yellow);
+}
+
 
 .top-bar .top-buttons .register-btn {
 	background-color: var(--color-dark-red);
@@ -25022,7 +25028,6 @@ textarea {
 }
 
 .top-search .list-results {
-	border-radius: 5px;
 	box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
 	background-color: #f9f9f9;
 	position: absolute;
@@ -25762,18 +25767,30 @@ textarea {
 }
 
 .main-content .view-more-btn {
-	border-radius: 5px;
-	box-shadow: 0 0 3px 0 rgba(0, 0, 0, .25);
-	background-color: #84c52c;
-	font-size: 16px;
-	font-weight: 700;
-	color: #fff!important;
-	padding: 12px 20px;
-	display: inline-block
+	display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px 20px 5px 10px;
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  border-radius: 0 7px 7px 0;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: -20px 0;
+  z-index: 1;
+  font-size: var(--font-size-l);
+	font-weight: 500;
 }
 
-.main-content .view-more-btn:hover {
-	opacity: .5
+.main-content .view-more-btn:hover span {
+	margin-left: 8px;
 }
 
 .main-content .latest {
@@ -25952,8 +25969,7 @@ textarea {
 .footer {
 	padding: 0;
 	background: var(--color-black);
-	height: 50px;
-	line-height: 50px;
+	height: 80px;
 }
 .footer .back-ground {
 	background: -webkit-gradient(linear,left bottom,left top,from(rgba(220,9,20,.5)),to(rgba(220,9,20,0)));
@@ -26997,7 +27013,7 @@ textarea {
 	min-width: 80px;
 	text-align: center;
 	margin-right: 10px;
-	color: #000
+	color: var(--color-small-impact);
 }
 
 .story-list .story-list-bl01 table td ul li a:active,
@@ -27687,7 +27703,7 @@ textarea {
 }
 
 .on.top-bar {
-	background: #333
+	/* background: #333 */
 }
 
 .on.top-bar .logo a {
@@ -27707,13 +27723,20 @@ textarea {
 }
 
 .on.top-bar .top-search input[type=text] {
-	background-color: #f9f9f9;
 	width: 100%;
-	height: 100%;
-	border: solid 1px #e0e0e0;
-	border-radius: 50px;
-	padding: 0 45px 0 20px;
-	color: #757575
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--color-small-impact);
+  padding: calc(var(--space)/1) 0 calc(var(--space)/1) 8px;
+  background-color: transparent;
+  border: 0;
+    border-bottom-width: 0px;
+    border-bottom-style: none;
+    border-bottom-color: currentcolor;
+  outline: none;
+  border-bottom: 1px solid hsla(0,0%,100%,.3);
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
 .on.top-bar .top-search .submit-btn {
@@ -28215,7 +28238,7 @@ textarea {
 		overflow: hidden
 	}
 	.footer {
-		padding: 5px;
+		padding: 0px;
 	}
 	.footer .text-footer {
 		font-size: 90%;

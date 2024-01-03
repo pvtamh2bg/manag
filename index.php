@@ -219,12 +219,11 @@ $ChapSlider=$linkOption.$the_loai.vn_str_filter($NameStory)."-".$muc3['IdStory']
 				  ?>
                   <!-- /.list-stories -->
                   <div class="has-text-centered">
-                     <a href="<?php echo $linkOption;?>truyen-tranh-hay/trang-2.html" class="view-more-btn">Xem thêm </a>
+                     <a href="<?php echo $linkOption;?>truyen-tranh-hay/trang-2.html" class="view-more-btn">See More Listings <span> → </span></a>
                   </div>
                </div>
-               
                <div class="male">
-                  <div class="caption" id="list-male"><a href="<?php echo $linkOption;?>tieu-thuyet-hay.html"><span class="male-icon"></span>Truyện chữ</a></div>
+                  <div class="caption" id="list-male"><a href="<?php echo $linkOption;?>tieu-thuyet-hay.html"><span class="male-icon"></span>Novel</a></div>
                   <div class="tile is-ancestor">
                      <div class="tile is-vertical is-parent">
                         <?php
@@ -263,18 +262,19 @@ $ChapSlider=$linkOption.$the_loai.vn_str_filter($NameStory)."-".$muc3['IdStory']
     <div class="container">
         <div class="level">
             <div class="level-left">
-	    <div class="col-sm-4 text-center" itemscope="" itemtype="http://schema.org/Organization">
+	    					<div class="col-sm-4 text-center" itemscope="" itemtype="http://schema.org/Organization">
                     <a itemprop="url" href="index.html">
-                        <img itemprop="logo" src="<?=$linkOption?>page/frontend/images/logo.png" alt="<?=$linkOption?>">
+                        <img itemprop="logo" width="100" src="<?=$linkOption?>page/frontend/images/web_logo.png" alt="<?=$linkOption?>">
                     </a>
                 </div>
                 <div class="text-footer">Copyright © 2023 - Email: contact@<?=$domain?></div>
             </div>
-           <!-- <div class="level-right">
-                <ul class="social-links">
-                    <li><a href="#"><span class="app-store-icon"></span></a></li>
-                    <li><a href="#"><span class="google-play-icon"></span></a></li>
-            </div> -->
+						<!-- <div class="level-right">
+								<ul class="social-links">
+										<li><a href="#"><span class="app-store-icon"></span></a></li>
+										<li><a href="#"><span class="google-play-icon"></span></a></li>
+								</ul>
+						</div> -->
         </div>
     </div>
 	</div>	

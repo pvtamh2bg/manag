@@ -123,7 +123,7 @@ echo '</li>';
 //echo '</ul>';						 
 }else{
 		
-		//echo '<div class="warning-list box">Xin lỗi, không tìm thấy kết quả nào!!</div>';
+		//echo '<div class="warning-list box">Sorry, no results found!!</div>';
 		
 	}							
 			
@@ -186,7 +186,7 @@ echo '</li>';
 //echo '</ul>';						 
 	}else{
 		
-		//echo '<div class="warning-list box">Xin lỗi, không tìm thấy kết quả nào!!</div>';
+		//echo '<div class="warning-list box">Sorry, no results found!!</div>';
 		
 	}						
 			
@@ -257,7 +257,7 @@ function newsList($arr,$linkOption){
 	echo '</ul>';
 	}else{
 		
-		echo '<div class="warning-list box">Xin lỗi, không tìm thấy kết quả nào!!</div>';
+		echo '<div class="warning-list box">Sorry, no results found!!</div>';
 	}
 			
 }
@@ -321,7 +321,7 @@ function storiesList($arr,$linkOption){
 	echo '</ul>';
 	}else{
 		
-		echo '<div class="warning-list box">Xin lỗi, không tìm thấy kết quả nào!!</div>';
+		echo '<div class="warning-list box">Sorry, no results found!!</div>';
 	}
 			
 }

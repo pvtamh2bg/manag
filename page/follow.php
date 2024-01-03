@@ -74,7 +74,7 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
 			if($totalRecords>0) {
 			   if($subscribe[0]==""){	
 			   
-					 echo '<div class="warning-list box">Xin lỗi, không tìm thấy kết quả nào!!</div>';
+					 echo '<div class="warning-list box">Sorry, no results found!!</div>';
 					
 			   }else{
 				  
@@ -99,7 +99,7 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
 			    echo '</ul>';
 			   }
 			}else{
-				echo '<div class="warning-list box">Xin lỗi, không tìm thấy kết quả nào!!</div>';
+				echo '<div class="warning-list box">Sorry, no results found!!</div>';
 			}
 			    $db->dis_connect();//ngat ket noi mysql	
 			   ?>

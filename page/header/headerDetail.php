@@ -80,9 +80,7 @@ if(isset($_SESSION['email']))
 <script>
 $(document).ready(function(){
 if ($(window).width() > 1023) {
-	
-	
-	$('<button class="login-btn">Sign in</button><button class="register-btn">Sign up</button>').insertAfter("#lg_005");
+	$('<span class="login-btn">Sign in</span>').insertAfter("#lg_005");
    //alert('Less than 960');
 }else{
 	$('#captcha_register').css('width', '87%');
