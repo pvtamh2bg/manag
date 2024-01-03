@@ -21,7 +21,7 @@
 <html lang="vi">
   <head>
     <meta charset="utf-8">
-    <title>Danh Sách Tin Nhắn</title>
+    <title>List of messages</title>
     <meta property="og:site_name" content="<?=$linkOption?>">
     <meta property="og:type" content="article">
     <meta property="og:url" content="<?=$linkOption?>tin-nhan.html">
@@ -59,10 +59,10 @@ require_once('header/headerDetail.php');
 			?>  
             <div class="column">
               <div class="level title">
-                <p class="level-left has-text-weight-bold">Tin nhắn</p>
+                <p class="level-left has-text-weight-bold">Message</p>
                 <p class="level-right">
                   <a href="gui-tin-nhan.html">
-                    <i class="fas fa-paper-plane"></i> Gửi tin nhắn </a>
+                    <i class="fas fa-paper-plane"></i> Send Message </a>
                 </p>
               </div>
               <table class="table is-narrow">
@@ -74,7 +74,7 @@ require_once('header/headerDetail.php');
                 </thead>
                 <tbody>
                   <tr>
-                    <td colspan="2" class="no-result" style="text-align: center;">Không Có Tin Nhắn Nào!</td>
+                    <td colspan="2" class="no-result" style="text-align: center;">No messages!</td>
                   </tr>
                 </tbody>
               </table>

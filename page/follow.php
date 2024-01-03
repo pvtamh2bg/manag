@@ -34,7 +34,7 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
 <html lang="vi">
   <head>
     <meta charset="utf-8">
-    <title>Truyện Đang Theo Dõi - <?=$domain?></title>
+    <title>Stories Being Followed - <?=$domain?></title>
     <meta property="og:site_name" content="<?=$domain?>">
     <meta property="og:type" content="article">
     <meta property="og:url" content="<?=$linkOption?>truyen-dang-theo-doi.html">
@@ -60,7 +60,7 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
       
       <section class="main-content">
         <div class="container story-list">
-          <div class="title-list">Truyện Đang Theo Dõi</div>
+          <div class="title-list">Stories Being Followed</div>
           <div class="tile is-ancestor">
 		
             <div class="tile is-vertical is-parent">

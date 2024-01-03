@@ -46,8 +46,8 @@ require_once('header/headerDetail.php');
         <div class="messages columns">
 <div class="column is-narrow left pc">
     <ul class="nav-user">
-        <li><a class="li01 " href="#">Quản lý tài khoản</a></li>
-        <li><a class="li02 " href="#">Tin nhắn</a></li>
+        <li><a class="li01 " href="#">Account Management</a></li>
+        <li><a class="li02 " href="#">Message</a></li>
         <li><a class="li03 " href="forgotPassword.php">Đổi mật khẩu</a></li>
         <li><a class="li04 " href="listStory.php">Danh sách truyện</a></li>
 		<li><a class="li05 is-active" href="addStory.php">Thêm truyện</a></li>

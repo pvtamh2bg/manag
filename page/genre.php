@@ -97,10 +97,10 @@ require_once('header/headerDetail.php');
         
          <div class="title-list"> 
 		 <?php
-		 $pos = strpos($genres3, "Truyện");
+		 $pos = strpos($genres3, "Stories");
 		 if ($pos !== false) 
 		   echo $genres3;
-		 else echo "Truyện ".$genres3;
+		 else echo "$genres3 Stories";
 		 
 		 
 		 ?>
@@ -112,7 +112,7 @@ require_once('header/headerDetail.php');
     <table>
         <tbody>
             <tr>
-                <th>Thể loại truyện</th>
+                <th>Genre of the story</th>
                 <td>
                     <div class="select is-warning">
                         <select id="category">
@@ -143,44 +143,44 @@ require_once('header/headerDetail.php');
                 </td>
             </tr>
             <tr>
-                <th>Tình trạng</th>
+                <th>Status</th>
                 <td>
                     <ul class="choose">
-                        <li><a class="<?php if($status1=="0") echo "active"; else echo ""; ?>" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $s1?>status=0<?= $s2?><?= $sort?>">Đang tiến hành</a>
+                        <li><a class="<?php if($status1=="0") echo "active"; else echo ""; ?>" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $s1?>status=0<?= $s2?><?= $sort?>">In progress</a>
                         </li>
-                        <li><a class="<?php if($status1=="1") echo "active"; else echo ""; ?>" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $s1?>status=1<?= $s2?><?= $sort?>">Hoàn thành</a>
+                        <li><a class="<?php if($status1=="1") echo "active"; else echo ""; ?>" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $s1?>status=1<?= $s2?><?= $sort?>">Complete</a>
                         </li>
                     </ul>
                 </td>
             </tr>
             <tr>
-                <th>Quốc gia</th>
+                <th>Country</th>
                 <td>
                     <ul class="choose">
-                        <li><a class="<?php if($country1=="1")  echo "active";else echo ""; ?>" title="Truyện Trung Quốc" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=1<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Trung Quốc</a>
+                        <li><a class="<?php if($country1=="1")  echo "active";else echo ""; ?>" title="Chinese Stories" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=1<?= $c1?><?= $status?><?= $c2?><?= $sort?>">China</a>
                         </li>
-                        <li><a class="<?php if($country1=="2")  echo "active";else echo ""; ?>" title="Truyện Việt Nam" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=2<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Việt Nam</a>
+                        <li><a class="<?php if($country1=="2")  echo "active";else echo ""; ?>" title="Vietnamese Stories" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=2<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Viet Nam</a>
                         </li>
-                        <li><a class="<?php if($country1=="3")  echo "active";else echo ""; ?>" title="Truyện Hàn Quốc" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=3<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Hàn Quốc</a>
+                        <li><a class="<?php if($country1=="3")  echo "active";else echo ""; ?>" title="Korean Stories" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=3<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Korea</a>
                         </li>
-                        <li><a class="<?php if($country1=="4")  echo "active";else echo ""; ?>" title="Truyện Nhật Bản" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=4<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Nhật Bản</a>
+                        <li><a class="<?php if($country1=="4")  echo "active";else echo ""; ?>" title="Japanese Stories" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=4<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Japan</a>
                         </li>
-                        <li><a class="<?php if($country1=="5")  echo "active";else echo ""; ?>" title="Truyện Mỹ" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=5<?= $c1?><?= $status?><?= $c2?><?= $sort?>">Mỹ</a>
+                        <li><a class="<?php if($country1=="5")  echo "active";else echo ""; ?>" title="American Stories" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?country=5<?= $c1?><?= $status?><?= $c2?><?= $sort?>">US</a>
                         </li>
                     </ul>
                 </td>
             </tr>
             <tr>
-                <th>Sắp xếp</th>
+                <th>Sort</th>
                 <td>
                     <div class="select is-warning">
                         <select id="category-sort">
-                            <option <?php if($sort1==1) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=1">Ngày đăng giảm dần</option>
-                            <option <?php if($sort1==2) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=2">Ngày đăng tăng dần</option>
-                            <option <?php if($sort1==3) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=3">Ngày cập nhật giảm dần</option>
-                            <option <?php if($sort1==4) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=4">Ngày cập nhật tăng dần</option>
-                            <option <?php if($sort1==5) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=5">Lượt xem giảm dần</option>
-                            <option <?php if($sort1==6) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=6">Lượt xem tăng dần</option>
+                            <option <?php if($sort1==1) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=1">Date posted in descending order</option>
+                            <option <?php if($sort1==2) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=2">Date posted in ascending order</option>
+                            <option <?php if($sort1==3) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=3">Date updated in descending order</option>
+                            <option <?php if($sort1==4) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=4">Date updated in ascending order</option>
+                            <option <?php if($sort1==5) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=5">Views in descending order</option>
+                            <option <?php if($sort1==6) echo "selected"; else echo ""; ?> value="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $x1?><?= $status?><?= $x2?>sort=6">Views in ascending order</option>
                         </select>
                     </div>
                 </td>

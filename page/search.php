@@ -57,7 +57,7 @@
         <div class="container story-list">
           <div class="tile is-ancestor">
             <div class="tile is-vertical is-parent">
-              <?php							  
+              <?php
 			    storiesList($arr,$linkOption);
 				$totalRecords =$db->GetSearchFull($q,"total",$item_per_page,$current_page);	
 				$db->dis_connect();//ngat ket noi mysql		

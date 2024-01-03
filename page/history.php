@@ -35,7 +35,7 @@
 <html lang="vi">
   <head>
     <meta charset="utf-8">
-    <title>Lịch Sử Đọc Truyện - <?=$domain?></title>
+    <title>Story Reading History - <?=$domain?></title>
     <meta property="og:site_name" content="<?=$domain?>">
     <meta property="og:type" content="article">
     <meta property="og:url" content="<?=$linkOption?>lich-su.html">
@@ -68,7 +68,7 @@
 
       <section class="main-content">
         <div class="container story-list">
-          <div class="title-list">Lịch Sử Đọc Truyện</div>
+          <div class="title-list">Story Reading History</div>
           <div class="tile is-ancestor">
             <div class="tile is-vertical is-parent">
               <?php

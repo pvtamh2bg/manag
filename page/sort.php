@@ -36,11 +36,9 @@
 		}
 	  	if(isset($_GET["sort"])){
 		 $sort1=$_GET["sort"];
-		 echo $sort1;
 		 $linkOption2=$linkOption.$_GET["sort"]."/";
 		 $linkOption1=$linkOption."page/";
 		 $sort3=$db->GetNameSort($sort1);
-		 echo $sort3;
 		 $metaSeo=$db->GetMetaSeoSort($sort1);
 		}
 		//echo $sort1;
@@ -85,13 +83,13 @@ require_once('header/headerDetail.php');
 							if($sort1=="truyen-hoan-thanh")
 							{							
 							?>
-							<li><a class="" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?<?= $country?><?= $s1?>status=2">Đang tiến hành</a></li>
-							<li><a class="active" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?<?= $country?><?= $s1?>status=2">Hoàn thành</a></li>
+							<li><a class="" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?<?= $country?><?= $s1?>status=2">In process</a></li>
+							<li><a class="active" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?<?= $country?><?= $s1?>status=2">Complete</a></li>
 							<?php
 							}else{
 							?>
-							<li><a class="<?php if($status1==0) echo "active"; else echo ""; ?>" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?<?= $country?><?= $s1?>status=0">Đang tiến hành</a></li>
-							<li><a class="<?php if($status1==2) echo "active"; else echo ""; ?>" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?<?= $country?><?= $s1?>status=2">Hoàn thành</a></li>
+							<li><a class="<?php if($status1==0) echo "active"; else echo ""; ?>" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?<?= $country?><?= $s1?>status=0">In process</a></li>
+							<li><a class="<?php if($status1==2) echo "active"; else echo ""; ?>" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?<?= $country?><?= $s1?>status=2">Complete</a></li>
 							<?php
 							}
 							?>
@@ -105,14 +103,14 @@ require_once('header/headerDetail.php');
                 
                 ?>
                 <tr>
-                    <th>Quốc gia</th>
+                    <th>Country</th>
                     <td>
                         <ul class="choose">
-								<li><a class="<?php if($country1=="1")  echo "active";else echo ""; ?>" title="Truyện Trung Quốc" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=1<?= $c1?><?= $status?>">Trung Quốc</a></li>
-								<li><a class="<?php if($country1=="2")  echo "active";else echo ""; ?>" title="Truyện Việt Nam" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=2<?= $c1?><?= $status?>">Việt Nam</a></li>
-								<li><a class="<?php if($country1=="3")  echo "active";else echo ""; ?>" title="Truyện Hàn Quốc" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=3<?= $c1?><?= $status?>">Hàn Quốc</a></li>
-								<li><a class="<?php if($country1=="4")  echo "active";else echo ""; ?>" title="Truyện Nhật Bản" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=4<?= $c1?><?= $status?>">Nhật Bản</a></li>
-								<li><a class="<?php if($country1=="5")  echo "active";else echo ""; ?>" title="Truyện Mỹ" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=5<?= $c1?><?= $status?>">Mỹ</a></li>
+								<li><a class="<?php if($country1=="1")  echo "active";else echo ""; ?>" title="Chinese Stories" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=1<?= $c1?><?= $status?>">China</a></li>
+								<li><a class="<?php if($country1=="2")  echo "active";else echo ""; ?>" title="Vietnamese Stories" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=2<?= $c1?><?= $status?>">Viet Nam</a></li>
+								<li><a class="<?php if($country1=="3")  echo "active";else echo ""; ?>" title="Korean Stories" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=3<?= $c1?><?= $status?>">Korea</a></li>
+								<li><a class="<?php if($country1=="4")  echo "active";else echo ""; ?>" title="Japanese Stories" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=4<?= $c1?><?= $status?>">Japan</a></li>
+								<li><a class="<?php if($country1=="5")  echo "active";else echo ""; ?>" title="American Stories" href="<?= $linkOption?><?= $sort1?><?= $page?>.html?country=5<?= $c1?><?= $status?>">US</a></li>
 						</ul>
                     </td>
                 </tr>

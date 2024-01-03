@@ -42,12 +42,12 @@ case "update":
 
 <div class="column is-narrow left pc">
 	<ul class="nav-user">
-		<li><a class="li01 <?=$li01?>" href="<?=$linkOption?>quan-ly-tai-khoan.html">Quản lý tài khoản</a></li>
-		<li><a class="li02 <?=$li02?>" href="<?=$linkOption?>tin-nhan.html">Tin nhắn</a></li>
-		<li><a class="li03 <?=$li03?>" href="<?=$linkOption?>doi-mat-khau.html">Đổi mật khẩu</a></li>
+		<li><a class="li01 <?=$li01?>" href="<?=$linkOption?>quan-ly-tai-khoan.html">Account Management</a></li>
+		<li><a class="li02 <?=$li02?>" href="<?=$linkOption?>tin-nhan.html">Message</a></li>
+		<li><a class="li03 <?=$li03?>" href="<?=$linkOption?>doi-mat-khau.html">Change password</a></li>
 		
 		<?php
-		/*if($levelUser>0){
+		if($levelUser>0){
 		    echo '<li><a class="li012 <?=$li12?>" href="<?=$linkOption?>update/">Update theme</a></li>';
 			echo '<li><a class="li04 '.$li04.'" href="'.$linkOption.'page/listStory.php">Ds truyện</a></li>';
 			echo '<li><a class="li05 '.$li05.'" href="'.$linkOption.'page/addStory.php">Thêm truyện</a></li>';
@@ -59,7 +59,7 @@ case "update":
 			echo '<li class=""><a class="li09"  href="'.$linkOption.'page/listFeedback.php">Ds phản hồi('.$numFee.')</a></li>';
 			
 			
-		}*/
+		}
 		?>
 		
 	</ul>

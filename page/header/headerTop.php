@@ -23,7 +23,7 @@
             <div class="level-right">
                 <ul class="top-links pc">
                     <li>
-                        <a href="http://truyenqq.com/lich-su.html">Lịch sử</a>
+                        <a href="http://truyenqq.com/lich-su.html">History</a>
                     </li>
                     <li>
                         <a href="http://truyenqq.com/truyen-dang-theo-doi.html">Theo dõi</a>
@@ -89,13 +89,13 @@
                     <div class="notify center">
                         <i class="fas fa-envelope"></i>
                         <div class="list-messages">
-                            <div class="title-message">Tin nhắn</div>
+                            <div class="title-message">Message</div>
                             <ul>
-                                <li class="no-result" style="padding: 10px">Không Có Tin Nhắn Nào!</li>
+                                <li class="no-result" style="padding: 10px">No messages!</li>
 								
 								<li class="message unread">
                                     <a href="http://truyenqq.com/truyen-tranh/fairy-tail-100-year-quest-5212-chap-54.html">
-                                        <div class="title-message-item">Thông Báo</div>
+                                        <div class="title-message-item">Notify</div>
                                         <div class="content-message-item">kinglewwww vừa trả lời bình luận của bạn.</div>
                                         <p class="time"><i class="far fa-clock"></i>19:50 22/06/2020</p>
                                     </a>

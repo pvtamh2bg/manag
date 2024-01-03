@@ -19,7 +19,7 @@
 <html lang="vi">
   <head>
     <meta charset="utf-8">
-    <title>Gửi Tin Nhắn</title>
+    <title>Send Message</title>
     <meta property="og:site_name" content="<?=$linkOption?>">
     <meta property="og:type" content="article">
     <meta property="og:url" content="<?=$linkOption?>gui-tin-nhan.html">
@@ -48,7 +48,7 @@ require_once('header/headerDetail.php');
 //require_once('qc/bannerHeader.php'); 
 ?>
 
-      <title>Gửi Tin Nhắn</title>
+      <title>Send Message</title>
       <section class="main-content">
         <div class="container">
           <div class="messages columns">
@@ -62,7 +62,7 @@ require_once('header/headerDetail.php');
                 <form method="post">
                   <input type="hidden" name="token" value="ENHJIFYAzrF5/ySQ-1631590659-b6ef24f3dfd8af264cc7502f8005f377f1380c9b">
                   <div class="level title user-title">
-                    <p class="level-left has-text-weight-bold">Gửi tin nhắn</p>
+                    <p class="level-left has-text-weight-bold">Send Message</p>
                   </div>
                   <div class="user-form">
                     <div class="field">

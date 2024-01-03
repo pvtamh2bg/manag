@@ -102,7 +102,7 @@ if ($(window).width() > 1023) {
             <div class="level-right">
                 <ul class="top-links pc">
                     <li>
-                        <a href="<?php echo $linkOption ?>lich-su.html">Lịch sử</a>
+                        <a href="<?php echo $linkOption ?>lich-su.html">History</a>
                     </li>
                     <li>
                         <a href="<?php echo $linkOption ?>truyen-dang-theo-doi.html">Theo dõi</a>
@@ -145,10 +145,10 @@ if ($(window).width() > 1023) {
                                     <a href="<?php echo $linkOption ?>quan-ly-tai-khoan.html"><i class="fas fa-user-circle"></i> Quản lý tài khoản</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $linkOption ?>truyen-dang-theo-doi.html"><i class="fas fa-heart"></i> Truyện đang theo dõi</a>
+                                    <a href="<?php echo $linkOption ?>truyen-dang-theo-doi.html"><i class="fas fa-heart"></i> Stories Being Followed</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $linkOption ?>lich-su.html"><i class="fas fa-history"></i> Lịch sử đọc truyện</a>
+                                    <a href="<?php echo $linkOption ?>lich-su.html"><i class="fas fa-history"></i> Story Reading History</a>
                                 </li>
                                
                                 <li>
@@ -333,7 +333,7 @@ if ($(window).width() > 1023) {
                     <a href="<?= $linkOption."truyen-tranh-hay.html"?>" class="navbar-item">Truyện Tranh</a>
                     <a href="<?= $linkOption."tieu-thuyet-hay.html"?>" class="navbar-item">Tiểu Thuyết</a>
 					<a href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item">Tìm Truyện</a>
-                    <a rel="nofollow" href="<?= $linkOption."lich-su.html"?>" class="navbar-item">Lịch Sử</a>
+                    <a rel="nofollow" href="<?= $linkOption."lich-su.html"?>" class="navbar-item">History</a>
                     <a rel="nofollow" href="<?= $linkOption."truyen-dang-theo-doi.html"?>" class="navbar-item">Theo Dõi</a>
                     <a rel="nofollow" href="#" target="" class="navbar-item">Thảo Luận</a>
                     <a rel="nofollow" href="#" target="" class="navbar-item">Fanpage</a>

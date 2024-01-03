@@ -167,10 +167,10 @@ if ($(window).width() > 1023) {
                                 </li>
                                
                                 <li>
-                                    <a href="<?php echo $linkOption ?>truyen-dang-theo-doi.html"><i class="fas fa-heart"></i> Truyện đang theo dõi</a>
+                                    <a href="<?php echo $linkOption ?>truyen-dang-theo-doi.html"><i class="fas fa-heart"></i> Stories Being Followed</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo $linkOption ?>lich-su.html"><i class="fas fa-history"></i> Lịch sử</a>
+                                    <a href="<?php echo $linkOption ?>lich-su.html"><i class="fas fa-history"></i> History</a>
                                 </li>
                                
                                 <li>
