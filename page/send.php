@@ -72,20 +72,20 @@ require_once('header/headerDetail.php');
                       </p>
                     </div>
                     <div class="field">
-                      <p class="txt">Tiêu Đề</p>
+                      <p class="txt">Title</p>
                       <p class="control">
                         <input class="input" type="text" id="title" name="title" value="">
                       </p>
                     </div>
                     <div class="field">
-                      <p class="txt">Nội Dung</p>
+                      <p class="txt">Content</p>
                       <p class="control">
                         <textarea class="textarea" name="content"></textarea>
                       </p>
                     </div>
                     <div class="field">
                       <p class="control">
-                        <button class="button is-danger" type="submit">Gửi</button>
+                        <button class="button is-danger" type="submit">Send</button>
                       </p>
                     </div>
                   </div>

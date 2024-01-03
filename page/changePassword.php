@@ -69,31 +69,31 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
 			?>
             <div class="column">
               <div class="level title">
-                <p class="level-left has-text-weight-bold">Đổi mật khẩu</p>
+                <p class="level-left has-text-weight-bold">Change password</p>
               </div>
              
                 <div class="form-change-pass">
                   <div class="field">
-                    <p class="txt">Mật khẩu hiện tại</p>
+                    <p class="txt">Old password</p>
                     <p class="control">
                       <input class="input" type="password" value="<?=$_SESSION['password_old']?>" name="password_old" id="password_old">
                     </p>
                   </div>
                   <div class="field">
-                    <p class="txt">Mật khẩu mới</p>
+                    <p class="txt">New password</p>
                     <p class="control">
                       <input class="input" type="password" value="<?=$_SESSION['password_new']?>" name="password_new" id="password_new">
                     </p>
                   </div>
                   <div class="field">
-                    <p class="txt">Xác nhận mật khẩu</p>
+                    <p class="txt">Confirm new password</p>
                     <p class="control">
                       <input class="input" type="password" value="<?=$_SESSION['confirm_password_new']?>" name="confirm_password_new" id="confirm_password_new">
                     </p>
                   </div>
                   <div class="field">
                     <p class="control">
-                      <button class="button is-danger" id="changePassword">Đổi mật khẩu</button>
+                      <button class="button is-danger" id="changePassword">Change</button>
                     </p>
                   </div>
                 </div>

@@ -7,7 +7,7 @@
 		$user=0;
 		$IdStory=$_GET["IdStory"];
 		$subscribe_class="fas"; 
-		$subscribe_text="Theo dõi";
+		$subscribe_text="Subscribe ";
 		
 		if(!isset($_SESSION['name_comment'])){
 		 $_SESSION['name_comment']="";
@@ -24,7 +24,7 @@
 				$subscribe1=explode(",",$subscribe);
 				if(array_search($IdStory,$subscribe1)!=[]){
 					$subscribe_class="far"; 
-					$subscribe_text="Huỷ theo dõi";
+					$subscribe_text="Unsubscribe ";
 				}
 			}
 			
@@ -32,9 +32,7 @@
 		if($_SESSION['subscribe']!=[]){
 			if(array_search($IdStory,$_SESSION['subscribe'])!=[]){
 				$subscribe_class="far"; 
-				$subscribe_text="Huỷ theo dõi";
-				 
-				
+				$subscribe_text="Unsubscribe";
 			}
 		}		
 	}
@@ -139,13 +137,13 @@
                     <div class="center" itemscope="" itemtype="http://schema.org/Book">
                         <h1 itemprop="name"><?php echo $arr[1]?></h1>
                         <div class="txt">
-							<?php if($arr[2]!="") echo '<span class="info-item">Tên Khác: '.$arr[2].'</span>';?>
+							<?php if($arr[2]!="") echo '<span class="info-item">Other Names: '.$arr[2].'</span>';?>
                            
                             
 							<?php 
 							$AuthorArr=ConvertStrToArr($arr[7]);
 							if($arr[7]!=""){
-								echo '<p class="info-item">Tác giả: ';
+								echo '<p class="info-item">Authors: ';
 									
 									for($i=0;$i<count($AuthorArr);$i++){
 										$IdAuthor=$db->GetIdAuthor($AuthorArr[$i]);
@@ -157,9 +155,9 @@
 							}
 							?>
 							
-                            <p class="info-item">Tình trạng: <?php echo $arr[3]?></p>
+                            <p class="info-item">Status: <?php echo $arr[3]?></p>
                             <div>
-                                <span>Thống kê:</span>
+                                <span>Statistics:</span>
                                 <span class="sp01"><i class="fas fa-thumbs-up"></i> <span class="sp02 number-like"><?=$Sum_Like?></span></span>
                                 <span class="sp01"><i class="fas fa-heart"></i> <span class="sp02"><?=$Sum_Subscribe?></span></span>
                                 <span class="sp01"><i class="fas fa-eye"></i> <span class="sp02"><?=$Sum_Views?></span></span>
@@ -189,7 +187,7 @@
 						?> 
                        
                         <ul class="story-detail-menu">
-                            <li class="li01"><a href="<?=$chapStar?>" class="button is-danger is-rounded"><span class="btn-read"></span>Đọc từ đầu</a>
+                            <li class="li01"><a href="<?=$chapStar?>" class="button is-danger is-rounded"><span class="btn-read"></span>Start over</a>
                             </li>
                             <li class="li02"><a href="javascript:void(0);" class="button is-danger is-rounded btn-subscribe subscribeBook" data-page="index" data-id="<?=$IdStory?>"><span class="<?=$subscribe_class?> fa-heart"></span><?=$subscribe_text?></a>
                             </li>
@@ -212,7 +210,7 @@
                     </li>
                     <li class="li02"><a href="javascript:void(0);" class="button is-danger is-rounded btn-subscribe subscribeBook" data-page="index" data-id="<?=$IdStory?>"><span class="<?=$subscribe_class?> fa-heart"></span><?=$subscribe_text?></a>
                     </li>
-                    <li class="li03"><a href="javascript:void(0);" class="button is-danger is-rounded btn-like" data-id="<?=$IdStory?>"><span class="fas fa-thumbs-up"></span>Thích</a>
+                    <li class="li03"><a href="javascript:void(0);" class="button is-danger is-rounded btn-like" data-id="<?=$IdStory?>"><span class="fas fa-thumbs-up"></span>Like</a>
                     </li>
                     
                     </li>
@@ -231,7 +229,7 @@
 				
                 <div class="block02">
                     <div class="title">
-                        <h2 class="story-detail-title">Danh sách chương</h2>
+                        <h2 class="story-detail-title">Chapter List</h2>
                     </div>
                     <div class="box">
                         <div class="works-chapter-list">

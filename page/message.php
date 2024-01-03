@@ -68,8 +68,8 @@ require_once('header/headerDetail.php');
               <table class="table is-narrow">
                 <thead>
                   <tr>
-                    <th class="col-02">Nội dung</th>
-                    <th class="col-03 has-text-centered">Ngày gửi</th>
+                    <th class="col-02">Content</th>
+                    <th class="col-03 has-text-centered">Date sent</th>
                   </tr>
                 </thead>
                 <tbody>

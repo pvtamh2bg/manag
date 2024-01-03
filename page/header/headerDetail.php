@@ -217,7 +217,7 @@ if ($(window).width() > 1023) {
 							}
 						
 						}else{
-								echo '<li class="no-result" style="padding: 10px">Không Có Thông Báo Nào!</li>';
+								echo '<li class="no-result" style="padding: 10px">No Notifications!</li>';
 						}						
 						?>
 							<input id="id_notification" type="hidden" value="" data-totalnotification="0">

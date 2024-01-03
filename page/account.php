@@ -74,11 +74,11 @@ require_once('header/headerDetail.php');
                     <div class="img"><img class="image-avatar" src="<?php echo $linkOption1.$Path;?>" alt="" /></div>
 					
                     <input type="file" multiple="false" name="file" id="uploadavatar" style="display: none;">
-                    <button class="button is-danger btn-avatar">Chọn hình</button>
+                    <button class="button is-danger btn-avatar">Select image</button>
                 </div>
                 <div class="user-main column">
                     <div class="level title">
-                        <p class="level-left has-text-weight-bold">Thông tin tài khoản</p>
+                        <p class="level-left has-text-weight-bold">Account Information</p>
                     </div>
                 
                         <div class="form-change-pass">
@@ -96,42 +96,42 @@ require_once('header/headerDetail.php');
                             </div>
                         </div>
                         <div class="level title user-title">
-                            <p class="level-left has-text-weight-bold">Thông tin cá nhân</p>
+                            <p class="level-left has-text-weight-bold">Personal Information</p>
                         </div>
                         <div class="form-change-pass user-form">
                             <div class="field">
-                                <p class="txt">Họ</p>
+                                <p class="txt">Family Name</p>
                                 <p class="control">
                                     <input class="input" type="text" id="last_name" name="last_name" value="<?php echo $LastName; ?>">
                                 </p>
                             </div>
                             <div class="field">
-                                <p class="txt">Tên</p>
+                                <p class="txt">Name</p>
                                 <p class="control">
                                     <input class="input" type="text" id="first_name" name="first_name" value="<?php echo $FirstName; ?>">
                                 </p>
                             </div>
                             <div class="field">
-                                <p class="txt">Ngày sinh</p>
+                                <p class="txt">Date of Birth</p>
                                 <p class="control">
                                     <input class="input" type="date" id="birthday" name="birthday" value="<?php echo $Birthday; ?>">
                                 </p>
                             </div>
                             <div class="field">
-                                <p class="txt">Điện thoại</p>
+                                <p class="txt">Phone</p>
                                 <p class="control">
                                     <input class="input" id="phone" name="phone" type="number" value="<?php echo $Phone; ?>">
                                 </p>
                             </div>
                             <div class="field user-field">
-                                <span class="txt">Giới tính</span>
+                                <span class="txt">Gender</span>
                                 <input type="radio" id="gender1" name="gender" value="1"  <?php if($Gender==1) echo "checked"; ?>>
-                                <label for="gender1">Nam</label>
+                                <label for="gender1">Male</label>
                                 <input type="radio" id="gender2" name="gender" value="0" <?php if($Gender==0) echo "checked"; ?>>
-                                <label for="gender2">Nữ</label>
+                                <label for="gender2">FeMale</label>
                             </div>
                             <div class="field">
-                                <p class="txt">Mật khẩu hiện tại:</p>
+                                <p class="txt">Current password:</p>
                                 <p class="control">
                                     <input class="input" id="password_old" name="password_old" type="password" value="">
                                 </p>
@@ -140,7 +140,7 @@ require_once('header/headerDetail.php');
                             <input type="hidden" id="inputDelImage" name="inputDelImage" value="">
                             <div class="field">
                                 <p class="control">
-                                    <button class="button is-danger" type="submit" id="editInfo" src-image="<?php echo $Path;?>">Lưu</button>
+                                    <button class="button is-danger" type="submit" id="editInfo" src-image="<?php echo $Path;?>">Save</button>
                                 </p>
                             </div>
                        
