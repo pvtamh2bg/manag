@@ -241,7 +241,7 @@ if (session_status() == PHP_SESSION_NONE) {
 					</div>
 					<div class="form-group clearfix">
 						<div class="text-center">
-							<button type="button" class="btn btn-success btn-search is-danger">Tìm kiếm</button>
+							<button type="button" class="btn btn-success btn-search is-danger TitleDetail-module_languages_87lPm">Search</button>
 						</div>
 					</div>
 				</div>

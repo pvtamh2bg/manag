@@ -25950,14 +25950,21 @@ textarea {
 }
 
 .footer {
-	padding: 5px 0;
-	background-color: #fff;
-	margin-top: 10px
+	padding: 0;
+	background: var(--color-black);
+	height: 50px;
+	line-height: 50px;
 }
-
+.footer .back-ground {
+	background: -webkit-gradient(linear,left bottom,left top,from(rgba(220,9,20,.5)),to(rgba(220,9,20,0)));
+  background: linear-gradient(0deg,rgba(220,9,20,.5),rgba(220,9,20,0));
+	height: 100%;
+}
 .footer .text-footer {
 	letter-spacing: -.9px;
-	color: #000
+	color: var(--color-small-impact);
+  font-weight: 300;
+  font-size: var(--font-size-m);
 }
 
 .footer .social-links {
@@ -26957,6 +26964,18 @@ textarea {
 	min-height: 750px
 }
 
+/* custom search btn in find.php */
+.TitleDetail-module_languages_87lPm {
+  background-color:var(--color-dark-red);
+  color:var(--color-white);
+	border: none;
+	padding: 10px 110px;
+}
+.TitleDetail-module_languages_87lPm:hover {
+  background-color:var(--color-yellow);
+  color:#000
+}
+
 .story-list .story-list-bl01 table th {
 	width: 150px;
 	font-weight: 400;
@@ -26997,7 +27016,7 @@ textarea {
 .story-list .story-list-bl01 select {
 	/* background-color: transparent; */
 	text-indent: 5px;
-	color: var(--color-gray-hlt);
+	/* color: var(--color-gray-hlt); */
 }
 
 .story-list .story-list-bl01 .select2-selection.select2-selection--multiple {
@@ -27521,13 +27540,6 @@ textarea {
 	display: block!important;
 }
 
-.Updates-module_showBtn_WUpS9 {
-	z-index: 2;
-	-webkit-animation: Updates-module_fadeIn_1Afxc .5s forwards;
-	animation: Updates-module_fadeIn_1Afxc .5s forwards;
-	display: block!important
-}
-
 @-webkit-keyframes Updates-module_fadeOut_2DqcJ {
 	0% {
 			opacity: .8
@@ -27728,7 +27740,6 @@ textarea {
 
 .on.main-content {
 	background: #424242;
-	margin-top: -20px
 }
 
 .on.nav {
@@ -27795,7 +27806,7 @@ textarea {
 	background-color: #424242;
 	color: #fff;
 	padding: 0;
-	margin-top: 0
+	margin-top: 0;
 }
 
 .active.nav {
@@ -28204,7 +28215,7 @@ textarea {
 		overflow: hidden
 	}
 	.footer {
-		padding: 5px
+		padding: 5px;
 	}
 	.footer .text-footer {
 		font-size: 90%;

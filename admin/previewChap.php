@@ -336,7 +336,7 @@ $dateUpload=date('Y-m-d H:i:s');
                             </div>
                         </div>
                     </div>
-                    <div id="stop" class="scrollTop" style="display: none; bottom: 60px;">
+                    <div id="stop" class="scrollTop" style="display: none; bottom: 52px;">
 					
                         <span><a href="#"><img src="<?php echo $linkOption1;?>frontend/images/back-to-top-icon.png"></a></span>
                     </div>

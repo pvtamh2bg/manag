@@ -167,9 +167,9 @@ $dateUpload=date('Y-m-d H:i:s');
                             </div>
                         </div>
                     </div>
-                    <div id="stop" class="scrollTop" style="display: none; bottom: 60px;">
+                    <div id="stop" class="scrollTop Updates-module_showBtn_WUpS9" style="display: none; bottom: 52px;">
 					
-                        <span><a href="#"><img src="<?php echo $linkOption1;?>frontend/images/back-to-top-icon.png"></a></span>
+                        <span><a href="#"><img src="<?php echo $linkOption1;?>frontend/images/arrow_up_icon.png"></a></span>
                     </div>
                 </div>
             </section>

@@ -239,7 +239,7 @@ $ChapSlider=$linkOption.$the_loai.vn_str_filter($NameStory)."-".$muc3['IdStory']
                <!-- /.male -->
             </div>
             <div id="Top" class="scrollTop none Updates-module_showBtn_WUpS9">
-               <span><a href="index.html"><img src="<?php echo $linkOption1?>frontend/images/back-to-top-icon.png"></a></span>
+               <span><a href="index.html"><img src="<?php echo $linkOption1?>frontend/images/arrow_up_icon.png"></a></span>
             </div>
          </section>
  
@@ -259,6 +259,7 @@ $ChapSlider=$linkOption.$the_loai.vn_str_filter($NameStory)."-".$muc3['IdStory']
 	   <script src="<?php echo $linkOption1;?>js/qc/ad.js"></script> -->
       
 <section class="footer">
+	<div class="back-ground">
     <div class="container">
         <div class="level">
             <div class="level-left">
@@ -276,6 +277,7 @@ $ChapSlider=$linkOption.$the_loai.vn_str_filter($NameStory)."-".$muc3['IdStory']
             </div> -->
         </div>
     </div>
+	</div>	
 </section>
 
    </body>
