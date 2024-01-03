@@ -35,10 +35,12 @@
 		 $status1=$_GET["status"];
 		}
 	  	if(isset($_GET["sort"])){
-		 $sort1=$_GET["sort"];		 
+		 $sort1=$_GET["sort"];
+		 echo $sort1;
 		 $linkOption2=$linkOption.$_GET["sort"]."/";
 		 $linkOption1=$linkOption."page/";
 		 $sort3=$db->GetNameSort($sort1);
+		 echo $sort3;
 		 $metaSeo=$db->GetMetaSeoSort($sort1);
 		}
 		//echo $sort1;
@@ -64,7 +66,7 @@
 <div class="outsite ">
 <?php
 require_once('header/headerDetail.php');
-//require_once('qc/bannerHeader.php'); 
+// require_once('qc/bannerHeader.php'); 
 ?> 
 
 
@@ -75,7 +77,7 @@ require_once('header/headerDetail.php');
         <div class="story-list-bl01 box">
             <table>
                 <tbody><tr>
-                    <th>Tình trạng </th>
+                    <th>Status</th>
                     <td>
                         <ul class="choose">
 							<?php

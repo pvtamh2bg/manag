@@ -21195,7 +21195,8 @@ a.navbar-item:hover {
 }
 
 .pagination.is-rounded .pagination-link {
-	border-radius: 290486px
+	border-radius: 290486px;
+	color: var(--color-gray-p);
 }
 
 .pagination,
@@ -21215,15 +21216,15 @@ a.navbar-item:hover {
 	padding-right: .5em;
 	justify-content: center;
 	margin: .25rem;
-	text-align: center
+	text-align: center;
 }
 
 .pagination-link,
 .pagination-next,
 .pagination-previous {
 	border-color: #dbdbdb;
-	color: #363636;
-	min-width: 2.25em
+	color: var(--color-gray-p); 
+	min-width: 2.25em;
 }
 
 .pagination-link:hover,
@@ -27137,7 +27138,7 @@ textarea {
 
 .story-list .pagination a.is-current,
 .story-list .pagination a:hover {
-	background-color: #35b44d;
+	background: var(--color-modal);
 	color: #fff!important
 }
 
