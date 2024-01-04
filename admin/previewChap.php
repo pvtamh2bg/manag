@@ -208,7 +208,7 @@ $dateUpload=date('Y-m-d H:i:s');
                                 </div>
                                 <div>
                                     <h1 class="detail-title"><a href="#"><?php echo $NameStory;?></a> <?php echo "Chap ".tofloat($IdChapter);?></h1>
-                                    <time datetime="2020-10-20T12:25:21+07:00">(Cập nhật lúc: <?php echo $dateUpload;?>)</time>
+                                    <time datetime="2020-10-20T12:25:21+07:00">(Updated at: <?php echo $dateUpload;?>)</time>
 									 
                                 </div>
 								

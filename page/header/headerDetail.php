@@ -238,9 +238,10 @@ if ($(window).width() > 1023) {
 <div class="modal login-modal">
     <div class="modal-background"></div>
     <div class="modal-content">
+        <div class="content-background"></div>
         <span class="top-caption">
-            Dù ai di ngược về xuôi,<br/>
-            đến giờ đọc truyện hãy vào Thần Kinh Các
+            Unleash Your Imagination with Mangaplus.shueisha<br/>
+            - Your Ultimate Manga Destination
         </span>
         <div>
             <!-- /.top-caption -->
@@ -253,16 +254,16 @@ if ($(window).width() > 1023) {
                 <div class="login-section">
                     <div class="form-login">
                             <input type="email" placeholder="Email" id="email_login"/>
-                            <input type="password" placeholder="Mật khẩu" id="password_login">
+                            <input type="password" placeholder="password" id="password_login">
                             <button type="submit" class="button_login btn btn-lg" id="button_login2">Log in</button>
                             <a href="javascript:void(0);" class="forget-password-link">Forgot password</a>
-                    </div>                   
-                </div>            
+                    </div>
+                </div>
                 <div class="register-section">
                     <div class="form-login">
                         <input type="email" placeholder="Email" id="email_register"/>
-                        <input type="password" placeholder="Mật khẩu >7 ký tự" id="password_register">
-					   <input type="text" id="captcha_register" name="captcha_register" placeholder="Nhập mã xác nhận" style="width:85%">
+                        <input type="password" placeholder="password >7 characters" id="password_register">
+					   <input type="text" id="captcha_register" name="captcha_register" placeholder="Enter the verification code" style="width:85%">
 					     <span id="refresh_captcha"></span>
                         <button type="submit" id="button_register">Sign up</button>
                     </div>

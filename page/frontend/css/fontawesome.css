@@ -11563,9 +11563,8 @@ a.thumbnail:hover {
 }
 
 .alert-info {
-	color: #31708f;
-	background-color: #d9edf7;
-	border-color: #bce8f1
+	color: var(--color-dark-red);
+  background-color: var(--color-yellow);
 }
 
 .alert-info hr {
@@ -26056,11 +26055,11 @@ textarea {
 }
 
 .modal.login-modal .modal-content .top-caption {
-	font-size: 18px;
+	font-size: 13px;
 	font-weight: 700;
 	line-height: 1.7;
 	text-align: center;
-	color: #fff;
+	color: var(--color-gray-p);
 	position: absolute;
 	top: 8px;
 	left: 75px;
@@ -26077,19 +26076,19 @@ textarea {
 
 .modal.login-modal .modal-content .tabs-buttons button {
 	background-color: #fff;
-	color: #56ccf2;
+	color: var(--color-small-impact);
 	border-radius: 50px;
-	border: 1px solid #56ccf2;
+	border: 1px solid var(--color-menu);
 	font-size: 16px;
 	font-weight: 500;
 	width: 120px;
 	padding: 12px 0;
-	margin: 0 5px
+	margin: 0 5px;
 }
 
 .modal.login-modal .modal-content .tabs-buttons button.is-active {
-	background-color: #56ccf2;
-	color: #fff
+	background: var(--color-menu);
+  color: var(--color-small-impact);
 }
 
 .modal.login-modal .modal-content .tabs-contents {
@@ -26134,22 +26133,22 @@ textarea {
 
 .modal.login-modal .modal-content .tabs-contents>div .form-login button[type=submit] {
 	width: 100%;
-	padding: 12px 0;
-	border: none;
 	border-radius: 50px;
-	background-color: #56ccf2;
 	font-size: 16px;
 	font-weight: 700;
-	color: #fff;
 	margin-bottom: 20px;
-	cursor: pointer
+	cursor: pointer;
+	background-color: var(--color-dark-red);
+	color: var(--color-white);
+	border: none;
+	padding: 10px 110px;
 }
 
 .modal.login-modal .modal-content .tabs-contents>div .form-login .forget-password-link {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 700;
-	color: #56ccf2;
-	text-decoration: underline
+	color: var(--color-small-impact);
+	text-decoration: none;
 }
 
 .modal.login-modal .modal-content .tabs-contents>div .social-login {
@@ -27199,7 +27198,7 @@ textarea {
 
 #path a {
 	font-size: 13px;
-	color: #424242
+	color: var(--color-white);
 }
 
 #path a:hover {
@@ -27207,7 +27206,7 @@ textarea {
 }
 
 #path .breadcrumb {
-	background-color: #fff;
+	background-color: transparent;
 	padding: 0
 }
 
@@ -29121,15 +29120,14 @@ textarea {
 }
 
 .detail-title {
-	font-size: 20px;
-	color: #333;
-	font-weight: 700;
+	font-size: 16px;
+  color: var(--color-red);
 	display: inline-block
 }
 
 .detail-title a {
 	font-size: 20px;
-	color: #333;
+	color: var(--color-gray-hlt);
 	font-weight: 700
 }
 

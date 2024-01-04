@@ -288,7 +288,7 @@ if(isset($_SESSION['email'])){
                                 </div>
                                 <div>
                                     <h1 class="detail-title"><a href="#"><?php echo $NameStory;?></a> <?php echo "Chap ".tofloat($IdChapter);?></h1>
-                                    <time datetime="2020-10-20T12:25:21+07:00">(Cập nhật lúc: <?php echo $dateUpload;?>)</time>
+                                    <time datetime="2020-10-20T12:25:21+07:00">(Updated at: <?php echo $dateUpload;?>)</time>
 									 
                                 </div>
 								
@@ -307,13 +307,13 @@ if(isset($_SESSION['email'])){
 											echo ' ';
 											echo '<a href="javascript:void(0);" class="download-app-link"><i class="fas fa-cog fa-lg"></i></a>';
 										}else if($Nex ==-1){
-										    echo '<a class="btn btn-info go-btn prev text-white m-1 d-block" href="'.$path_p.'" ><em class="fa fa-arrow-left"></em> Chap trước</a>';
+										    echo '<a class="btn btn-info go-btn prev text-white m-1 d-block" href="'.$path_p.'" ><em class="fa fa-arrow-left"></em> Previous chapter</a>';
 											//echo '<a class="btn btn-info go-btn next text-white m-1 d-block" href="'.$path_n.'">Chap sau <em class="fa fa-arrow-right"></em></a>';
 											echo ' ';
 											echo '<a href="javascript:void(0);" class="download-app-link"><i class="fas fa-cog fa-lg"></i></a>';
 											
 										}else{
-											echo '<a  class="btn btn-info go-btn prev text-white m-1 d-block" href="'.$path_p.'"><em class="fa fa-arrow-left"></em> Chap trước</a>';
+											echo '<a  class="btn btn-info go-btn prev text-white m-1 d-block" href="'.$path_p.'"><em class="fa fa-arrow-left"></em> Previous chapter</a>';
 											echo ' ';
 											echo '<a href="javascript:void(0);" class="download-app-link"><i class="fas fa-cog fa-lg"></i></a>';
 											echo ' ';
@@ -369,12 +369,12 @@ if(isset($_SESSION['email'])){
 											echo '<a class="btn btn-info go-btn next text-white m-1 d-block" href="'.$path_n.'">Chap sau <em class="fa fa-arrow-right"></em></a>';
 										}else if($Nex ==-1){
 										    
-										    echo '<a class="btn btn-info go-btn prev text-white m-1 d-block" href="'.$path_p.'" ><em class="fa fa-arrow-left"></em> Chap trước</a>';
+										    echo '<a class="btn btn-info go-btn prev text-white m-1 d-block" href="'.$path_p.'" ><em class="fa fa-arrow-left"></em> Previous chapter</a>';
 											
 											
 											
 										}else{
-											echo '<a  class="btn btn-info go-btn prev text-white m-1 d-block" href="'.$path_p.'"><em class="fa fa-arrow-left"></em> Chap trước</a>';
+											echo '<a  class="btn btn-info go-btn prev text-white m-1 d-block" href="'.$path_p.'"><em class="fa fa-arrow-left"></em> Previous chapter</a>';
 											echo ' ';
 											echo '<a  class="btn btn-info go-btn next text-white m-1 d-block" href="'.$path_n.'">Chap sau <em class="fa fa-arrow-right"></em></a>';
 										}
