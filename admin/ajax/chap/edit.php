@@ -4,7 +4,7 @@ require_once('../../function/function.php');
 $IdStory=$_POST['IdStory'];
 $IdChap=$_POST['IdChap'];
 
-$Name="Chương ".tofloat($_POST['Name']);
+$Name="Chapter ".tofloat($_POST['Name']);
 $Path="";
 if(isset($_POST['Path']))
 $Path=implode(",",$_POST['Path']);

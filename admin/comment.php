@@ -12,7 +12,7 @@ if(isset($_SESSION['email'])){
     <span class="story-detail-title"><i class="fas fa-comments"></i>Bình Luận (<span class="comment-count"><?=$countComment?></span>)</span>
 
     <div class="group01 comments-container">
-        <div class="notify" style="padding: 10px; margin-bottom: 10px; background-color: #FFF;">
+        <div class="notify" style="padding: 10px; margin-bottom: 10px;">
             Like <a rel="nofollow" href="https://www.facebook.com/ThanKinhCac" target="_blank">Fanpage</a> để ủng hộ Thần Kinh Các và cập nhật các thông tin mới nhất về các bộ truyện nhé.
             <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/ThanKinhCac" data-send="false" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=1090&amp;href=https%3A%2F%2Fwww.facebook.com%2Ffantruyenqq&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;share=false&amp;show_faces=true"><span style="vertical-align: bottom; width: 82px; height: 20px;"><iframe name="f2b77c7d6b38574" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="" style="border: none; visibility: visible; width: 82px; height: 20px;" class=""></iframe></span>
             </div>

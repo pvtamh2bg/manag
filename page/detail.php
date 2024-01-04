@@ -110,7 +110,7 @@
 		 ?>
 		
         <section class="main-content">
-            <div class="container has-background-white story-detail">
+            <div class="container has-background-white story-detail background-dark">
                 <div id="path">
                     <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
                         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
@@ -245,8 +245,9 @@
 							
 									echo '<div class="works-chapter-item row">'; 
 									echo '<div class="col-md-10 col-sm-10 col-xs-8 ">';
-									if($muc2['Title']!="")
+									if($muc2['Title']!="") {
 										$title1=" - ".$muc2['Title'];
+									}
 									else $title1=$muc2['Title'];
 									$kk1=$linkOption.$the_loai.vn_str_filter($arr[1])."-".$IdStory."-chap-".tofloat($muc2['Name']).".html";
 									echo '<a  href="'.$kk1.'">'.$muc2['Name'].$title1.'</a>';

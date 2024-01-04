@@ -13,11 +13,11 @@
         preg_match('#col-image">.*src="(.*)".*>#ismU', $string, $cover);
 
         $manga                = array();
-        $manga['other_name']  = !empty($other_name[1]) ? $other_name[1] : "Đang cập nhật";
+        $manga['other_name']  = !empty($other_name[1]) ? $other_name[1] : "Updating...";
         $manga['name']        = !empty($name[1]) ? trim($name[1]) : '';
-        $manga['authors']     = !empty($authors[1]) ? $authors[1] : "Đang cập nhật";
-        $manga['artists']     = !empty($authors[1]) ? $authors[1] : "Đang cập nhật";
-        $manga['trans_group'] = "Đang cập nhật";
+        $manga['authors']     = !empty($authors[1]) ? $authors[1] : "Updating...";
+        $manga['artists']     = !empty($authors[1]) ? $authors[1] : "Updating...";
+        $manga['trans_group'] = "Updating...";
         $manga['genres']      = !empty($genres[1]) ? $genres[1] : '';
       return $manga ;
     }

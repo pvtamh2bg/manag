@@ -329,7 +329,7 @@ function load_comments1(){
 	       data:{'IdDiv':IdDiv,'IdComment':IdComment,'IdStory':IdStory},
 	       success:function(kq){
 			  
-			   $(".load_more_comment a").text("Xem thêm nhiều bình luận....");
+			   $(".load_more_comment a").text("View more comments....");
 			function myFunction3(str,arr1,arr2) {
 			 var k=str;
 			

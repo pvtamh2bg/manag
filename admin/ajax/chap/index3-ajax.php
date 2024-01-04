@@ -9,7 +9,7 @@ $link_chap=$_POST['link_chap'];
 $curl = new cURL();
 $slug    = $curl->slug(trim($name));
 $error=0;
-$IdChapter="Chương ".$from;
+$IdChapter="Chapter ".$from;
 $parse = parse_url($link_chap);
 	$db=new config();
 	$db->config();

@@ -466,10 +466,10 @@ $(document).ready(function(){
 		  var Content=$("#Content").val();
 		  
 		  if(NameOther==""){
-			  NameOther="Đang Cập Nhật";
+			  NameOther="Updating...";
 		  }
 		  if(Content==""){
-			  Content="Đang Cập Nhật";
+			  Content="Updating...";
 		  }
 		
 window.open("previewStory.php?idStory=0&_name="+Name+"&_nameOther="+NameOther+"&_status="+Status+"&_content="+Content+"&_hot="+Badge+"&_waning="+Waning+"&_genre="+Genre+"&_author="+Author+"&_country="+Country+"&_link="+Avatar+"", '_blank');

@@ -2,7 +2,7 @@
 require_once('../../model/connection.php');
 require_once('../../function/function.php');
 $IdStory=$_POST['IdStory'];
-$Name="Chương ".tofloat($_POST['Name']);
+$Name="Chapter ".tofloat($_POST['Name']);
 $Path="";
 if(isset($_POST['Path']))
 $Path=implode(",",$_POST['Path']);

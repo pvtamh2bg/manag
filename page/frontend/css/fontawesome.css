@@ -26811,7 +26811,11 @@ textarea {
 
 .comment-container .group01 .form-comment .input-comment input {
 	width: 100%;
-	border-radius: 25px
+	border-radius: 25px;
+	background: var(--color-card-header);
+	border: none;
+	color: var(--color-small-impact);
+	padding-left: 15px;
 }
 
 .comment-container .group01 .form-comment .mess-input {
@@ -26824,7 +26828,16 @@ textarea {
 
 .comment-container .group01 .form-comment .mess-input .textarea {
 	min-height: 96px;
-	padding-right: 100px
+	padding-right: 100px;
+	border: 1px solid var(--color-yellow);
+	background: var(--color-card-header);
+	color: var(--color-gray-p);
+}
+.comment-container .group01 .form-comment .mess-input textarea:-moz-placeholder,
+.comment-container .group01 .form-comment .mess-input textarea::-moz-placeholder,
+.comment-container .group01 .form-comment .mess-input textarea::-webkit-input-placeholder,
+.comment-container .group01 .form-comment .mess-input textarea::placeholder {
+	color: var(--color-white);
 }
 
 .comment-container .group01 .form-comment .mess-input .submit_comment {
@@ -26934,7 +26947,7 @@ textarea {
 
 .comment-container .group01 .list-comment .content-comment {
 	padding: 10px 0;
-	color: #000
+	color: var(--color-small-impact);
 }
 
 .comment-container .group01 .list-comment .reply-list {
@@ -26953,9 +26966,14 @@ textarea {
 }
 
 .comment-container .group01 .list-comment .outline-content-comment {
-	background: #f7f7f7;
+	background: var(--color-card-header);
 	padding: 10px;
-	border-radius: 10px
+	border-radius: 10px;
+	color: var(--color-menu);
+}
+
+.comment-container .group01 .list-comment .outline-content-comment strong {
+	color: #fff;
 }
 
 .comment-container .load-more a {
@@ -27213,7 +27231,10 @@ textarea {
 #path .breadcrumb li+li:before {
 	content: "\0003E"
 }
-
+.story-detail.background-dark {
+	background: var(--color-dark-gray) !important;
+  color: var(--color-white);
+}
 .story-detail .block01 {
 	width: 100%;
 	float: left;
@@ -27261,7 +27282,7 @@ textarea {
 .story-detail .block01 .center h1 {
 	font-size: 24px;
 	font-weight: 700;
-	color: #000;
+	color: var(--color-yellow);
 	padding-bottom: 5px
 }
 
@@ -27271,17 +27292,22 @@ textarea {
 
 .story-detail .block01 .center .txt {
 	line-height: 30px;
-	color: #000;
-	padding-bottom: 10px
+	color: var(--color-small-impact);
+	padding-bottom: 10px;
 }
 
 .story-detail .block01 .center .txt a.org {
-	color: #424242
+	padding: 3px 7px;
+	color: #fff;
+	background-size: 300% 100%;
+	background-image: linear-gradient(to right,#25aae1,#043ea5,#04befe,#3f86ed);
+	border-radius: 3px;
+	font-size: 12px;
+	text-transform: capitalize;
 }
 
 .story-detail .block01 .center .txt span.sp01 {
 	padding-left: 15px;
-	color: #424242
 }
 
 .story-detail .block01 .center .txt span.sp02 {
@@ -27451,7 +27477,7 @@ textarea {
 }
 
 .story-detail .block02 .box .works-chapter-item a {
-	color: #000
+	color: var(--color-small-impact);
 }
 
 .story-detail .block02 .box .works-chapter-item a:hover {

@@ -16,7 +16,7 @@ function check_chap($arr,$str){
         $t=0;
         for($i=0;$i<count($arr);$i++)
         {
-            preg_match('#(chapter|chap|chương) ([\d.]+)#is', $arr[$i], $chapter);
+            preg_match('#(chapter|chap|chapter) ([\d.]+)#is', $arr[$i], $chapter);
             
             $chap2=str_replace('Chapter','Chương',$chapter[0]);
             $chap3=str_replace('Chapter','Chương',$str);

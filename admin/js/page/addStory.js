@@ -28,10 +28,10 @@ $(document).ready(function(){
 		  var NameOther=$("#NameOther").val();
 		  var Content=$("#Content").val();
 		  if(NameOther==""){
-			  NameOther="Đang Cập Nhật";
+			  NameOther="Updating...";
 		  }
 		  if(Content==""){
-			  Content="Đang Cập Nhật";
+			  Content="Updating...";
 		  }
 	 if (confirm("Bạn chắc muốn lưu!!!") == true) {	  
 	  if(Avatar!=undefined && Name!=""){
@@ -85,10 +85,10 @@ $(document).ready(function(){
 		  var NameOther=$("#NameOther").val();
 		  var Content=$("#Content").val();
 		  if(NameOther==""){
-			  NameOther="Đang Cập Nhật";
+			  NameOther="Updating...";
 		  }
 		  if(Content==""){
-			  Content="Đang Cập Nhật";
+			  Content="Updating...";
 		  }
 	 if (confirm("Bạn chắc muốn lưu!!!") == true) {	
 	  if(Avatar!=undefined && Name!=""){
