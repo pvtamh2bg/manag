@@ -35,7 +35,7 @@ if(isset($_SESSION['email'])){
 				$subscribe1=explode(",",$subscribe);
 				if(array_search($IdStory,$subscribe1)!=[]){
 					$subscribe_class="fa"; 
-					$subscribe_text=" Huỷ theo dõi";
+					$subscribe_text=" Unsubscribe";
 				}
 			}
 	//
@@ -60,7 +60,7 @@ if(isset($_SESSION['email'])){
 	if($_SESSION['subscribe']!=[]){
 			if(array_search($IdStory,$_SESSION['subscribe'])!=[]){
 				$subscribe_class="fa"; 
-				$subscribe_text=" Huỷ theo dõi";
+				$subscribe_text=" Unsubscribe";
 				 
 				
 			}else{

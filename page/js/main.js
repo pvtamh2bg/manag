@@ -6330,7 +6330,7 @@ function(h) {
                     // id: e
                 // },
                 // success: function(e) {
-                    // "" != e && ("index" == n ? 0 == e ? t.html('<span class="fa fa-heart"></span>Theo dõi') : t.html('<span class="far fa-heart"></span>Huỷ theo dõi') : 0 == e ? t.html('<i class="far fa-heart"></i><span class="control-see"> Theo dõi</span>') : t.html('<i class="fa fa-heart"></i><span class="control-see"> Huỷ theo dõi</span>'))
+                    // "" != e && ("index" == n ? 0 == e ? t.html('<span class="fa fa-heart"></span>Theo dõi') : t.html('<span class="far fa-heart"></span>Unsubscribe') : 0 == e ? t.html('<i class="far fa-heart"></i><span class="control-see"> Theo dõi</span>') : t.html('<i class="fa fa-heart"></i><span class="control-see"> Unsubscribe</span>'))
                 // }
             // })
         });

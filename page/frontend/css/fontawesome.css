@@ -24699,11 +24699,12 @@ textarea {
 
 .top-bar {
 	padding: 10px 0;
-	background:#dc0914;
-  background:-webkit-gradient(linear,left top,left bottom,from(rgba(220,9,20,.7)),color-stop(6%,#dc0914),color-stop(6%,#000),to(rgba(220,9,20,0)));
-  background:linear-gradient(180deg,rgba(220,9,20,.7),#dc0914 6%,#000 0,rgba(220,9,20,0));
-  -webkit-transition:all .3s;
-  transition:all .3s
+  transition:all .3s;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 999;
 }
 
 .Updates-module_fluidImage_1NMT9 {
@@ -26817,6 +26818,9 @@ textarea {
 	color: var(--color-small-impact);
 	padding-left: 15px;
 }
+.comment-container .group01 .form-comment .input-comment input::placeholder {
+	color: var(--color-line);
+}
 
 .comment-container .group01 .form-comment .mess-input {
 	clear: both;
@@ -26833,11 +26837,9 @@ textarea {
 	background: var(--color-card-header);
 	color: var(--color-gray-p);
 }
-.comment-container .group01 .form-comment .mess-input textarea:-moz-placeholder,
-.comment-container .group01 .form-comment .mess-input textarea::-moz-placeholder,
-.comment-container .group01 .form-comment .mess-input textarea::-webkit-input-placeholder,
+
 .comment-container .group01 .form-comment .mess-input textarea::placeholder {
-	color: var(--color-white);
+	color: var(--color-line);
 }
 
 .comment-container .group01 .form-comment .mess-input .submit_comment {

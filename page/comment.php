@@ -22,7 +22,7 @@ if(isset($_SESSION['email'])){
         <div class="form-comment main_comment">
             <div class="message-content">
                 <div class="input-comment">
-                    <span class="col-md-6 col-sm-6 col-xs-12 text-center"><input  class="input" id="name_comment" type="text" placeholder="Họ tên" value="<?=$_SESSION['name_comment']?>"/></span>
+                    <span class="col-md-6 col-sm-6 col-xs-12 text-center"><input  class="input" id="name_comment" type="text" placeholder="Name" value="<?=$_SESSION['name_comment']?>"/></span>
                     <span class="col-md-6 col-sm-6 col-xs-12 text-center"><input  class="input" id="email_comment" type="email" placeholder="Email" value="<?=$email_1?>"></span>
                 </div>
                 <div class="mess-input">

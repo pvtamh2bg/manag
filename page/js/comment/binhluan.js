@@ -133,7 +133,7 @@ $(document).ready(function(){
 		 var Id=$(this).attr("aa0");//
 		 var id3=$(this).attr("email");
 	
-	   	 $("#"+Id).after("<div class='form-comment reply_comment reply_"+Id+" reply-ccc' ><div class='message-content'><div class='input-comment'><span class='col-md-6 col-sm-6 col-xs-12 text-center'><input  class='input' id='name_comments' type='text' placeholder='Họ tên' value='"+name_comment+"'></span><span class='col-md-6 col-sm-6 col-xs-12 text-center'><input  class='input' id='email_comments' type='email' placeholder='Email' value='"+m+"'></span></div><div class='mess-input'><textarea class='textarea' placeholder='Nội dung bình luận' id='content_comment_s'></textarea><button id='emoji_2' type='submit' class='click_emoji'></button><button type='submit' class='submit_comment' aa00='0' aa0='"+Id+"' aa4='"+Id+"' aa5='"+NameRelay1+"' aa6='"+id2+"' email='"+id3+"'></button></div></div></div>");
+	   	 $("#"+Id).after("<div class='form-comment reply_comment reply_"+Id+" reply-ccc' ><div class='message-content'><div class='input-comment'><span class='col-md-6 col-sm-6 col-xs-12 text-center'><input  class='input' id='name_comments' type='text' placeholder='Name' value='"+name_comment+"'></span><span class='col-md-6 col-sm-6 col-xs-12 text-center'><input  class='input' id='email_comments' type='email' placeholder='Email' value='"+m+"'></span></div><div class='mess-input'><textarea class='textarea' placeholder='Nội dung bình luận' id='content_comment_s'></textarea><button id='emoji_2' type='submit' class='click_emoji'></button><button type='submit' class='submit_comment' aa00='0' aa0='"+Id+"' aa4='"+Id+"' aa5='"+NameRelay1+"' aa6='"+id2+"' email='"+id3+"'></button></div></div></div>");
 		 //$("#content_comment_s").focus();
 		 $("#content_comment_s").focus();
 		 //$("#content_comment_s").select();
@@ -480,15 +480,15 @@ function load_comments1(){
 				
 				if(Type_Chapter==1){
 					if(o.success==0){
-						t.html('<span class="fa fa-heart"></span>Theo dõi')
+						t.html('<span class="fa fa-heart"></span>Subscribe')
 					}else{
-						t.html('<span class="far fa-heart"></span>Huỷ theo dõi')
+						t.html('<span class="far fa-heart"></span>Unsubscribe')
 					}
 				}else{
 					if(o.success==0){
-						t.html('<span class="far fa-heart"> Theo dõi</span>')
+						t.html('<span class="far fa-heart"> Subscribe</span>')
 					}else{
-						t.html('<span class="fa fa-heart"> Huỷ theo dõi</span>')
+						t.html('<span class="fa fa-heart"> Unsubscribe</span>')
 					}
 				}
 			 }
