@@ -6231,7 +6231,7 @@ function(h) {
         if (h('#results a[rel="external"]').attr("target", "_blank"), 0 < jQuery(".scrollTop").length && jQuery(window).on("scroll", function(e) {
                 500 < jQuery(window).scrollTop() ? h(".scrollTop").css("display", "block") : h(".scrollTop").css("display", "none")
             }), h(".light-see").click(function(e) {
-                e.preventDefault(), h(".top-bar, .main-content, .story-see-footer, .nav, .button-nav, .story-see-blur, .outsite").toggleClass("on"), p < u && (h(".outsite").hasClass("on") ? (h(this).html('<i class="fas fa-lightbulb"></i> Bật đèn'), g("light-see", 1, 2628e3)) : (h(this).html('<i class="far fa-lightbulb"></i> Tắt đèn'), g("light-see", 0, 2628e3)))
+                e.preventDefault(), h(".top-bar, .main-content, .story-see-footer, .nav, .button-nav, .story-see-blur, .outsite").toggleClass("on"), p < u && (h(".outsite").hasClass("on") ? (h(this).html('<i class="fas fa-lightbulb"></i> Turn on the light'), g("light-see", 1, 2628e3)) : (h(this).html('<i class="far fa-lightbulb"></i> Turn off the light'), g("light-see", 0, 2628e3)))
             }), h(".scrollTop").click(function() {
                 return h("html, body").animate({
                     scrollTop: 0

@@ -192,8 +192,8 @@ if ($(window).width() > 1023) {
 							foreach($arrNotify as $muc){
 								echo '<li class="message  '.$noti.'">';
 									echo '<a href="'.$linkOption.'truyen-tranh/'.vn_str_filter($muc['Name']).'-'.$muc['IdStory'].'.html">';
-										echo '<div class="title-message-item">Thông Báo</div>';
-										echo '<div class="content-message-item">'.$muc['NameNoti'].' vừa trả lời bình luận của bạn.</div>';
+										echo '<div class="title-message-item">Notify</div>';
+										echo '<div class="content-message-item">'.$muc['NameNoti'].' just replied to your comment.</div>';
 										echo '<p class="time"><i class="far fa-clock"></i>'.date("H:i d/m/Y", strtotime($muc['DateUpload'])).'</p>';
 									echo '</a>';
 								echo '</li>';

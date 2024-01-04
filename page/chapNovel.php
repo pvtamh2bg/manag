@@ -468,7 +468,7 @@ if(isset($_SESSION['email'])){
 
                         <div class="level-right">
                             <ul class="list-01">
-                                <li><a class="light-see" href="javascript:void(0);"><i class="fas fa-lightbulb"></i> <span class="control-see">Bật đèn</span></a>
+                                <li><a class="light-see" href="javascript:void(0);"><i class="fas fa-lightbulb"></i> <span class="control-see">Turn on the light</span></a>
                                 </li>
                                 <li><a class="subscribeBook" href="javascript:void(0);" data-id="<?=$IdStory?>" data-page="detail"><i class="<?=$subscribe_class?> fa-heart"></i><span class="control-see"></span></a>
                                 </li>
