@@ -507,7 +507,7 @@ $(document).ready(function () {
   // });
 
   function load_comments1() {
-    $(".load_more_comment a").text("Đang tải thêm bình luận....");
+    $(".load_more_comment a").text("Processing....");
 
     var count_class = document.getElementsByClassName("comment-main-replys");
     var IdDiv = 0;
@@ -525,8 +525,6 @@ $(document).ready(function () {
       data: { IdDiv: IdDiv, IdComment: IdComment, IdStory: IdStory },
       success: function (kq) {
         $(".load_more_comment a").text("View more comments....");
-				console.log(kq);
-				var o = JSON.parse(kq);
         function myFunction3(str, arr1, arr2) {
           var k = str;
 
@@ -542,6 +540,7 @@ $(document).ready(function () {
           }
           return k;
         }
+				var o = JSON.parse(kq);
         var c = o.Comment_s;
         var r = o.reply_s;
         var ej_c = o.ej_code;

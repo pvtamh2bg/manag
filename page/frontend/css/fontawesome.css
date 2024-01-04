@@ -26932,8 +26932,8 @@ textarea {
 }
 
 .comment-container .group01 .list-comment .title-hidden {
-	border: 1px solid #000;
-	color: #000
+	border: 1px solid var(--color-gray-hlt);
+	color: var(--color-small-impact)
 }
 
 .comment-container .group01 .list-comment .action-comment span {
