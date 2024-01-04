@@ -496,7 +496,6 @@ if (isset($_SESSION['text_size']))
 				</div>
 			</div>
 		</section>
-
 		<script type="text/javascript">
 			var m = 0;
 			m = <?php echo json_encode($user); ?>;
@@ -524,9 +523,8 @@ if (isset($_SESSION['text_size']))
 				}
 				e.preventDefault(); // prevent the default action (scroll / move caret)
 			};
-			//console.log(m);
-			var m2 = <?php echo json_encode($IdStory); ?>
-			var linkOption1 = <?php echo json_encode($linkOption1); ?>
+			var m2 = <?php echo json_encode($IdStory); ?>;
+			var linkOption1 = <?php echo json_encode($linkOption1); ?>;
 			var Type_Chapter = 0;
 			var name_comment = <?php echo json_encode($_SESSION['name_comment']) ?>;
 		</script>
