@@ -88,7 +88,14 @@ if ($(window).width() > 1023) {
 }
 });
 </script>
-    <div class="Updates-module_fluidImage_1NMT9"></div>
+    <div class="Updates-module_fluidImage_1NMT9 <?= $On?>"></div>
+    <span class="logo mobile">
+        <a href="<?= $linkOption?>">
+            <div>
+            <img src="<?= $linkOption . 'page/frontend/images/web_logo.png' ?>" alt="logo">
+            </div>
+        </a>
+    </span>
 	<section class="top-bar <?= $On?>" id="home">
     <div class="container">
         <div class="level">
@@ -101,7 +108,7 @@ if ($(window).width() > 1023) {
                     </a>
                 </span>
                     <!-- /.logo -->
-                    <div class="top-search">
+                    <div class="top-search pc">
                         <input type="text" class="text-search" input-Link="<?= $linkOption?>" placeholder="Search..."/>
                         <button class="submit-btn btn_search" button-Link="<?= $linkOption?>"></button>
                         <div class="list-results"><!-- Add class 'open' to open list results -->
@@ -110,7 +117,7 @@ if ($(window).width() > 1023) {
                             </div>
                         </div>
                         <!-- /.list-results -->
-                    </div>					
+                    </div>
                 <!-- /.top-search -->
             </div>
             <div class="level-right">
@@ -316,7 +323,7 @@ if ($(window).width() > 1023) {
             <div class="navbar-menu">
                 <div class="navbar-start">
                     <div class="top-search smp">
-                        <input class="text-search" type="text" placeholder="keyword">
+                        <input class="text-search" type="text" placeholder="Search">
                         <button class="submit-btn btn_search"></button>
                         <div class="list-results">
                         </div>
