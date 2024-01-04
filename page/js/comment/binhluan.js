@@ -37,7 +37,6 @@ var IdUser = m;
 $(document).ready(function () {
   load_comments1();
   $("#submit_comment-id").click(function () {
-    alert("aaaa");
 
     var d = new Date();
     var Content = $("#content_comment").val();
@@ -526,6 +525,7 @@ $(document).ready(function () {
       data: { IdDiv: IdDiv, IdComment: IdComment, IdStory: IdStory },
       success: function (kq) {
         $(".load_more_comment a").text("View more comments....");
+				console.log(kq);
 				var o = JSON.parse(kq);
         function myFunction3(str, arr1, arr2) {
           var k = str;
