@@ -94,7 +94,11 @@ if ($(window).width() > 1023) {
         <div class="level">
             <div class="level-left pc">
                 <span class="logo">
-                    <a href="<?= $linkOption?>"><img src="<?= $linkOption . 'page/frontend/images/web_logo.png' ?>" alt="logo"></a>
+                    <a href="<?= $linkOption?>">
+                        <div>
+                        <img src="<?= $linkOption . 'page/frontend/images/web_logo.png' ?>" alt="logo">
+                        </div>
+                    </a>
                 </span>
                     <!-- /.logo -->
                     <div class="top-search">

@@ -24736,14 +24736,111 @@ textarea {
   }
 }
 
-.top-bar .logo {
+.top-bar .logo a div {
 	text-indent: -9999px;
-	width: 150px;
+	width:150px;
+  position:relative;
+  top:15px;
+  z-index:2;
+}
+.top-bar .logo a div img {
+	display: block;
+	height: auto;
 }
 
-.top-bar .logo img {
-	width: 100%;
-	display: block
+.top-bar .logo a div:after {
+	content:"";
+  background:url(../images/web_logo_190118_light-luffy.bcf5fcca.png) no-repeat;
+  background-size:cover;
+  width:100%;
+  height:100%;
+  position:absolute;
+  display:inline-block;
+  left:0;
+  top:0;
+  -webkit-transform-origin:30% 70%;
+  transform-origin:30% 70%;
+  will-change:transform;
+  pointer-events:none;
+  -webkit-animation:styles-module_gomuback_20yQg .2s both;
+  animation:styles-module_gomuback_20yQg .2s both
+}
+
+.top-bar a:hover div:after {
+  -webkit-animation:styles-module_gomugomu_2sF1H 1s both;
+  animation:styles-module_gomugomu_2sF1H 1s both
+}
+@-webkit-keyframes styles-module_gomugomu_2sF1H {
+  0% {
+    -webkit-transform:skew(0deg,0deg);
+    transform:skew(0deg,0deg)
+  }
+  40% {
+    -webkit-transform:skew(-10deg,-10deg) scale(1);
+    transform:skew(-10deg,-10deg) scale(1)
+  }
+  50% {
+    -webkit-transform:skew(25deg,25deg) scale(1.75);
+    transform:skew(25deg,25deg) scale(1.75)
+  }
+  65% {
+    -webkit-transform:scale(1.2) skew(-5deg,-5deg);
+    transform:scale(1.2) skew(-5deg,-5deg)
+  }
+  75% {
+    -webkit-transform:scale(1.2) skew(5deg,5deg);
+    transform:scale(1.2) skew(5deg,5deg)
+  }
+  to {
+    -webkit-transform:scale(1.2) skew(0deg,0deg);
+    transform:scale(1.2) skew(0deg,0deg)
+  }
+}
+@keyframes styles-module_gomugomu_2sF1H {
+  0% {
+    -webkit-transform:skew(0deg,0deg);
+    transform:skew(0deg,0deg)
+  }
+  40% {
+    -webkit-transform:skew(-10deg,-10deg) scale(1);
+    transform:skew(-10deg,-10deg) scale(1)
+  }
+  50% {
+    -webkit-transform:skew(25deg,25deg) scale(1.75);
+    transform:skew(25deg,25deg) scale(1.75)
+  }
+  65% {
+    -webkit-transform:scale(1.2) skew(-5deg,-5deg);
+    transform:scale(1.2) skew(-5deg,-5deg)
+  }
+  75% {
+    -webkit-transform:scale(1.2) skew(5deg,5deg);
+    transform:scale(1.2) skew(5deg,5deg)
+  }
+  to {
+    -webkit-transform:scale(1.2) skew(0deg,0deg);
+    transform:scale(1.2) skew(0deg,0deg)
+  }
+}
+@-webkit-keyframes styles-module_gomuback_20yQg {
+  0% {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2)
+  }
+  to {
+    -webkit-transform:scale(1);
+    transform:scale(1)
+  }
+}
+@keyframes styles-module_gomuback_20yQg {
+  0% {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2)
+  }
+  to {
+    -webkit-transform:scale(1);
+    transform:scale(1)
+  }
 }
 
 .top-bar .top-links {
