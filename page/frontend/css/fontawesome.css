@@ -27999,9 +27999,7 @@ textarea {
 	}
 	.top-bar {
 		width: 100%;
-		padding: 8px 0;
-		box-shadow: 0 3px 3px -6px #6b6969;
-		background-color: #f18121
+		background: var(--color-gray);
 	}
 	.top-bar .level-right {
 		margin-top: 0;
@@ -28635,7 +28633,8 @@ textarea {
 		bottom: 0
 	}
 	.story-detail {
-		background: 0 0!important
+		background: 0 0!important;
+		padding: 10px;
 	}
 	.story-detail .block01 .left {
 		margin: 0 0 20px;

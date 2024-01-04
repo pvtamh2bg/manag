@@ -386,7 +386,7 @@ if(isset($_SESSION['email'])){
                                         </li>
                                     </ol>
                                 </div>                          
-								<?php								
+								<?php
 								$countComment=$db->GetCountComment($IdStory);
 								require_once('comment.php');
 								?>

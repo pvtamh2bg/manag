@@ -264,7 +264,6 @@
                 </div>
                	<?php
 					$countComment=$db->GetCountComment($IdStory);
-					
 					require_once('comment.php');
 										
 				?>

@@ -376,7 +376,7 @@ if(isset($_SESSION['email'])){
 									//require_once('qc/bannerFooterChap.php'); 
 							?>	
                             <div class="story-detail has-background-white on">
-                                <div id="path">
+                                <!-- <div id="path">
                                     <ol class="breadcrumb" itemscope="" itemtype="">
                                         <li itemprop="itemListElement" itemscope="" itemtype="">
                                             <a itemprop="item" href="<?=$linkOption?>">
@@ -397,8 +397,8 @@ if(isset($_SESSION['email'])){
                                             <meta itemprop="position" content="3">
                                         </li>
                                     </ol>
-                                </div>                          
-								<?php								
+                                </div>                           -->
+								<?php
 								$countComment=$db->GetCountComment($IdStory);
 								require_once('comment.php');
 								?>
