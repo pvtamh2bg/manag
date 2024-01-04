@@ -172,7 +172,7 @@ $(document).ready(function(){
 							 var html="";
 							
 							   if(b1.length==0){
-								   html+="<div class='no-result' style='padding: 10px'>Không Tìm Thấy Kết Quả Nào!</div>";
+								   html+="<div class='no-result' style='padding: 10px'>No Results Found!</div>";
 							   }else{
 											 for(var i=0;i<b1.length;i++){
 												 html+="<div class='list-container'>";
