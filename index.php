@@ -15,20 +15,38 @@
 <html lang="vi">
    <head>
 	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	  <title>Thần Kinh Các - Kênh Truyện Đam Mỹ Online Hay Nhất</title>
-	  <meta name="keyword" content="truyện tranh online, truyện tranh đam mỹ, truyện tranh bách hợp hàn quốc, truyện tranh xuyên không cổ đại, truyện tranh audio, truyện tranh ngôn tình full">
-	  <meta name="description" content="Web Truyện tranh online lớn nhất được cập nhật liên tục mỗi ngày - truyện tranh online ngôn tình full, truyện tranh đam mỹ, truyện tranh xuyên không cổ đại">
-	  <meta property="og:title" content="truyện tranh online ngôn tình full, truyện tranh đam mỹ, truyện tranh bách hợp hàn quốc, truyện tranh xuyên không cổ đại">
-      <meta property="og:type" content="website">
-      <meta property="og:url" content="https://<?=$domain?>/">
+	  <title>mangaplus.shueisha.tv | Read and Discover Manga Online</title>
+		<meta name="title" content="mangaplus.shueisha.tv | Read and Discover Manga Online">
+	  <meta name="keyword" content="Explore a vast collection of manga on mangaplus.shueisha.tv. Enjoy the latest chapters and discover new favorites updated daily.">
+	  <meta name="description" content="Explore a vast collection of manga on mangaplus.shueisha.tv. Enjoy the latest chapters and discover new favorites updated daily.">
+	  <meta property="og:title" content="mangaplus.shueisha.tv | Read and Discover Manga Online">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://<?=$domain?>/">
 	  <meta property="og:site_name" content="<?=$domain?>">
+		<meta property="og:description" content="Explore a vast collection of manga on mangaplus.shueisha.tv. Enjoy the latest chapters and discover new favorites updated daily.">
+    <meta property="og:image" content="https://mangaplus.shueisha.tv/images/social-preview-image.png">
+
 	  <meta property="og:type" content="article">    
-	  <meta name="copyright" content=" Copyright © 2023<?=$domain?>">
+	  <meta name="copyright" content=" Copyright © 2024<?=$domain?>">
 	  <meta name="Author" content="<?=$domain?>">
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+		<!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<?=$domain?>">
+    <meta property="twitter:title" content="Manga plus shueisha | Read and Discover Manga Online">
+    <meta property="twitter:description" content="Explore a vast collection of manga on Your Manga Site Name. Enjoy the latest chapters and discover new favorites updated daily.">
+    <meta property="twitter:image" content="<?=$domain?>/images/social-preview-image.png">
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="<?=$domain?>">
+
+		<!-- Language Indication -->
+		<meta http-equiv="content-language" content="en">
+
 		<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/style.css">	  
-		<link rel="shortcut icon" href="<?php echo $linkOption1;?>frontend/images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="<?php echo $linkOption1;?>frontend/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/fontawesome.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/read.css">	  
     <script src="<?php echo $linkOption1;?>js/main.js"></script>

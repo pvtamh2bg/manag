@@ -186,8 +186,8 @@ $(document).ready(function () {
         $(".content-comment").readmore({
           maxHeight: 105,
           speed: 100,
-          moreLink: '<p class="readmore"><a href="#">Xem Thêm</a></p>',
-          lessLink: '<p class="readmore"><a href="#">Rút Gọn</a></p>',
+          moreLink: '<p class="readmore"><a href="#">Read More</a></p>',
+          lessLink: '<p class="readmore"><a href="#">Collapse</a></p>',
           embedCSS: !0,
           sectionCSS: "display: block; width: 100%;",
           startOpen: !1,
@@ -402,8 +402,8 @@ $(document).ready(function () {
         $(".content-comment").readmore({
           maxHeight: 105,
           speed: 100,
-          moreLink: '<p class="readmore"><a href="#">Xem Thêm</a></p>',
-          lessLink: '<p class="readmore"><a href="#">Rút Gọn</a></p>',
+          moreLink: '<p class="readmore"><a href="#">Read More</a></p>',
+          lessLink: '<p class="readmore"><a href="#">Collapse</a></p>',
           embedCSS: !0,
           sectionCSS: "display: block; width: 100%;",
           startOpen: !1,
@@ -869,8 +869,8 @@ $(document).ready(function () {
       $(".content-comment").readmore({
         maxHeight: 105,
         speed: 100,
-        moreLink: '<p class="readmore"><a href="#">Xem Thêm</a></p>',
-        lessLink: '<p class="readmore"><a href="#">Rút Gọn</a></p>',
+        moreLink: '<p class="readmore"><a href="#">Read More</a></p>',
+        lessLink: '<p class="readmore"><a href="#">Collapse</a></p>',
         embedCSS: !0,
         sectionCSS: "display: block; width: 100%;",
         startOpen: !1,
