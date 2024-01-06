@@ -1081,20 +1081,20 @@ class config
 			
 			switch ($country) {
 			  case "1":	
-				$country="Trung Quốc";
-				break;
+					$country="China";
+					break;
 			  case "2":
-			    $country="Việt Nam";
-				break;
+			    $country="Viet Nam";
+					break;
 			  case "3":
-				$country="Hàn Quốc";
-				break;
+					$country="Korea";
+					break;
 			  case "4":
-				$country="Nhật Bản";
-				break;
+					$country="Japan";
+					break;
 			  case "5":
-				$country="Mỹ";
-				break;			
+					$country="US";
+					break;			
 			}
 			$k.=" and Country LIKE '%".$country."%'";
 				
@@ -1102,10 +1102,10 @@ class config
 		if($status!="0"){
 			switch ($status) {
 			  case "1":	
-				$status="onGoing";
+				$status="OnGoing";
 				break;
 			  case "2":
-			    $status="Completed";
+			    $status="Finished";
 				break;
 			 
 				break;			
@@ -1172,30 +1172,30 @@ class config
 		$k="";		
 		$offset = ($current_page - 1) * $item_per_page;		
 		switch ($country) {
-		  case "1":	
-			$country="Trung Quốc";
-			break;
-		  case "2":
-			$country="Việt Nam";
-			break;
-		  case "3":
-			$country="Hàn Quốc";
-			break;
-		  case "4":
-			$country="Nhật Bản";
-			break;
-		  case "5":
-			$country="Mỹ";
-			break;
+			case "1":	
+				$country="China";
+				break;
+			case "2":
+			    $country="Viet Nam";
+				break;
+			case "3":
+				$country="Korea";
+				break;
+			case "4":
+				$country="Japan";
+				break;
+			case "5":
+				$country="US";
+				break;			
 		  default:
  		  $country="";
 		}
 		switch ($status) {
 		  case "0":	
-			$status="onGoing";
+			$status="OnGoing";
 			break;
 		  case "2":
-			$status="Completed";
+			$status="Finished";
 			break;
 		  default:
  		  $status="";	
@@ -1238,7 +1238,7 @@ class config
 			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpload DESC";
 			break;
 		  case "truyen-hoan-thanh":
-		    $sql="SELECT * FROM qq_story where hide_view=0 and story_Status='Completed' ".$k." ORDER BY DateUpdate_Chap DESC";
+		    $sql="SELECT * FROM qq_story where hide_view=0 and story_Status='Finished' ".$k." ORDER BY DateUpdate_Chap DESC";
 		    break;
 		  case "truyen-tranh-hay":
 		    $sql = "SELECT * FROM qq_story where hide_view=0 and Female=1 ".$k." ORDER BY DateUpdate_Chap DESC";
@@ -1284,29 +1284,29 @@ class config
 		$offset = ($current_page - 1) * $item_per_page;
 		switch ($country) {
 		  case "1":	
-			$country="Trung Quốc";
-			break;
-		  case "2":
-			$country="Việt Nam";
-			break;
-		  case "3":
-			$country="Hàn Quốc";
-			break;
-		  case "4":
-			$country="Nhật Bản";
-			break;
-		  case "5":
-			$country="Mỹ";
-			break;
+				$country="China";
+				break;
+			case "2":
+			  $country="Viet Nam";
+				break;
+			case "3":
+				$country="Korea";
+				break;
+			case "4":
+				$country="Japan";
+				break;
+			case "5":
+				$country="US";
+				break;
 		  default:
  		  $country="";
 		}
 		switch ($status) {
 		  case "0":	
-			$status="onGoing";
+			$status="OnGoing";
 			break;
 		  case "2":
-			$status="Completed";
+			$status="Finished";
 			break;
 		  default:
  		  $status="";	
@@ -1377,10 +1377,10 @@ class config
 		
 		switch ($status) {
 		  case "0":	
-			$status="onGoing";
+			$status="OnGoing";
 			break;
 		  case "2":
-			$status="Completed";
+			$status="Finished";
 			break;
 		  default:
  		  $status="";	

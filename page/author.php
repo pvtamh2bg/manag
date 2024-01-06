@@ -85,8 +85,8 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
                   <th>Tình trạng</th>
                   <td>
                     <ul class="choose">
-<li><a class="<?php if($status1=="0") echo "active"; else echo ""; ?>" href="<?= $linkOption?>tac-gia/<?= $name?><?= $IdAuthor?><?= $page?>.html?status=0">onGoing</a></li>				
-<li><a class="<?php if($status1=="2") echo "active"; else echo ""; ?>" href="<?= $linkOption?>tac-gia/<?= $name?><?= $IdAuthor?><?= $page?>.html?status=2">Completed</a></li>					
+<li><a class="<?php if($status1=="0") echo "active"; else echo ""; ?>" href="<?= $linkOption?>tac-gia/<?= $name?><?= $IdAuthor?><?= $page?>.html?status=0">OnGoing</a></li>				
+<li><a class="<?php if($status1=="2") echo "active"; else echo ""; ?>" href="<?= $linkOption?>tac-gia/<?= $name?><?= $IdAuthor?><?= $page?>.html?status=2">Finished</a></li>					
                     </ul>
                   </td>
                 </tr>

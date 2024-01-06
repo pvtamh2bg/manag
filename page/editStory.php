@@ -41,8 +41,8 @@
     <link rel="stylesheet" type="text/css" href="frontend/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="frontend/css/style.css">
     <script src="js/main.js"></script>
-	<link rel="stylesheet" href="frontend/file/jquery.tag-editor.css">	
-	<script src="frontend/file/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+		<link rel="stylesheet" href="frontend/file/jquery.tag-editor.css">	
+		<script src="frontend/file/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="frontend/file/jquery.caret.min.js"></script>
     <script src="frontend/file/jquery.tag-editor.js"></script>	 
 </head>
@@ -98,12 +98,12 @@ require_once('header/headerDetail.php');
                                 <span class="txt">Status</span>
 								
 								<select id="Status" class="form-control">
-										<?php if($arr_Story[3]=="onGoing"){
-											echo "<option selected>onGoing</option>";
-											echo "<option>Completed</option>";
+										<?php if($arr_Story[3]=="OnGoing"){
+											echo "<option selected>OnGoing</option>";
+											echo "<option>Finished</option>";
 										}else{
-											echo "<option>onGoing</option>";
-											echo "<option selected>Completed</option>";
+											echo "<option>OnGoing</option>";
+											echo "<option selected>Finished</option>";
 										}
 										?>
 										

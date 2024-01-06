@@ -92,8 +92,8 @@ require_once('header/headerDetail.php');
                                 <span class="txt">Status</span>
 								
 								<select id="Status" class="form-control">
-									<option>onGoing</option>
-									<option>Completed</option>						
+									<option>OnGoing</option>
+									<option>Finished</option>						
 								</select>
                             </div>
                             <div class="field">
