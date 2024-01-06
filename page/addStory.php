@@ -92,8 +92,8 @@ require_once('header/headerDetail.php');
                                 <span class="txt">Status</span>
 								
 								<select id="Status" class="form-control">
-									<option>Đang tiến hành</option>
-									<option>Hoàn thành</option>						
+									<option>onGoing</option>
+									<option>Completed</option>						
 								</select>
                             </div>
                             <div class="field">

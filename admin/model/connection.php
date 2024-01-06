@@ -1102,10 +1102,10 @@ class config
 		if($status!="0"){
 			switch ($status) {
 			  case "1":	
-				$status="Đang tiến hành";
+				$status="onGoing";
 				break;
 			  case "2":
-			    $status="Hoàn thành";
+			    $status="Completed";
 				break;
 			 
 				break;			
@@ -1192,10 +1192,10 @@ class config
 		}
 		switch ($status) {
 		  case "0":	
-			$status="Đang tiến hành";
+			$status="onGoing";
 			break;
 		  case "2":
-			$status="Hoàn thành";
+			$status="Completed";
 			break;
 		  default:
  		  $status="";	
@@ -1238,7 +1238,7 @@ class config
 			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpload DESC";
 			break;
 		  case "truyen-hoan-thanh":
-		    $sql="SELECT * FROM qq_story where hide_view=0 and story_Status='Hoàn Thành' ".$k." ORDER BY DateUpdate_Chap DESC";
+		    $sql="SELECT * FROM qq_story where hide_view=0 and story_Status='Completed' ".$k." ORDER BY DateUpdate_Chap DESC";
 		    break;
 		  case "truyen-tranh-hay":
 		    $sql = "SELECT * FROM qq_story where hide_view=0 and Female=1 ".$k." ORDER BY DateUpdate_Chap DESC";
@@ -1303,10 +1303,10 @@ class config
 		}
 		switch ($status) {
 		  case "0":	
-			$status="Đang tiến hành";
+			$status="onGoing";
 			break;
 		  case "2":
-			$status="Hoàn thành";
+			$status="Completed";
 			break;
 		  default:
  		  $status="";	
@@ -1377,10 +1377,10 @@ class config
 		
 		switch ($status) {
 		  case "0":	
-			$status="Đang tiến hành";
+			$status="onGoing";
 			break;
 		  case "2":
-			$status="Hoàn thành";
+			$status="Completed";
 			break;
 		  default:
  		  $status="";	

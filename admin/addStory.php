@@ -184,8 +184,8 @@ foreach ($arr_authors as $muc) {
                 <div class="form-group">
                   <label for="inputStatus">Trạng thái</label>
                   <select id="Status" class="form-control custom-select">
-                    <option>Đang tiến hành</option>
-                    <option>Hoàn thành</option>
+                    <option>OnGoing</option>
+                    <option>Concluded</option>
                   </select>
                 </div>
                 <div class="form-group">

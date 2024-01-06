@@ -298,12 +298,12 @@ foreach ($arr_authors as $muc) {
                 <div class="form-group">
                   <label for="inputStatus">Trạng thái</label>
                   <select id="Status" class="form-control custom-select">
-                    <?php if ($arr_Story[3] == "Đang tiến hành") {
-                      echo "<option selected>Đang tiến hành</option>";
-                      echo "<option>Hoàn Thành</option>";
+                    <?php if ($arr_Story[3] == "onGoing") {
+                      echo "<option selected>onGoing</option>";
+                      echo "<option>Completed</option>";
                     } else {
-                      echo "<option>Đang tiến hành</option>";
-                      echo "<option selected>Hoàn Thành</option>";
+                      echo "<option>onGoing</option>";
+                      echo "<option selected>Completed</option>";
                     }
                     ?>
                   </select>
