@@ -146,9 +146,9 @@ require_once('header/headerDetail.php');
                 <th>Status</th>
                 <td>
                     <ul class="choose">
-                        <li><a class="<?php if($status1=="0") echo "active"; else echo ""; ?>" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $s1?>status=0<?= $s2?><?= $sort?>">In progress</a>
+                        <li><a class="<?php if($status1=="0") echo "active"; else echo ""; ?>" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $s1?>status=0<?= $s2?><?= $sort?>">OnGoing</a>
                         </li>
-                        <li><a class="<?php if($status1=="1") echo "active"; else echo ""; ?>" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $s1?>status=1<?= $s2?><?= $sort?>">Complete</a>
+                        <li><a class="<?php if($status1=="1") echo "active"; else echo ""; ?>" href="<?= $linkOption1?><?= $genres1?>-<?= $IdGenre?><?= $page?>.html?<?= $country?><?= $s1?>status=1<?= $s2?><?= $sort?>">Finished</a>
                         </li>
                     </ul>
                 </td>

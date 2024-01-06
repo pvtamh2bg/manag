@@ -106,10 +106,9 @@ $banner = $db->GetAdvertisement();
 										if ($sort1 == "truyen-hoan-thanh") {
 											?>
 											<li><a class=""
-													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?<?= $country ?><?= $s1 ?>status=2">In
-													process</a></li>
+													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?<?= $country ?><?= $s1 ?>status=2">OnGoing</a></li>
 											<li><a class="active"
-													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?<?= $country ?><?= $s1 ?>status=2">Complete</a>
+													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?<?= $country ?><?= $s1 ?>status=2">Finished</a>
 											</li>
 											<?php
 										} else {
@@ -118,13 +117,12 @@ $banner = $db->GetAdvertisement();
 												echo "active";
 											else
 												echo ""; ?>"
-													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?<?= $country ?><?= $s1 ?>status=0">In
-													process</a></li>
+													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?<?= $country ?><?= $s1 ?>status=0">OnGoing</a></li>
 											<li><a class="<?php if ($status1 == 2)
 												echo "active";
 											else
 												echo ""; ?>"
-													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?<?= $country ?><?= $s1 ?>status=2">Complete</a>
+													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?<?= $country ?><?= $s1 ?>status=2">Finished</a>
 											</li>
 											<?php
 										}
@@ -152,8 +150,7 @@ $banner = $db->GetAdvertisement();
 												echo "active";
 											else
 												echo ""; ?>" title="Vietnamese Stories"
-													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?country=2<?= $c1 ?><?= $status ?>">Viet
-													Nam</a></li>
+													href="<?= $linkOption ?><?= $sort1 ?><?= $page ?>.html?country=2<?= $c1 ?><?= $status ?>">Viet Nam</a></li>
 											<li><a class="<?php if ($country1 == "3")
 												echo "active";
 											else
