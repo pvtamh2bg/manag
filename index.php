@@ -50,6 +50,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/fontawesome.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/read.css">	  
     <script src="<?php echo $linkOption1;?>js/main.js"></script>
+		<?php require_once('page/googleAnalytics.php'); ?>
    </head>
    <body>
       <input type="hidden" id="keyword-default" value="black">
