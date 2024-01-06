@@ -73,7 +73,7 @@ if(isset($_SESSION['email'])){
 		$linkOption1=$linkOption."page/";
 		
 		$banner=$db->GetAdvertisement();
-		$IdChapter="Chương ".$_GET["IdChapter"];
+		$IdChapter="Chapter ".$_GET["IdChapter"];
 		$numChap=$_GET["IdChapter"];
 	
 		//require_once('getChap3.php'); 
@@ -222,7 +222,7 @@ if(isset($_SESSION['email'])){
 							$arr3=array();
 							$Nex=1;
 							$Pre=1;
-							$nameChap2="Chương ".$numChap;
+							$nameChap2="Chapter ".$numChap;
 						
 							for($i=0;$i<count($arr);$i++)
 							{

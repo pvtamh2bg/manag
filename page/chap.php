@@ -78,7 +78,7 @@ if(isset($_SESSION['email'])){
 		$linkOption1=$linkOption."page/";
 		
 		$banner=$db->GetAdvertisement();
-		$IdChapter="Chương ".$_GET["IdChapter"];
+		$IdChapter="Chapter ".$_GET["IdChapter"];
 		$numChap=$_GET["IdChapter"];
 		//require_once('getChap3.php'); 
 		$images=$db->GetImagePathChap($IdChapter,$IdStory);
@@ -126,7 +126,7 @@ if(isset($_SESSION['email'])){
 <head>
     <meta charset="utf-8">
 	<title><?=$bb1.$nextChapTitle?></title>
-	<meta name="keyword" content="<?=$arr_name_o[1]." ".$numChap.",".$arr_name_o[1]." chap ".$numChap.",đọc truyện tranh ".$arr_name_o[1]." chap ".$numChap.",".$arr_name_o[1]." chương ".$numChap.",".$arr_name_o[1]." ".$numChap." tiếng việt"?>">
+	<meta name="keyword" content="<?=$arr_name_o[1]." ".$numChap.",".$arr_name_o[1]." chap ".$numChap.",đọc truyện tranh ".$arr_name_o[1]." chap ".$numChap.",".$arr_name_o[1]." Chapter ".$numChap.",".$arr_name_o[1]." ".$numChap." tiếng việt"?>">
 	<meta name="description" content="<?="Đọc truyện tranh ".$bb1.$nextChapMeta." Mới nhất nhanh nhất tại ".$domain?>">
 	<meta name="author" content="<?=$domain?>">
 	<meta property="og:title" content="<?=$arr_name_o[1]?>">
@@ -186,7 +186,7 @@ if(isset($_SESSION['email'])){
                                     <select class="form-control" name="typeError" id="typeError">
                                         <option value="0">Chọn loại lỗi</option>
                                         <option value="1">Hình Bị Hư</option>
-                                        <option value="2">Chương Tiếng Anh</option>
+                                        <option value="2">Chapter Tiếng Anh</option>
                                         <option value="3">Không Có Hình</option>
                                         <option value="-1">Khác</option>
                                     </select>

@@ -73,7 +73,7 @@ $domain = $_SERVER['SERVER_NAME'];
 $linkOption1 = $linkOption . "page/";
 
 $banner = $db->GetAdvertisement();
-$IdChapter = "Chương " . $_GET["IdChapter"];
+$IdChapter = "Chapter " . $_GET["IdChapter"];
 $numChap = $_GET["IdChapter"];
 
 //require_once('getChap3.php'); 
@@ -233,7 +233,7 @@ if (isset($_SESSION['text_size']))
 						$arr3 = array();
 						$Nex = 1;
 						$Pre = 1;
-						$nameChap2 = "Chương " . $numChap;
+						$nameChap2 = "Chapter " . $numChap;
 
 						for ($i = 0; $i < count($arr); $i++) {
 							if ($nameChap2 == $arr[$i]['Name']) {
