@@ -24,7 +24,7 @@
 		<meta property="og:url" content="https://<?=$domain?>/">
 	  <meta property="og:site_name" content="<?=$domain?>">
 		<meta property="og:description" content="Explore a vast collection of manga on mangaplus.shueisha.tv. Enjoy the latest chapters and discover new favorites updated daily.">
-    <meta property="og:image" content="https://mangaplus.shueisha.tv/images/social-preview-image.png">
+    <meta property="og:image" content="<?php echo $linkOption1;?>frontend/images/favicon.png">
 
 	  <meta property="og:type" content="article">    
 	  <meta name="copyright" content=" Copyright © 2024<?=$domain?>">
