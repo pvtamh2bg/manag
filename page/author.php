@@ -82,7 +82,7 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
             <table>
               <tbody>
                 <tr>
-                  <th>Tình trạng</th>
+                  <th>Status</th>
                   <td>
                     <ul class="choose">
 <li><a class="<?php if($status1=="0") echo "active"; else echo ""; ?>" href="<?= $linkOption?>tac-gia/<?= $name?><?= $IdAuthor?><?= $page?>.html?status=0">OnGoing</a></li>				

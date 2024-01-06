@@ -105,9 +105,9 @@ echo '<li>';
 		echo '</div>';
 		echo '<div class="more-info">';
 			echo '<div class="title-more">'.$arr[1].'</div>';
-			echo '<p class="info">Tình trạng: '.$arr[2].'</p>';
-			echo '<p class="info">Lượt xem: '.$arr[12].'</p>';
-			echo '<p class="info">Lượt theo dõi: '.$arr[10].'</p>';
+			echo '<p class="info">Status: '.$arr[2].'</p>';
+			echo '<p class="info">Views: '.$arr[12].'</p>';
+			echo '<p class="info">Subscriber: '.$arr[10].'</p>';
 			echo '<div class="list-tags">';
 			$genreArr=ConvertStrToArr($arr[8]);
 			for($i=0;$i<count($genreArr);$i++){
@@ -168,9 +168,9 @@ echo '<li>';
 		echo '</div>';
 		echo '<div class="more-info">';
 			echo '<div class="title-more">'.$arr[1].'</div>';
-			echo '<p class="info">Tình trạng: '.$arr[2].'</p>';
-			echo '<p class="info">Lượt xem: '.$arr[12].'</p>';
-			echo '<p class="info">Lượt theo dõi: '.$arr[10].'</p>';
+			echo '<p class="info">Status: '.$arr[2].'</p>';
+			echo '<p class="info">Views: '.$arr[12].'</p>';
+			echo '<p class="info">Subscriber: '.$arr[10].'</p>';
 			echo '<div class="list-tags">';
 			$genreArr=ConvertStrToArr($arr[8]);
 			for($i=0;$i<count($genreArr);$i++){
@@ -301,9 +301,9 @@ function storiesList($arr,$linkOption){
 				echo '</div>';
 				echo '<div class="more-info">';
 					echo '<div class="title-more">'.$arr3["Name"].'</div>';
-					echo '<p class="info">Tình trạng: '.$arr3["story_Status"].'</p>';
-					echo '<p class="info">Lượt xem: '.$countView.'</p>';
-					echo '<p class="info">Lượt theo dõi: '.$countSubscribe.'</p>';
+					echo '<p class="info">Status: '.$arr3["story_Status"].'</p>';
+					echo '<p class="info">Views: '.$countView.'</p>';
+					echo '<p class="info">Subscriber: '.$countSubscribe.'</p>';
 					echo '<div class="list-tags">';
 					$genreArr=ConvertStrToArr($arr3["Genre"]);
 					for($i=0;$i<count($genreArr);$i++){
