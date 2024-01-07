@@ -151,7 +151,7 @@ if(isset($_SESSION['email'])){
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/style.css">	
     <script src="<?php echo $linkOption1;?>js/main.js"></script>
 	<script src="<?php echo $linkOption1;?>js/js.js"></script>
-    <body onbeforeunload="HandleOnClose()">
+    <body onbeforeunload="HandleOnClose()" oncontextmenu="return false;">
 	<script language="javascript">
 	function HandleOnClose() {
 	   if (event.clientY < 0) {

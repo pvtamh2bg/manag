@@ -163,7 +163,7 @@ if (isset($_SESSION['text_size']))
 	<?php include 'googleAnalytics.php'; ?>
 </head>
 
-<body onbeforeunload="HandleOnClose()">
+<body onbeforeunload="HandleOnClose()" oncontextmenu="return false;">
 	<script language="javascript">
 		function HandleOnClose() {
 			if (event.clientY < 0) {
