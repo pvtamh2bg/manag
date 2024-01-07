@@ -5,6 +5,10 @@ RewriteEngine on
 deny from all
 </Files>
 
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?mangaplus.shueisha.tv [NC]
+RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
+
 RewriteCond %{QUERY_STRING} ^category=(.*)&notcategory=(.*)&country=(.*)&status=(.*)&minchapter=(.*)&sort=(.*)
 RewriteRule "^tim-kiem-nang-cao/(.*).html$" page/find.php?page=$1&category=%1&notcategory=%2&country=%3&status=%4&minchapter=%5&sort=%6 [L]
 
