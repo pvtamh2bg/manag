@@ -170,7 +170,6 @@ foreach ($arr_authors as $muc) {
                 </div>
               </div>
               <div class="card-body">
-
                 <div class="form-group">
                   <label for="inputName">Tên truyện</label>
                   <input type="text" id="Name" class="form-control">
@@ -185,7 +184,7 @@ foreach ($arr_authors as $muc) {
                   <label for="inputStatus">Trạng thái</label>
                   <select id="Status" class="form-control custom-select">
                     <option>OnGoing</option>
-                    <option>Concluded</option>
+                    <option>Finished</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -466,6 +465,7 @@ foreach ($arr_authors as $muc) {
         }
         var Country = $('#Country :selected').text();
         var Waning = $('#Waning :selected').text();
+        var lang = $('#language :selected').val();
 
         var NameOther = $("#NameOther").val();
         var Content = $("#Content").val();

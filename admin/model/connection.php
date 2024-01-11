@@ -2273,17 +2273,22 @@ class config
 			$error="Thêm thành công";
 		return $error;
 	}
-	function UpdateStory($Id,$Name,$NameOther,$Status,$Content,$Avatar,$Badge,$Waning,$Author,$Genre,$NameEncodeGenres,$Country,$URL1,$URL2,$female,$male)
+	function UpdateStory($lang='en', $Id,$Name, $NameOther,$Status,$Content, $Avatar,$Badge,$Waning,$Author,$Genre,$NameEncodeGenres,$Country,$URL1,$URL2,$female,$male)
 	{
 		$Name1=mysqli_real_escape_string($this->_conn,$Name);
 		$NameOther1=mysqli_real_escape_string($this->_conn,$NameOther);
 		$Content1=mysqli_real_escape_string($this->_conn,$Content);
 		$Author1=mysqli_real_escape_string($this->_conn,$Author);
-		     $error="Sửa thất bại";
-$sql="UPDATE qq_story SET Name='$Name1',NameOther='$NameOther1',story_Status='$Status',Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";	
-			mysqli_query($this->_conn, $sql);	          
-			if(mysqli_affected_rows($this->_conn)==1)
-			$error="Sửa thành công";
+		$error="Sửa thất bại";
+		if($lang == 'en')
+			$sql="UPDATE qq_story SET Name='$Name1', NameOther='$NameOther1',story_Status='$Status',Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
+		if($lang == 'jp')
+			$sql="UPDATE qq_story SET JP_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',JP_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
+		if($lang == 'vn')
+			$sql="UPDATE qq_story SET VN_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',VN_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
+		mysqli_query($this->_conn, $sql);
+		if(mysqli_affected_rows($this->_conn)==1)
+		$error="Sửa thành công";
 	
 		
 		return  $error;

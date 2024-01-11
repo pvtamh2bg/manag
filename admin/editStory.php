@@ -284,7 +284,14 @@ foreach ($arr_authors as $muc) {
                 </div>
               </div>
               <div class="card-body">
-
+               <div class="form-group">
+                  <label for="inputStatus">Ngôn Ngữ</label>
+                  <select id="language" class="form-control custom-select">
+                    <option value="en">English</option>
+                    <option value="jp">Japanese</option>
+                    <option value="vn">Vietnamese</option>
+                  </select>
+                </div>
                 <div class="form-group">
                   <label for="inputName">Tên truyện</label>
                   <input type="text" id="Name" class="form-control" value="<?php echo $arr_Story[1] ?>">
