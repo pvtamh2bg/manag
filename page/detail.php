@@ -43,8 +43,8 @@ $banner = $db->GetAdvertisement();
 
 // include language configuration file based on selected language
 $lang = "en";
-if(isset($_GET['lang'])){ 
-	$lang = $_GET['lang']; 
+if(isset($_GET["lang"])) {
+	$lang = $_GET["lang"];
 }
 $arr = $db->GetIdStory($IdStory, $lang);
 $the_loai = "truyen-tranh/";
@@ -66,8 +66,6 @@ $arr_name_o = $db->GetIdStory($IdStory)
 $arr2 = $db->GetChapter2($IdStory, $lang);
 $lastElement = reset($arr2)['Name'];
 $lastElement = str_replace("Chương", "Chap", $lastElement);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -326,10 +324,10 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 			if (m == 0) {
 				m = 0;
 			}
-			var m2 = <?php echo json_encode($IdStory); ?>
-			var linkOption1 = <?php echo json_encode($linkOption1); ?>
+			var m2 = <?php echo json_encode($IdStory); ?>;
+			var linkOption1 = <?php echo json_encode($linkOption1); ?>;
 			var Type_Chapter = 1;
-			var name_comment = <?php echo json_encode($_SESSION['name_comment']) ?>;
+			var name_comment = <?php echo json_encode($_SESSION['name_comment']); ?>;
 		</script>
 		<script async="" src="<?= $linkOption1 ?>js/comment/binhluan.js"></script>
 		<script type="text/javascript">
