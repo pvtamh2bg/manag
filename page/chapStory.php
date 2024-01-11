@@ -130,7 +130,8 @@ if (isset($_SESSION['text_size']))
 	</title>
 	<meta name="keyword"
 		content="<?= $arr_name_o[1] . " " . $numChap . "," . $arr_name_o[1] . " chap " . $numChap . ",đọc truyện tranh " . $arr_name_o[1] . " chap " . $numChap . "," . $arr_name_o[1] . " chương " . $numChap . "," . $arr_name_o[1] . " " . $numChap . " tiếng việt" ?>">
-	<meta name="description" content="<?= "Đọc truyện tranh " . $bb1 . $nextChapMeta . " Mới nhất nhanh nhất tại " . $domain ?>">
+	<meta name="description"
+		content="<?= "Đọc truyện tranh " . $bb1 . $nextChapMeta . " Mới nhất nhanh nhất tại " . $domain ?>">
 	<meta name="author" content="<?= $domain ?>">
 
 	<meta property="og:title" content="<?= $arr_name_o[1] ?>">
@@ -405,7 +406,7 @@ if (isset($_SESSION['text_size']))
 						<?php
 						//require_once('qc/bannerFooterChap.php'); 
 						?>
-							<!-- <div id="path">
+						<!-- <div id="path">
 																		<ol class="breadcrumb" itemscope="" itemtype="">
 																				<li itemprop="itemListElement" itemscope="" itemtype="">
 																						<a itemprop="item" href="<?= $linkOption ?>">
@@ -428,8 +429,9 @@ if (isset($_SESSION['text_size']))
 																		</ol>
 																</div>                           -->
 						<?php
-							$countComment = $db->GetCountComment($IdStory);
-							require_once('comment.php');
+						echo "chap story";
+						$countComment = $db->GetCountComment($IdStory);
+						require_once('comment.php');
 						?>
 					</div>
 				</div>
