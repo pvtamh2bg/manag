@@ -271,13 +271,13 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 						</div>
 						<div class="TitleDetail-module_languages_87lPm">
 							<?php if($arr[1] !== ''): ?>
-								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-en"  ?>" aria-current="page" class="<?php $lang==='en' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in English">English</a>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-en"  ?>" aria-current="page" class="<?php echo $lang==='en' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in English">English</a>
 							<?php endif; ?>
 							<?php if($arr[22] !== ''): ?>
-								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-jp"  ?>" class="<?php $lang==='jp' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Japanese">日本語</a>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-jp"  ?>" class="<?php echo $lang==='jp' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Japanese">日本語</a>
 							<?php endif; ?>
 							<?php if($arr[23] !== ''): ?>
-								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-vn"  ?>" class="<?php $lang==='vn' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in vietnamese">Tiếng Việt</a>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-vn"  ?>" class="<?php echo $lang==='vn' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in vietnamese">Tiếng Việt</a>
 							<?php endif; ?>
 						</div>
 					</div>
