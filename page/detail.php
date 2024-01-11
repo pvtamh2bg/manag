@@ -41,7 +41,12 @@ $domain = $_SERVER['SERVER_NAME'];
 $linkOption1 = $linkOption . "page/";
 $banner = $db->GetAdvertisement();
 
-$arr = $db->GetIdStory($IdStory);
+// include language configuration file based on selected language
+$lang = "en";
+if(isset($_GET['lang'])){ 
+	$lang = $_GET['lang']; 
+}
+$arr = $db->GetIdStory($IdStory, $lang);
 $the_loai = "truyen-tranh/";
 if ($arr[14] == 1)
 	$the_loai = "tieu-thuyet/";
@@ -56,9 +61,9 @@ if ($arr[2] != "")
 
 $arr_name_o = $db->GetIdStory($IdStory)
 
-	?>
+?>
 <?php
-$arr2 = $db->GetChapter2($IdStory);
+$arr2 = $db->GetChapter2($IdStory, $lang);
 $lastElement = reset($arr2)['Name'];
 $lastElement = str_replace("Chương", "Chap", $lastElement);
 
@@ -70,8 +75,8 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 
 <head>
 	<meta charset="utf-8">
-	<title>Truyện
-		<?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> [Tới
+	<title>
+		<?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> [Next
 		<?= $lastElement ?>]
 	</title>
 	<meta name="keyword"
@@ -198,7 +203,6 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 							$chapStar = "";
 
 							foreach ($arr2 as $muc2) {
-
 								$chapStar = $linkOption . $the_loai . vn_str_filter($arr[1]) . "-" . $IdStory . "-chap-" . tofloat($muc2['Name']) . ".html";
 								//break;
 							}
@@ -261,14 +265,20 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 
 
 				<div class="block02">
-					<div style="display: flex;justify-content: space-between;align-items: center;padding: 0;">
+					<div class="head-chapter-list">
 						<div class="title" style="margin: 0;">
 							<h2 class="story-detail-title">Chapter List</h2>
 						</div>
 						<div class="TitleDetail-module_languages_87lPm">
-							<a href="/titles/100246" aria-current="page" class="router-link-exact-active router-link-active TitleDetail-module_active_1rFIx" title="Read in English">English</a>
-							<a href="/titles/300017" class="" title="Read in English">Japanese</a>
-							<a href="/titles/300017" class="" title="Read in English">Vietnamese</a>
+							<?php if($arr[1] !== ''): ?>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-en"  ?>" aria-current="page" class="<?php $lang==='en' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in English">English</a>
+							<?php endif; ?>
+							<?php if($arr[22] !== ''): ?>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-jp"  ?>" class="<?php $lang==='jp' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Japanese">日本語</a>
+							<?php endif; ?>
+							<?php if($arr[23] !== ''): ?>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-vn"  ?>" class="<?php $lang==='vn' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in vietnamese">Tiếng Việt</a>
+							<?php endif; ?>
 						</div>
 					</div>
 					<div class="box">
@@ -282,14 +292,13 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 							
 							//echo microtime(true)-$time;
 							foreach ($arr2 as $muc2) {
-
 								echo '<div class="works-chapter-item row">';
 								echo '<div class="col-md-10 col-sm-10 col-xs-8 ">';
 								if ($muc2['Title'] != "") {
 									$title1 = " - " . $muc2['Title'];
 								} else
 									$title1 = $muc2['Title'];
-								$kk1 = $linkOption . $the_loai . vn_str_filter($arr[1]) . "-" . $IdStory . "-chap-" . tofloat($muc2['Name']) . ".html";
+								$kk1 = $linkOption . $the_loai . vn_str_filter($arr[1]) . "-" . $IdStory . "-chap-" . tofloat($muc2['Name']) . "-$lang.html";
 								echo '<a  href="' . $kk1 . '">' . $muc2['Name'] . $title1 . '</a>';
 
 								echo '</div>';
@@ -304,7 +313,6 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 					</div>
 				</div>
 				<?php
-				echo "chap detail";
 				$countComment = $db->GetCountComment($IdStory);
 				require_once('comment.php');
 

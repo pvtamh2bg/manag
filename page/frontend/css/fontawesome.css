@@ -27534,6 +27534,13 @@ textarea {
 	float: left
 }
 
+.story-detail .block02 .head-chapter-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+}
+
 .TitleDetail-module_languages_87lPm a {
 	display: inline-block;
 	border-radius: 5px;
@@ -27547,7 +27554,8 @@ textarea {
 	letter-spacing: .05rem;
 	cursor: pointer;
 	max-width: 50%;
-	white-space: nowrap
+	white-space: nowrap;
+	color: var(--color-white);
 }
 .TitleDetail-module_languages_87lPm a.TitleDetail-module_active_1rFIx {
 	background-color: var(--color-dark-red);
@@ -28853,6 +28861,20 @@ textarea {
 		margin-bottom: 10px;
 		background-size: 15px 15px!important;
 		float: left
+	}
+	.story-detail div.head-chapter-list {
+		display: inline-block !important;
+	}
+	.TitleDetail-module_languages_87lPm {
+		display: flex;
+	}
+	.TitleDetail-module_languages_87lPm a {
+		padding: 5px 10px;
+    font-size: 14px;
+		color: var(--color-white);
+	}
+	.TitleDetail-module_languages_87lPm a:visited {
+		color: var(--color-white);
 	}
 	.story-see {
 		overflow: hidden;

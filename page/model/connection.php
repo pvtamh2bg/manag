@@ -371,16 +371,31 @@ class config
 		}
 		return $arr;
 	}
-	function GetChapter2($IdStory)
+	function GetChapter2($IdStory, $lang = 'en')
 	{
-		$q = "select Name,Title,DateUpload from qq_chapter where IdStory='$IdStory' ORDER BY CAST(SUBSTRING(Name,8) AS DECIMAL(30,5)) DESC";
+		$q = "select Name, JP_Name, VN_Name, Title, JP_Title, VN_Title, DateUpload from qq_chapter where IdStory='$IdStory' ORDER BY CAST(SUBSTRING(Name,8) AS DECIMAL(30,5)) DESC";
 		$r = mysqli_query($this->_conn,$q);		
 		$arr = array();
 		while($a = mysqli_fetch_array($r,MYSQLI_ASSOC))
 		{
-			$arr[] = $a;
+			$arr[] = $this->_switchLanguage($lang, $a);
 		}
 		return $arr;
+	}
+	function _switchLanguage($lang, $array) {
+		switch ($lang) {
+			case 'jp':
+				$array['Name'] = $array['JP_Name'];
+				$array['Title'] = $array['JP_Title'];
+				break;
+			case 'vn':
+				$array['Name'] = $array['VN_Name'];
+				$array['Title'] = $array['VN_Title'];
+				break;
+			default:
+				break;
+		}
+		return $array;
 	}
 	function GetAllChapter($IdStory)
 	{
@@ -417,7 +432,7 @@ class config
 		array_push($a,$Content_04);
         return $a;
 	}
-	function GetIdStory($id)
+	function GetIdStory($id, $lang='en')
 	{
 		$sql = "select * from qq_story where Id='$id' and hide_view=0";	
 		$result = mysqli_query($this->_conn, $sql);
@@ -427,9 +442,13 @@ class config
 		if($numRow!=0){
 		$Avatar=$row['ImgAvatar'];//0
 		$Name=$row['Name'];
+		$JP_Name=$row['JP_Name'];
+		$VN_Name=$row['VN_Name'];
 		$NameOther=$row['NameOther'];
 		$Status=$row['story_Status'];
 		$Content=$row['Content'];
+		$JP_Content=$row['JP_Content'];
+		$VN_Content=$row['VN_Content'];
 		$Badge=$row['Badge'];
 		$Waning=$row['Waning'];
 		$Author=$row['Author'];
@@ -446,12 +465,26 @@ class config
 		$Sum_Views=$row['Sum_Views'];
 		$NameUpdate_Chap=$row['NameUpdate_Chap'];
 		$DateUpdate_Chap=$row['DateUpdate_Chap'];
-		
+
 		array_push($a,$Avatar);
-		array_push($a,$Name);
+		if($lang === 'jp') {
+			array_push($a,$JP_Name);
+		} else if($lang === 'vn') {
+			array_push($a,$VN_Name);
+		} else {
+			array_push($a,$Name);
+		}
+
 		array_push($a,$NameOther);
 		array_push($a,$Status);
-		array_push($a,$Content);
+		
+		if($lang === 'jp') {
+			array_push($a,$JP_Content);
+		} else if($lang === 'vn') {
+			array_push($a,$VN_Content);
+		} else {
+			array_push($a,$Content);
+		}
 		array_push($a,$Badge);
 		array_push($a,$Waning);
 		array_push($a,$Author);
@@ -469,9 +502,12 @@ class config
 		array_push($a,$Sum_Views);//18
 		array_push($a,$NameUpdate_Chap);//19
 		array_push($a,$DateUpdate_Chap);//20
+		array_push($a,$Name); // 21- name story
+		array_push($a,$JP_Name); //22
+		array_push($a,$VN_Name); //23
 		}
-		
-        return $a;
+
+    return $a;
 	}
 	function GetChapterLink($idStory)
 	{
@@ -1985,16 +2021,28 @@ class config
 		$num = mysqli_num_rows($result);		
 		return $num;
 	}
-	function GetImagePathChap($IdChapter,$IdStory)
+	function GetImagePathChap($IdChapter,$IdStory, $lang='en')
 	{
 		$sql = "SELECT * from qq_chapter where Name='$IdChapter' and IdStory='$IdStory'";
 		$result =mysqli_query($this->_conn, $sql);	
 		
 		$a = mysqli_fetch_array($result,MYSQLI_ASSOC);
-        $b1= $a['Name'];//0	
-		$b2= $a['Title'];//1	
-		$b3= $a['Path'];//2	
-		$b4= $a['Content'];//3	
+		if($lang === 'jp') {
+			$b1= $a['JP_Name'];//0
+			$b2= $a['JP_Title'];//1
+			$b3= $a['JP_Path'];//2
+			$b4= $a['JP_Content'];//3	
+		} else if($lang === 'vn') {
+			$b1= $a['VN_Name'];//0
+			$b2= $a['VN_Title'];//1
+			$b3= $a['VN_Path'];//2
+			$b4= $a['VN_Content'];//3	
+		} else {
+			$b1= $a['Name'];//0
+			$b2= $a['Title'];
+			$b3= $a['Path'];//2
+			$b4= $a['Content'];//3	
+		}	
 		$b5= $a['Content_01'];//4
 		$b6= $a['Content_02'];//5	
 		$b7= $a['Content_03'];//6	

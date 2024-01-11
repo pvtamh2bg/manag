@@ -1,5 +1,4 @@
 <?php
-
 	session_status() === PHP_SESSION_ACTIVE ?: session_start(); 
 	require_once('page/model/connection.php'); 
 	require_once('page/function/function.php'); 	
@@ -235,6 +234,7 @@ $ChapSlider=$linkOption.$the_loai.vn_str_filter($NameStory)."-".$muc3['IdStory']
                   <?php
 						$arrLatest=$db->GetLatest();
 						storiesList($arrLatest,$linkOption);
+						
 				  ?>
                   <!-- /.list-stories -->
                   <div class="has-text-centered">

@@ -7,6 +7,12 @@ $db->config();
 if (!isset($_SESSION['name_comment'])) {
 	$_SESSION['name_comment'] = "";
 }
+// include language configuration file based on selected language
+$lang = "en";
+if(isset($_GET['lang'])){ 
+	$lang = $_GET['lang']; 
+}
+
 $IdStory = $_GET["IdStory"];
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 $dateUpload = date('Y-m-d H:i:s');
@@ -76,8 +82,8 @@ $banner = $db->GetAdvertisement();
 $IdChapter = "Chapter " . $_GET["IdChapter"];
 $numChap = $_GET["IdChapter"];
 
-//require_once('getChap3.php'); 
-$images = $db->GetImagePathChap($IdChapter, $IdStory);
+//require_once('getChap3.php');
+$images = $db->GetImagePathChap($IdChapter, $IdStory, $lang);
 $NameStory = $db->GetNameStory2($IdStory);
 
 if ($NameStory == "")
@@ -261,9 +267,9 @@ if (isset($_SESSION['text_size']))
 
 
 
-						$path_p = $linkOption . $the_loai . vn_str_filter($NameStory) . "-" . $IdStory . "-chap-" . tofloat($Pre) . ".html";
+						$path_p = $linkOption . $the_loai . vn_str_filter($NameStory) . "-" . $IdStory . "-chap-" . tofloat($Pre) . "-$lang.html";
 
-						$path_n = $linkOption . $the_loai . vn_str_filter($NameStory) . "-" . $IdStory . "-chap-" . tofloat($Nex) . ".html";
+						$path_n = $linkOption . $the_loai . vn_str_filter($NameStory) . "-" . $IdStory . "-chap-" . tofloat($Nex) . "-$lang.html";
 
 						?>
 						<div class="box">
@@ -276,7 +282,7 @@ if (isset($_SESSION['text_size']))
 										<meta itemprop="position" content="1">
 									</li>
 									<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-										<a href="<?= $linkOption . $the_loai ?><?= vn_str_filter($NameStory) . "-" . $IdStory ?>"
+										<a href="<?= $linkOption . $the_loai ?><?= vn_str_filter($NameStory) . "-" . $IdStory."-$lang"; ?>"
 											title="<?= $NameStory ?>">
 											<span itemprop="name">
 												<?php echo $NameStory; ?>
@@ -361,7 +367,8 @@ if (isset($_SESSION['text_size']))
 
 							if ($images[2] != "") {
 								$arrImg_box = explode(",", $images[2]);
-								for ($i = 0; $i < count($arrImg_box); $i++) {
+								$countImages = count($arrImg_box);
+								for ($i = 0; $i < $countImages; $i++) {
 									if (strpos($arrImg_box[$i], "blogger.googleusercontent.com") !== false || strpos($arrImg_box[$i], "http://") !== false || strpos($arrImg_box[$i], "https://") !== false)
 										echo '<img class="lazy" src="' . getParseUrl($arrImg_box[$i], $images[7], $linkOption) . '" alt="' . $NameStory . ' Chap ' . $IdChap . ' - Next Chap ' . $nextChapter . '" /><br>';
 									else
@@ -429,7 +436,6 @@ if (isset($_SESSION['text_size']))
 																		</ol>
 																</div>                           -->
 						<?php
-						echo "chap story";
 						$countComment = $db->GetCountComment($IdStory);
 						require_once('comment.php');
 						?>

@@ -69,8 +69,8 @@ RewriteCond %{QUERY_STRING} ^status=(.*)
 RewriteRule "^(.*).html$" page/sort.php?sort=$1&status=%1 [L]
 
 
-RewriteRule "^truyen-tranh/(.*)-(.*)-chap-(.*).html$" page/chapStory.php?Name=$1&IdStory=$2&IdChapter=$3 [L]
-RewriteRule "^truyen-tranh/(.*)-(.*)$" page/detail.php?Name=$1&IdStory=$2 [L]
+RewriteRule "^truyen-tranh/(.*)-(.*)-chap-(.*)-(.*).html$" page/chapStory.php?Name=$1&IdStory=$2&IdChapter=$3&lang=$4 [L]
+RewriteRule "^truyen-tranh/(.*)-(.*)-(.*)$" page/detail.php?Name=$1&IdStory=$2&lang=$3 [L]
 RewriteRule "^tieu-thuyet/(.*)-(.*)-chap-(.*).html$" page/chapNovel.php?Name=$1&IdStory=$2&IdChapter=$3 [L]
 RewriteRule "^tieu-thuyet/(.*)-(.*)$" page/detail1.php?Name=$1&IdStory=$2 [L]
 

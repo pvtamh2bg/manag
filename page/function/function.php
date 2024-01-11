@@ -261,7 +261,7 @@ function newsList($arr,$linkOption){
 	}
 			
 }
-function storiesList($arr,$linkOption){	  
+function storiesList($arr,$linkOption){
 	 $db=new config();
      $db->config();	
 	if(count($arr)>0){
@@ -282,7 +282,7 @@ function storiesList($arr,$linkOption){
 			}
 	   echo '<li>';
 			echo '<div class="story-item">';
-				 echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"].'" title="'.$arr3["Name"].'">';						
+				 echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"]."-"."en".'" title="'.$arr3["Name"].'">';						
 				echo '<img class="story-cover lazy_cover" src="'.$linkOption.'page/'.$arr3["ImgAvatar"].'" alt="'.$arr3["Name"].'" style="width:190px;height:247px;"/>';
 				echo '</a>';
 				echo '<div class="top-notice">';
@@ -294,7 +294,7 @@ function storiesList($arr,$linkOption){
 					
 				echo '</div>';
 				echo '<h3 class="title-book">';
-					echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"].'" title="'.$arr3["Name"].'">'.ConvertStr($arr3["Name"],0).'</a>';
+					echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"]."-"."en".'" title="'.$arr3["Name"].'">'.ConvertStr($arr3["Name"],0).'</a>';
 				echo '</h3>';
 				echo '<div class="episode-book">';
 					echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"]."-chap-".tofloat($nameChap).'.html">'.$nameChap.'</a>';
