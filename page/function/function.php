@@ -297,7 +297,7 @@ function storiesList($arr,$linkOption){
 					echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"]."-"."en".'" title="'.$arr3["Name"].'">'.ConvertStr($arr3["Name"],0).'</a>';
 				echo '</h3>';
 				echo '<div class="episode-book">';
-					echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"]."-chap-".tofloat($nameChap).'.html">'.$nameChap.'</a>';
+					echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"]."-chap-".tofloat($nameChap).'-en.html">'.$nameChap.'</a>';
 				echo '</div>';
 				echo '<div class="more-info">';
 					echo '<div class="title-more">'.$arr3["Name"].'</div>';
