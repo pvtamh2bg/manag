@@ -256,6 +256,14 @@ require_once('function/function.php');
             </div>
             <div class="card-body">
               <div class="form-group">
+                  <label for="inputStatus">Ngôn Ngữ</label>
+                  <select id="language" class="form-control custom-select">
+                    <option value="en">English</option>
+                    <option value="jp">Japanese</option>
+                    <option value="vn">Vietnamese</option>
+                  </select>
+              </div>
+              <div class="form-group">
                 <label for="inputClientCompany">Tên chương</label>
                	<input type="text" class="form-control"  id="Name" name="Name" >
               </div>

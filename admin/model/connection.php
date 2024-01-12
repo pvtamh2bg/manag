@@ -534,9 +534,13 @@ class config
 		if($numRow!=0){
 		$Avatar=$row['ImgAvatar'];//0
 		$Name=$row['Name'];
+		$JP_Name=$row['JP_Name'];
+		$VN_Name=$row['VN_Name'];
 		$NameOther=$row['NameOther'];
 		$Status=$row['story_Status'];
 		$Content=$row['Content'];
+		$JP_Content=$row['JP_Content'];
+		$VN_Content=$row['VN_Content'];
 		$Badge=$row['Badge'];
 		$Waning=$row['Waning'];
 		$Author=$row['Author'];
@@ -576,6 +580,10 @@ class config
 		array_push($a,$Sum_Views);//18
 		array_push($a,$NameUpdate_Chap);//19
 		array_push($a,$DateUpdate_Chap);//20
+		array_push($a,$JP_Name);
+		array_push($a,$VN_Name);
+		array_push($a,$JP_Content);
+		array_push($a,$VN_Content);
 		}
 		
         return $a;
@@ -2313,16 +2321,22 @@ class config
 			$sql="UPDATE qq_users SET Level='$Level' WHERE Id='$Id'";	
 			mysqli_query($this->_conn, $sql);	          		
 	}
-	function AddChap($Name,$Content,$Notify,$Summary,$DateUpload,$IdStory,$Path,$Content_01,$Content_02,$Content_03,$Content_04,$Title,$url1="")
+	function AddChap($lang,$Name,$Content,$Notify,$Summary,$DateUpload,$IdStory,$Path,$Content_01,$Content_02,$Content_03,$Content_04,$Title,$url1="")
 	{
+		$Name1=mysqli_real_escape_string($this->_conn,$Name);
 		$Content1=mysqli_real_escape_string($this->_conn,$Content);
 		$Content_03_1=mysqli_real_escape_string($this->_conn,$Content_03);
 		$Title1=mysqli_real_escape_string($this->_conn,$Title);
 		$error="Thêm thất bại";
-$sql="INSERT INTO qq_chapter (Name,Content,Notify,Summary,DateUpload,IdStory,Path,Content_01,Content_02,Content_03,Content_04,Title,url1) VALUES ('$Name','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";			
-			mysqli_query($this->_conn, $sql);	
-		   if(mysqli_affected_rows($this->_conn)==1)
-			$error="Thêm thành công";
+		if($lang == 'en')
+			$sql="INSERT INTO qq_chapter (Name,Content,Notify,Summary,DateUpload,IdStory,Path,Content_01,Content_02,Content_03,Content_04,Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+	  if($lang == 'jp')
+		  $sql="INSERT INTO qq_chapter (JP_Name,JP_Content,Notify,Summary,DateUpload,IdStory,JP_Path,Content_01,Content_02,Content_03,Content_04,JP_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		if($lang == 'jp')
+		  $sql="INSERT INTO qq_chapter (VN_Name,VN_Content,Notify,Summary,DateUpload,IdStory,VN_Path,Content_01,Content_02,Content_03,Content_04,VN_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		mysqli_query($this->_conn, $sql);	
+		if(mysqli_affected_rows($this->_conn)==1)
+		  $error="Thêm thành công";
 		return $error;
 	}
 	function UpdateChap($IdChap,$Name,$Content,$Content_03,$Summary,$IdStory,$Path,$Title,$DateUpload)

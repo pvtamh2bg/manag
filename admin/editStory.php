@@ -284,7 +284,7 @@ foreach ($arr_authors as $muc) {
                 </div>
               </div>
               <div class="card-body">
-               <div class="form-group">
+                <div class="form-group">
                   <label for="inputStatus">Ngôn Ngữ</label>
                   <select id="language" class="form-control custom-select">
                     <option value="en">English</option>
@@ -496,6 +496,21 @@ foreach ($arr_authors as $muc) {
   <script>
     var id = <?php echo json_encode($id) ?>;
     $(document).ready(function () {
+      $('#language').on('change', function() {
+        var lang = this.value;
+        if(lang === 'jp'){
+          $('#Name').val(<?php echo json_encode($arr_Story[21]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[23]); ?>);
+        }
+        if(lang === 'vn') {
+          $('#Name').val(<?php echo json_encode($arr_Story[22]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[24]); ?>);
+        }
+        if(lang === 'en') {
+          $('#Name').val(<?php echo json_encode($arr_Story[2]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[4]); ?>);
+        }
+      });
       nameStory = document.getElementById("Name").value;
       fileupload(nameStory);
       $("#Name").keyup(function () {
