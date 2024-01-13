@@ -1,31 +1,36 @@
 <?php
-session_status() === PHP_SESSION_ACTIVE ?: session_start(); 
+session_status() === PHP_SESSION_ACTIVE ?: session_start();
 require_once('model/connection.php');
 require_once('function/function.php');
-	$db=new config();
-	$db->config();	
-    $user="";
-    $linkOption=siteURL();
-	$linkOption1=$linkOption."page/";
-	if(isset($_SESSION['email'])){
-		if($db->GetLevelUser($_SESSION['email'])<1){
-			header("location:".$linkOption);
-		}else{
-		   $user= $_SESSION['email'];
-		}
-	}else{
-		header("location:".$linkOption);
-	}
+$db = new config();
+$db->config();
+$user = "";
+$linkOption = siteURL();
+$linkOption1 = $linkOption . "page/";
+if (isset($_SESSION['email'])) {
+  if ($db->GetLevelUser($_SESSION['email']) < 1) {
+    header("location:" . $linkOption);
+  } else {
+    $user = $_SESSION['email'];
+  }
+} else {
+  header("location:" . $linkOption);
+}
 
-	$avatarAdmin=$db->GetAvatarUser($user);
-	$idChap=$_GET['idChap'];
-	$idStory=$_GET['idStory'];
-	$nameStory=$db->GetNameStory2($idStory);
-	$arr_Chapter=$db->GetIdChapter1($idChap);
-	$r1=$arr_Chapter[1];
-	$an="";
-	if(tofloat($arr_Chapter[0])==0)
-		$an="disabled";
+$avatarAdmin = $db->GetAvatarUser($user);
+$idChap = $_GET['idChap'];
+$idStory = $_GET['idStory'];
+$nameStory = $db->GetNameStory2($idStory);
+$arr_Chapter = $db->GetIdChapter1($idChap);
+$enContent = $arr_Chapter[1];
+$jpContent = $arr_Chapter[11];
+$vnContent = $arr_Chapter[12];
+$Path =  getHTMLPath($arr_Chapter[1], $arr_Chapter, $linkOption, $linkOption1);
+$JP_Path = getHTMLPath($arr_Chapter[13], $arr_Chapter, $linkOption, $linkOption1);
+$VN_Path = getHTMLPath($arr_Chapter[14], $arr_Chapter, $linkOption, $linkOption1);
+$an = "";
+if (tofloat($arr_Chapter[0]) == 0)
+  $an = "disabled";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,391 +41,399 @@ require_once('function/function.php');
   <title>Chapter | Sửa</title>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
- 
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="plugins/ekko-lightbox/ekko-lightbox.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="frontend/file/jquery.tag-editor.css">	
-  <link href="toastr/toastr.css" rel="stylesheet" />	
-   
+  <link rel="stylesheet" href="frontend/file/jquery.tag-editor.css">
+  <link href="toastr/toastr.css" rel="stylesheet" />
+
 </head>
+
 <body class="hold-transition sidebar-mini" onbeforeunload="return Reload()">
-<!-- Site wrapper -->
-<div class="wrapper">
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.php" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Chapter</a>
-      </li>
-    </ul>
+  <!-- Site wrapper -->
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index.php" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Chapter</a>
+        </li>
+      </ul>
 
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i class="fas fa-search"></i>
+          </a>
+          <div class="navbar-search-block">
+            <form class="form-inline">
+              <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                  <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
               </div>
-            </div>
-          </form>
-        </div>
-      </li>
+            </form>
+          </div>
+        </li>
 
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-comments"></i>
+            <span class="badge badge-danger navbar-badge">3</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Brad Diesel
+                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">Call me whenever you can...</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
               </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    John Pierce
+                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">I got your message bro</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
               </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Nora Silvester
+                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">The subject goes here</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
               </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+          </div>
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">15</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <span class="dropdown-item dropdown-header">15 Notifications</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 4 new messages
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-users mr-2"></i> 8 friend requests
+              <span class="float-right text-muted text-sm">12 hours</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-file mr-2"></i> 3 new reports
+              <span class="float-right text-muted text-sm">2 days</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index.php" class="brand-link">
+        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+          style="opacity: .8">
+        <span class="brand-text font-weight-light">Admin</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+          <div class="input-group" data-widget="sidebar-search">
+            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-sidebar">
+                <i class="fas fa-search fa-fw"></i>
+              </button>
             </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-   <a href="index.php" class="brand-link">
-    <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-     
-
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
           </div>
         </div>
+
+        <!-- Sidebar Menu -->
+        <?php
+        $typeMenu = "editChap";
+        require_once('menuLeft.php');
+        ?>
+        <!-- /.sidebar-menu -->
       </div>
+      <!-- /.sidebar -->
+    </aside>
 
-      <!-- Sidebar Menu -->
-     <?php
-     $typeMenu="editChap";
-     require_once('menuLeft.php');
-     ?>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Thêm chapter mới</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Thêm truyện mới</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title"><?php echo $nameStory;?></h3>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-              </div>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Thêm chapter mới</h1>
             </div>
-            <div class="card-body">
-              <div class="form-group">
-                <label for="inputClientCompany">Tên chương</label>
-               	<input type="text" class="form-control"  id="Name" name="Name" value="<?php if (isset($arr_Chapter[0])) echo tofloat($arr_Chapter[0]);else echo ""; ?>"/>
-              </div>
-               <div class="form-group">
-                <label for="inputClientCompany">Tiêu đề chương</label>
-               		<input type="text" class="form-control"  id="Title" name="Title" value="<?=$arr_Chapter[5]?>"/>
-              </div>
-             <div class="form-group">
-                <label for="inputDescription">Site</label>
-               <input type="text" class="form-control" value="<?=$arr_Chapter[6]?>"  id="site" name="site" placeholder="Ví dụ: nettruyengo.com">
-              </div> 
-             
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-        </div>
-         <div class="col-md-6">
-          <div class="card card-secondary">
-             <div class="card-header">
-              <label for="inputStatus">Link ảnh</label>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-              </div>
-            </div>
-             <div class="card-body">
-                <div class="form-group">
-             	<?php
-             	             $content_4_null="";
-							 $a2=explode(",",$arr_Chapter[3]);
-								for($i=0;$i<count($a2);$i++){
-									
-									if (strpos($a2[$i], "https://") !== false || strpos($a2[$i], "http://") !== false)
-								     $content_4_null=$arr_Chapter[3];
-							       
-							        
-								}
-							?>
-<textarea value="<?=$content_4_null;?>" name="Content_04" rows="9" cols="106" id="Content_04" placeholder="Mỗi link cách nhau dấu phẩy" class="form-control"><?=$content_4_null?></textarea>
-              </div>
-              
-
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Thêm truyện mới</li>
+              </ol>
             </div>
           </div>
-        </div>
-         <div class="col-md-12">
-           <div class="card card-secondary">
-                 <div class="card-header">
-            <label for="inputClientCompany">Nội dung</label>
+        </div><!-- /.container-fluid -->
+      </section>
 
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-              </div>
-            </div>
-             <div class="card-body">
-               <div class="form-group">
-               
-                   
-				<textarea name="Content" class="form-control" rows="10" cols="106" id="Content" ></textarea>  
-              </div>
-
-            </div>
-          </div>   
-         </div>         
-        
-        
-      </div>
-       <div class="row">
-            <div class="col-12">
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <div class="col-md-6">
             <div class="card card-primary">
-            
-            <div class="card-body">
-         
-            
-               <div class="form-check">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <?php echo $nameStory; ?>
+                </h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="inputStatus">Ngôn Ngữ</label>
+                  <select id="language" class="form-control custom-select">
+                    <option value="en">English</option>
+                    <option value="jp">Japanese</option>
+                    <option value="vn">Vietnamese</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="inputClientCompany">Tên chương</label>
+                  <input type="text" class="form-control" id="Name" name="Name"
+                    value="<?php if (isset($arr_Chapter[0]))
+                      echo tofloat($arr_Chapter[0]);
+                    else
+                      echo ""; ?>" />
+                </div>
+                <div class="form-group">
+                  <label for="inputClientCompany">Tiêu đề chương</label>
+                  <input type="text" class="form-control" id="Title" name="Title" value="<?= $arr_Chapter[5] ?>" />
+                </div>
+                <div class="form-group">
+                  <label for="inputDescription">Site</label>
+                  <input type="text" class="form-control" value="<?= $arr_Chapter[6] ?>" id="site" name="site"
+                    placeholder="Ví dụ: nettruyengo.com">
+                </div>
+
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <div class="col-md-6">
+            <div class="card card-secondary">
+              <div class="card-header">
+                <label for="inputStatus">Link ảnh</label>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <?php
+                  $content_4_null = "";
+                  $a2 = explode(",", $arr_Chapter[3]);
+                  for ($i = 0; $i < count($a2); $i++) {
+
+                    if (strpos($a2[$i], "https://") !== false || strpos($a2[$i], "http://") !== false)
+                      $content_4_null = $arr_Chapter[3];
+
+
+                  }
+                  ?>
+                  <textarea value="<?= $content_4_null; ?>" name="Content_04" rows="9" cols="106" id="Content_04"
+                    placeholder="Mỗi link cách nhau dấu phẩy" class="form-control"><?= $content_4_null ?></textarea>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card card-secondary">
+              <div class="card-header">
+                <label for="inputClientCompany">Nội dung</label>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <textarea name="Content" class="form-control" rows="10" cols="106" id="Content"></textarea>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="card card-primary">
+              <div class="card-body">
+                <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="hidenImg">
                   <label class="form-check-label">Hiện ảnh</label>
-               </div>
-               <div class="form-group" id="link_img">
+                </div>
+                <div class="form-group" id="link_img">
                   <label for="pwd">Linh ảnh đã upload</label>
-                  <textarea rows="7" id="link_1" style="width:100%" class="form-control" ></textarea>	
-               </div>
-               <div class="form-group">
-                           
-   	           
-				<input type="file"  name="files[]" id="uploadavatar" style="display: none;" multiple>
-				<button class="btn btn-success btn-avatar" id="chon_hinh">Chọn hình</button>
-				<button class="btn btn-warning" id="clear_hinh">Clear hình</button>
-              </div>
+                  <textarea rows="7" id="link_1" style="width:100%" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="file" name="files[]" id="uploadavatar" style="display: none;" multiple>
+                  <button class="btn btn-success btn-avatar" id="chon_hinh">Chọn hình</button>
+                  <button class="btn btn-warning" id="clear_hinh">Clear hình</button>
+                </div>
 
-           
-                  <div class="btn-group w-100 mb-2">
-                    <a class="btn btn-info active" href="javascript:void(0)" data-filter="all">Tất cả ảnh</a>
-                    <a class="btn btn-info" href="javascript:void(0)" data-filter="1"></a>
-                    <a class="btn btn-info" href="javascript:void(0)" data-filter="2"></a>
-                    <a class="btn btn-info" href="javascript:void(0)" data-filter="3"></a>
-                    <a class="btn btn-info" href="javascript:void(0)" data-filter="4"></a>
-                  </div>
-                  <div class="mb-2">
-         
-                    <div class="float-right">
-                      <select class="custom-select" style="width: auto;" data-sortOrder>
-                        <option value="index"> Sort by Position </option>
-                        <option value="sortData"> Sort by Custom Data </option>
-                      </select>
-                      <div class="btn-group">
-                        <a class="btn btn-default" href="javascript:void(0)" data-sortAsc> Ascending </a>
-                        <a class="btn btn-default" href="javascript:void(0)" data-sortDesc> Descending </a>
-                      </div>
+
+                <div class="btn-group w-100 mb-2">
+                  <a class="btn btn-info active" href="javascript:void(0)" data-filter="all">Tất cả ảnh</a>
+                  <a class="btn btn-info" href="javascript:void(0)" data-filter="1"></a>
+                  <a class="btn btn-info" href="javascript:void(0)" data-filter="2"></a>
+                  <a class="btn btn-info" href="javascript:void(0)" data-filter="3"></a>
+                  <a class="btn btn-info" href="javascript:void(0)" data-filter="4"></a>
+                </div>
+                <div class="mb-2">
+
+                  <div class="float-right">
+                    <select class="custom-select" style="width: auto;" data-sortOrder>
+                      <option value="index"> Sort by Position </option>
+                      <option value="sortData"> Sort by Custom Data </option>
+                    </select>
+                    <div class="btn-group">
+                      <a class="btn btn-default" href="javascript:void(0)" data-sortAsc> Ascending </a>
+                      <a class="btn btn-default" href="javascript:void(0)" data-sortDesc> Descending </a>
                     </div>
                   </div>
-                  <div class="filter-container p-0 row">
-                      	<?php
-							 $a2=explode(",",$arr_Chapter[3]);
-								for($i=0;$i<count($a2);$i++){
-									
-									if (strpos($a2[$i], "https://") !== false || strpos($a2[$i], "http://") !== false)
-								  echo '<img style="width:300px;height:300px" class="image-avatar" src="'.getParseUrl($a2[$i],$arr_Chapter[6],$linkOption).'" alt=""   custom_attribute="'.$a2[$i].'"/><hr>';
-							  else  echo '<img  class="image-avatar" style="width:300px;height:300px" src="'.$linkOption1.$a2[$i].'" alt=""   custom_attribute="'.$a2[$i].'"/><hr>';
-								}
-							?>
-                  </div>
-                  
-                 <div class="form-group">
-			    
-			    	
-			    	<button class="button is-danger btn btn-success"  id="editChap" data-id-chap="<?php echo $idChap; ?>" data-id-story="<?php echo $idStory; ?>" <?=$an?> >Lưu</button>
-			    	<button type="button" class="btn btn-warning" id="previewChap">Xem thử</button>
-                 </div> 
-             
                 </div>
-           
+                <div class="filter-container p-0 row en-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
+                    <?php echo $Path; ?>
+                </div>
+                <div class="filter-container p-0 row jp-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
+                    <?php echo $JP_Path; ?>
+                </div>
+                <div class="filter-container p-0 row vn-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
+                    <?php echo $VN_Path; ?>
+                </div>
+                <div class="form-group">
+                  <button class="button is-danger btn btn-success" id="editChap" data-id-chap="<?php echo $idChap; ?>"
+                    data-id-story="<?php echo $idStory; ?>" <?= $an ?>>Lưu</button>
+                  <button type="button" class="btn btn-warning" id="previewChap">Xem thử</button>
+                </div>
+
+              </div>
+
+            </div>
           </div>
-      </div>
-      
-       <div class="row">
-        <div class="col-12">
-         
-        </div>
-      </div>
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
 
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
+          <div class="row">
+            <div class="col-12">
+
+            </div>
+          </div>
+      </section>
+      <!-- /.content -->
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">mangavip</a>.</strong> All rights reserved.
-  </footer>
+    <!-- /.content-wrapper -->
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
+    <footer class="main-footer">
+      <div class="float-right d-none d-sm-block">
+        <b>Version</b> 3.2.0
+      </div>
+      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">mangavip</a>.</strong> All rights reserved.
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
 
 <?php
 $db->dis_connect();//ngat ket noi mysql	
@@ -444,15 +457,45 @@ $db->dis_connect();//ngat ket noi mysql
 <script type="text/javascript" src="../page/frontend/js/jquery.iframe-transport.js"></script>
 <script type="text/javascript" src="js/page/addChap.js"></script>
 <script src="toastr/toastr.min.js"></script>
-<script>
+<script type="text/javascript">
 	CKEDITOR.replace('Content');
 	var idStory=<?php echo json_encode($idStory)?>;
 	var linkOption1=<?php echo json_encode($linkOption1)?>;
-	 var r1=<?php echo json_encode($r1); ?>;
-	CKEDITOR.instances.Content.setData(r1);
+	var enContent=<?php echo json_encode($enContent); ?>;
+  var jpContent=<?php echo json_encode($jpContent); ?>;
+  var vnContent=<?php echo json_encode($vnContent); ?>;
+	CKEDITOR.instances.Content.setData(enContent);
 $(document).ready(function(){
-    
-    
+  $('.filter-container.vn-path').hide();
+  $('.filter-container.jp-path').hide();
+   $('#language').on('change', function() {
+        var lang = this.value;
+        if(lang === 'jp'){
+          $('#Name').val(<?php echo json_encode($arr_Chapter[7]); ?>);
+          $('#Title').val(<?php echo json_encode($arr_Chapter[9]); ?>);
+          CKEDITOR.instances.Content.setData(jpContent);
+          $('.filter-container.en-path').hide();
+          $('.filter-container.jp-path').show();
+          $('.filter-container.vn-path').hide();
+        }
+        if(lang === 'vn') {
+          $('#Name').val(<?php echo json_encode($arr_Chapter[8]); ?>);
+          $('#Title').val(<?php echo json_encode($arr_Chapter[10]); ?>);
+          CKEDITOR.instances.Content.setData(vnContent);
+          $('.filter-container.en-path').hide();
+          $('.filter-container.jp-path').hide();
+          $('.filter-container.vn-path').show();
+        }
+        if(lang === 'en') {
+          $('#Name').val(<?php echo json_encode($arr_Chapter[0]); ?>);
+          $('#Title').val(<?php echo json_encode($arr_Chapter[5]); ?>);
+          CKEDITOR.instances.Content.setData(enContent);
+          $('.filter-container.en-path').show();
+          $('.filter-container.jp-path').hide();
+          $('.filter-container.vn-path').hide();
+
+        }
+    });
     //$('#chon_hinh').prop("disabled", true); 	
     $("#link_img").hide();
    var nameChap=document.getElementById("Name").value;
@@ -472,8 +515,8 @@ $(document).ready(function(){
          $("#link_img").hide();
     });
     $("#clear_hinh").click(function(){
-		$(".filter-container").html("");
-	});	
+		  $(".filter-container").html("");
+	  });	
      $('.btn-avatar').click(function(){ $('#uploadavatar').trigger('click');});
     
 		function fileupload(nameChap){

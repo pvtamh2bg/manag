@@ -507,11 +507,19 @@ class config
 		$result = mysqli_query($this->_conn, $sql);
 		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 		$Name=$row['Name'];
+		$JP_Name=$row['JP_Name'];
+		$VN_Name=$row['VN_Name'];
 		$Content=$row['Content'];
+		$JP_Content=$row['JP_Content'];
+		$VN_Content=$row['VN_Content'];
 		$Content_03=$row['Content_03'];		
 		$Path=$row['Path'];
+		$JP_Path=$row['JP_Path'];
+		$VN_Path=$row['VN_Path'];
 		$Summary=$row['Summary'];
 		$Title=$row['Title'];	
+		$JP_Title=$row['JP_Title'];
+		$VN_Title=$row['VN_Title'];
 		$Content_04=$row['Content_04'];
 		$a=array();
 		
@@ -521,8 +529,20 @@ class config
 		array_push($a,$Path);
 		array_push($a,$Summary);
 		array_push($a,$Title);
-		array_push($a,$Content_04);
-        return $a;
+		array_push($a,$Content_04); //6
+
+		array_push($a,$JP_Name);//7
+		array_push($a,$VN_Name);//8
+
+		array_push($a,$JP_Title);//9
+		array_push($a,$VN_Title);//10
+
+		array_push($a,$JP_Content);//11
+		array_push($a,$VN_Content);//12
+
+		array_push($a,$JP_Path); //13
+		array_push($a,$VN_Path); //14
+    return $a;
 	}
 	function GetIdStory($id)
 	{
@@ -2332,22 +2352,27 @@ class config
 			$sql="INSERT INTO qq_chapter (Name,Content,Notify,Summary,DateUpload,IdStory,Path,Content_01,Content_02,Content_03,Content_04,Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 	  if($lang == 'jp')
 		  $sql="INSERT INTO qq_chapter (JP_Name,JP_Content,Notify,Summary,DateUpload,IdStory,JP_Path,Content_01,Content_02,Content_03,Content_04,JP_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
-		if($lang == 'jp')
+		if($lang == 'vn')
 		  $sql="INSERT INTO qq_chapter (VN_Name,VN_Content,Notify,Summary,DateUpload,IdStory,VN_Path,Content_01,Content_02,Content_03,Content_04,VN_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 		mysqli_query($this->_conn, $sql);	
 		if(mysqli_affected_rows($this->_conn)==1)
 		  $error="Thêm thành công";
 		return $error;
 	}
-	function UpdateChap($IdChap,$Name,$Content,$Content_03,$Summary,$IdStory,$Path,$Title,$DateUpload)
+	function UpdateChap($lang,$IdChap,$Name,$Content,$Content_03,$Summary,$IdStory,$Path,$Title,$DateUpload)
 	{
 		$Content1=mysqli_real_escape_string($this->_conn,$Content);
 		$Content_03_1=mysqli_real_escape_string($this->_conn,$Content_03);
 		$Title1=mysqli_real_escape_string($this->_conn,$Title);
-		     $error="Sửa thất bại";
-$sql="UPDATE qq_chapter SET Name='$Name',Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',Path='$Path',Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
-			mysqli_query($this->_conn, $sql);	
-	        if(mysqli_affected_rows($this->_conn)==1)
+		$error="Sửa thất bại";
+		if($lang == 'en')
+			$sql="UPDATE qq_chapter SET Name='$Name',Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',Path='$Path',Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
+	  if($lang == 'jp')
+			$sql="UPDATE qq_chapter SET JP_Name='$Name',JP_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',JP_Path='$Path',JP_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
+		if($lang == 'vn')
+			$sql="UPDATE qq_chapter SET VN_Name='$Name',VN_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',VN_Path='$Path',VN_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
+		mysqli_query($this->_conn, $sql);	
+	  if(mysqli_affected_rows($this->_conn)==1)
 			$error="Sửa thành công";
 		 //$error=$sql;
 		return  $error;

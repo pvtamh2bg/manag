@@ -247,7 +247,6 @@ function base64url_decode( $data ){
 // }
 function storiesList($arr,$linkOption){	 
 	
-	echo 'aaaaaaaaaaaaaaaaa';
 	 $db=new config();
      $db->config();	
 	if(count($arr)>0){
@@ -452,6 +451,18 @@ function swap($IdStory,$arr){
     }
 	return $c;							
 	
+}
+function getHTMLPath($path, $arr_Chapter, $linkOption, $linkOption1) {
+	$html = '';
+	$a2 = explode(",", $path);
+	$countPath = count($a2);
+	for ($i = 0; $i < $countPath; $i++) {
+		if (strpos($a2[$i], "https://") !== false || strpos($a2[$i], "http://") !== false)
+			$html.='<img style="width:300px;height:300px" class="image-avatar" src="' . getParseUrl($a2[$i], $arr_Chapter[6], $linkOption) . '" alt=""   custom_attribute="' . $a2[$i] . '"/><hr>';
+		else
+			$html.='<img  class="image-avatar" style="width:300px;height:300px" src="' . $linkOption1 . $a2[$i] . '" alt=""   custom_attribute="' . $a2[$i] . '"/><hr>';
+	}
+	return $html;
 }
 
 ?>

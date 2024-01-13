@@ -433,8 +433,6 @@ $db->dis_connect();//ngat ket noi mysql
 	var linkOption1=<?php echo json_encode($linkOption1)?>;
 	
 $(document).ready(function(){
-    
-    
     $('#chon_hinh').prop("disabled", true); 	
     $("#link_img").hide();	
     	

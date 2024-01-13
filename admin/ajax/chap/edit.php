@@ -3,6 +3,7 @@ require_once('../../model/connection.php');
 require_once('../../function/function.php');
 $IdStory=$_POST['IdStory'];
 $IdChap=$_POST['IdChap'];
+$lang=$_POST['Lang'];
 
 $Name="Chapter ".tofloat($_POST['Name']);
 $Path="";
@@ -18,6 +19,14 @@ $Notify=$_POST['Notify'];
 $Summary=$_POST['Summary'];
 //$tempChap=$_POST['tempChap'];
 $Title=$_POST['Title'];
+
+if($lang === 'en')
+	$Name="Chapter ".tofloat($_POST['Name']);
+if($lang === 'jp')
+	$Name="Chapter ".tofloat($_POST['Name']);
+if($lang === 'vn')
+	$Name="Chapter ".tofloat($_POST['Name']);
+
 	$db=new config();
 	$db->config();
 	
@@ -25,7 +34,7 @@ $Title=$_POST['Title'];
      date_default_timezone_set("Asia/Ho_Chi_Minh");
 	 $DateUpload=date('Y-m-d h:i:s');
 
-$error=$db->UpdateChap($IdChap,$Name,$Content,$Content_03,$Summary,$IdStory,$Path,$Title,$DateUpload);
+$error=$db->UpdateChap($lang,$IdChap,$Name,$Content,$Content_03,$Summary,$IdStory,$Path,$Title,$DateUpload);
 //$nameChap=$db->GetByNameChap($IdStory);
 //$dateChap=$db->GetByDateChap($IdStory);
 //$db->UpdateChapToStory($IdStory,$nameChap,$dateChap);

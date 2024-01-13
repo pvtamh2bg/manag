@@ -132,6 +132,7 @@ $(document).ready(function () {
             Notify: Notify,
             Summary: Summary,
             Title: Title,
+            Lang: lang
           },
           success: function (kq) {
             var o = JSON.parse(kq);
