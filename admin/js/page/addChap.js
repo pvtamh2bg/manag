@@ -95,7 +95,13 @@ $(document).ready(function () {
       var temp3 = [];
 
       //var check_link= $('#check_link :selected').text();
-      $("img.image-avatar").each(function () {
+      if(lang === 'en')
+        Paths = $('.en-path img.image-avatar');
+      if(lang === 'jp') 
+        Paths = $('.jp-path img.image-avatar');
+      if(lang === 'vn') 
+        Paths = $('.vn-path img.image-avatar');
+      Paths.each(function () {
         var temp1 = $(this).attr("custom_attribute");
         var str1 = temp1.substring(temp1.lastIndexOf("/") + 1);
         var str2 = str1.lastIndexOf(".");
