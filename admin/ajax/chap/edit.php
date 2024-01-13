@@ -23,7 +23,7 @@ $Title=$_POST['Title'];
 if($lang === 'en')
 	$Name="Chapter ".tofloat($_POST['Name']);
 if($lang === 'jp')
-	$Name=tofloat($_POST['Name'])."話";
+	$Name=tofloat("第".$_POST['Name'])."話";
 if($lang === 'vn')
 	$Name="Chương ".tofloat($_POST['Name']);
 
