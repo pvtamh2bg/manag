@@ -111,7 +111,7 @@ $(document).ready(function () {
       });
       temp2.sort(function (a, b) {
         return a.temp - b.temp;
-      });
+      }); 
       for (var i = 0; i < temp2.length; i++) {
         temp3.push(temp2[i].path);
       }

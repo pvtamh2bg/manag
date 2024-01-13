@@ -25,7 +25,7 @@ if($lang === 'en')
 if($lang === 'jp')
 	$Name="Chapter ".tofloat($_POST['Name']);
 if($lang === 'vn')
-	$Name="Chapter ".tofloat($_POST['Name']);
+	$Name="Chương ".tofloat($_POST['Name']);
 
 	$db=new config();
 	$db->config();

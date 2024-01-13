@@ -471,7 +471,7 @@ $(document).ready(function(){
    $('#language').on('change', function() {
         var lang = this.value;
         if(lang === 'jp'){
-          $('#Name').val(<?php echo json_encode($arr_Chapter[7]); ?>);
+          // $('#Name').val(<?php //echo json_encode($arr_Chapter[7]); ?>);
           $('#Title').val(<?php echo json_encode($arr_Chapter[9]); ?>);
           CKEDITOR.instances.Content.setData(jpContent);
           $('.filter-container.en-path').hide();
@@ -479,7 +479,7 @@ $(document).ready(function(){
           $('.filter-container.vn-path').hide();
         }
         if(lang === 'vn') {
-          $('#Name').val(<?php echo json_encode($arr_Chapter[8]); ?>);
+          // $('#Name').val(<?php //echo json_encode($arr_Chapter[8]); ?>);
           $('#Title').val(<?php echo json_encode($arr_Chapter[10]); ?>);
           CKEDITOR.instances.Content.setData(vnContent);
           $('.filter-container.en-path').hide();
@@ -487,7 +487,7 @@ $(document).ready(function(){
           $('.filter-container.vn-path').show();
         }
         if(lang === 'en') {
-          $('#Name').val(<?php echo json_encode($arr_Chapter[0]); ?>);
+          // $('#Name').val(<?php //echo json_encode($arr_Chapter[0]); ?>);
           $('#Title').val(<?php echo json_encode($arr_Chapter[5]); ?>);
           CKEDITOR.instances.Content.setData(enContent);
           $('.filter-container.en-path').show();
