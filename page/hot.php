@@ -329,7 +329,8 @@
     <h1 class="styles-module_title_3gUV9 Updates-module_rankingHeaderTitle__rR8m">Hottest</h1>
     <a href="/manga_list/hot" class="Updates-module_subShowAll_IFDwn">View All</a>
   </div>
-  <div class="Updates-module_rankingTitle_Ky0uL"><a href="/titles/100269" class="">
+  <div class="Updates-module_rankingTitle_Ky0uL">
+    <a href="http://mangaplus.shueisha.tv/truyen-tranh/boruto-two-blue-vortex-45-en" class="">
       <p class="RankingTitle-module_rankingNumber_a7Dbg"><img
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHwAAACsCAMAAACO/jijAAAArlBMVEUAAAD/3AD/4gD/2AD/2AD/2AD/3AD/2AD/2AD/4wD/2AD/4QD/3AD/2AD/3QD/2AD/2AD/2AD/2gD/4wD/2AD/2AD/2QD/2QD/2AD/2AD/2QD/2QD/2gD/2AD/2AD/2AD/2AD/2AD/2AD/2AD/2QD/2AD/2QD/2AD/2QD/2AD/2QD/2AD/2AD/2AD/2AD/2AD/2AD/2gD/2QD/3AD/2AD/2AD/2QD/2QD/1wD/1wAJyLz3AAAAOXRSTlMAAwadjFYV/PQM+RAlgRnw2cUrCeCGXErovHlwNtGrpeTKt3RrZiHdQLNR1WGwn5HsRDEdwJY8fc2yGc0OAAAHOUlEQVR42uzZ6WKiMBQF4IMboAjivrY67ktr7X7e/8WmMy0I5dIQtdM/8/2m99Qkl8SI//7T4dzj5/Sr+DmTLX7MA1nHTxmQL/gWhgEVnxxByYC+5xUUXJOkA4XhAfr2eyjM+GYKhVYe+ppjKPT4ZgKFWteAriH5jC+VTP7xgC/VyRV0tciClHg041/90hGSquQeumpkE0mHLlPddZC0JcfQVOebe+mj/2KKnoskh1TMnzxaZAuSQZkCs29A0OebAvRs+aYG0X2NCcshRK9804QWh3/VIbJv+cm1DdGCfw2htCqGbj9qFkMHRBU9Rli7tDp5oY7M7THV4wNiFmOGuk72Ov4CKYy+SZH5YiCuYTFUruCTaZkis2og3XBJQTPZKxtGtDPWGSvedZVrJlxVkBB77AYJtlDnpgKVncUYa46knPc+4OX3R2wktT3GlGfIwHllxKgOQeejuT9avijWmTBiW0cmuSVDzQYk+ffmDlr+Sq5TY2gs1pH3yiMXAuOOtHbHlrfE0pVonQWymTNiBsGBfHXClvfJDQQ7RkyRTY8RjxA8sZBDyGiZtxCsGeFDJo9W833mzRISjFEHMattDgl2+b1OTZ4/2e6juT9adS78e4lC0iGmHdS5TZ0/ebSsXdjyPZzoJnxJtD15/uTRGjnHljcrOIltHV8Si4k4f+Jo7XNhqxbIHU5SJJ8a0TpzqF3Fz4Gd7hoidZ1N/OTZg1Jj7SLGXdsQqOs8IKaUYV9pGPgsPdy2deucz36eF9bbsWeS9MbbdWG+quBfaBxavskEc9I6NPC9VrceU1nXBwPfpVRtUmHcKuE7uAWLGVj7B1yaXSgzo/JTBRfVHlNDd4fLWfSoyXdwIRuP2qw2LiG350nyDZyt4lNg+fnpZjV0nPvVZpp/9Ch4dXGmhy0T/JfnHGKMYd9nwtLBWeqJVd6sOhAtXpaJVX+PMzhdxm3bBlIZxRHjvDpO5jYZMy4aqsb4/BcLnKgyYpRZsKHUaJUZVSvhJEZPuPJRq9cY5edwiqrwJV2g+mpewAlWJiOq0NBnVAfaSl0emTNo2Zk8unOh65YRbWjaRNOvoOmZEVNom58x8Mbo3CXzwqNaDjpmPOoZOMWaR31oyEXvF12cpNJk6K5x4ox1INBdNgNkZiwzLdXF9a+AWDzP0DiHrIoMeS7SzC2G8hCU7hjaaawV9VJxf5GKcAwYeoT+PZxnQ9b2qA5vdPXv4QbKV3rphswQjql+t/kMlEuQbLrMFm5bDGwz38MFbhS34qpwRB51kUWHoQ0EPWYPP+huTnsGvBwEE41woxt7RG3EwBpfhj9eyZXlcV8iA6MsvBSFcGuGgjp8zpANNYeh+y/CHxcQwhXVNNabmUsNtwZApnBYDBShNmWghrRw30HW8FetM+hesd4wsQYGModfi8+oT45PEO0dIHt4S+sceeyfFlLohPcZ+AW141bZv0T4jAFfa1uZXSJ8x8BI67elqU64+i0zgdqN1BvqcHXn9iCTe6NwifBqZH9We2Lgd/v22psoEAVg+IBWEMQiCigFW8Vbbb1UtPb8/z+2yW52BljtMBdtsuH5jm+iHAwzsFURpx/3DBR7MHsq4vQU2gFbQP/OVcQHueFhi5HoysfbSHwAm43EWj7+gUQGFQzpxV0+Ts8gE4Br0F35+ISOOe+9eUc2nhmcdw0eEr5sPEIiBuD70Qey8Tc6txpU0kAilIuvkHjmX1LoycWnAgscSyRWMvEYiaEmsOrak4lPRZbTFhYS7+LxBySMjtDa594WjbdfxFZAOwbzOHa8gdQBOIyRmovFA6RegUfHQsI6XJ3Jp78+oMwzkTAOwMUv7NJI7g3tgE9/ILVLYydIvbSBU4g5SRe4tCaY8wDcTuI7k5mLOc/Ar59gzvATKotfMMdtg4COiTlGBBewnwK3PBCyNjBvuoAKuhssCEDQHAvMSAcGLTWxIAVhZyxy3/Vv04GLRU2Q0MSSwcyGK+zZEktOICXCMmu8bl+YjXBsYZkDkujOJGX1nLCjkS+7EzpHUi7sgUoL93iR5U5Gm81o4lp40eMaFMh6KGCyACU0H7ntdFAl/kIuyScopM0esTIz1UCtll8xbza7oJ593iPTo9+C2+gHUwO/YYyCNtxQ92lk4kXWKM3g5vSV8+oamGMsp85Kh7vRvTCYp46TzoLQ0+F/pYkfIt/eOzZwsaOhripOrhwc1yOFcUTrdIBKvJ2JqDL+h+t7zLLzhohq44TrxDpcoR9IWXGcspLGLO6XuvG88WUhoTZeZgyS42a7O5+b280xGRhIqI8z1fE6XsfreB2v4wriZpSaPxV/XQBk4x+JD9bwW7i8Z7z8gkPft+4b73mQ4x3vGN/PoSQY3iu+bcE/7NNd4m8ruChObh43I5254qw+Tkf7umx8izgdbYZwqTzO9+6S6jgdbTbvqDxOR5stGKqNb1vAwT4pjJPRrixOdFBVh1pNkV/Sglg88IeFvgAAAABJRU5ErkJggg=="
           class="RankingTitle-module_icon_hKj5L"></p>
@@ -347,7 +348,8 @@
         </div>
       </div>
     </a></div>
-  <div class="Updates-module_rankingTitle_Ky0uL"><a href="/titles/100020" class="">
+  <div class="Updates-module_rankingTitle_Ky0uL">
+    <a href="http://mangaplus.shueisha.tv/truyen-tranh/one-piece-1-chap-1103-en.html" class="">
       <p class="RankingTitle-module_rankingNumber_a7Dbg"><img
           src="data:image/png;base64,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"
           class="RankingTitle-module_icon_hKj5L"></p>
@@ -363,8 +365,10 @@
               class="RankingTitle-module_viewCountIcon_Haavo">306427</p>
         </div>
       </div>
-    </a></div>
-  <div class="Updates-module_rankingTitle_Ky0uL"><a href="/titles/100034" class="">
+    </a>
+  </div>
+  <div class="Updates-module_rankingTitle_Ky0uL">
+    <a href="http://mangaplus.shueisha.tv/truyen-tranh/jujutsu-kaisen-4-chap-247-en.html" class="">
       <p class="RankingTitle-module_rankingNumber_a7Dbg"><img
           src="data:image/png;base64,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"
           class="RankingTitle-module_icon_hKj5L"></p>
@@ -381,7 +385,8 @@
         </div>
       </div>
     </a></div>
-  <div class="Updates-module_rankingTitle_Ky0uL"><a href="/titles/100037" class="">
+  <div class="Updates-module_rankingTitle_Ky0uL">
+    <a href="http://mangaplus.shueisha.tv/truyen-tranh/chainsaw-man-37-chap-152-en.html" class="">
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">4</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Chainsaw Man by Tatsuki Fujimoto for free!" class="RankingTitle-module_titleImg_18ZMt"
@@ -396,7 +401,7 @@
         </div>
       </div>
     </a></div>
-  <div class="Updates-module_rankingTitle_Ky0uL"><a href="/titles/100012" class="">
+  <div class="Updates-module_rankingTitle_Ky0uL"><a href="http://mangaplus.shueisha.tv/truyen-tranh/one-piece-1-chap-1103-en.html" class="">
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">5</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Dragon Ball Super by Akira Toriyama / Toyotarou for free!"
@@ -412,7 +417,7 @@
         </div>
       </div>
     </a></div>
-  <div class="Updates-module_rankingTitle_Ky0uL"><a href="/titles/100017" class="">
+  <div class="Updates-module_rankingTitle_Ky0uL"><a href="http://mangaplus.shueisha.tv/truyen-tranh/my-hero-academia-6-en" class="">
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">6</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga My Hero Academia by Kohei Horikoshi for free!" class="RankingTitle-module_titleImg_18ZMt"
@@ -427,7 +432,7 @@
         </div>
       </div>
     </a></div>
-  <div class="Updates-module_rankingTitle_Ky0uL"><a href="/titles/100056" class="">
+  <div class="Updates-module_rankingTitle_Ky0uL"><a href="http://mangaplus.shueisha.tv/truyen-tranh/spy-x-family-36-chap-93-en.html" class="">
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">7</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga SPY x FAMILY by Tatsuya Endo  for free!" class="RankingTitle-module_titleImg_18ZMt"
