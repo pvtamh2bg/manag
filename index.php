@@ -56,7 +56,6 @@ $domain = $_SERVER['SERVER_NAME'];
 	<script src="<?php echo $linkOption1; ?>js/main.js"></script>
 	<?php require_once('page/googleAnalytics.php'); ?>
 </head>
-
 <body oncontextmenu="return false;">
 	<input type="hidden" id="keyword-default" value="black">
 	<div class="outsite ">
@@ -254,6 +253,9 @@ $domain = $_SERVER['SERVER_NAME'];
 					</div>
 				</div>
 			</div>
+			<div class="ranking-hot on">
+				<?php require('page/hot.php'); ?>
+			</div>
 			<div id="Top" class="scrollTop none Updates-module_showBtn_WUpS9">
 				<span><a href="index.html"><img src="<?php echo $linkOption1 ?>frontend/images/arrow_up_icon.png"></a></span>
 			</div>
@@ -263,7 +265,6 @@ $domain = $_SERVER['SERVER_NAME'];
 		<?php
 		require_once('page/qc/bannerLeft.php');
 		?>
-
 	</div>
 	<?php
 	require_once('page/qc/bannerContent.php');

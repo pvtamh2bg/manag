@@ -25539,6 +25539,9 @@ textarea {
 	padding-top: 15px;
   padding-bottom: 30px
 }
+.ranking-hot.on {
+	display: none;
+}
 .main-content .caption {
 	font-size: 24px;
 	font-weight: 500;
@@ -28170,6 +28173,9 @@ textarea {
 	}
 	.ranking-hot {
 		display: none;
+	}
+  .ranking-hot.on{
+		display: block;
 	}
 
 	.logo.mobile a div {
