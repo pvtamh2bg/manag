@@ -28168,6 +28168,9 @@ textarea {
 	.Updates-module_fluidImage_1NMT9 {
 		height: 55px;
 	}
+	.ranking-hot {
+		display: none;
+	}
 
 	.logo.mobile a div {
 		text-indent: -9999px;
