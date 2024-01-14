@@ -28178,6 +28178,9 @@ textarea {
 		display: block;
 		width: 100% !important;
 	}
+	.ranking-hot.on .Updates-module_subInnerWrapper_1P-W9{
+		width: 100% !important;
+	}
 
 	.logo.mobile a div {
 		text-indent: -9999px;
