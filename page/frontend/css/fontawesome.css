@@ -28176,6 +28176,7 @@ textarea {
 	}
   .ranking-hot.on{
 		display: block;
+		width: 100% !important;
 	}
 
 	.logo.mobile a div {
