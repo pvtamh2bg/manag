@@ -107,7 +107,7 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 
 </head>
 
-<body>
+<body oncontextmenu="return false;">
 	<input type="hidden" id="keyword-default" value="one">
 	<div class="outsite ">
 		<?php
