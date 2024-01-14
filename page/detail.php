@@ -78,16 +78,16 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 		<?= $lastElement ?>]
 	</title>
 	<meta name="keyword"
-		content="<?= $arr[1] . "," . $arr[1] ?> ,đọc truyện tranh <?= $arr[1] ?>,truyện <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?>,đam mỹ">
+		content="<?= $arr[1] . "," . $arr[1] ?> ,Read Manga <?= $arr[1] ?>,Story <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?>,đam mỹ">
 	<meta name="description"
-		content="❶✔️ Đọc truyện  <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> bản dịch Full mới nhất, ảnh đẹp chất lượng cao, cập nhật nhanh và sớm nhất tại <?= $domain ?>">
+		content="❶✔️ Read Manga  <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> The latest full translation, high-quality beautiful images, updated quickly and promptly at <?= $domain ?>">
 	<meta itemprop="description"
-		content="❶✔️ Đọc truyện  <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> bản dịch Full mới nhất, ảnh đẹp chất lượng cao, cập nhật nhanh và sớm nhất tại <?= $domain ?>">
+		content="❶✔️ Read Manga  <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> The latest full translation, high-quality beautiful images, updated quickly and promptly at <?= $domain ?>">
 	<meta itemprop="name" content="<?= $arr[1] ?>">
 	<meta itemprop="image" content="<?= $arr[0] ?>">
 	<meta property="og:title" content="Truyên <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> ">
 	<meta property="og:description"
-		content="❶✔️ Đọc truyện  <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> bản dịch Full mới nhất, ảnh đẹp chất lượng cao, cập nhật nhanh và sớm nhất tại <?= $domain ?>">
+		content="❶✔️ Read Manga  <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> The latest full translation, high-quality beautiful images, updated quickly and promptly at <?= $domain ?>">
 	<meta property="og:image" content="<?= $arr[0] ?>">
 	<link rel="canonical" href="<?= $linkOption . $the_loai ?><?= vn_str_filter($arr[1]) . "-" . $arr[15] ?>">
 	<meta property="og:site_name" content="<?= $domain ?>">

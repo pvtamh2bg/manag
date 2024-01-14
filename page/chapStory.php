@@ -135,19 +135,19 @@ if (isset($_SESSION['text_size']))
 		<?= $bb1 . $nextChapTitle ?>
 	</title>
 	<meta name="keyword"
-		content="<?= $arr_name_o[1] . " " . $numChap . "," . $arr_name_o[1] . " chap " . $numChap . ",đọc truyện tranh " . $arr_name_o[1] . " chap " . $numChap . "," . $arr_name_o[1] . " chương " . $numChap . "," . $arr_name_o[1] . " " . $numChap . " tiếng việt" ?>">
+		content="<?= $arr_name_o[1] . " " . $numChap . "," . $arr_name_o[1] . " chapter " . $numChap . ", read manga " . $arr_name_o[1] . " chap " . $numChap . "," . $arr_name_o[1] . " chapter " . $numChap . ", 日本語 ネタバレ100%" . $arr_name_o[1] . " " . $numChap . " 話死ぬくれ！ english" ?>">
 	<meta name="description"
-		content="<?= "Đọc truyện tranh " . $bb1 . $nextChapMeta . " Mới nhất nhanh nhất tại " . $domain ?>">
+		content="<?= "Read Manga " . $bb1 . $nextChapMeta . " Latest chapter and fastest at " . $domain ?>">
 	<meta name="author" content="<?= $domain ?>">
 
 	<meta property="og:title" content="<?= $arr_name_o[1] ?>">
 	<meta property="og:description"
-		content="<?= "Đọc truyện tranh " . $bb1 . $nextChapMeta . " Mới nhất nhanh nhất tại " . $domain ?>">
+		content="<?= "Read Manga " . $bb1 . $nextChapMeta . " Latest chapter and fastest " . $domain ?>">
 	<meta property="og:image" content="<?= $arr_name_o[0] ?>">
 	<link rel="canonical"
 		href="<?= $linkOption . $the_loai ?><?= vn_str_filter($arr_name_o[1]) . "-" . $arr_name_o[15] . "-chap-" . $numChap . ".html" ?>" />
 	<meta itemprop="description"
-		content="<?= "Đọc truyện tranh " . $bb1 . $nextChapMeta . " Mới nhất nhanh nhất tại " . $domain ?>">
+		content="<?= "Read Manga " . $bb1 . $nextChapMeta . " Latest chapter and fastest " . $domain ?>">
 	<meta itemprop="name" content="<?= $arr_name_o[1] ?>">
 	<meta itemprop="image" content="<?= $linkOption1 . $arr_name_o[0] ?>">
 	<meta itemprop="thumbnail" content="<?= $linkOption1 . $arr_name_o[0] ?>">
