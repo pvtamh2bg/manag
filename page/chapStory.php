@@ -370,9 +370,9 @@ if (isset($_SESSION['text_size']))
 								$countImages = count($arrImg_box);
 								for ($i = 0; $i < $countImages; $i++) {
 									if (strpos($arrImg_box[$i], "blogger.googleusercontent.com") !== false || strpos($arrImg_box[$i], "http://") !== false || strpos($arrImg_box[$i], "https://") !== false)
-										echo '<img style="max-width: 800px !important;" class="lazy" src="' . getParseUrl($arrImg_box[$i], $images[7], $linkOption) . '" alt="' . $NameStory . ' Chap ' . $IdChap . ' - Next Chap ' . $nextChapter . '" /><br>';
+										echo '<img class="lazy" src="' . getParseUrl($arrImg_box[$i], $images[7], $linkOption) . '" alt="' . $NameStory . ' Chap ' . $IdChap . ' - Next Chap ' . $nextChapter . '" /><br>';
 									else
-										echo '<img style="max-width: 800px !important;" class="lazy" src="' . $linkOption . "page/" . $arrImg_box[$i] . '" alt="' . $NameStory . ' Chap ' . $IdChap . ' - Next Chap ' . $nextChapter . '" /><br>';
+										echo '<img class="lazy" src="' . $linkOption . "page/" . $arrImg_box[$i] . '" alt="' . $NameStory . ' Chap ' . $IdChap . ' - Next Chap ' . $nextChapter . '" /><br>';
 								}
 							}
 
