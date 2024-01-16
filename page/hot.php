@@ -327,7 +327,7 @@
 <div class="Updates-module_subInnerWrapper_1P-W9">
   <div class="Updates-module_subHeader_Nc89q">
     <h1 class="styles-module_title_3gUV9 Updates-module_rankingHeaderTitle__rR8m">Hottest</h1>
-    <a href="/manga_list/hot" class="Updates-module_subShowAll_IFDwn">View All</a>
+    <a href="https://mangaplus.shueisha.tv" class="Updates-module_subShowAll_IFDwn">View All</a>
   </div>
   <div class="Updates-module_rankingTitle_Ky0uL">
     <a href="http://mangaplus.shueisha.tv/truyen-tranh/boruto-two-blue-vortex-45-en" class="">
@@ -337,8 +337,8 @@
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Boruto: Two Blue Vortex by Masashi Kishimoto / Mikio Ikemoto for free!"
           class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100269/title_thumbnail_portrait_list/311890.jpg?key=27dd5fb1dc73716b393fb513ad74a5ca&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100269/title_thumbnail_portrait_list/311890.jpg?key=27dd5fb1dc73716b393fb513ad74a5ca&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/boruto-two-blue-vortex-133177271965a354b7d02ec.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/boruto-two-blue-vortex-133177271965a354b7d02ec.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> Boruto: Two Blue Vortex</p>
@@ -355,8 +355,8 @@
           class="RankingTitle-module_icon_hKj5L"></p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img alt="Read the Manga One Piece by Eiichiro Oda for free!"
           class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100020/title_thumbnail_portrait_list/326439.jpg?key=cb056bc36fa3ee39db898f2ebda22885&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100020/title_thumbnail_portrait_list/326439.jpg?key=cb056bc36fa3ee39db898f2ebda22885&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/one-piece-5246603956598ebba2a1b1.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/one-piece-5246603956598ebba2a1b1.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> One Piece</p>
@@ -374,8 +374,8 @@
           class="RankingTitle-module_icon_hKj5L"></p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Jujutsu Kaisen by Gege Akutami for free!" class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100034/title_thumbnail_portrait_list/312829.jpg?key=81ff399fda433797ecce00bdd1a6b593&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100034/title_thumbnail_portrait_list/312829.jpg?key=81ff399fda433797ecce00bdd1a6b593&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/jujutsu-kaisen-747048761659927fa1fa45.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/jujutsu-kaisen-747048761659927fa1fa45.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> Jujutsu Kaisen</p>
@@ -390,8 +390,8 @@
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">4</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Chainsaw Man by Tatsuki Fujimoto for free!" class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100037/title_thumbnail_portrait_list/312145.jpg?key=c4c2cdc144865af6573dfe2f8af229e7&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100037/title_thumbnail_portrait_list/312145.jpg?key=c4c2cdc144865af6573dfe2f8af229e7&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/chainsaw-man-318082924659d6d3955e85.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/chainsaw-man-318082924659d6d3955e85.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> Chainsaw Man</p>
@@ -406,8 +406,8 @@
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Dragon Ball Super by Akira Toriyama / Toyotarou for free!"
           class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100012/title_thumbnail_portrait_list/312400.jpg?key=531d3416b11e65e4487a265ee209b52c&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100012/title_thumbnail_portrait_list/312400.jpg?key=531d3416b11e65e4487a265ee209b52c&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/dragon-ball-super-22881329065a5e1dab379b.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/dragon-ball-super-22881329065a5e1dab379b.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> Dragon Ball Super</p>
@@ -421,8 +421,8 @@
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">6</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga My Hero Academia by Kohei Horikoshi for free!" class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100017/title_thumbnail_portrait_list/313258.jpg?key=75189873d1a2ae44b2ced0d79f8fb48d&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100017/title_thumbnail_portrait_list/313258.jpg?key=75189873d1a2ae44b2ced0d79f8fb48d&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/my-hero-academia-267699271659929ce4f3e2.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/my-hero-academia-267699271659929ce4f3e2.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> My Hero Academia</p>
@@ -436,8 +436,8 @@
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">7</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga SPY x FAMILY by Tatsuya Endo  for free!" class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100056/title_thumbnail_portrait_list/313744.jpg?key=a62f9286e131f3eb925a719aaaf37327&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100056/title_thumbnail_portrait_list/313744.jpg?key=a62f9286e131f3eb925a719aaaf37327&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/spy-x-family-957593451659c2127a7e47.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/spy-x-family-957593451659c2127a7e47.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> SPY x FAMILY</p>
@@ -451,8 +451,8 @@
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">8</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Black Clover by Yuki Tabata for free!" class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100003/title_thumbnail_portrait_list/311752.jpg?key=de4763644009f8dc46f52bcc6435c17d&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100003/title_thumbnail_portrait_list/311752.jpg?key=de4763644009f8dc46f52bcc6435c17d&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/black-clover-10415169965a5213a2e5b8.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/black-clover-10415169965a5213a2e5b8.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> Black Clover</p>
@@ -466,8 +466,8 @@
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">9</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Kagurabachi by Takeru Hokazono for free!" class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100274/title_thumbnail_portrait_list/312883.jpg?key=e36dda907f8f1d1b263851710efc915d&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100274/title_thumbnail_portrait_list/312883.jpg?key=e36dda907f8f1d1b263851710efc915d&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/kagurabachi-109633426665992f694eb50.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/kagurabachi-109633426665992f694eb50.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> Kagurabachi</p>
@@ -482,8 +482,8 @@
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga 【OSHI NO KO】 by Aka Akasaka x Mengo Yokoyari for free!"
           class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100191/title_thumbnail_portrait_list/310708.jpg?key=17f9f8f9da5ffdd15c90440d459bae35&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100191/title_thumbnail_portrait_list/310708.jpg?key=17f9f8f9da5ffdd15c90440d459bae35&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/kagurabachi-109633426665992f694eb50.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/kagurabachi-109633426665992f694eb50.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> 【OSHI NO KO】</p>
@@ -497,8 +497,8 @@
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">11</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img alt="Read the Manga Dandadan by Yukinobu Tatsu for free!"
           class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100171/title_thumbnail_portrait_list/312235.jpg?key=0a0379f33405fc328b56145af3911a37&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100171/title_thumbnail_portrait_list/312235.jpg?key=0a0379f33405fc328b56145af3911a37&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/dandadan-24528951865a55b5e4d4ee.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/dandadan-24528951865a55b5e4d4ee.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> Dandadan</p>
@@ -513,8 +513,8 @@
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga KAIJU NO.8 (Monster #8) by Naoya Matsumoto for free!"
           class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100110/title_thumbnail_portrait_list/312889.jpg?key=2a4bdf6253f95634724ba9d16d456439&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100110/title_thumbnail_portrait_list/312889.jpg?key=2a4bdf6253f95634724ba9d16d456439&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/kaiju-no-8-monster--603380211659c24835b5ae.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/kaiju-no-8-monster--603380211659c24835b5ae.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> KAIJU NO.8 (Monster #8)</p>
@@ -529,8 +529,8 @@
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Kaiju No. 8: B-Side by Naoya Matsumoto / Keiji Ando / Kentaro Hidano for free!"
           class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100290/title_thumbnail_portrait_list/329307.jpg?key=fc5a609c4d8d13e02a7d705d06c69d9e&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100290/title_thumbnail_portrait_list/329307.jpg?key=fc5a609c4d8d13e02a7d705d06c69d9e&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/kaiju-no-8-b-side-136331646265993182751d5.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/kaiju-no-8-b-side-136331646265993182751d5.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> Kaiju No. 8: B-Side</p>
@@ -544,8 +544,8 @@
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">14</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga SAKAMOTO DAYS by Yuto Suzuki for free!" class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100127/title_thumbnail_portrait_list/313621.jpg?key=0628ed642bafa6a1c55297766c807237&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100127/title_thumbnail_portrait_list/313621.jpg?key=0628ed642bafa6a1c55297766c807237&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/sakamoto-days-891301117659926c59e675.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/sakamoto-days-891301117659926c59e675.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> SAKAMOTO DAYS</p>
@@ -559,8 +559,8 @@
       <p class="RankingTitle-module_icon_hKj5L RankingTitle-module_rankingNumber_a7Dbg">15</p>
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga The God Before Me by Shou Kunoda for free!" class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100289/title_thumbnail_portrait_list/328050.jpg?key=4203d35c6a9492464a49093af544c4a9&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100289/title_thumbnail_portrait_list/328050.jpg?key=4203d35c6a9492464a49093af544c4a9&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/the-god-before-me-558006062659c14341046e.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/the-god-before-me-558006062659c14341046e.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> The God Before Me</p>
@@ -575,8 +575,8 @@
       <div class="RankingTitle-module_rankingTitle_2E0E-"><img
           alt="Read the Manga Make the Exorcist Fall in Love by Aruma Arima/Masuku Fukayama for free!"
           class="RankingTitle-module_titleImg_18ZMt"
-          data-src="https://mangaplus.shueisha.co.jp/drm/title/100198/title_thumbnail_portrait_list/313057.jpg?key=2d5adc3a858acd6c8f0a4c41030494b3&amp;duration=86400"
-          src="https://mangaplus.shueisha.co.jp/drm/title/100198/title_thumbnail_portrait_list/313057.jpg?key=2d5adc3a858acd6c8f0a4c41030494b3&amp;duration=86400"
+          data-src="https://mangaplus.shueisha.tv/page/upload/story/190x247/make-the-exorcist-fall-in-love-1963071237659d7072769b1.jpg"
+          src="https://mangaplus.shueisha.tv/page/upload/story/190x247/make-the-exorcist-fall-in-love-1963071237659d7072769b1.jpg"
           lazy="loaded">
         <div class="RankingTitle-module_titleDetail_35zr8">
           <p class="RankingTitle-module_title_2rg5n"> Make the Exorcist Fall in Love</p>
@@ -587,5 +587,5 @@
       </div>
     </a>
   </div>
-  <a href="/manga_list/hot" class="Updates-module_subShowAllBottom_1qN-f">View All</a>
+  <a href="https://mangaplus.shueisha.tv" class="Updates-module_subShowAllBottom_1qN-f">View All</a>
 </div>
