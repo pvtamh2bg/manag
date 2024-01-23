@@ -177,7 +177,7 @@ $(document).ready(function(){
 											 for(var i=0;i<b1.length;i++){
 												 html+="<div class='list-container'>";
 													 html+="<div class='result-item'>";
-														 html+="<a href='"+t2+"truyen-tranh/"+b6[i]+"-"+b1[i]+"'>";
+														 html+="<a href='"+t2+"truyen-tranh/"+b6[i]+"-"+b1[i]+"-en'>";
 															 html+="<div class='media'>";
 																 html+="<figure class='media-left'>";
 																	 html+="<p class='image'>";
