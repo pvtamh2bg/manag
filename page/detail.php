@@ -225,6 +225,13 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 
 						</ul>
 						</br>
+						<div class="socials-share">
+								<a class="bg-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"><span class="fa fa-facebook"></span> Share</a>
+								<a class="bg-twitter" id="twitterShareButton" href="#" target="_blank"><span class="fa fa-twitter"></span> Tweet</a>
+								<a class="bg-google-plus" href="" target="_blank"><span class="fa fa-google-plus"></span> Plus</a>
+								<!-- <a class="bg-pinterest" href="" target="_blank"><span class="fa fa-pinterest"></span> Pin</a>
+								<a class="bg-email" href="" target="_blank"><span class="fa fa-envelope"></span> Gmail</a> -->
+						</div>
 
 						<div class="txt txt01 story-detail-info" itemprop="description">
 							<p>
@@ -313,7 +320,7 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 				<?php
 				$countComment = $db->GetCountComment($IdStory);
 				require_once('comment.php');
-
+				$linkXShare =  $linkOption . $the_loai . vn_str_filter($arr[1]) . "-" . $IdStory ."-en";
 				?>
 			</div>
 		</section>
@@ -334,6 +341,15 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 			setTimeout(function () {
 				document.getElementById("load_comments").click();
 			}, 1000);
+			function openTwitterPopup() {
+				const shareUrl = encodeURIComponent(<?php echo  json_encode($linkXShare); ?>);
+				const shareText = encodeURIComponent(<?php echo json_encode($arr[1]); ?>);
+				const twitterUrl = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
+
+				window.open(twitterUrl, 'twitterPopup', 'height=350,width=600');
+			}
+					// Call this function when the user clicks your share button.
+			document.getElementById('twitterShareButton').addEventListener('click', openTwitterPopup);
 		</script>
 		<?php
 		////require_once('qc/bannerLeft.php'); 
