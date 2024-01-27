@@ -1156,7 +1156,7 @@ class config
 		    $sql="SELECT * FROM qq_story where hide_view=0 and story_Status='Finished' ".$k." ORDER BY DateUpdate_Chap DESC";
 		    break;
 		  case "truyen-tranh-hay":
-		    $sql = "SELECT * FROM qq_story where hide_view=0 and Female=1 ".$k." ORDER BY DateUpdate_Chap DESC";
+		    $sql = "SELECT * FROM qq_story where hide_view=0 and Female=0 ".$k." ORDER BY DateUpdate_Chap DESC";
 		    break;
 		  case "tieu-thuyet-hay":
 			$sql = "SELECT * FROM qq_story where hide_view=0 and Male=1 ".$k." ORDER BY DateUpdate_Chap DESC";
