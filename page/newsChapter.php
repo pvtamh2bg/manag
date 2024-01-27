@@ -47,14 +47,12 @@ $dateUpload=date('Y-m-d H:i:s');
     <meta charset="utf-8">
 	<title><?=$listNews[1]?></title>
 
-	<meta name="description" content="<?="Đọc truyện tranh ".$bb1.$nextChapMeta." Mới nhất nhanh nhất tại ".$domain?>">
+	<meta name="description" content="<?="Read manga ".$bb1.$nextChapMeta." for free,  latest chapter and fastest at shueisha.tv - ".$domain?>">
 	<meta name="author" content="<?=$domain?>">
 	 
 
-	<meta property="og:description" content="<?="Đọc truyện tranh ".$bb1.$nextChapMeta." Mới nhất nhanh nhất tại ".$domain?>">
-
-	  
-	  <meta name="copyright" content="Copyright © 2023 <?=$domain?>" />
+	<meta property="og:description" content="<?="Read manga ".$bb1.$nextChapMeta." for free,  latest chapter and fastest at shueisha.tv - ".$domain?>">
+	<meta name="copyright" content="Copyright © 2023 <?=$domain?>" />
 	<meta name="Author" content="<?=$domain?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=6.0, user-scalable=yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />

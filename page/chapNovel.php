@@ -122,15 +122,15 @@ if(isset($_SESSION['email'])){
 <head>
     <meta charset="utf-8">
 	<title><?=$bb1.$nextChapTitle?></title>
-	<meta name="keyword" content="<?=$arr_name_o[1]." ".$numChap.",".$arr_name_o[1]." chap ".$numChap.",đọc truyện tranh ".$arr_name_o[1]." chap ".$numChap.",".$arr_name_o[1]." chương ".$numChap.",".$arr_name_o[1]." ".$numChap." tiếng việt"?>">
-	<meta name="description" content="<?="Đọc truyện tranh ".$bb1.$nextChapMeta." Mới nhất nhanh nhất tại ".$domain?>">
+	<meta name="keyword" content="<?=$arr_name_o[1]." ".$numChap.",".$arr_name_o[1]." chapter ".$numChap.",read manga ".$arr_name_o[1]." chapter ".$numChap.",".$arr_name_o[1]." chương ".$numChap.",".$arr_name_o[1]." ".$numChap.""?>">
+	<meta name="description" content="<?="Read manga ".$bb1.$nextChapMeta." for free,  latest chapter and fastest at shueisha.tv - ".$domain?>">
 	<meta name="author" content="<?=$domain?>">
 	 
 	<meta property="og:title" content="<?=$arr_name_o[1]?>">
-	<meta property="og:description" content="<?="Đọc truyện tranh ".$bb1.$nextChapMeta." Mới nhất nhanh nhất tại ".$domain?>">
+	<meta property="og:description" content="<?="Read manga ".$bb1.$nextChapMeta." for free,  latest chapter and fastest at shueisha.tv - ".$domain?>">
 	<meta property="og:image" content="<?=$arr_name_o[0]?>">
 	<link rel="canonical" href="<?=$linkOption.$the_loai?><?=vn_str_filter($arr_name_o[1])."-".$arr_name_o[15]."-chap-".$numChap.".html"?>" />
-	<meta itemprop="description" content="<?="Đọc truyện tranh ".$bb1.$nextChapMeta." Mới nhất nhanh nhất tại ".$domain?>">
+	<meta itemprop="description" content="<?="Read manga ".$bb1.$nextChapMeta." for free,  latest chapter and fastest at shueisha.tv - ".$domain?>">
 	<meta itemprop="name" content="<?=$arr_name_o[1]?>">
 	<meta itemprop="image" content="<?=$linkOption1.$arr_name_o[0]?>">
 	<meta itemprop="thumbnail" content="<?=$linkOption1.$arr_name_o[0]?>">

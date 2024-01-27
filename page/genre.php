@@ -65,10 +65,10 @@
 <head>
 	<meta charset="utf-8">
 	<title><?=$genres3." - ".$domain?></title>
-	<meta name="keywords" content="truyện <?=$genres3.",".$genres3?>">
-	<meta name="description" content="Đọc truyện <?=$genres3?> mới nhất và nhanh nhất tại <?=$domain?>">
+	<meta name="keywords" content="Manga <?=$genres3.",".$genres3?>">
+	<meta name="description" content="Read <?=$genres3?> for free,  latest chapter and fastest at shueisha.tv - <?=$domain?>">
 	<meta property="og:title" content="<?=$genres3." - ".$domain?>">
-	<meta property="og:description" content="Đọc truyện <?=$genres3?> mới nhất và nhanh nhất tại <?=$domain?>">
+	<meta property="og:description" content="Read <?=$genres3?> for free,  latest chapter and fastest at shueisha.tv - <?=$domain?>">
 	<link href="<?=$linkOption1.$genres1."-".$IdGenre?>.html" rel="canonical">
 	<meta property="og:site_name" content="<?=$domain?>">
 	<meta property="og:type" content="article">
