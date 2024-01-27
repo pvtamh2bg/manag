@@ -256,12 +256,9 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 				</ul>
 				<?php if ($arr[6] == "Nhạy Cảm") { ?>
 					<p class="alert alert-danger warning-info">
-						<span>Cảnh báo độ tuổi:</span>
-						Truyện tranh
-						<?= $arr[1] ?> có thể có nội dung và hình ảnh nhạy cảm, không phù hợp với lứa tuổi của bạn. Nếu bạn dưới 18
-						tuổi, vui lòng chọn một truyện khác để giải trí. Chúng tôi sẽ không chịu trách nhiệm liên quan nếu bạn bỏ qua
-						cảnh báo này.
-
+						<span>Age Warning:</span>
+						The comic
+						<?= $arr[1] ?> may contain sensitive content and images that are not suitable for your age group. If you are under the age of 17, please choose a different story for entertainment. We will not be responsible for any related issues if you disregard this warning.
 					</p>
 				<?php }
 
