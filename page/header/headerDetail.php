@@ -330,7 +330,7 @@ if ($(window).width() > 1023) {
                     </div>
                     <a href="<?= $linkOption?>" class="navbar-item">Home</a>
                     <div class="navbar-item has-dropdown is-hoverable is-mega">
-                        <div class="navbar-link">Type of Story</div>
+                        <div class="navbar-link">Genres</div>
                         <div class="navbar-dropdown ">
                             <div class="container">
                                 <div class="level">
