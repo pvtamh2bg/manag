@@ -15,7 +15,7 @@ if (isset($_SESSION['email'])) {
 
     <div class="group01 comments-container">
         <div class="notify" style="padding: 10px; margin-bottom: 10px; color: var(--color-white);">
-            Like <a rel="nofollow" href="https://www.facebook.com/shueisha-tv" target="_blank">Fanpage</a> to support
+            Like <a rel="nofollow" href="https://www.facebook.com/larvatubafunny" target="_blank">Fanpage</a> or follow me on <a rel="nofollow" href="https://twitter.com/shueishatv" target="_blank">Twitter</a>  to support
             Shueisha.tv and stay updated with the latest information about the series.
             <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/shueisha-tv" data-send="false"
                 data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"
