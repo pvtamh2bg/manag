@@ -145,7 +145,7 @@ if (isset($_SESSION['text_size']))
 		content="<?= "Read Manga " . $bb1 . $nextChapMeta . " Latest chapter and fastest " . $domain ?>">
 	<meta property="og:image" content="<?= $arr_name_o[0] ?>">
 	<link rel="canonical"
-		href="<?= $linkOption . $the_loai ?><?= vn_str_filter($arr_name_o[1]) . "-" . $arr_name_o[15] . "-chap-" . $numChap . ".html" ?>" />
+		href="<?= $linkOption . $the_loai ?><?= vn_str_filter($arr_name_o[1]) . "-" . $arr_name_o[15] . "-chap-" . $numChap . "-$lang.html" ?>" />
 	<meta itemprop="description"
 		content="<?= "Read Manga " . $bb1 . $nextChapMeta . " Latest chapter and fastest " . $domain ?>">
 	<meta itemprop="name" content="<?= $arr_name_o[1] ?>">

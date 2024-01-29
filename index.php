@@ -15,18 +15,18 @@ $domain = $_SERVER['SERVER_NAME'];
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>MANGA Plus TV by SHUEISHA | Read and Discover Manga Online</title>
-	<meta name="title" content="MANGA Plus TV by SHUEISHA | Read and Discover Manga Online">
+	<title>MANGA Plus TV by SHUEISHA | Read and Discover Manga Online For Free</title>
+	<meta name="title" content="MANGA Plus by SHUEISHA TV | Read and Discover Manga Online">
 	<meta name="keyword"
-		content="Explore a vast collection of manga on MANGA Plus TV by SHUEISHA. Enjoy the latest chapters and discover new favorites updated daily.">
+		content="Explore a vast collection of manga on MANGA Plus by SHUEISHA TV. Enjoy the latest chapters and discover new favorites updated daily.">
 	<meta name="description"
-		content="Explore a vast collection of manga on MANGA Plus TV by SHUEISHA. Enjoy the latest chapters and discover new favorites updated daily.">
-	<meta property="og:title" content="MANGA Plus TV by SHUEISHA | Read and Discover Manga Online">
+		content="Explore a vast collection of manga on MANGA Plus TV by SHUEISHA TV. Enjoy the latest chapters and discover new favorites updated daily.">
+	<meta property="og:title" content="MANGA Plus TV by SHUEISHA TV | Read and Discover Manga Online For Free">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://<?= $domain ?>/">
 	<meta property="og:site_name" content="<?= $domain ?>">
 	<meta property="og:description"
-		content="Explore a vast collection of manga on MANGA Plus TV by SHUEISHA. Enjoy the latest chapters and discover new favorites updated daily.">
+		content="Explore a vast collection of manga on MANGA Plus by SHUEISHA TV. Enjoy the latest chapters and discover new favorites updated daily.">
 	<meta property="og:image" content="<?php echo $linkOption1; ?>frontend/images/favicon.png">
 
 	<meta property="og:type" content="article">
@@ -44,7 +44,7 @@ $domain = $_SERVER['SERVER_NAME'];
 	<meta property="twitter:image" content="<?= $domain ?>/images/social-preview-image.png">
 
 	<!-- Canonical URL -->
-	<link rel="canonical" href="<?= $domain ?>">
+	<link rel="canonical" href="<?= $domain.'/index.html' ?>">
 
 	<!-- Language Indication -->
 	<meta http-equiv="content-language" content="en">
