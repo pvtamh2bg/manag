@@ -59,7 +59,7 @@
 		}
 	$banner=$db->GetAdvertisement();
 	$domain=$_SERVER['SERVER_NAME'];
-	$canonical = $linkOption1.$genres1.'-'.$IdGenre.'html';
+	$canonical = $linkOption1.$genres1.'-'.$IdGenre.'.html';
 	if(isset($_GET["country"]) || isset($_GET["status"]) || isset($_GET["sort"])) {
 		$canonical += '?';
 	}
