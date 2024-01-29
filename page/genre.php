@@ -82,6 +82,9 @@
 	if(!isset($_GET["country"]) && isset($_GET["status"]) && isset($_GET["sort"])) {
 		$canonical .= $status . '&'. $sort;
 	}
+	if(isset($_GET["country"]) && isset($_GET["status"]) && isset($_GET["sort"])) {
+		$canonical .= $country .'&'. $status .'&'. $sort;
+	}
 
 ?>
 <!DOCTYPE html>
