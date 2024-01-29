@@ -85,7 +85,8 @@ RewriteCond %{QUERY_STRING} ^size=(.*)&data=(.*)
 RewriteRule "^wp-content/uploads/image.jpg$" server.php?size=%1&data=%2 [L]
 
 RewriteRule "^index.html$" index.php [L]
-ErrorDocument 404 page/404.php
+RewriteRule "^404.html$" page/404.php [L]
+ErrorDocument 404 /404.html
 RewriteRule "^lich-su/(.*).html$" page/history.php?page=$1 [L]
 RewriteRule "^lich-su.html$" page/history.php [L]
 RewriteRule "^truyen-dang-theo-doi/(.*).html$" page/follow.php?page=$1 [L]
