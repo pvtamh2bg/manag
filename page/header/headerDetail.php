@@ -140,9 +140,9 @@ if ($(window).width() > 1023) {
 						
 						
 						<div class="notify center btn-search smp" id="lg_002" for="focus-input"><i class="fas fa-search"></i></div>
-						<!-- <div class="user center login-modal-open" id="lg_005">
+						<div class="user center login-modal-open" id="lg_005">
 							<div class="notify btn-user smp"><i class="fas fa-user-circle"></i></div>
-						</div>	 -->
+						</div>	
 						
 
 				<?php
