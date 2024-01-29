@@ -42,9 +42,6 @@
         max-width: 100%;
         -webkit-overflow-scrolling: touch;
       }
-      html {
-        overflow-x: hidden;
-      }
       .Error-module_container_mzmCx {
         width: 100%;
         display: -webkit-box;
@@ -503,7 +500,6 @@
         }
       }
       .styles-module_container_1rtol {
-        min-height: 100vh;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
