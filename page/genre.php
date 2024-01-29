@@ -61,26 +61,26 @@
 	$domain=$_SERVER['SERVER_NAME'];
 	$canonical = $linkOption1.$genres1.'-'.$IdGenre.'.html';
 	if(isset($_GET["country"]) || isset($_GET["status"]) || isset($_GET["sort"])) {
-		$canonical += '?';
+		$canonical .= '?';
 	}
 	if(isset($_GET["country"]) && !isset($_GET["status"]) && !isset($_GET["sort"])) {
-		$canonical += $country;
+		$canonical .= $country;
 	}
 	if(!isset($_GET["country"]) && isset($_GET["status"]) && !isset($_GET["sort"])) {
-		$canonical += $status;
+		$canonical .= $status;
 	}
 	if(!isset($_GET["country"]) && !isset($_GET["status"]) && isset($_GET["sort"])) {
-		$canonical += $sort;
+		$canonical .= $sort;
 	}
 
 	if(isset($_GET["country"]) && isset($_GET["status"]) && !isset($_GET["sort"])) {
-		$canonical += $country . '&'. $status;
+		$canonical .= $country . '&'. $status;
 	}
 	if(isset($_GET["country"]) && !isset($_GET["status"]) && isset($_GET["sort"])) {
-		$canonical += $country . '&'. $sort;
+		$canonical .= $country . '&'. $sort;
 	}
 	if(!isset($_GET["country"]) && isset($_GET["status"]) && isset($_GET["sort"])) {
-		$canonical += $status . '&'. $sort;
+		$canonical .= $status . '&'. $sort;
 	}
 
 ?>
@@ -93,7 +93,7 @@
 	<meta name="description" content="Read <?=$genres3?> for free,  latest chapter and fastest at shueisha.tv - <?=$domain?>">
 	<meta property="og:title" content="<?=$genres3." - ".$domain?>">
 	<meta property="og:description" content="Read <?=$genres3?> for free,  latest chapter and fastest at shueisha.tv - <?=$domain?>">
-	<link href="<?= $canonical; ?>" rel="canonical">
+	<link rel="canonical" href="<?= $canonical ?>">
 	<meta property="og:site_name" content="<?=$domain?>">
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="<?=$linkOption1.$genres1."-".$IdGenre?>.html">
