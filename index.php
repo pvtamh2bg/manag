@@ -53,7 +53,7 @@ $domain = $_SERVER['SERVER_NAME'];
 	<link rel="shortcut icon" href="<?php echo $linkOption1; ?>frontend/images/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1; ?>frontend/css/fontawesome.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1; ?>frontend/css/read.css">
-	<script src="<?php echo $linkOption1; ?>js/main.js"></script>
+	<script src="<?php echo $linkOption1; ?>js/main.min.js"></script>
 	<?php require_once('page/googleAnalytics.php'); ?>
 </head>
 <body oncontextmenu="return false;">
