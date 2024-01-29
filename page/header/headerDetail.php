@@ -84,7 +84,8 @@ if ($(window).width() > 1023) {
    //alert('Less than 960');
 }else{
 	$('#captcha_register').css('width', '87%');
-	$('<div class="notify center login-modal-open" id="lg_004"><i class="fas fa-envelope" ></i></div><div class="notify center login-modal-open" data-id="notification" id="lg_003"><i class="fas fa-bell"></i></div>').insertAfter("#lg_005");	
+	// $('<div class="notify center login-modal-open" id="lg_004"><i class="fas fa-envelope" ></i></div><div class="notify center login-modal-open" data-id="notification" id="lg_003"><i class="fas fa-bell"></i></div>').insertAfter("#lg_005");	
+    $('<div class="notify center login-modal-open" data-id="notification" id="lg_003"><i class="fas fa-bell"></i></div>').insertAfter("#lg_005");
 }
 });
 </script>
@@ -139,9 +140,9 @@ if ($(window).width() > 1023) {
 						
 						
 						<div class="notify center btn-search smp" id="lg_002" for="focus-input"><i class="fas fa-search"></i></div>
-						<div class="user center login-modal-open" id="lg_005">
+						<!-- <div class="user center login-modal-open" id="lg_005">
 							<div class="notify btn-user smp"><i class="fas fa-user-circle"></i></div>
-						</div>	
+						</div>	 -->
 						
 
 				<?php

@@ -240,7 +240,7 @@ $domain = $_SERVER['SERVER_NAME'];
 			<div class="container">
 				<div class="latest">
 					<div class="caption" id="list-update"><a href="<?php echo $linkOption; ?>truyen-tranh-hay.html"><span
-								class="starts-icon"></span>Daily Update</a></div>
+								class="starts-icon"></span>Daily Updates</a></div>
 					<?php
 					$arrLatest = $db->GetLatest();
 					storiesList($arrLatest, $linkOption);
