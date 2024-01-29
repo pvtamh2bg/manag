@@ -20,7 +20,7 @@ if (window.matchMedia("(min-width: 1023px)").matches) {
 			  html_left+='<i class="fas fa-times"></i>';
 			html_left+='</span>';
 			html_left+='<a rel="nofollow" href="'+banner8+'" target="_blank">';
-			  html_left+='<img src="'+banner7+'">';
+			  html_left+='<img alt="advertisement" src="'+banner7+'">';
 			html_left+='</a>';
 		  html_left+='</div>';
 		html_left+='</div>';
