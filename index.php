@@ -257,7 +257,7 @@ $domain = $_SERVER['SERVER_NAME'];
 				<?php require('page/hot.php'); ?>
 			</div>
 			<div id="Top" class="scrollTop none Updates-module_showBtn_WUpS9">
-				<span><a href="index.html"><img src="<?php echo $linkOption1 ?>frontend/images/arrow_up_icon.png"></a></span>
+				<span><a href="index.html"><img alt="arrow up to top to read manga" src="<?php echo $linkOption1 ?>frontend/images/arrow_up_icon.png"></a></span>
 			</div>
 		</section>
 
