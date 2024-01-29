@@ -267,7 +267,7 @@ if ($(window).width() > 1023) {
                             <input type="email" placeholder="Email" id="email_login"/>
                             <input type="password" placeholder="password" id="password_login">
                             <button type="submit" class="button_login btn btn-lg" id="button_login2">Log in</button>
-                            <a href="javascript:void(0);" class="forget-password-link">Forgot password</a>
+                            <span style="cursor: pointer;" class="forget-password-link">Forgot password</span>
                     </div>
                 </div>
                 <div class="register-section">
@@ -306,7 +306,7 @@ if ($(window).width() > 1023) {
             <span class="caption">The recovery password has been sent, please check your email.</span>
         </div>
       
-        <a href="javascript:void(0);" class="back-to-login">Do you want to go back to login?</a>
+        <span style="cursor: pointer;" class="back-to-login">Do you want to go back to login?</span>
     
     </div>
 </div>

@@ -22,7 +22,7 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
 	 html_Content+='<div id="image_popup_wrapper" class="popup_wrapper popup_wrapper_visible" style="opacity: 1; visibility: visible; position: fixed; overflow: auto; z-index: 100001; width: 100%; height: 100%; top: 0px; left: 0px; text-align: center; display: block;">';
 	 html_Content+='<div id="image_popup" style="display: inline-block; opacity: 1; visibility: visible; text-align: left; position: relative; vertical-align: middle;" data-popup-initialized="true" class="popup_content" aria-hidden="false" role="dialog" tabindex="-1">';
 	   html_Content+='<a rel="nofollow" target="_blank" class="image_close" href="'+banner6+'">';
-		 html_Content+='<img alt="Quảng Cáo" src="'+banner5+'" style="width: 600px;">';
+		 html_Content+='<img alt="advertisement" src="'+banner5+'" style="width: 600px;">';
 	   html_Content+='</a>'
 	   html_Content+='<a rel="nofollow" href="#" class="popup_close"></a>';
 	 html_Content+='</div>'
@@ -35,7 +35,7 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
 	 html_Content+='<div id="image_popup_mobile_wrapper" class="popup_wrapper popup_wrapper_visible" style="opacity: 1; visibility: visible; position: fixed; cursor: pointer; overflow: auto; z-index: 100001; width: 100%; height: 100%; top: 0px; left: 0px; text-align: center; display: block;">';
 		 html_Content+='<div id="image_popup_mobile" style="display: inline-block; opacity: 1; visibility: visible; text-align: left; position: relative; vertical-align: middle;" data-popup-initialized="true" class="popup_content" aria-hidden="false" role="dialog" tabindex="-1">'
 			 html_Content+='<a rel="nofollow" target="_blank" class="image_close_mobile" href="'+banner6+'">';
-				 html_Content+='<img src="'+banner5+'" style="width: 300px;">';
+				 html_Content+='<img alt="shueisha tv read manga for free" src="'+banner5+'" style="width: 300px;">';
 			 html_Content+='</a>';
 			 html_Content+='<a rel="nofollow" href="#" class="popup_close_mobile">Tắt</a>';
 		 html_Content+='</div>';

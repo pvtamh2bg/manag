@@ -44,7 +44,7 @@ $domain = $_SERVER['SERVER_NAME'];
 	<meta property="twitter:image" content="<?= $domain ?>/images/social-preview-image.png">
 
 	<!-- Canonical URL -->
-	<link rel="canonical" href="<?= $domain.'/index.html' ?>">
+	<link rel="canonical" href="<?= $domain ?>">
 
 	<!-- Language Indication -->
 	<meta http-equiv="content-language" content="en">
