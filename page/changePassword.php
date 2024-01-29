@@ -38,7 +38,7 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
     <link rel="shortcut icon" href="page/frontend/images/favicon.ico?v=1.1" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="page/frontend/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="page/frontend/css/style.css">
-    <script src="page/js/main.js"></script>
+    <script src="page/js/main.min.js"></script>
    
   </head>
   <body>

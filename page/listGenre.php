@@ -23,7 +23,7 @@
 	<link rel="shortcut icon" href="frontend/images/favicon.ico?v=1.1" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="frontend/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="frontend/css/style.css">
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 	<script src="ckeditor/ckeditor.js" type="text/javascript" ></script>
 </head>
 <body>

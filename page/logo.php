@@ -27,7 +27,7 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
     <link rel="shortcut icon" href="<?php echo $linkOption1;?>frontend/images/favicon.ico?v=1.1" type="image/x-icon">  
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/style.css">
-    <script src="<?php echo $linkOption1;?>js/main.js"></script>
+    <script src="<?php echo $linkOption1;?>js/main.min.js"></script>
 	<script type="text/javascript" src="<?php echo $linkOption1;?>frontend/js/jquery.ui.widget.js"></script>
 	<script type="text/javascript" src="<?php echo $linkOption1;?>frontend/js/jquery.fileupload.js"></script>
 	<script type="text/javascript" src="<?php echo $linkOption1;?>frontend/js/jquery.iframe-transport.js"></script>

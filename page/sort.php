@@ -75,7 +75,7 @@ $banner = $db->GetAdvertisement();
 	<link rel="shortcut icon" href="<?= $linkOption ?>page/frontend/images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="<?= $linkOption ?>page/frontend/css/fontawesome.css">
 	<link rel="stylesheet" type="text/css" href="<?= $linkOption ?>page/frontend/css/style.css">
-	<script src="<?= $linkOption ?>page/js/main.js"></script>
+	<script src="<?= $linkOption ?>page/js/main.min.js"></script>
 	<?php include 'googleAnalytics.php'; ?>
 </head>
 

@@ -60,7 +60,7 @@ $dateUpload=date('Y-m-d H:i:s');
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/fontawesome.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/read.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/style.css">	
-    <script src="<?php echo $linkOption1;?>js/main.js"></script>
+    <script src="<?php echo $linkOption1;?>js/main.min.js"></script>
 	<script src="<?php echo $linkOption1;?>js/js.js"></script>
 	<?php include 'googleAnalytics.php';?>
 </head>	

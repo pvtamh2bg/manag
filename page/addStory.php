@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="frontend/images/favicon.ico?v=1.1" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="frontend/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="frontend/css/style.css">
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 	<link rel="stylesheet" href="frontend/file/jquery.tag-editor.css">	
 	<script src="frontend/file/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="frontend/file/jquery.caret.min.js"></script>

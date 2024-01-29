@@ -109,7 +109,7 @@
     <link rel="shortcut icon" href="<?php echo $linkOption;?>page/frontend/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption;?>page/frontend/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption;?>page/frontend/css/style.css">	  
-    <script src="<?php echo $linkOption;?>page/js/main.js"></script>
+    <script src="<?php echo $linkOption;?>page/js/main.min.js"></script>
     	<?php include 'googleAnalytics.php';?>
  </head>   
 <input type="hidden" id="keyword-default" value="vợ">

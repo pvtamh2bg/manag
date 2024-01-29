@@ -27,7 +27,7 @@ if(isset($_SESSION['email'])){
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/fontawesome.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $linkOption1;?>frontend/css/style.css">
-    <script src="<?php echo $linkOption1;?>js/main.js"></script>
+    <script src="<?php echo $linkOption1;?>js/main.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script type="text/javascript" src="<?php echo $linkOption1;?>frontend/js/jquery.ui.widget.js"></script>
 	<script type="text/javascript" src="<?php echo $linkOption1;?>frontend/js/jquery.fileupload.js"></script>
