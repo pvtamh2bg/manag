@@ -198,7 +198,7 @@ if ($(window).width() > 1023) {
                                 </li>
                          </ul>
                 </div>
-				<div class="notify center">
+				<div class="notify center btn-message">
 					<i class="fas fa-envelope"></i>
 					<div class="list-messages">
 						<div class="title-message">Message</div>
@@ -207,7 +207,7 @@ if ($(window).width() > 1023) {
 						</ul>
 					</div>
 				</div>
-				<div class="notify center <?=$noti?>" data-id="notification">
+				<div class="notify center btn-notify <?=$noti?>" data-id="notification">
 					<i class="fas fa-bell" email="<?=$user?>"></i>
 					<div class="list-messages">
 					
