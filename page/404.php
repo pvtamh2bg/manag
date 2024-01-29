@@ -34,6 +34,72 @@
     <meta name="apple-mobile-web-app-title" content="MANGA Plus by Shueisha TV" />
     <meta name="msapplication-TileColor" content="#000000" />
     <style type="text/css">
+      :root {
+--color-white: #fff;
+  --color-black: #191919;
+  --color-gray: #505050;
+  --color-dark-gray: #323232;
+  --color-dark-red: #5d0914;
+  --color-gray-dk: #1a1a1a;
+  --color-gray-lt: #6e6e6e;
+  --color-gray-hlt: #e6e6e6;
+  --color-gray-p: #f6f6f6;
+  --color-green: #51c300;
+  --color-red: #dc0914;
+  --color-menu: #b00914;
+  --color-yellow: #ffd600;
+  --color-small-impact: #bebebe;
+  --color-base: var(--color-white);
+  --color-link: var(--color-green);
+  --color-link-visited: none;
+  --color-link-hover: none;
+  --color-link-active: none;
+  --color-success: none;
+  --color-danger: none;
+  --color-warning: var(--color-red);
+  --color-info: var(--color-gray);
+  --color-primary: var(--color-green);
+  --color-secondary: none;
+  --color-accent: none;
+  --color-selected: var(--color-gray-p);
+  --color-modal: rgba(0,0,0,0.3);
+  --hover-opacity: 0.8;
+  --already-read-opacity: 0.5;
+  --color-text: var(--color-black);
+  --color-text-outlined: var(--color-white);
+  --color-tip: var(--color-gray-dk);
+  --color-line: var(--color-gray-lt);
+  --color-info-layer1: var(--color-gray-p);
+  --color-info-layer2: var(--color-white);
+  --color-header: var(--color-black);
+  --color-card: var(--color-white);
+  --color-card-header: var(--color-black);
+  --font-size-xxs: none;
+  --font-size-xs: 0.6rem;
+  --font-size-s: 0.8rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.2rem;
+  --font-size-xl: 1.4rem;
+  --font-size-xxl: 1.6rem;
+  --font-size-xxxl: 1.8rem;
+  --font-size-xxxxl: 2rem;
+  --font-weight-default: 400;
+  --font-weight-bold: 700;
+  --space: 0.5rem;
+  --line-width: 1px;
+  --line-style: solid;
+  --radius: 2px;
+  --border: var(--line-width) var(--line-style) var(--color-line);
+  --icon-size: 6px;
+  --hover-feedback-opacity: 0.7;
+  --hover-animation-duration: 0.1s;
+  --hover-animation-timing: ease-out;
+  --hover-animation: var(--hover-animation-duration) var(--hover-animation-timing);
+  --fade-animation-duration: 0.2s;
+  --fade-animation-timing: linear;
+  --fade-animation: var(--fade-animation-duration) var(--fade-animation-timing);
+  --z-modal: 100;
+}
       body {
         background-color: #191919;
         color: #fff;
@@ -41,6 +107,39 @@
         font-weight: 500;
         max-width: 100%;
         -webkit-overflow-scrolling: touch;
+      }
+      .Updates-module_subShowAllBottom_1qN-f {
+        display:block;
+        color:var(--color-red);
+        text-decoration:none;
+        padding:15px;
+        border:1px solid var(--color-red);
+        margin:20px 10%;
+        text-align:center;
+        opacity:.6;
+        -webkit-transition:all .3s ease;
+        transition:all .3s ease;
+        letter-spacing:.05rem;
+        text-transform:uppercase;
+        border-radius:10px; 
+        position: absolute;
+        bottom: 100;
+      }
+      .Updates-module_subShowAllBottom_1qN-f:hover {
+        color:var(--color-yellow) !important;
+        border:1px solid var(--color-yellow);
+        opacity:1;
+        -webkit-transition:all .3s ease;
+        transition:all .3s ease;
+        margin:20px 8%;
+        font-weight: 500;
+      }
+      .Updates-module_subShowAllBottom_1qN-f:hover:after {
+        left:17px;
+        border-bottom:3px solid var(--color-yellow);
+        border-left:3px solid var(--color-yellow);
+        -webkit-transition:all .3s ease;
+        transition:all .3s ease
       }
       .Error-module_container_mzmCx {
         width: 100%;
@@ -601,6 +700,7 @@
                 </g>
               </svg>
             </div>
+            <a href="https://mangaplus.shueisha.tv" class="Updates-module_subShowAllBottom_1qN-f">←Home</a>
           </div>
         </div>
       </div>
