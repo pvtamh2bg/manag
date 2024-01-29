@@ -48,6 +48,7 @@
         display: -ms-flexbox;
         display: flex;
         text-align: center;
+        justify-content: center;
       }
       h2 {
         position: relative;
@@ -73,8 +74,8 @@
       #Error-module_svgWrap_2_2X6yY {
         position: absolute;
         height: auto;
-        max-width: 100%;
-        padding: 100px 20%;
+        max-width: 60%;
+        padding: 100px 0;
         -webkit-animation: Error-module_hueRotate_QjA-l 6s ease-in-out 3s
           infinite;
         animation: Error-module_hueRotate_QjA-l 6s ease-in-out 3s infinite;
