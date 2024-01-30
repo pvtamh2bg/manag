@@ -201,7 +201,7 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 							$chapStar = "";
 
 							foreach ($arr2 as $muc2) {
-								$chapStar = $linkOption . $the_loai . vn_str_filter($arr[1]) . "-" . $IdStory . "-chap-" . tofloat($muc2['Name']) . ".html";
+								$chapStar = $linkOption . $the_loai . vn_str_filter($arr[1]) . "-" . $IdStory . "-chap-" . tofloat($muc2['Name']) . "-$lang.html";
 								//break;
 							}
 							echo '</ul>';
