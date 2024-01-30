@@ -62,7 +62,7 @@ if (isset($_GET["sort"])) {
 //echo $sort1;
 $banner = $db->GetAdvertisement();
 
-$canonical = $linkOption . $sort. '.html';
+$canonical = $linkOption . $sort1. '.html';
 if(isset($_GET["country"]) || isset($_GET["status"])) {
 	$canonical .= '?';
 }
