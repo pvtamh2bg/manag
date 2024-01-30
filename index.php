@@ -11,7 +11,7 @@ $banner = $db->GetAdvertisement();
 $domain = $_SERVER['SERVER_NAME'];
 ?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
