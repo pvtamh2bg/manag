@@ -472,7 +472,7 @@ if (isset($_SESSION['text_size']))
 						}
 						echo '<select class="selectEpisode">';
 						foreach ($arr as $muc) {
-							$path = $linkOption . $the_loai . vn_str_filter($NameStory) . "-" . $muc['IdStory'] . "-chap-" . tofloat($muc['Name']) . ".html";
+							$path = $linkOption . $the_loai . vn_str_filter($NameStory) . "-" . $muc['IdStory'] . "-chap-" . tofloat($muc['Name']) . "-$lang.html";
 
 							if ($IdChapter == $muc['Name']) {
 								echo '<option selected="selected" value="' . $path . '">' . $muc['Name'] . '</option>';
