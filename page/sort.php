@@ -61,9 +61,24 @@ if (isset($_GET["sort"])) {
 }
 //echo $sort1;
 $banner = $db->GetAdvertisement();
+
+$canonical = $linkOption . $sort. '.html';
+if(isset($_GET["country"]) || isset($_GET["status"])) {
+	$canonical .= '?';
+}
+if(isset($_GET["country"]) && !isset($_GET["status"])) {
+	$canonical .= $country;
+}
+if(!isset($_GET["country"]) && isset($_GET["status"])) {
+	$canonical .= $status;
+}
+
+if(isset($_GET["country"]) && isset($_GET["status"])) {
+	$canonical .= $country . '&'. $status;
+}
 ?>
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
 	<title>
@@ -72,6 +87,7 @@ $banner = $db->GetAdvertisement();
 	<?php
 	require_once('header/headerMeta.php');
 	?>
+	<link rel="canonical" href="<?= $canonical ?>">
 	<link rel="shortcut icon" href="<?= $linkOption ?>page/frontend/images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="<?= $linkOption ?>page/frontend/css/fontawesome.css">
 	<link rel="stylesheet" type="text/css" href="<?= $linkOption ?>page/frontend/css/style.css">
@@ -90,7 +106,6 @@ $banner = $db->GetAdvertisement();
 
 		<section class="main-content">
 			<div class="container story-list">
-
 				<div class="title-list">
 					<?php echo $sort3; ?>
 				</div>
@@ -223,7 +238,7 @@ $banner = $db->GetAdvertisement();
 	//require_once('qc/bannerContent.php');
 	?>
 	<script>
-		var linkOption1 = <?php echo json_encode($linkOption1) ?>;
+		var linkOption1 = <?php echo json_encode($linkOption1); ?>;
 	</script>
 	<script src="<?php echo $linkOption1; ?>js/qc/ad.js"></script>
 </body>
