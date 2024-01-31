@@ -103,7 +103,21 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 	<link rel="stylesheet" type="text/css" href="<?php echo $linkOption1; ?>frontend/css/style.css">
 
 	<script src="<?php echo $linkOption1; ?>js/main.min.js"></script>
-
+	<style>
+		#ChapterList-module_sort_3OHNF {
+			display: inline-block;
+			padding: 0 10px;
+		}
+		#sort-img {
+			display: inline-block;
+			width: 32px;
+			margin-top: 3px;
+			cursor: pointer;
+		}
+		.head-chapter-list {
+			width: 100%;
+		}
+  </style>
 
 </head>
 
@@ -281,6 +295,9 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 							<?php if($arr[23] !== ''): ?>
 								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-vn"  ?>" class="<?php echo $lang==='vn' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in vietnamese">Tiếng Việt</a>
 							<?php endif; ?>
+							<div id="ChapterList-module_sort_3OHNF">
+								<img id="sort-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAjVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8DizOFAAAALnRSTlMAgBj0hwSKyYLihGpbQSAB+/jvptXNX00tCMa+spuYUDkqEujl3a9yVS/mkXkX4MN39wAAAcpJREFUaN7t1mlvgkAQgOGhHKJyQ1G876PH/P+fV+NgBknaxjKTmHTfT65ueBLWXQCTyWR66iyss+DH3CAvsnQ38c86QNnHW4dIHnDn2CgLxYF3vMteCwMjbFW4okD8iu0CUSBEahpGw5Q+vooCHk2YVI27tZEEejRh1BwsJQHaAgkt7AfNHkoC9vX3Pg0Cni0G0MLuaXBSALbX31MaHPkWSS/y+DqY8UYQAxY0YQ6X1siaGLBE6ujCuT5Us1gScLe3Q66PdbnsYVdiu5UsEOd4X0/8gbNoHaZSABfmNqKN1JsrCHCbaIi8yxQAqHY0c++qADy1BB3gs16CIlYCFsjPGg1gnfAeUAFmSIU6AL9agArA70YrJSBAagY6QFUf1MlYCeAMAAb410DUo4kvSsApQ02gmiNqAuMCVYFhiprA5oCoCvRQGShVAX5cTtQAWOElz9UDIMdsBKAIRNMIdADuqQDLbpTcgKT5rdUJAA9/yet6i7y/XJ+BroInscgOfpsj8y9yHr4+A50ER24fOA9en4EOgiO7kwfYagCyQFsYgCzQFgYah53P1/dBA2DBBw2ABR80AH4iWKABsGCBBsCCBQ8BJpPJ9KR9AY4H9+HKSblgAAAAAElFTkSuQmCC" alt="sort" class="ChapterList-module_sortIcon_1dGE4">
+							</div>
 						</div>
 					</div>
 					<div class="box">
@@ -321,7 +338,6 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 				?>
 			</div>
 		</section>
-
 		<script type="text/javascript">
 			var m = 0;
 			m = <?php echo json_encode($user); ?>;
@@ -347,6 +363,35 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 			}
 					// Call this function when the user clicks your share button.
 			document.getElementById('twitterShareButton').addEventListener('click', openTwitterPopup);
+
+			// Sort
+			$(document).ready(function() {
+				var ascending = false;
+				var list = $('.works-chapter-list');
+				var srcAscending = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAjVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8DizOFAAAALnRSTlMAgBj0hwSKyYLihGpbQSAB+/jvptXNX00tCMa+spuYUDkqEujl3a9yVS/mkXkX4MN39wAAAcpJREFUaN7t1mlvgkAQgOGhHKJyQ1G876PH/P+fV+NgBknaxjKTmHTfT65ueBLWXQCTyWR66iyss+DH3CAvsnQ38c86QNnHW4dIHnDn2CgLxYF3vMteCwMjbFW4okD8iu0CUSBEahpGw5Q+vooCHk2YVI27tZEEejRh1BwsJQHaAgkt7AfNHkoC9vX3Pg0Cni0G0MLuaXBSALbX31MaHPkWSS/y+DqY8UYQAxY0YQ6X1siaGLBE6ujCuT5Us1gScLe3Q66PdbnsYVdiu5UsEOd4X0/8gbNoHaZSABfmNqKN1JsrCHCbaIi8yxQAqHY0c++qADy1BB3gs16CIlYCFsjPGg1gnfAeUAFmSIU6AL9agArA70YrJSBAagY6QFUf1MlYCeAMAAb410DUo4kvSsApQ02gmiNqAuMCVYFhiprA5oCoCvRQGShVAX5cTtQAWOElz9UDIMdsBKAIRNMIdADuqQDLbpTcgKT5rdUJAA9/yet6i7y/XJ+BroInscgOfpsj8y9yHr4+A50ER24fOA9en4EOgiO7kwfYagCyQFsYgCzQFgYah53P1/dBA2DBBw2ABR80AH4iWKABsGCBBsCCBQ8BJpPJ9KR9AY4H9+HKSblgAAAAAElFTkSuQmCC';
+				var srcDescending = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAZlBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+Vn2moAAAAIXRSTlMAgPUYgoYELIrJTuJqW0Eg7+exptXNll8Ixr6bcjkS3VXtYBJAAAABkElEQVRo3u2Y266CMBBFB4SCIHdUvDv//5PHk6kpmICt6SQmznprgnslbXelgCAIwtcSoCYAC6o1PbxiEtxr5BQMJ0ROQdIjq2ATIqfg2iKyCtbILNhzC2CL/xz4BBd8kCo+AXRYZwCMgupYAY/AIAIRiEAEIhCBCL5G8EQEIvhZgSq6vg6bQ5TwCPY5Pmkr/wJ1whF16V2wwwlh4lmQ4Qu9YrgETii8CkokjmX1vPJvvQpSeugwjGbrynDTzyYDnwJdAVrYMw02PgU07zkNCv0L/4IbDe4MgobaBTxTZNaV6tu+KUIQjhiVf0Qwc1Cc4EGC2rawqd+Qzp4UZwWJ3lH1Um1c80E1SIQ5ajr41JAuffIyXGCJGGeJ574XTVnDMrFjPqid42EaW+Ybyi5EDJFoFHxkiGGRa7VB+5bF1vmGQe+mmwILInwhsi7+HqyIXPNXegl6sCRyyjevFhlYG5zyE9MBd0ME72mRKMHRYPLtXi3AicD632lrTiE3g2V+gUQLrgRW+UOORAKCIAjfyx+kCLKua+dXnAAAAABJRU5ErkJggg==';
+				var items = $('.works-chapter-list div.works-chapter-item');
+				var originalItemList = Array.prototype.slice.call(items); 
+				var itemList = Array.prototype.slice.call(originalItemList);
+				$('#ChapterList-module_sort_3OHNF').on('click',function() {
+						ascending = !ascending;
+						if (ascending) {
+							$('img#sort-img').attr('src', srcDescending);
+							itemList.sort(function(a, b) {
+									return $(b).index() - $(a).index();
+							});
+						} else {
+							$('img#sort-img').attr('src', srcAscending);
+							itemList.sort(function(a, b) {
+									return $(a).index() - $(b).index();
+							});
+							itemList = Array.prototype.slice.call(originalItemList);
+						}
+						itemList.forEach(function(item) {
+								list.append(item);
+						});
+				});
+			});
 		</script>
 		<?php
 		////require_once('qc/bannerLeft.php'); 
