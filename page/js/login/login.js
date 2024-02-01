@@ -152,7 +152,7 @@ $(document).ready(function(){
 			   url:type_new+'page/ajax/page/timkiem.php',
 			   type:'POST',
 			   cache:false,
-			   data:{'txtsearch':txtsearch},
+			   data:{'txtsearch':txtsearch.trim()},
 			   success:function(kq){
 							var o = JSON.parse(kq);							
 							var a1=o.Id;
