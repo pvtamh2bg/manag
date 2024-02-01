@@ -194,7 +194,7 @@ if ($(window).width() > 1023) {
 								</li>
                                
                                 <li>
-                                    <a href="javascript:void(0)" id="button_logout"><i class="fas fa-sign-out-alt"></i> Log out</a>
+                                    <span style="cursor: pointer;" id="button_logout"><i class="fas fa-sign-out-alt"></i> Log out</span>
                                 </li>
                          </ul>
                 </div>
@@ -366,8 +366,8 @@ if ($(window).width() > 1023) {
                     <a href="<?= $linkOption."truyen-tranh-hay.html"?>" class="navbar-item">Comic</a>
                     <a href="<?= $linkOption."tieu-thuyet-hay.html"?>" class="navbar-item">Novel</a>
 
-                    <a rel="nofollow" href="https://www.facebook.com/larvatubafunny" target="" class="navbar-item">Fanpage</a>
-                    <a href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item">Advance Search</a>
+                    <a rel="nofollow" href="https://www.facebook.com/larvatubafunny" target="_blank" class="navbar-item">Fanpage</a>
+                    <a rel="nofollow" href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item">Advance Search</a>
                 </div>
             </div>
         </nav>

@@ -2188,8 +2188,8 @@ $sql="UPDATE qq_chapter SET url1='$url' WHERE Name='$IdChap' and IdStory='$IdSto
 	function GetSearchFind($keyword)
 	{
 		$k=mysqli_real_escape_string($this->_conn,$keyword);
-		$sql = "select * from qq_story where hide_view=0 and CONCAT(Name,NameOther,Author,Country)  LIKE N'%$k%' LIMIT 20";
-		$rr = mysqli_query($this->_conn,$sql);		
+		$sql = "select * from qq_story where hide_view=0 and CONCAT(Name,JP_Name,VN_Name,NameOther,Author,Country)  LIKE N'%$k%' LIMIT 20";
+		$rr = mysqli_query($this->_conn,$sql);
 		$arr = array();
 		while($a = mysqli_fetch_array($rr,MYSQLI_ASSOC))
 		{
