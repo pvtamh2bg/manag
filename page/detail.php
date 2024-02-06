@@ -285,7 +285,7 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 						<div class="title" style="margin: 0;">
 							<h2 class="story-detail-title">Chapter List</h2>
 						</div>
-						<div class="TitleDetail-module_languages_87lPm">
+						<div class="TitleDetail-module_languages_87lPm" style="justify-content: space-between;">
 							<?php if($arr[1] !== '' && $arr[1] !== Null): ?>
 								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-en"  ?>" aria-current="page" class="<?php echo $lang==='en' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in English">English</a>
 							<?php endif; ?>
