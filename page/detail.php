@@ -146,7 +146,7 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 						</li>
 						<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 							<?php
-							echo '<a itemprop="item" href="' . $linkOption . $the_loai . __switchLangUrl($arr[1]) . "-" . $IdStory . '-'.$lang.'" title="' . $arr[1] . '">';
+							echo '<a itemprop="item" href="' . $linkOption . $the_loai . __switchLangUrl($lang, $arr[1]) . "-" . $IdStory . '-'.$lang.'" title="' . $arr[1] . '">';
 							//echo '<a itemprop="item" href="detail.php?IdStory='.$IdStory.'">';
 							echo '<span itemprop="name">' . $arr[1] . '</span>';
 							echo '</a>';
