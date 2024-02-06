@@ -405,6 +405,40 @@ function vn_str_filter ($str){
         $str = strtolower($str);
         return $str;
 }
+function japaneseToRomaji($japaneseString) {
+	// Kiểm tra xem lớp Transliterator có tồn tại không
+	if (class_exists('Transliterator')) {
+		// Định nghĩa transliterator ID cho việc chuyển đổi từ Katakana/Hiragana sang Latin
+		$transliterator = Transliterator::create('Katakana-Hiragana to Latin');
+		// Thực hiện chuyển đổi
+		$romaji = $transliterator->transliterate($japaneseString);
+		return $romaji;
+	} else {
+		// Lớp Transliterator không tồn tại, trả về chuỗi gốc
+		return $japaneseString;
+	}
+}
+
+function __switchLangUrl ($lang, $str) {
+
+$result = '';
+switch ($lang) {
+	case 'en':
+		$result = vn_str_filter($str);
+		break;
+	case 'jp':
+		$result = japaneseToRomaji($str);
+		break;
+	case 'vn':
+		$result = vn_str_filter($str);
+		break;
+	default:
+		$result = vn_str_filter($str);
+		break;
+}
+return $result;
+
+}
 function findTop($type)
 {
 		date_default_timezone_set("Asia/Ho_Chi_Minh");
