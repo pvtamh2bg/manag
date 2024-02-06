@@ -31,7 +31,7 @@ function siteURL() {
 				'127.0.0.1',
 				'::1'
 			);
-			$protocol = 'https://';
+			
 
 			if(!in_array($_SERVER['REMOTE_ADDR'], $whitelist)){
 				return $protocol.$domainName."/";
@@ -413,7 +413,8 @@ function japaneseToRomaji($japaneseString) {
 		$transliterator = Transliterator::create('Katakana-Hiragana to Latin');
 		// Thực hiện chuyển đổi
 		$romaji = $transliterator->transliterate($japaneseString);
-		return $romaji;
+		
+		return str_replace(' ', '-', $romaji);
 	} else {
 		// Lớp Transliterator không tồn tại, trả về chuỗi gốc
 		return $japaneseString;
