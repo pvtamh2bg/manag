@@ -286,13 +286,13 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 							<h2 class="story-detail-title">Chapter List</h2>
 						</div>
 						<div class="TitleDetail-module_languages_87lPm">
-							<?php if($arr[1] !== ''): ?>
+							<?php if($arr[1] !== '' && $arr[1] !== Null): ?>
 								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-en"  ?>" aria-current="page" class="<?php echo $lang==='en' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in English">English</a>
 							<?php endif; ?>
-							<?php if($arr[22] !== ''): ?>
+							<?php if($arr[22] !== '' && $arr[22] !== Null): ?>
 								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-jp"  ?>" class="<?php echo $lang==='jp' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Japanese">日本語</a>
 							<?php endif; ?>
-							<?php if($arr[23] !== ''): ?>
+							<?php if($arr[23] !== '' && $arr[23] !== Null): ?>
 								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-vn"  ?>" class="<?php echo $lang==='vn' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in vietnamese">Tiếng Việt</a>
 							<?php endif; ?>
 							<div id="ChapterList-module_sort_3OHNF">
