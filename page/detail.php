@@ -317,7 +317,7 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 									$title1 = " - " . $muc2['Title'];
 								} else
 									$title1 = $muc2['Title'];
-								$kk1 = $linkOption . $the_loai . vn_str_filter($arr[1]) . "-" . $IdStory . "-chap-" . tofloat($muc2['Name']) . "-$lang.html";
+								$kk1 = $linkOption . $the_loai . __switchLangUrl($lang, $arr[1]) . "-" . $IdStory . "-chap-" . tofloat($muc2['Name']) . "-$lang.html";
 								echo '<a  href="' . $kk1 . '">' . $muc2['Name'] . $title1 . '</a>';
 
 								echo '</div>';
