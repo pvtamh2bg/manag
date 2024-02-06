@@ -410,7 +410,7 @@ function japaneseToRomaji($japaneseString) {
 	// Kiểm tra xem lớp Transliterator có tồn tại không
 	if (class_exists('Transliterator')) {
 		// Định nghĩa transliterator ID cho việc chuyển đổi từ Katakana/Hiragana sang Latin
-		$transliterator = Transliterator::create('Katakana-Hiragana to Latin');
+		$transliterator = Transliterator::create('Any-Latin; Latin-ASCII; [\u0100-\u7fff] remove');
 		// Thực hiện chuyển đổi
 		$romaji = $transliterator->transliterate($japaneseString);
 		
