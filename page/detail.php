@@ -117,6 +117,33 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 		.head-chapter-list {
 			width: 100%;
 		}
+		.social {
+			width: 100%;
+			display: flex;
+			justify-content: start;
+			align-items: center;
+			margin: 1rem 0 0.5rem;
+		}
+
+		.social_item {
+			width: 50px;
+			padding: 0 10px;
+		}
+		a.btn_over img {
+			-webkit-transition: -weblit-transform 0.3s;
+			-moz-transition: -moz-transform 0.3s;
+			-o-transition: -o-transform 0.3s;
+			-ms-transition: -ms-transform 0.3s;
+			transition: transform 0.3s;
+  	}
+
+		a.btn_over img:hover {
+			-webkit-transform: scale(0.95);
+			-moz-transform: scale(0.95);
+			-o-transform: scale(0.95);
+			-ms-transform: scale(0.95);
+			transform: scale(0.95);
+		}
   </style>
 
 </head>
@@ -238,14 +265,35 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 
 
 						</ul>
-						</br>
-						<div class="socials-share">
-								<a class="bg-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"><span class="fa fa-facebook"></span> Share</a>
-								<a class="bg-twitter" id="twitterShareButton" href="#" target="_blank"><span class="fa fa-twitter"></span> Tweet</a>
-								<a class="bg-google-plus" href="" target="_blank"><span class="fa fa-google-plus"></span> Plus</a>
-								<!-- <a class="bg-pinterest" href="" target="_blank"><span class="fa fa-pinterest"></span> Pin</a>
-								<a class="bg-email" href="" target="_blank"><span class="fa fa-envelope"></span> Gmail</a> -->
-						</div>
+						<div class="social">
+								<div class="social_item">
+									<a rel="nofollow" id="twitterShareButton" href="https://twitter.com/shueishatv" class="btn_over" target="_blank">
+										<img src="<?php echo $linkOption1 .'frontend/images/icon_x.svg'; ?>" width="100%" alt="X">
+									</a>
+								</div>
+								<div class="social_item">
+									<a rel="nofollow" href="https://www.facebook.com/larvatubafunny/" class="btn_over" target="_blank">
+										<img src="<?php echo $linkOption1.'/frontend/images/icon_fb_en.svg'; ?>" width="100%" alt="Facebook ENG">
+									</a>
+								</div>
+								<!-- <div class="social_item">
+									<a rel="nofollow" href="https://www.facebook.com/mangaPlus.es" class="btn_over" target="_blank">
+										<img src="<?php echo $linkOption1.'/frontend/images/icon_fb_es.svg'; ?>" width="100%" alt="Facebook ESP">
+									</a>
+								</div> -->
+								<div class="social_item">
+									<a rel="nofollow" href="https://discord.gg/qAkpHxH" class="btn_over" target="_blank">
+										<img src="<?php echo $linkOption1.'/frontend/images/icon_dsc.svg'; ?>" width="100%" alt="DISCORD">
+									</a>
+								</div>
+						  </div>
+						<!-- <div class="socials-share">
+								<a rel="nofollow" class="bg-facebook" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank"><span class="fa fa-facebook"></span> Share</a>
+								<a rel="nofollow" class="bg-twitter" id="twitterShareButton" href="#" target="_blank"><span class="fa fa-twitter"></span> Tweet</a>
+								<a rel="nofollow" class="bg-google-plus" href="" target="_blank"><span class="fa fa-google-plus"></span> Plus</a>
+								<a class="bg-pinterest" href="" target="_blank"><span class="fa fa-pinterest"></span> Pin</a>
+								<a class="bg-email" href="" target="_blank"><span class="fa fa-envelope"></span> Gmail</a>
+						</div> -->
 
 						<div class="txt txt01 story-detail-info" itemprop="description">
 							<p>

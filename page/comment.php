@@ -5,6 +5,54 @@ if (isset($_SESSION['email'])) {
     $email_1 = $_SESSION['email'];
 }
 ?>
+<style>
+.Updates-module_subShowAllBottom_1qN-f {
+  display:block;
+  color:var(--color-red) !important;
+  text-decoration:none;
+  padding:15px;
+  border:1px solid var(--color-red);
+  margin:20px 10%;
+  text-align:center;
+  opacity:.6;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+  letter-spacing:.05rem;
+  text-transform:uppercase;
+  border-radius:10px
+}
+.Updates-module_subShowAllBottom_1qN-f:after {
+  content:"";
+  display:inline-block;
+  width:10px;
+  height:10px;
+  color:var(--color-black);
+  border-bottom:3px solid var(--color-red);
+  border-left:3px solid var(--color-red);
+  -webkit-transform:rotate(-135deg);
+  transform:rotate(-135deg);
+  position:relative;
+  left:7px;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease
+}
+.Updates-module_subShowAllBottom_1qN-f:hover {
+  color:var(--color-yellow) !important;
+  border:1px solid var(--color-yellow);
+  opacity:1;
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease;
+  margin:20px 8%;
+  font-weight: 500;
+}
+.Updates-module_subShowAllBottom_1qN-f:hover:after {
+  left:17px;
+  border-bottom:3px solid var(--color-yellow);
+  border-left:3px solid var(--color-yellow);
+  -webkit-transition:all .3s ease;
+  transition:all .3s ease
+}
+</style>
 <input type="hidden" id="current_page" value="1">
 <input type="hidden" id="id_textarea" value="content_comment">
 <input type="hidden" id="id_textarea_s" value="content_comment_s">
@@ -40,7 +88,7 @@ if (isset($_SESSION['email'])) {
                 </div>
                 <div class="mess-input">
                     <textarea class="textarea" placeholder="Comment content" id="content_comment"></textarea>
-                    <button id="emoji_1" type="submit" class="click_emoji"></button>
+                    <!-- <button id="emoji_1" type="submit" class="click_emoji"></button> -->
                     <button type="submit" class="submit_comment " id="submit_comment-id"></button>
                 </div>
             </div>
@@ -58,6 +106,6 @@ if (isset($_SESSION['email'])) {
 
 
 
-    <div class="load-more load_more_comment" id="load_comments"><a class="button is-info">View more comments</a>
+    <div class="load_more_comment" id="load_comments"><a class="Updates-module_subShowAllBottom_1qN-f">View more comments</a>
     </div>
 </div>
