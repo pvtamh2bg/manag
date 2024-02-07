@@ -120,13 +120,17 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 		.social {
 			width: 100%;
 			display: flex;
-			justify-content: start;
+			justify-content: center;
 			align-items: center;
 			margin: 1rem 0 0.5rem;
+			background: #000;
+      background: -webkit-gradient(linear,right top,left top,from(#000),to(transparent));
+      background: linear-gradient(270deg,#000,transparent);
+			padding: 5px 0;
 		}
 
 		.social_item {
-			width: 50px;
+			width: 45px;
 			padding: 0 10px;
 		}
 		a.btn_over img {
