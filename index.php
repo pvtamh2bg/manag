@@ -228,9 +228,7 @@ $domain = $_SERVER['SERVER_NAME'];
 		}
 		?>
 
-		<?php
-		//require_once('page/qc/bannerHeader.php'); 
-		?>
+		<?php require_once('page/qc/bannerHeader.php'); ?>
 
 		<!-- /.right-bar -->
 		<section class="main-content index">
