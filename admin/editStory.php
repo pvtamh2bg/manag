@@ -517,28 +517,28 @@ foreach ($arr_authors as $muc) {
           $('#Content').val(<?php echo json_encode($arr_Story[4]); ?>);
         }
         if(lang === 'th'){
-          $('#Name').val(<?php echo json_encode($arr_Story[21]); ?>);
-          $('#Content').val(<?php echo json_encode($arr_Story[23]); ?>);
+          $('#Name').val(<?php echo json_encode($arr_Story[25]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[31]); ?>);
         }
         if(lang === 'es') {
-          $('#Name').val(<?php echo json_encode($arr_Story[22]); ?>);
-          $('#Content').val(<?php echo json_encode($arr_Story[24]); ?>);
+          $('#Name').val(<?php echo json_encode($arr_Story[26]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[32]); ?>);
         }
         if(lang === 'ind') {
-          $('#Name').val(<?php echo json_encode($arr_Story[2]); ?>);
-          $('#Content').val(<?php echo json_encode($arr_Story[4]); ?>);
+          $('#Name').val(<?php echo json_encode($arr_Story[27]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[33]); ?>);
         }
         if(lang === 'br'){
-          $('#Name').val(<?php echo json_encode($arr_Story[21]); ?>);
-          $('#Content').val(<?php echo json_encode($arr_Story[23]); ?>);
+          $('#Name').val(<?php echo json_encode($arr_Story[28]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[34]); ?>);
         }
         if(lang === 'ru') {
-          $('#Name').val(<?php echo json_encode($arr_Story[22]); ?>);
-          $('#Content').val(<?php echo json_encode($arr_Story[24]); ?>);
+          $('#Name').val(<?php echo json_encode($arr_Story[29]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[35]); ?>);
         }
         if(lang === 'fr') {
-          $('#Name').val(<?php echo json_encode($arr_Story[2]); ?>);
-          $('#Content').val(<?php echo json_encode($arr_Story[4]); ?>);
+          $('#Name').val(<?php echo json_encode($arr_Story[30]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[36]); ?>);
         }
       });
       nameStory = document.getElementById("Name").value;

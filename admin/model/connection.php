@@ -556,11 +556,23 @@ class config
 		$Name=$row['Name'];
 		$JP_Name=$row['JP_Name'];
 		$VN_Name=$row['VN_Name'];
+		$TH_Name=$row['TH_Name'];
+		$ES_Name=$row['ES_Name'];
+		$IND_Name=$row['IND_Name'];
+		$BR_Name=$row['BR_Name'];
+		$RU_Name=$row['RU_Name'];
+		$FR_Name=$row['FR_Name'];
 		$NameOther=$row['NameOther'];
 		$Status=$row['story_Status'];
 		$Content=$row['Content'];
 		$JP_Content=$row['JP_Content'];
 		$VN_Content=$row['VN_Content'];
+		$TH_Content=$row['TH_Content'];
+		$ES_Content=$row['ES_Content'];
+		$IND_Content=$row['IND_Content'];
+		$BR_Content=$row['BR_Content'];
+		$RU_Content=$row['RU_Content'];
+		$FR_Content=$row['FR_Content'];
 		$Badge=$row['Badge'];
 		$Waning=$row['Waning'];
 		$Author=$row['Author'];
@@ -600,10 +612,24 @@ class config
 		array_push($a,$Sum_Views);//18
 		array_push($a,$NameUpdate_Chap);//19
 		array_push($a,$DateUpdate_Chap);//20
-		array_push($a,$JP_Name);
+		array_push($a,$JP_Name); //21
 		array_push($a,$VN_Name);
 		array_push($a,$JP_Content);
 		array_push($a,$VN_Content);
+
+		array_push($a,$TH_Name); //25
+		array_push($a,$ES_Name);
+		array_push($a,$IND_Name);
+		array_push($a,$BR_Name);
+		array_push($a,$RU_Name);
+		array_push($a,$FR_Name); //30
+
+		array_push($a,$TH_Content); //31
+		array_push($a,$ES_Content);
+		array_push($a,$IND_Content);
+		array_push($a,$BR_Content);
+		array_push($a,$RU_Content);
+		array_push($a,$FR_Content); //36
 		}
 		
         return $a;
