@@ -290,6 +290,12 @@ foreach ($arr_authors as $muc) {
                     <option value="en">English</option>
                     <option value="jp">Japanese</option>
                     <option value="vn">Vietnamese</option>
+                    <option value="th">Thai</option>
+                    <option value="es">Spanish</option>
+                    <option value="ind">Indonesia</option>
+                    <option value="fr">French</option>
+                    <option value="br">Bồ Đào Nha - PORTUGUÊS</option>
+                    <option value="ru">Russian</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -507,6 +513,30 @@ foreach ($arr_authors as $muc) {
           $('#Content').val(<?php echo json_encode($arr_Story[24]); ?>);
         }
         if(lang === 'en') {
+          $('#Name').val(<?php echo json_encode($arr_Story[2]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[4]); ?>);
+        }
+        if(lang === 'th'){
+          $('#Name').val(<?php echo json_encode($arr_Story[21]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[23]); ?>);
+        }
+        if(lang === 'es') {
+          $('#Name').val(<?php echo json_encode($arr_Story[22]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[24]); ?>);
+        }
+        if(lang === 'ind') {
+          $('#Name').val(<?php echo json_encode($arr_Story[2]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[4]); ?>);
+        }
+        if(lang === 'br'){
+          $('#Name').val(<?php echo json_encode($arr_Story[21]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[23]); ?>);
+        }
+        if(lang === 'ru') {
+          $('#Name').val(<?php echo json_encode($arr_Story[22]); ?>);
+          $('#Content').val(<?php echo json_encode($arr_Story[24]); ?>);
+        }
+        if(lang === 'fr') {
           $('#Name').val(<?php echo json_encode($arr_Story[2]); ?>);
           $('#Content').val(<?php echo json_encode($arr_Story[4]); ?>);
         }

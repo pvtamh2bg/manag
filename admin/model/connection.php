@@ -2314,6 +2314,18 @@ class config
 			$sql="UPDATE qq_story SET JP_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',JP_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
 		if($lang == 'vn')
 			$sql="UPDATE qq_story SET VN_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',VN_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
+		if($lang == 'th')
+			$sql="UPDATE qq_story SET TH_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',TH_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
+		if($lang == 'es')
+			$sql="UPDATE qq_story SET ES_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',ES_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
+		if($lang == 'ind')
+			$sql="UPDATE qq_story SET IND_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',IND_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
+		if($lang == 'br')
+			$sql="UPDATE qq_story SET BR_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',BR_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
+		if($lang == 'ru')
+			$sql="UPDATE qq_story SET RU_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',RU_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";
+		if($lang == 'fr')
+			$sql="UPDATE qq_story SET FR_Name='$Name1', NameOther='$NameOther1',story_Status='$Status',FR_Content='$Content1',ImgAvatar='$Avatar',Badge='$Badge',Waning='$Waning',Author='$Author1',Genre='$Genre',NameEncodeGenres='$NameEncodeGenres',Country='$Country',Url1='$URL1',Url2='$URL2',Female='$female',Male='$male' WHERE Id='$Id'";	
 		mysqli_query($this->_conn, $sql);
 		if(mysqli_affected_rows($this->_conn)==1)
 		$error="Sửa thành công";
