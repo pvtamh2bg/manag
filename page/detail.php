@@ -347,6 +347,24 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 							<?php if($arr[23] !== '' && $arr[23] !== Null): ?>
 								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-vn"  ?>" class="<?php echo $lang==='vn' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in vietnamese">Tiếng Việt</a>
 							<?php endif; ?>
+							<?php if($arr[24] !== '' && $arr[24] !== Null): ?>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-th"  ?>" class="<?php echo $lang==='th' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Thai">ภาษาไทย</a>
+							<?php endif; ?>
+							<?php if($arr[25] !== '' && $arr[25] !== Null): ?>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-es"  ?>" class="<?php echo $lang==='es' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Spainish">Español</a>
+							<?php endif; ?>
+							<?php if($arr[26] !== '' && $arr[26] !== Null): ?>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-ind"  ?>" class="<?php echo $lang==='ind' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Bahasa">Bahasa (IND)</a>
+							<?php endif; ?>
+							<?php if($arr[27] !== '' && $arr[27] !== Null): ?>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-br"  ?>" class="<?php echo $lang==='br' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in PORTUGUÊS">PORTUGUÊS (BR)</a>
+							<?php endif; ?>
+							<?php if($arr[28] !== '' && $arr[28] !== Null): ?>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-ru"  ?>" class="<?php echo $lang==='ru' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Russian">Русский</a>
+							<?php endif; ?>
+							<?php if($arr[29] !== '' && $arr[29] !== Null): ?>
+								<a href="<?= $linkOption . $the_loai . vn_str_filter($arr[21]) . "-" . $IdStory ."-fr"  ?>" class="<?php echo $lang==='fr' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in French">Français</a>
+							<?php endif; ?>
 							<div id="ChapterList-module_sort_3OHNF">
 								<img id="sort-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAjVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8DizOFAAAALnRSTlMAgBj0hwSKyYLihGpbQSAB+/jvptXNX00tCMa+spuYUDkqEujl3a9yVS/mkXkX4MN39wAAAcpJREFUaN7t1mlvgkAQgOGhHKJyQ1G876PH/P+fV+NgBknaxjKTmHTfT65ueBLWXQCTyWR66iyss+DH3CAvsnQ38c86QNnHW4dIHnDn2CgLxYF3vMteCwMjbFW4okD8iu0CUSBEahpGw5Q+vooCHk2YVI27tZEEejRh1BwsJQHaAgkt7AfNHkoC9vX3Pg0Cni0G0MLuaXBSALbX31MaHPkWSS/y+DqY8UYQAxY0YQ6X1siaGLBE6ujCuT5Us1gScLe3Q66PdbnsYVdiu5UsEOd4X0/8gbNoHaZSABfmNqKN1JsrCHCbaIi8yxQAqHY0c++qADy1BB3gs16CIlYCFsjPGg1gnfAeUAFmSIU6AL9agArA70YrJSBAagY6QFUf1MlYCeAMAAb410DUo4kvSsApQ02gmiNqAuMCVYFhiprA5oCoCvRQGShVAX5cTtQAWOElz9UDIMdsBKAIRNMIdADuqQDLbpTcgKT5rdUJAA9/yet6i7y/XJ+BroInscgOfpsj8y9yHr4+A50ER24fOA9en4EOgiO7kwfYagCyQFsYgCzQFgYah53P1/dBA2DBBw2ABR80AH4iWKABsGCBBsCCBQ8BJpPJ9KR9AY4H9+HKSblgAAAAAElFTkSuQmCC" alt="sort" class="ChapterList-module_sortIcon_1dGE4">
 							</div>

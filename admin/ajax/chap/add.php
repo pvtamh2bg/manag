@@ -18,6 +18,19 @@ $Summary = $_POST['Summary'];
 $Title = $_POST['Title'];
 $Lang = $_POST['Lang'];
 
+if($Lang === 'en') {
+	$Name="Chapter ".tofloat($_POST['Name']);
+	if($Content === '') $Content = "You are reading " .$story[1] ." ".$Name." in English. Read ".$Name." of " .$story[1] ." manga online on shueisha tv for free.";
+}
+if($Lang === 'jp') {
+	$Name="第".tofloat($_POST['Name'])."話";
+  if($Content === '') $Content = "日本語で" .$story[21] .$Name."を読んでいます。mangaplus.shueisha.tvで無料で" .$story[21] ."漫画の".$Name."をオンラインで読んでください。";
+}	
+if($Lang === 'vn') {
+	$Name="Chương ".tofloat($_POST['Name']);
+	if($Content === '') $Content = "Bạn đang đọc ".$Name." của truyện tranh " .$story[22] ." tiếng việt. Đọc " .$story[22] ." ".$Name." trực tuyến trên shueisha tv miễn phí";
+}
+
 $db = new config();
 $db->config();
 $min = $db->GetMinChap($IdStory);

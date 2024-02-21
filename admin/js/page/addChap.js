@@ -101,6 +101,18 @@ $(document).ready(function () {
         Paths = $('.jp-path img.image-avatar');
       if(lang === 'vn') 
         Paths = $('.vn-path img.image-avatar');
+      if(lang === 'th')
+        Paths = $('.th-path img.image-avatar');
+      if(lang === 'es') 
+        Paths = $('.es-path img.image-avatar');
+      if(lang === 'ind') 
+        Paths = $('.ind-path img.image-avatar');
+      if(lang === 'br')
+        Paths = $('.br-path img.image-avatar');
+      if(lang === 'ru') 
+        Paths = $('.ru-path img.image-avatar');
+      if(lang === 'fr') 
+        Paths = $('.fr-path img.image-avatar');
       Paths.each(function () {
         var temp1 = $(this).attr("custom_attribute");
         var str1 = temp1.substring(temp1.lastIndexOf("/") + 1);

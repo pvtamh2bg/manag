@@ -25,9 +25,23 @@ $arr_Chapter = $db->GetIdChapter1($idChap);
 $enContent = $arr_Chapter[1];
 $jpContent = $arr_Chapter[11];
 $vnContent = $arr_Chapter[12];
+$thContent = $arr_Chapter[27];
+$esContent = $arr_Chapter[28];
+$indContent = $arr_Chapter[29];
+$brContent = $arr_Chapter[30];
+$ruContent = $arr_Chapter[31];
+$frContent = $arr_Chapter[32];
+
 $Path =  getHTMLPath($arr_Chapter[3], $arr_Chapter, $linkOption, $linkOption1);
 $JP_Path = getHTMLPath($arr_Chapter[13], $arr_Chapter, $linkOption, $linkOption1);
 $VN_Path = getHTMLPath($arr_Chapter[14], $arr_Chapter, $linkOption, $linkOption1);
+$TH_Path = getHTMLPath($arr_Chapter[33], $arr_Chapter, $linkOption, $linkOption1);
+$ES_Path = getHTMLPath($arr_Chapter[34], $arr_Chapter, $linkOption, $linkOption1);
+$IND_Path = getHTMLPath($arr_Chapter[35], $arr_Chapter, $linkOption, $linkOption1);
+$BR_Path = getHTMLPath($arr_Chapter[36], $arr_Chapter, $linkOption, $linkOption1);
+$RU_Path = getHTMLPath($arr_Chapter[37], $arr_Chapter, $linkOption, $linkOption1);
+$FR_Path = getHTMLPath($arr_Chapter[38], $arr_Chapter, $linkOption, $linkOption1);
+
 $an = "";
 if (tofloat($arr_Chapter[0]) == 0)
   $an = "disabled";
@@ -273,6 +287,12 @@ if (tofloat($arr_Chapter[0]) == 0)
                     <option value="en">English</option>
                     <option value="jp">Japanese</option>
                     <option value="vn">Vietnamese</option>
+                    <option value="th">Thai</option>
+                    <option value="es">Spanish</option>
+                    <option value="ind">Indonesia</option>
+                    <option value="fr">French</option>
+                    <option value="br">Bồ Đào Nha - PORTUGUÊS</option>
+                    <option value="ru">Russian</option>
                   </select>
                 </div>
                 <div class="form-group">
@@ -400,6 +420,24 @@ if (tofloat($arr_Chapter[0]) == 0)
                 <div class="filter-container p-0 row vn-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
                     <?php echo $VN_Path; ?>
                 </div>
+                <div class="filter-container p-0 row th-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
+                    <?php echo $TH_Path; ?>
+                </div>
+                <div class="filter-container p-0 row es-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
+                    <?php echo $ES_Path; ?>
+                </div>
+                <div class="filter-container p-0 row ind-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
+                    <?php echo $IND_Path; ?>
+                </div>
+                <div class="filter-container p-0 row br-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
+                    <?php echo $BR_Path; ?>
+                </div>
+                <div class="filter-container p-0 row ru-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
+                    <?php echo $RU_Path; ?>
+                </div>
+                <div class="filter-container p-0 row fr-path" style="padding: 3px; position: relative; width: 100%; display: flex; flex-wrap: wrap;">
+                    <?php echo $FR_Path; ?>
+                </div>
                 <div class="form-group">
                   <button class="button is-danger btn btn-success" id="editChap" data-id-chap="<?php echo $idChap; ?>"
                     data-id-story="<?php echo $idStory; ?>" <?= $an ?>>Lưu</button>
@@ -464,10 +502,22 @@ $db->dis_connect();//ngat ket noi mysql
 	var enContent=<?php echo json_encode($enContent); ?>;
   var jpContent=<?php echo json_encode($jpContent); ?>;
   var vnContent=<?php echo json_encode($vnContent); ?>;
+  var thContent=<?php echo json_encode($thContent); ?>;
+  var esContent=<?php echo json_encode($esContent); ?>;
+  var indContent=<?php echo json_encode($indContent); ?>;
+  var brContent=<?php echo json_encode($brContent); ?>;
+  var ruContent=<?php echo json_encode($ruContent); ?>;
+  var frContent=<?php echo json_encode($frContent); ?>;
 	CKEDITOR.instances.Content.setData(enContent);
 $(document).ready(function(){
   $('.filter-container.vn-path').hide();
   $('.filter-container.jp-path').hide();
+  $('.filter-container.th-path').hide();
+  $('.filter-container.es-path').hide();
+  $('.filter-container.ind-path').hide();
+  $('.filter-container.br-path').hide();
+  $('.filter-container.ru-path').hide();
+  $('.filter-container.fr-path').hide();
    $('#language').on('change', function() {
         var lang = this.value;
         if(lang === 'jp'){
@@ -477,6 +527,12 @@ $(document).ready(function(){
           $('.filter-container.en-path').hide();
           $('.filter-container.jp-path').show();
           $('.filter-container.vn-path').hide();
+          $('.filter-container.th-path').hide();
+          $('.filter-container.es-path').hide();
+          $('.filter-container.ind-path').hide();
+          $('.filter-container.br-path').hide();
+          $('.filter-container.ru-path').hide();
+          $('.filter-container.fr-path').hide();
         }
         if(lang === 'vn') {
           // $('#Name').val(<?php //echo json_encode($arr_Chapter[8]); ?>);
@@ -485,6 +541,12 @@ $(document).ready(function(){
           $('.filter-container.en-path').hide();
           $('.filter-container.jp-path').hide();
           $('.filter-container.vn-path').show();
+          $('.filter-container.th-path').hide();
+          $('.filter-container.es-path').hide();
+          $('.filter-container.ind-path').hide();
+          $('.filter-container.br-path').hide();
+          $('.filter-container.ru-path').hide();
+          $('.filter-container.fr-path').hide();
         }
         if(lang === 'en') {
           // $('#Name').val(<?php //echo json_encode($arr_Chapter[0]); ?>);
@@ -493,6 +555,102 @@ $(document).ready(function(){
           $('.filter-container.en-path').show();
           $('.filter-container.jp-path').hide();
           $('.filter-container.vn-path').hide();
+          $('.filter-container.th-path').hide();
+          $('.filter-container.es-path').hide();
+          $('.filter-container.ind-path').hide();
+          $('.filter-container.br-path').hide();
+          $('.filter-container.ru-path').hide();
+          $('.filter-container.fr-path').hide();
+
+        }
+        if(lang === 'th') {
+          // $('#Name').val(<?php //echo json_encode($arr_Chapter[0]); ?>);
+          $('#Title').val(<?php echo json_encode($arr_Chapter[21]); ?>);
+          CKEDITOR.instances.Content.setData(thContent);
+          $('.filter-container.en-path').hide();
+          $('.filter-container.jp-path').hide();
+          $('.filter-container.vn-path').hide();
+          $('.filter-container.th-path').show();
+          $('.filter-container.es-path').hide();
+          $('.filter-container.ind-path').hide();
+          $('.filter-container.br-path').hide();
+          $('.filter-container.ru-path').hide();
+          $('.filter-container.fr-path').hide();
+
+        }
+        if(lang === 'es') {
+          // $('#Name').val(<?php //echo json_encode($arr_Chapter[0]); ?>);
+          $('#Title').val(<?php echo json_encode($arr_Chapter[22]); ?>);
+          CKEDITOR.instances.Content.setData(esContent);
+          $('.filter-container.en-path').hide();
+          $('.filter-container.jp-path').hide();
+          $('.filter-container.vn-path').hide();
+          $('.filter-container.th-path').hide();
+          $('.filter-container.es-path').show();
+          $('.filter-container.ind-path').hide();
+          $('.filter-container.br-path').hide();
+          $('.filter-container.ru-path').hide();
+          $('.filter-container.fr-path').hide();
+
+        }
+        if(lang === 'ind') {
+          // $('#Name').val(<?php //echo json_encode($arr_Chapter[0]); ?>);
+          $('#Title').val(<?php echo json_encode($arr_Chapter[23]); ?>);
+          CKEDITOR.instances.Content.setData(indContent);
+          $('.filter-container.en-path').hide();
+          $('.filter-container.jp-path').hide();
+          $('.filter-container.vn-path').hide();
+          $('.filter-container.th-path').hide();
+          $('.filter-container.es-path').hide();
+          $('.filter-container.ind-path').show();
+          $('.filter-container.br-path').hide();
+          $('.filter-container.ru-path').hide();
+          $('.filter-container.fr-path').hide();
+
+        }
+        if(lang === 'br') {
+          // $('#Name').val(<?php //echo json_encode($arr_Chapter[0]); ?>);
+          $('#Title').val(<?php echo json_encode($arr_Chapter[24]); ?>);
+          CKEDITOR.instances.Content.setData(brContent);
+          $('.filter-container.en-path').hide();
+          $('.filter-container.jp-path').hide();
+          $('.filter-container.vn-path').hide();
+          $('.filter-container.th-path').hide();
+          $('.filter-container.es-path').hide();
+          $('.filter-container.ind-path').hide();
+          $('.filter-container.br-path').show();
+          $('.filter-container.ru-path').hide();
+          $('.filter-container.fr-path').hide();
+
+        }
+        if(lang === 'ru') {
+          // $('#Name').val(<?php //echo json_encode($arr_Chapter[0]); ?>);
+          $('#Title').val(<?php echo json_encode($arr_Chapter[25]); ?>);
+          CKEDITOR.instances.Content.setData(ruContent);
+          $('.filter-container.en-path').hide();
+          $('.filter-container.jp-path').hide();
+          $('.filter-container.vn-path').hide();
+          $('.filter-container.th-path').hide();
+          $('.filter-container.es-path').hide();
+          $('.filter-container.ind-path').hide();
+          $('.filter-container.br-path').hide();
+          $('.filter-container.ru-path').show();
+          $('.filter-container.fr-path').hide();
+
+        }
+        if(lang === 'fr') {
+          // $('#Name').val(<?php //echo json_encode($arr_Chapter[0]); ?>);
+          $('#Title').val(<?php echo json_encode($arr_Chapter[26]); ?>);
+          CKEDITOR.instances.Content.setData(frContent);
+          $('.filter-container.en-path').hide();
+          $('.filter-container.jp-path').hide();
+          $('.filter-container.vn-path').hide();
+          $('.filter-container.th-path').hide();
+          $('.filter-container.es-path').hide();
+          $('.filter-container.ind-path').hide();
+          $('.filter-container.br-path').hide();
+          $('.filter-container.ru-path').hide();
+          $('.filter-container.fr-path').show();
 
         }
     });

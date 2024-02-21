@@ -261,6 +261,12 @@ require_once('function/function.php');
                     <option value="en">English</option>
                     <option value="jp">Japanese</option>
                     <option value="vn">Vietnamese</option>
+                    <option value="th">Thai</option>
+                    <option value="es">Spanish</option>
+                    <option value="ind">Indonesia</option>
+                    <option value="fr">French</option>
+                    <option value="br">Bồ Đào Nha - PORTUGUÊS</option>
+                    <option value="ru">Russian</option>
                   </select>
               </div>
               <div class="form-group">

@@ -373,7 +373,7 @@ class config
 	}
 	function GetChapter2($IdStory, $lang = 'en')
 	{
-		$q = "select Name, JP_Name, VN_Name, Title, JP_Title, VN_Title, DateUpload from qq_chapter where IdStory='$IdStory' ORDER BY CAST(SUBSTRING(Name,8) AS DECIMAL(30,5)) DESC";
+		$q = "select Name, JP_Name, VN_Name, TH_Name, ES_Name, IND_Name, BR_Name, RU_Name, FR_Name, Title, JP_Title, VN_Title, TH_Title, ES_Title, IND_Title, BR_Title, RU_Title, FR_Title, DateUpload from qq_chapter where IdStory='$IdStory' ORDER BY CAST(SUBSTRING(Name,8) AS DECIMAL(30,5)) DESC";
 		$r = mysqli_query($this->_conn,$q);		
 		$arr = array();
 		while($a = mysqli_fetch_array($r,MYSQLI_ASSOC))
@@ -392,6 +392,30 @@ class config
 				$array['Name'] = $array['VN_Name'];
 				$array['Title'] = $array['VN_Title'];
 				break;
+			case 'th':
+				$array['Name'] = $array['TH_Name'];
+				$array['Title'] = $array['TH_Title'];
+				break;
+			case 'es':
+				$array['Name'] = $array['ES_Name'];
+				$array['Title'] = $array['ES_Title'];
+				break;
+			case 'ind':
+				$array['Name'] = $array['IND_Name'];
+				$array['Title'] = $array['IND_Title'];
+				break;
+			case 'br':
+				$array['Name'] = $array['BR_Name'];
+				$array['Title'] = $array['BR_Title'];
+				break;
+			case 'ru':
+				$array['Name'] = $array['RU_Name'];
+				$array['Title'] = $array['RU_Title'];
+				break;
+			case 'fr':
+				$array['Name'] = $array['FR_Name'];
+				$array['Title'] = $array['FR_Title'];
+				break;				
 			default:
 				break;
 		}
@@ -444,11 +468,23 @@ class config
 		$Name=$row['Name'];
 		$JP_Name=$row['JP_Name'];
 		$VN_Name=$row['VN_Name'];
+		$TH_Name=$row['TH_Name'];
+		$ES_Name=$row['ES_Name'];
+		$IND_Name=$row['IND_Name'];
+		$BR_Name=$row['BR_Name'];
+		$RU_Name=$row['RU_Name'];
+		$FR_Name=$row['FR_Name'];
 		$NameOther=$row['NameOther'];
 		$Status=$row['story_Status'];
 		$Content=$row['Content'];
 		$JP_Content=$row['JP_Content'];
 		$VN_Content=$row['VN_Content'];
+		$TH_Content=$row['TH_Content'];
+		$ES_Content=$row['ES_Content'];
+		$IND_Content=$row['IND_Content'];
+		$BR_Content=$row['BR_Content'];
+		$RU_Content=$row['RU_Content'];
+		$FR_Content=$row['FR_Content'];
 		$Badge=$row['Badge'];
 		$Waning=$row['Waning'];
 		$Author=$row['Author'];
@@ -471,6 +507,18 @@ class config
 			array_push($a,$JP_Name);
 		} else if($lang === 'vn') {
 			array_push($a,$VN_Name);
+		} else if($lang === 'th') {
+			array_push($a,$TH_Name);
+		} else if($lang === 'es') {
+			array_push($a,$ES_Name);
+		} else if($lang === 'ind') {
+			array_push($a,$IND_Name);
+		} else if($lang === 'br') {
+			array_push($a,$BR_Name);
+		} else if($lang === 'ru') {
+			array_push($a,$RU_Name);
+		} else if($lang === 'fr') {
+			array_push($a,$FR_Name);
 		} else {
 			array_push($a,$Name);
 		}
@@ -482,6 +530,18 @@ class config
 			array_push($a,$JP_Content);
 		} else if($lang === 'vn') {
 			array_push($a,$VN_Content);
+		} else if($lang === 'th') {
+			array_push($a,$TH_Content);
+		} else if($lang === 'es') {
+			array_push($a,$ES_Content);
+		} else if($lang === 'ind') {
+			array_push($a,$IND_Content);
+		} else if($lang === 'br') {
+			array_push($a,$BR_Content);
+		} else if($lang === 'ru') {
+			array_push($a,$RU_Content);
+		} else if($lang === 'fr') {
+			array_push($a,$FR_Content);
 		} else {
 			array_push($a,$Content);
 		}
@@ -505,6 +565,12 @@ class config
 		array_push($a,$Name); // 21- name story
 		array_push($a,$JP_Name); //22
 		array_push($a,$VN_Name); //23
+		array_push($a,$TH_Name); //24
+		array_push($a,$ES_Name);
+		array_push($a,$IND_Name);
+		array_push($a,$BR_Name);
+		array_push($a,$RU_Name);
+		array_push($a,$FR_Name); //29
 		}
 
     return $a;

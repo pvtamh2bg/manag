@@ -509,17 +509,41 @@ class config
 		$Name=$row['Name'];
 		$JP_Name=$row['JP_Name'];
 		$VN_Name=$row['VN_Name'];
+		$TH_Name=$row['TH_Name'];
+		$ES_Name=$row['ES_Name'];
+		$IND_Name=$row['IND_Name'];
+		$BR_Name=$row['BR_Name'];
+		$RU_Name=$row['RU_Name'];
+		$FR_Name=$row['FR_Name'];
 		$Content=$row['Content'];
 		$JP_Content=$row['JP_Content'];
 		$VN_Content=$row['VN_Content'];
-		$Content_03=$row['Content_03'];		
+		$TH_Content=$row['TH_Content'];
+		$ES_Content=$row['ES_Content'];
+		$IND_Content=$row['IND_Content'];
+		$BR_Content=$row['BR_Content'];
+		$RU_Content=$row['RU_Content'];
+		$FR_Content=$row['FR_Content'];
+		$Content_03=$row['Content_03'];
 		$Path=$row['Path'];
 		$JP_Path=$row['JP_Path'];
 		$VN_Path=$row['VN_Path'];
+		$TH_Path=$row['TH_Path'];
+		$ES_Path=$row['ES_Path'];
+		$IND_Path=$row['IND_Path'];
+		$BR_Path=$row['BR_Path'];
+		$RU_Path=$row['RU_Path'];
+		$FR_Path=$row['FR_Path'];
 		$Summary=$row['Summary'];
 		$Title=$row['Title'];	
 		$JP_Title=$row['JP_Title'];
 		$VN_Title=$row['VN_Title'];
+		$TH_Title=$row['TH_Title'];
+		$ES_Title=$row['ES_Title'];
+		$IND_Title=$row['IND_Title'];
+		$BR_Title=$row['BR_Title'];
+		$RU_Title=$row['RU_Title'];
+		$FR_Title=$row['FR_Title'];
 		$Content_04=$row['Content_04'];
 		$a=array();
 		
@@ -542,6 +566,34 @@ class config
 
 		array_push($a,$JP_Path); //13
 		array_push($a,$VN_Path); //14
+
+		array_push($a,$TH_Name); //15
+		array_push($a,$ES_Name);
+		array_push($a,$IND_Name);
+		array_push($a,$BR_Name);
+		array_push($a,$RU_Name);
+		array_push($a,$FR_Name); //20
+
+		array_push($a,$TH_Title); //21
+		array_push($a,$ES_Title);
+		array_push($a,$IND_Title);
+		array_push($a,$BR_Title);
+		array_push($a,$RU_Title);
+		array_push($a,$FR_Title); //26
+
+		array_push($a,$TH_Content); //27
+		array_push($a,$ES_Content);
+		array_push($a,$IND_Content);
+		array_push($a,$BR_Content);
+		array_push($a,$RU_Content);
+		array_push($a,$FR_Content); //32
+
+		array_push($a,$TH_Path); //33
+		array_push($a,$ES_Path);
+		array_push($a,$IND_Path);
+		array_push($a,$BR_Path);
+		array_push($a,$RU_Path);
+		array_push($a,$FR_Path); //38
     return $a;
 	}
 	function GetIdStory($id)
@@ -2392,6 +2444,18 @@ class config
 		  $sql="INSERT INTO qq_chapter (JP_Name,JP_Content,Notify,Summary,DateUpload,IdStory,JP_Path,Content_01,Content_02,Content_03,Content_04,JP_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 		if($lang == 'vn')
 		  $sql="INSERT INTO qq_chapter (VN_Name,VN_Content,Notify,Summary,DateUpload,IdStory,VN_Path,Content_01,Content_02,Content_03,Content_04,VN_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		if($lang == 'th')
+			$sql="INSERT INTO qq_chapter (TH_Name,TH_Content,Notify,Summary,DateUpload,IdStory,TH_Path,Content_01,Content_02,Content_03,Content_04,TH_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+	  if($lang == 'es')
+		  $sql="INSERT INTO qq_chapter (ES_Name,ES_Content,Notify,Summary,DateUpload,IdStory,ES_Path,Content_01,Content_02,Content_03,Content_04,ES_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		if($lang == 'ind')
+		  $sql="INSERT INTO qq_chapter (IND_Name,IND_Content,Notify,Summary,DateUpload,IdStory,IND_Path,Content_01,Content_02,Content_03,Content_04,IND_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+			if($lang == 'br')
+			$sql="INSERT INTO qq_chapter (BR_Name,BR_Content,Notify,Summary,DateUpload,IdStory,BR_Path,Content_01,Content_02,Content_03,Content_04,BR_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+	  if($lang == 'ru')
+		  $sql="INSERT INTO qq_chapter (RU_Name,RU_Content,Notify,Summary,DateUpload,IdStory,RU_Path,Content_01,Content_02,Content_03,Content_04,RU_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		if($lang == 'fr')
+		  $sql="INSERT INTO qq_chapter (FR_Name,FR_Content,Notify,Summary,DateUpload,IdStory,FR_Path,Content_01,Content_02,Content_03,Content_04,FR_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";		
 		mysqli_query($this->_conn, $sql);	
 		if(mysqli_affected_rows($this->_conn)==1)
 		  $error="Thêm thành công";

@@ -28,7 +28,7 @@ if($lang === 'en') {
 }
 if($lang === 'jp') {
 	$Name="第".tofloat($_POST['Name'])."話";
-  if($Content === '') $Content = "英語で" .$story[21] .$Name."を読んでいます。mangaplus.shueisha.tvで無料で" .$story[21] ."漫画の".$Name."をオンラインで読んでください。";
+  if($Content === '') $Content = "日本語で" .$story[21] .$Name."を読んでいます。mangaplus.shueisha.tvで無料で" .$story[21] ."漫画の".$Name."をオンラインで読んでください。";
 }	
 if($lang === 'vn') {
 	$Name="Chương ".tofloat($_POST['Name']);
