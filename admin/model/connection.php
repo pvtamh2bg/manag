@@ -2473,6 +2473,18 @@ class config
 			$sql="UPDATE qq_chapter SET JP_Name='$Name',JP_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',JP_Path='$Path',JP_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
 		if($lang == 'vn')
 			$sql="UPDATE qq_chapter SET VN_Name='$Name',VN_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',VN_Path='$Path',VN_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
+		if($lang == 'th')
+			$sql="UPDATE qq_chapter SET TH_Name='$Name',TH_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',TH_Path='$Path',TH_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
+	  if($lang == 'es')
+			$sql="UPDATE qq_chapter SET ES_Name='$Name',ES_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',ES_Path='$Path',ES_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
+		if($lang == 'ind')
+			$sql="UPDATE qq_chapter SET IND_Name='$Name',IND_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',IND_Path='$Path',IND_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
+		if($lang == 'br')
+			$sql="UPDATE qq_chapter SET BR_Name='$Name',BR_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',BR_Path='$Path',BR_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
+	  if($lang == 'ru')
+			$sql="UPDATE qq_chapter SET RU_Name='$Name',RU_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',RU_Path='$Path',RU_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
+		if($lang == 'fr')
+			$sql="UPDATE qq_chapter SET FR_Name='$Name',FR_Content='$Content1',Content_03='$Content_03_1',Summary='$Summary',IdStory='$IdStory',FR_Path='$Path',FR_Title='$Title1',DateUpload='$DateUpload' WHERE Id='$IdChap'";
 		mysqli_query($this->_conn, $sql);	
 	  if(mysqli_affected_rows($this->_conn)==1)
 			$error="Sửa thành công";
