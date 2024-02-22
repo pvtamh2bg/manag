@@ -421,6 +421,53 @@ function japaneseToRomaji($japaneseString) {
 	}
 }
 
+function frenchToRomaji($frString) {
+	// Kiểm tra xem lớp Transliterator có tồn tại không
+	if (class_exists('Transliterator')) {
+		$transliterator = Transliterator::create('Any-Latin; Latin-ASCII; NFKD');
+		// Thực hiện chuyển đổi
+		$romaji = $transliterator->transliterate($frString);
+		
+		return preg_replace('/\W+/', '-', $romaji);
+	} else {
+		// Lớp Transliterator không tồn tại, trả về chuỗi gốc
+		return $frString;
+	}
+}
+
+function spanishToRomaji($frString) {
+	// Kiểm tra xem lớp Transliterator có tồn tại không
+	if (class_exists('Transliterator')) {
+		$transliterator = Transliterator::create('Any-Latin; Latin-ASCII; [\u0100-\u7fff] remove');
+		// Thực hiện chuyển đổi
+		$romaji = $transliterator->transliterate($frString);
+		// Thay thế khoảng trắng bằng dấu gạch nối và loại bỏ các ký tự không mong muốn
+		$urlFriendlyText = preg_replace('/[^A-Za-z0-9\-]+/', '-', $romaji);
+
+		return trim($urlFriendlyText, '-');
+	} else {
+		// Lớp Transliterator không tồn tại, trả về chuỗi gốc
+		return $frString;
+	}
+}
+
+function russianToRomaji($frString) {
+	// Kiểm tra xem lớp Transliterator có tồn tại không
+	if (class_exists('Transliterator')) {
+		$transliterator = Transliterator::create('Russian-Latin/BGN; Latin-ASCII');
+		// Thực hiện chuyển đổi
+		$romaji = $transliterator->transliterate($frString);
+		
+		// Thay thế khoảng trắng bằng dấu gạch nối và loại bỏ các ký tự không mong muốn
+		$urlFriendlyText = preg_replace('/\W+/', '-', $romaji);
+
+		return trim($urlFriendlyText, '-');
+	} else {
+		// Lớp Transliterator không tồn tại, trả về chuỗi gốc
+		return $frString;
+	}
+}
+
 function __switchLangUrl ($lang, $str) {
 
 $result = '';
@@ -433,6 +480,24 @@ switch ($lang) {
 		break;
 	case 'vn':
 		$result = vn_str_filter($str);
+		break;
+	case 'th':
+		$result = japaneseToRomaji($str);
+		break;
+	case 'es':
+		$result = spanishToRomaji($str);
+		break;
+	case 'ind':
+		$result = spanishToRomaji($str);
+		break;
+	case 'br':
+		$result = spanishToRomaji($str);
+		break;
+	case 'ru':
+		$result = russianToRomaji($str);
+		break;
+	case 'fr':
+		$result = frenchToRomaji($str);
 		break;
 	default:
 		$result = vn_str_filter($str);
