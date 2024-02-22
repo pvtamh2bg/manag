@@ -18,6 +18,8 @@ $Summary = $_POST['Summary'];
 $Title = $_POST['Title'];
 $Lang = $_POST['Lang'];
 
+$db = new config();
+$db->config();
 $story = $db->GetIdStory($IdStory);
 
 if($Lang === 'en') {
@@ -32,33 +34,31 @@ if($Lang === 'vn') {
 	$Name="Chương ".tofloat($_POST['Name']);
 	if($Content === '') $Content = "Bạn đang đọc ".$Name." của truyện tranh " .$story[22] ." tiếng việt. Đọc " .$story[22] ." ".$Name." trực tuyến trên shueisha tv miễn phí";
 }
-if($lang === 'th') {
-	$Name="Chapter ".tofloat($_POST['Name']);
-	if($Content === '') $Content = "You are reading " .$story[1] ." ".$Name." in English. Read ".$Name." of " .$story[1] ." manga online on shueisha tv for free.";
+if($Lang === 'th') {
+	$Name="ตอนที่ ".tofloat($_POST['Name']);
+	if($Content === '') $Content = "You are reading " .$story[25] ." ".$Name." in English. Read ".$Name." of " .$story[25] ." manga online on shueisha tv for free.";
 }
-if($lang === 'es') {
-	$Name="第".tofloat($_POST['Name'])."話";
-  if($Content === '') $Content = "日本語で" .$story[21] .$Name."を読んでいます。mangaplus.shueisha.tvで無料で" .$story[21] ."漫画の".$Name."をオンラインで読んでください。";
+if($Lang === 'es') {
+	$Name="Capítulo ".tofloat($_POST['Name']);
+  if($Content === '') $Content = "You are reading " .$story[26] ." ".$Name." in English. Read ".$Name." of " .$story[26] ." manga online on shueisha tv for free.";
 }	
-if($lang === 'ind') {
-	$Name="Chương ".tofloat($_POST['Name']);
-	if($Content === '') $Content = "Bạn đang đọc ".$Name." của truyện tranh " .$story[22] ." tiếng việt. Đọc " .$story[22] ." ".$Name." trực tuyến trên shueisha tv miễn phí";
-}
-if($lang === 'br') {
+if($Lang === 'ind') {
 	$Name="Chapter ".tofloat($_POST['Name']);
-	if($Content === '') $Content = "You are reading " .$story[1] ." ".$Name." in English. Read ".$Name." of " .$story[1] ." manga online on shueisha tv for free.";
+	if($Content === '') $Content = "You are reading " .$story[27] ." ".$Name." in English. Read ".$Name." of " .$story[27] ." manga online on shueisha tv for free.";
 }
-if($lang === 'ru') {
-	$Name="第".tofloat($_POST['Name'])."話";
-  if($Content === '') $Content = "日本語で" .$story[21] .$Name."を読んでいます。mangaplus.shueisha.tvで無料で" .$story[21] ."漫画の".$Name."をオンラインで読んでください。";
+if($Lang === 'br') {
+	$Name="Capítulo ".tofloat($_POST['Name']);
+	if($Content === '') $Content = "You are reading " .$story[28] ." ".$Name." in English. Read ".$Name." of " .$story[28] ." manga online on shueisha tv for free.";
+}
+if($Lang === 'ru') {
+	$Name="Глава ".tofloat($_POST['Name']);
+  if($Content === '') $Content = "You are reading " .$story[29] ." ".$Name." in English. Read ".$Name." of " .$story[29] ." manga online on shueisha tv for free.";
 }	
-if($lang === 'fr') {
-	$Name="Chương ".tofloat($_POST['Name']);
-	if($Content === '') $Content = "Bạn đang đọc ".$Name." của truyện tranh " .$story[22] ." tiếng việt. Đọc " .$story[22] ." ".$Name." trực tuyến trên shueisha tv miễn phí";
+if($Lang === 'fr') {
+	$Name="Chapitre ".tofloat($_POST['Name']);
+	if($Content === '') $Content = "You are reading " .$story[30] ." ".$Name." in English. Read ".$Name." of " .$story[30] ." manga online on shueisha tv for free.";
 }
 
-$db = new config();
-$db->config();
 $min = $db->GetMinChap($IdStory);
 $error = "";
 date_default_timezone_set("Asia/Ho_Chi_Minh");
