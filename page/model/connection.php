@@ -2103,6 +2103,36 @@ class config
 			$b2= $a['VN_Title'];//1
 			$b3= $a['VN_Path'];//2
 			$b4= $a['VN_Content'];//3	
+		} else if($lang === 'th') {
+			$b1= $a['TH_Name'];//0
+			$b2= $a['TH_Title'];//1
+			$b3= $a['TH_Path'];//2
+			$b4= $a['TH_Content'];//3	
+		}  else if($lang === 'es') {
+			$b1= $a['ES_Name'];//0
+			$b2= $a['ES_Title'];//1
+			$b3= $a['ES_Path'];//2
+			$b4= $a['ES_Content'];//3	
+		} else if($lang === 'ind') {
+			$b1= $a['IND_Name'];//0
+			$b2= $a['IND_Title'];//1
+			$b3= $a['IND_Path'];//2
+			$b4= $a['IND_Content'];//3	
+		} else if($lang === 'br') {
+			$b1= $a['BR_Name'];//0
+			$b2= $a['BR_Title'];//1
+			$b3= $a['BR_Path'];//2
+			$b4= $a['BR_Content'];//3	
+		} else if($lang === 'ru') {
+			$b1= $a['RU_Name'];//0
+			$b2= $a['RU_Title'];//1
+			$b3= $a['RU_Path'];//2
+			$b4= $a['RU_Content'];//3	
+		} else if($lang === 'fr') {
+			$b1= $a['FR_Name'];//0
+			$b2= $a['FR_Title'];//1
+			$b3= $a['FR_Path'];//2
+			$b4= $a['FR_Content'];//3	
 		} else {
 			$b1= $a['Name'];//0
 			$b2= $a['Title'];
