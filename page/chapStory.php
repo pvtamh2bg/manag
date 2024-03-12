@@ -267,9 +267,9 @@ if (isset($_SESSION['text_size']))
 
 
 
-						$path_p = $linkOption . $the_loai . vn_str_filter($NameStory) . "-" . $IdStory . "-chap-" . tofloat($Pre) . "-$lang.html";
+						$path_p = $linkOption . $the_loai . __switchLangUrl($lang, $NameStory) . "-" . $IdStory . "-chap-" . tofloat($Pre) . "-$lang.html";
 
-						$path_n = $linkOption . $the_loai . vn_str_filter($NameStory) . "-" . $IdStory . "-chap-" . tofloat($Nex) . "-$lang.html";
+						$path_n = $linkOption . $the_loai . __switchLangUrl($lang, $NameStory) . "-" . $IdStory . "-chap-" . tofloat($Nex) . "-$lang.html";
 
 						?>
 						<div class="box">
@@ -282,7 +282,7 @@ if (isset($_SESSION['text_size']))
 										<meta itemprop="position" content="1">
 									</li>
 									<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-										<a itemprop="item" href="<?= $linkOption . $the_loai ?><?= vn_str_filter($NameStory) . "-" . $IdStory."-$lang"; ?>"
+										<a itemprop="item" href="<?= $linkOption . $the_loai ?><?= __switchLangUrl($lang, $NameStory) . "-" . $IdStory."-$lang"; ?>"
 											title="<?= $NameStory ?>">
 											<span itemprop="name">
 												<?php echo $NameStory; ?>
