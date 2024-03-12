@@ -132,14 +132,14 @@ if(isset($_SESSION['email'])){
 	<meta property="og:title" content="<?=$arr_name_o[1]?>">
 	<meta property="og:description" content="<?="Read manga ".$bb1.$nextChapMeta." for free,  latest chapter and fastest at shueisha.tv - ".$domain?>">
 	<meta property="og:image" content="<?=$arr_name_o[0]?>">
-	<link rel="canonical" href="<?=$linkOption.$the_loai?><?=vn_str_filter($arr_name_o[1])."-".$arr_name_o[15]."-chap-".$numChap.".html"?>" />
+	<link rel="canonical" href="<?=$linkOption.$the_loai?><?=__switchLangUrl($lang, $arr_name_o[1])."-".$arr_name_o[15]."-chap-".$numChap.".html"?>" />
 	<meta itemprop="description" content="<?="Read manga ".$bb1.$nextChapMeta." for free,  latest chapter and fastest at shueisha.tv - ".$domain?>">
 	<meta itemprop="name" content="<?=$arr_name_o[1]?>">
 	<meta itemprop="image" content="<?=$linkOption1.$arr_name_o[0]?>">
 	<meta itemprop="thumbnail" content="<?=$linkOption1.$arr_name_o[0]?>">
 	<meta property="og:site_name" content="<?=$domain?>" />
 	<meta property="og:type" content="article" />
-	<meta property="og:url" content="<?=$linkOption.$the_loai?><?=vn_str_filter($arr_name_o[1])."-".$arr_name_o[15]."-chap-".$numChap.".html"?>" />
+	<meta property="og:url" content="<?=$linkOption.$the_loai?><?=__switchLangUrl($lang, $arr_name_o[1])."-".$arr_name_o[15]."-chap-".$numChap.".html"?>" />
 	  
 	<meta name="copyright" content="Copyright © 2023 <?=$domain?>" />
 	<meta name="Author" content="<?=$domain?>" />

@@ -89,10 +89,10 @@ $lastElement = str_replace("Chương", "Chap", $lastElement);
 	<meta property="og:description"
 		content="❶✔️ Read Manga  <?= $arr[1] . $gach . str_replace(";", " - ", $arr[2]) ?> The latest full translation, high-quality beautiful images, updated quickly and promptly at <?= $domain ?>">
 	<meta property="og:image" content="<?= $arr[0] ?>">
-	<link rel="canonical" href="<?= $linkOption . $the_loai ?><?= vn_str_filter($arr[1]) . "-" . $arr[15] . "-". $lang; ?>">
+	<link rel="canonical" href="<?= $linkOption . $the_loai ?><?=  __switchLangUrl($lang, $arr[1]) . "-" . $arr[15] . "-". $lang; ?>">
 	<meta property="og:site_name" content="<?= $domain ?>">
 	<meta property="og:type" content="article">
-	<meta property="og:url" content="<?= $linkOption . $the_loai ?><?= vn_str_filter($arr[1]) . "-" . $arr[15] ?>">
+	<meta property="og:url" content="<?= $linkOption . $the_loai ?><?= __switchLangUrl($lang, $arr[1]) . "-" . $arr[15] ?>">
 	<meta name="Author" content="<?= $domain ?>">
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=6.0, user-scalable=yes">

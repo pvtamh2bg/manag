@@ -6,6 +6,7 @@ deny from all
 </Files>
 
 RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?shueisha.tv [NC]
 RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?mangaplus.shueisha.tv [NC]
 RewriteRule \.(jpg|jpeg|png|gif)$ - [NC,F,L]
 
