@@ -66,7 +66,16 @@ $arr_name_o = $db->GetIdStory($IdStory)
 $arr2 = $db->GetChapter2($IdStory, $lang);
 $lastElement = reset($arr2)['Name'];
 $lastElement = str_replace("Chương", "Chap", $lastElement);
-$linkUrl = __switchLangUrl($lang, $arr[1])
+$linkUrl = __switchLangUrl($lang, $arr[1]);
+$linkEnUrl = __switchLangUrl($lang, $arr[21]);
+$linkJpUrl = __switchLangUrl($lang, $arr[22]);
+$linkVnUrl = __switchLangUrl($lang, $arr[23]);
+$linkThUrl = __switchLangUrl($lang, $arr[24]);
+$linkEsUrl = __switchLangUrl($lang, $arr[25]);
+$linkIndUrl = __switchLangUrl($lang, $arr[26]);
+$linkBrUrl = __switchLangUrl($lang, $arr[27]);
+$linkRuUrl = __switchLangUrl($lang, $arr[28]);
+$linkFrUrl = __switchLangUrl($lang, $arr[29]);
 ?>
 
 <!DOCTYPE html>
@@ -340,31 +349,31 @@ $linkUrl = __switchLangUrl($lang, $arr[1])
 						</div>
 						<div class="TitleDetail-module_languages_87lPm" style="display: flex;justify-content: space-between;-ms-flex-wrap: wrap;flex-wrap: wrap;">
 							<?php if($arr[1] !== '' && $arr[1] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai .  $linkUrl . "-" . $IdStory ."-en"  ?>" aria-current="page" class="<?php echo $lang==='en' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in English">English</a>
+								<a href="<?= $linkOption . $the_loai .  $linkEnUrl . "-" . $IdStory ."-en"  ?>" aria-current="page" class="<?php echo $lang==='en' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in English">English</a>
 							<?php endif; ?>
 							<?php if($arr[22] !== '' && $arr[22] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai . $linkUrl . "-" . $IdStory ."-jp"  ?>" class="<?php echo $lang==='jp' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Japanese">日本語</a>
+								<a href="<?= $linkOption . $the_loai . $linkJpUrl . "-" . $IdStory ."-jp"  ?>" class="<?php echo $lang==='jp' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Japanese">日本語</a>
 							<?php endif; ?>
 							<?php if($arr[23] !== '' && $arr[23] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai . $linkUrl . "-" . $IdStory ."-vn"  ?>" class="<?php echo $lang==='vn' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in vietnamese">Tiếng Việt</a>
+								<a href="<?= $linkOption . $the_loai . $linkVnUrl . "-" . $IdStory ."-vn"  ?>" class="<?php echo $lang==='vn' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in vietnamese">Tiếng Việt</a>
 							<?php endif; ?>
 							<?php if($arr[24] !== '' && $arr[24] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai . $linkUrl . "-" . $IdStory ."-th"  ?>" class="<?php echo $lang==='th' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Thai">ภาษาไทย</a>
+								<a href="<?= $linkOption . $the_loai . $linkThUrl . "-" . $IdStory ."-th"  ?>" class="<?php echo $lang==='th' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Thai">ภาษาไทย</a>
 							<?php endif; ?>
 							<?php if($arr[25] !== '' && $arr[25] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai .$linkUrl . "-" . $IdStory ."-es"  ?>" class="<?php echo $lang==='es' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Spainish">Español</a>
+								<a href="<?= $linkOption . $the_loai . $linkEsUrl . "-" . $IdStory ."-es"  ?>" class="<?php echo $lang==='es' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Spainish">Español</a>
 							<?php endif; ?>
 							<?php if($arr[26] !== '' && $arr[26] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai . $linkUrl . "-" . $IdStory ."-ind"  ?>" class="<?php echo $lang==='ind' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Bahasa">Bahasa (IND)</a>
+								<a href="<?= $linkOption . $the_loai . $linkIndUrl . "-" . $IdStory ."-ind"  ?>" class="<?php echo $lang==='ind' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Bahasa">Bahasa (IND)</a>
 							<?php endif; ?>
 							<?php if($arr[27] !== '' && $arr[27] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai . $linkUrl . "-" . $IdStory ."-br"  ?>" class="<?php echo $lang==='br' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in PORTUGUÊS">PORTUGUÊS (BR)</a>
+								<a href="<?= $linkOption . $the_loai . $linBrkUrl . "-" . $IdStory ."-br"  ?>" class="<?php echo $lang==='br' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in PORTUGUÊS">PORTUGUÊS (BR)</a>
 							<?php endif; ?>
 							<?php if($arr[28] !== '' && $arr[28] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai . $linkUrl . "-" . $IdStory ."-ru"  ?>" class="<?php echo $lang==='ru' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Russian">Русский</a>
+								<a href="<?= $linkOption . $the_loai . $linkRuUrl . "-" . $IdStory ."-ru"  ?>" class="<?php echo $lang==='ru' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Russian">Русский</a>
 							<?php endif; ?>
 							<?php if($arr[29] !== '' && $arr[29] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai . $linkUrl . "-" . $IdStory ."-fr"  ?>" class="<?php echo $lang==='fr' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in French">Français</a>
+								<a href="<?= $linkOption . $the_loai . $linkFrUrl . "-" . $IdStory ."-fr"  ?>" class="<?php echo $lang==='fr' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in French">Français</a>
 							<?php endif; ?>
 							<div id="ChapterList-module_sort_3OHNF">
 								<img id="sort-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAjVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8DizOFAAAALnRSTlMAgBj0hwSKyYLihGpbQSAB+/jvptXNX00tCMa+spuYUDkqEujl3a9yVS/mkXkX4MN39wAAAcpJREFUaN7t1mlvgkAQgOGhHKJyQ1G876PH/P+fV+NgBknaxjKTmHTfT65ueBLWXQCTyWR66iyss+DH3CAvsnQ38c86QNnHW4dIHnDn2CgLxYF3vMteCwMjbFW4okD8iu0CUSBEahpGw5Q+vooCHk2YVI27tZEEejRh1BwsJQHaAgkt7AfNHkoC9vX3Pg0Cni0G0MLuaXBSALbX31MaHPkWSS/y+DqY8UYQAxY0YQ6X1siaGLBE6ujCuT5Us1gScLe3Q66PdbnsYVdiu5UsEOd4X0/8gbNoHaZSABfmNqKN1JsrCHCbaIi8yxQAqHY0c++qADy1BB3gs16CIlYCFsjPGg1gnfAeUAFmSIU6AL9agArA70YrJSBAagY6QFUf1MlYCeAMAAb410DUo4kvSsApQ02gmiNqAuMCVYFhiprA5oCoCvRQGShVAX5cTtQAWOElz9UDIMdsBKAIRNMIdADuqQDLbpTcgKT5rdUJAA9/yet6i7y/XJ+BroInscgOfpsj8y9yHr4+A50ER24fOA9en4EOgiO7kwfYagCyQFsYgCzQFgYah53P1/dBA2DBBw2ABR80AH4iWKABsGCBBsCCBQ8BJpPJ9KR9AY4H9+HKSblgAAAAAElFTkSuQmCC" alt="sort" class="ChapterList-module_sortIcon_1dGE4">
