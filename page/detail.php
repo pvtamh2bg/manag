@@ -67,15 +67,15 @@ $arr2 = $db->GetChapter2($IdStory, $lang);
 $lastElement = reset($arr2)['Name'];
 $lastElement = str_replace("Chương", "Chap", $lastElement);
 $linkUrl = __switchLangUrl($lang, $arr[1]);
-$linkEnUrl = __switchLangUrl($lang, $arr[21]);
-$linkJpUrl = __switchLangUrl($lang, $arr[22]);
-$linkVnUrl = __switchLangUrl($lang, $arr[23]);
-$linkThUrl = __switchLangUrl($lang, $arr[24]);
-$linkEsUrl = __switchLangUrl($lang, $arr[25]);
-$linkIndUrl = __switchLangUrl($lang, $arr[26]);
-$linkBrUrl = __switchLangUrl($lang, $arr[27]);
-$linkRuUrl = __switchLangUrl($lang, $arr[28]);
-$linkFrUrl = __switchLangUrl($lang, $arr[29]);
+$linkEnUrl = __switchLangUrl('en', $arr[21]);
+$linkJpUrl = __switchLangUrl('jp', $arr[22]);
+$linkVnUrl = __switchLangUrl('vn', $arr[23]);
+$linkThUrl = __switchLangUrl('th', $arr[24]);
+$linkEsUrl = __switchLangUrl('es', $arr[25]);
+$linkIndUrl = __switchLangUrl('ind', $arr[26]);
+$linkBrUrl = __switchLangUrl('br', $arr[27]);
+$linkRuUrl = __switchLangUrl('ru', $arr[28]);
+$linkFrUrl = __switchLangUrl('fr', $arr[29]);
 ?>
 
 <!DOCTYPE html>
