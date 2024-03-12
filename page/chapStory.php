@@ -94,7 +94,7 @@ if ($NameStory == "")
 $arr = $db->GetChapter($IdStory);
 //echo microtime(true)-$time;
 
-$arr_name_o = $db->GetIdStory($IdStory);
+$arr_name_o = $db->GetIdStory($IdStory, $lang);
 $the_loai = "truyen-tranh/";
 if ($arr_name_o[14] == 1)
 	$the_loai = "tieu-thuyet/";
@@ -154,7 +154,7 @@ if (isset($_SESSION['text_size']))
 	<meta property="og:site_name" content="<?= $domain ?>" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url"
-		content="<?= $linkOption . $the_loai ?><?= vn_str_filter($arr_name_o[1]) . "-" . $arr_name_o[15] . "-chap-" . $numChap . ".html" ?>" />
+		content="<?= $linkOption . $the_loai ?><?= __switchLangUrl($lang, $arr_name_o[1])  . "-" . $arr_name_o[15] . "-chap-" . $numChap . ".html" ?>" />
 
 	<meta name="copyright" content="Copyright © 2023 <?= $domain ?>" />
 	<meta name="Author" content="<?= $domain ?>" />
