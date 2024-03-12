@@ -367,7 +367,7 @@ $linkFrUrl = __switchLangUrl('fr', $arr[29]);
 								<a href="<?= $linkOption . $the_loai . $linkIndUrl . "-" . $IdStory ."-ind"  ?>" class="<?php echo $lang==='ind' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Bahasa">Bahasa (IND)</a>
 							<?php endif; ?>
 							<?php if($arr[27] !== '' && $arr[27] !== Null): ?>
-								<a href="<?= $linkOption . $the_loai . $linBrkUrl . "-" . $IdStory ."-br"  ?>" class="<?php echo $lang==='br' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in PORTUGUÊS">PORTUGUÊS (BR)</a>
+								<a href="<?= $linkOption . $the_loai . $linkBrUrl . "-" . $IdStory ."-br"  ?>" class="<?php echo $lang==='br' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in PORTUGUÊS">PORTUGUÊS (BR)</a>
 							<?php endif; ?>
 							<?php if($arr[28] !== '' && $arr[28] !== Null): ?>
 								<a href="<?= $linkOption . $the_loai . $linkRuUrl . "-" . $IdStory ."-ru"  ?>" class="<?php echo $lang==='ru' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in Russian">Русский</a>
