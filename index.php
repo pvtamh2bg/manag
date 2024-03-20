@@ -14,7 +14,7 @@ $domain = $_SERVER['SERVER_NAME'];
 <html lang="en">
 
 <head>
-  <meta name="6f6d1a1d5ee75d55481fddfedc089a218f60c43d" content="6f6d1a1d5ee75d55481fddfedc089a218f60c43d">
+  <meta name="6f6d1a1d5ee75d55481fddfedc089a218f60c43d" content="6f6d1a1d5ee75d55481fddfedc089a218f60c43d" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>MANGA Plus TV by SHUEISHA | Read and Discover Manga Online For Free</title>
 	<meta name="title" content="MANGA Plus by SHUEISHA TV | Read and Discover Manga Online">
