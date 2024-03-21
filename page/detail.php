@@ -474,7 +474,7 @@ $linkFrUrl = __switchLangUrl('fr', $arr[29]);
 			});
 		</script>
 		<?php
-		////require_once('qc/bannerLeft.php'); 
+		require_once('qc/bannerLeft.php'); 
 		?>
 	</div>
 	<?php

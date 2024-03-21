@@ -501,7 +501,7 @@ if(isset($_SESSION['email'])){
             </script>
        <?php
 	      require_once('footer/footerDetail.php');
-	      //require_once('qc/bannerLeft.php'); 
+	      require_once('qc/bannerLeft.php');
 	   ?>	
       </div>
 	  <?php		  
