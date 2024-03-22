@@ -996,7 +996,7 @@ input+label {
   display: -ms-flexbox;
   display: flex
 }
-
+  
 .styles-module_settingBtn_2xojh {
     margin-left: 0;
     position: absolute;
@@ -1352,8 +1352,6 @@ small {
         transform: scale(1)
     }
 }
-
-
 
 </style>  
 
