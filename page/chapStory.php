@@ -103,9 +103,29 @@ if ($arr_name_o[2] != "")
 	$gach = " - ";
 
 $bb1 = $arr_name_o[1] . $gach . str_replace(";", " - ", $arr_name_o[2]);
+$langTitle = '';
+if ($lang === 'en') {
+	$langTitle = 'English';
+} else if( $lang === 'jp') {
+	$langTitle = '日本語';
+} else if( $lang === 'vn') {
+	$langTitle = 'Tiếng việt';
+}else if( $lang === 'th') {
+	$langTitle = 'Thai';
+}else if( $lang === 'es') {
+	$langTitle = 'Español';
+}else if( $lang === 'ind') {
+	$langTitle = 'Bahasa';
+}else if( $lang === 'br') {
+	$langTitle = 'PORTUGUÊS';
+}else if( $lang === 'fr') {
+	$langTitle = 'Français';
+}else if( $lang === 'ru') {
+	$langTitle = 'Русский';
+}
 
-$nextChapTitle = " Chap " . $numChap . " Next Chap " . (floor($numChap) + 1) . " Tiếng Việt";
-$nextChapMeta = " chap " . $numChap . " next chap " . (floor($numChap) + 1) . " tiếng việt";
+$nextChapTitle = " Chap " . $numChap . " Next Chap " . (floor($numChap) + 1) . " $langTitle";
+$nextChapMeta = " chap " . $numChap . " next chap " . (floor($numChap) + 1) . " $langTitle";
 
 $paper_color = "";
 $text_color = "";
