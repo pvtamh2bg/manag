@@ -42,7 +42,7 @@ $domain = $_SERVER['SERVER_NAME'];
 	<meta property="twitter:title" content="Manga plus shueisha | Read and Discover Manga Online">
 	<meta property="twitter:description"
 		content="Explore a vast collection of manga on Your Manga Site Name. Enjoy the latest chapters and discover new favorites updated daily.">
-	<meta property="twitter:image" content="<?= $domain ?>/images/social-preview-image.png">
+	<meta property="twitter:image" content="<?php echo $linkOption1; ?>frontend/images/favicon.png">
 
 	<!-- Canonical URL -->
 	<link rel="canonical" href="<?= $linkOption ?>">
@@ -299,6 +299,17 @@ $domain = $_SERVER['SERVER_NAME'];
 			</div>
 		</div>
 	</section>
+	<script>
+(function(bnfhwn){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = bnfhwn || {};
+s.src = "\/\/wretched-application.com\/c\/D.9-6Xb\/2p5zlySgWQQe9TNOTaIo3qMmjLAs0jMkiq0E1OM\/jcc\/y\/MzDkQozK";
+s.async = true;
+l.parentNode.insertBefore(s, l);
+})({})
+</script>
 </body>
 
 </html>
