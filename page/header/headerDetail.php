@@ -367,7 +367,7 @@ if ($(window).width() > 1023) {
                     <a href="<?= $linkOption."truyen-tranh-hay.html"?>" class="navbar-item">Comic</a>
                     <a href="<?= $linkOption."tieu-thuyet-hay.html"?>" class="navbar-item">Novel</a>
 
-                    <a rel="nofollow" href="https://www.facebook.com/larvatubafunny" target="_blank" class="navbar-item">Fanpage</a>
+                    <a rel="nofollow" href="https://www.facebook.com/shueishatv" target="_blank" class="navbar-item">Fanpage</a>
                     <a rel="nofollow" href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item">Advance Search</a>
                 </div>
             </div>
