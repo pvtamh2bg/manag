@@ -286,7 +286,7 @@ $linkFrUrl = __switchLangUrl('fr', $arr[29]);
 									</a>
 								</div>
 								<div class="social_item">
-									<a rel="nofollow" href="https://www.facebook.com/larvatubafunny/" class="btn_over" target="_blank">
+									<a rel="nofollow" href="https://www.facebook.com/shueishatv/" class="btn_over" target="_blank">
 										<img src="<?php echo $linkOption1.'/frontend/images/icon_fb_en.svg'; ?>" width="100%" alt="Facebook ENG">
 									</a>
 								</div>
