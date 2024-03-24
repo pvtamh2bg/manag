@@ -37,7 +37,7 @@ if (window.matchMedia("(min-width: 1024px)").matches) {
 			 html_Content+='<a rel="nofollow" target="_blank" class="image_close_mobile" href="'+banner6+'">';
 				 html_Content+='<img alt="shueisha tv read manga for free" src="'+banner5+'" style="width: 300px;">';
 			 html_Content+='</a>';
-			 html_Content+='<a rel="nofollow" href="#" class="popup_close_mobile">Tắt</a>';
+			 html_Content+='<a rel="nofollow" href="#" class="popup_close_mobile">&#x2715;</a>';
 		 html_Content+='</div>';
 		 html_Content+='<div class="popup_align" style="display: inline-block; vertical-align: middle; height: 100%;"></div>';
 	 html_Content+='</div>';
