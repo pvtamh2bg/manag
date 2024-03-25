@@ -76,6 +76,12 @@ if(!isset($_GET["country"]) && isset($_GET["status"])) {
 if(isset($_GET["country"]) && isset($_GET["status"])) {
 	$canonical .= $country . '&'. $status;
 }
+
+// Lang change
+$lang = 'en';
+if(isset($_SESSION["lang"])) {
+ $lang = $_SESSION["lang"];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -212,7 +218,7 @@ if(isset($_GET["country"]) && isset($_GET["status"])) {
 								break;
 						}
 
-						storiesList($db->GetSortTop($country1, $status1, $sort1, $date, "", $item_per_page, $current_page), $linkOption);
+						storiesList($lang, $db->GetSortTop($country1, $status1, $sort1, $date, "", $item_per_page, $current_page), $linkOption);
 
 						$totalRecords = $db->GetSortTop($country1, $status1, $sort1, $date, "total", $item_per_page, $current_page);
 						$db->dis_connect(); //ngat ket noi mysql	
