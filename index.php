@@ -57,7 +57,8 @@ $domain = $_SERVER['SERVER_NAME'];
 	<script src="<?php echo $linkOption1; ?>js/main.min.js"></script>
 	<?php require_once('page/googleAnalytics.php'); ?>
 </head>
-<body oncontextmenu="return false;">
+<body oncontextmenu="return true;">
+	<?php require_once('page/language/index.php'); ?>
 	<input type="hidden" id="keyword-default" value="black">
 	<div class="outsite ">
 		<?php

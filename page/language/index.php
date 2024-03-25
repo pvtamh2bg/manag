@@ -1,3 +1,9 @@
+<?php 
+ $lang = 'en';
+ if(isset($_SESSION["lang"])) {
+  $lang = $_SESSION["lang"];
+ }
+?>
 <style>
 @import url(https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap);
 abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video {
@@ -996,7 +1002,7 @@ input+label {
   display: -ms-flexbox;
   display: flex
 }
-  
+
 .styles-module_settingBtn_2xojh {
     margin-left: 0;
     position: absolute;
@@ -1021,7 +1027,7 @@ input+label {
     }
 
     .styles-module_navigation_YdAIm,.styles-module_settingBtn_2xojh {
-        display: none
+        display: block;
     }
 
     .styles-module_searchForm_rhCn- {
@@ -1367,59 +1373,65 @@ small {
       <div class="styles-module_itemArea_1XSVI">
          <h3 class="styles-module_text_2gkQu" _size="l">Service Language</h3>
          <div class="styles-module_items_2sfN5">
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="315ff4c2" domid="en" checked="checked">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="en">
                <label for="315ff4c2-en" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">English&nbsp;&nbsp;</p>
                </label>
-               <div name="315ff4c2" domid="315ff4c2-en" checked="checked"><input type="radio" name="315ff4c2" id="315ff4c2-en" class="styles-module_input_1_xZD"><label for="315ff4c2-en" class="styles-module_radio_311JI"></label></div>
+               <div name="315ff4c2" domid="315ff4c2-en" checked="checked"><input <?php echo ($lang === 'en') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-en" class="styles-module_input_1_xZD"><label for="315ff4c2-en" class="styles-module_radio_311JI"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="315ff4c2" domid="es">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="jp">
+               <label for="315ff4c2-jp" class="styles-module_label_3C1G0 ">
+                  <p class="styles-module_l_2xDvF">日本語&nbsp;&nbsp;</p>
+               </label>
+               <div name="315ff4c2" domid="315ff4c2-jp"><input <?php echo ($lang === 'jp') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-jp" class="styles-module_input_1_xZD"><label for="315ff4c2-jp" class="styles-module_radio_311JI"></label></div>
+            </div>
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="es">
                <label for="315ff4c2-es" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">Español&nbsp;&nbsp;</p>
                </label>
-               <div name="315ff4c2" domid="315ff4c2-es"><input type="radio" name="315ff4c2" id="315ff4c2-es" class="styles-module_input_1_xZD"><label for="315ff4c2-es" class="styles-module_radio_311JI"></label></div>
+               <div name="315ff4c2" domid="315ff4c2-es"><input <?php echo ($lang === 'es') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-es" class="styles-module_input_1_xZD"><label for="315ff4c2-es" class="styles-module_radio_311JI"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="315ff4c2" domid="th">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="th">
                <label for="315ff4c2-th" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">ภาษาไทย&nbsp;&nbsp;</p>
                </label>
-               <div name="315ff4c2" domid="315ff4c2-th"><input type="radio" name="315ff4c2" id="315ff4c2-th" class="styles-module_input_1_xZD"><label for="315ff4c2-th" class="styles-module_radio_311JI"></label></div>
+               <div name="315ff4c2" domid="315ff4c2-th"><input <?php echo ($lang === 'th') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-th" class="styles-module_input_1_xZD"><label for="315ff4c2-th" class="styles-module_radio_311JI"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="315ff4c2" domid="pt">
-               <label for="315ff4c2-pt" class="styles-module_label_3C1G0 ">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="br">
+               <label for="315ff4c2-br" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">Português (BR)&nbsp;&nbsp;</p>
                </label>
-               <div name="315ff4c2" domid="315ff4c2-pt"><input type="radio" name="315ff4c2" id="315ff4c2-pt" class="styles-module_input_1_xZD"><label for="315ff4c2-pt" class="styles-module_radio_311JI"></label></div>
+               <div name="315ff4c2" domid="315ff4c2-br"><input <?php echo ($lang === 'br') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-br" class="styles-module_input_1_xZD"><label for="315ff4c2-br" class="styles-module_radio_311JI"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="315ff4c2" domid="id">
-               <label for="315ff4c2-id" class="styles-module_label_3C1G0 ">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="ind">
+               <label for="315ff4c2-ind" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">Bahasa (IND)&nbsp;&nbsp;</p>
                </label>
-               <div name="315ff4c2" domid="315ff4c2-id"><input type="radio" name="315ff4c2" id="315ff4c2-id" class="styles-module_input_1_xZD"><label for="315ff4c2-id" class="styles-module_radio_311JI"></label></div>
+               <div name="315ff4c2" domid="315ff4c2-ind"><input <?php echo ($lang === 'ind') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-ind" class="styles-module_input_1_xZD"><label for="315ff4c2-ind" class="styles-module_radio_311JI"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="315ff4c2" domid="ru">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="ru">
                <label for="315ff4c2-ru" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">Русский&nbsp;&nbsp;</p>
                </label>
-               <div name="315ff4c2" domid="315ff4c2-ru"><input type="radio" name="315ff4c2" id="315ff4c2-ru" class="styles-module_input_1_xZD"><label for="315ff4c2-ru" class="styles-module_radio_311JI"></label></div>
+               <div name="315ff4c2" domid="315ff4c2-ru"><input <?php echo ($lang === 'ru') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-ru" class="styles-module_input_1_xZD"><label for="315ff4c2-ru" class="styles-module_radio_311JI"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="315ff4c2" domid="fr">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="fr">
                <label for="315ff4c2-fr" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">Français&nbsp;&nbsp;</p>
                </label>
-               <div name="315ff4c2" domid="315ff4c2-fr"><input type="radio" name="315ff4c2" id="315ff4c2-fr" class="styles-module_input_1_xZD"><label for="315ff4c2-fr" class="styles-module_radio_311JI"></label></div>
+               <div name="315ff4c2" domid="315ff4c2-fr"><input <?php echo ($lang === 'fr') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-fr" class="styles-module_input_1_xZD"><label for="315ff4c2-fr" class="styles-module_radio_311JI"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="315ff4c2" domid="de">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="de">
                <label for="315ff4c2-de" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">Deutsch&nbsp;&nbsp;</p>
                </label>
-               <div name="315ff4c2" domid="315ff4c2-de"><input type="radio" name="315ff4c2" id="315ff4c2-de" class="styles-module_input_1_xZD"><label for="315ff4c2-de" class="styles-module_radio_311JI"></label></div>
+               <div name="315ff4c2" domid="315ff4c2-de"><input <?php echo ($lang === 'de') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-de" class="styles-module_input_1_xZD"><label for="315ff4c2-de" class="styles-module_radio_311JI"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="315ff4c2" domid="vi">
-               <label for="315ff4c2-vi" class="styles-module_label_3C1G0 ">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="vn">
+               <label for="315ff4c2-vn" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">Tiếng Việt&nbsp;&nbsp;</p>
                </label>
-               <div name="315ff4c2" domid="315ff4c2-vi"><input type="radio" name="315ff4c2" id="315ff4c2-vi" class="styles-module_input_1_xZD"><label for="315ff4c2-vi" class="styles-module_radio_311JI"></label></div>
+               <div name="315ff4c2" domid="315ff4c2-vn"><input <?php echo ($lang === 'vn') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-vn" class="styles-module_input_1_xZD"><label for="315ff4c2-vn" class="styles-module_radio_311JI"></label></div>
             </div>
          </div>
       </div>
@@ -1430,62 +1442,89 @@ small {
                <label for="contents-en" class="styles-module_label_3C1G0 styles-module_disabled_2TdUA">
                   <p class="styles-module_l_2xDvF"><span>254 Series</span></p>
                </label>
-               <div name="contents" domid="contents-en" checked="checked" disabled="disabled"><input type="checkbox" disabled="disabled" name="contents" id="contents-en" class="styles-module_input_3SzMJ"><label for="contents-en" class="styles-module_checkbox_2pXpO"></label></div>
+               <div name="contents" domid="contents-en" checked="checked" disabled="disabled"><input <?php echo ($lang === 'en') ? 'checked="checked"' : ''; ?> type="checkbox" disabled="disabled" name="contents" id="contents-en" class="styles-module_input_3SzMJ"><label for="contents-en" class="styles-module_checkbox_2pXpO"></label></div>
+            </div>
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="jp">
+               <label for="contents-jp" class="styles-module_label_3C1G0 ">
+                  <p class="styles-module_l_2xDvF"><span>88 Series</span></p>
+               </label>
+               <div name="contents" domid="contents-jp"><input <?php echo ($lang === 'jp') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-jp" class="styles-module_input_3SzMJ"><label for="contents-jp" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
             <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="es">
                <label for="contents-es" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>108 Series</span></p>
                </label>
-               <div name="contents" domid="contents-es"><input type="checkbox" name="contents" id="contents-es" class="styles-module_input_3SzMJ"><label for="contents-es" class="styles-module_checkbox_2pXpO"></label></div>
+               <div name="contents" domid="contents-es"><input <?php echo ($lang === 'es') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-es" class="styles-module_input_3SzMJ"><label for="contents-es" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
             <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="th">
                <label for="contents-th" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>32 Series</span></p>
                </label>
-               <div name="contents" domid="contents-th"><input type="checkbox" name="contents" id="contents-th" class="styles-module_input_3SzMJ"><label for="contents-th" class="styles-module_checkbox_2pXpO"></label></div>
+               <div name="contents" domid="contents-th"><input <?php echo ($lang === 'th') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-th" class="styles-module_input_3SzMJ"><label for="contents-th" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="pt">
-               <label for="contents-pt" class="styles-module_label_3C1G0 ">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="br">
+               <label for="contents-br" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>6 Series</span></p>
                </label>
-               <div name="contents" domid="contents-pt"><input type="checkbox" name="contents" id="contents-pt" class="styles-module_input_3SzMJ"><label for="contents-pt" class="styles-module_checkbox_2pXpO"></label></div>
+               <div name="contents" domid="contents-br"><input <?php echo ($lang === 'br') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-br" class="styles-module_input_3SzMJ"><label for="contents-br" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="id">
-               <label for="contents-id" class="styles-module_label_3C1G0 ">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="ind">
+               <label for="contents-ind" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>8 Series</span></p>
                </label>
-               <div name="contents" domid="contents-id"><input type="checkbox" name="contents" id="contents-id" class="styles-module_input_3SzMJ"><label for="contents-id" class="styles-module_checkbox_2pXpO"></label></div>
+               <div name="contents" domid="contents-ind"><input <?php echo ($lang === 'ind') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-ind" class="styles-module_input_3SzMJ"><label for="contents-ind" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
             <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="ru">
                <label for="contents-ru" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>11 Series</span></p>
                </label>
-               <div name="contents" domid="contents-ru"><input type="checkbox" name="contents" id="contents-ru" class="styles-module_input_3SzMJ"><label for="contents-ru" class="styles-module_checkbox_2pXpO"></label></div>
+               <div name="contents" domid="contents-ru"><input <?php echo ($lang === 'ru') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-ru" class="styles-module_input_3SzMJ"><label for="contents-ru" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
             <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="fr">
                <label for="contents-fr" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>17 Series</span></p>
                </label>
-               <div name="contents" domid="contents-fr"><input type="checkbox" name="contents" id="contents-fr" class="styles-module_input_3SzMJ"><label for="contents-fr" class="styles-module_checkbox_2pXpO"></label></div>
+               <div name="contents" domid="contents-fr"><input <?php echo ($lang === 'fr') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-fr" class="styles-module_input_3SzMJ"><label for="contents-fr" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
             <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="de">
                <label for="contents-de" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>2 Series</span></p>
                </label>
-               <div name="contents" domid="contents-de"><input type="checkbox" name="contents" id="contents-de" class="styles-module_input_3SzMJ"><label for="contents-de" class="styles-module_checkbox_2pXpO"></label></div>
+               <div name="contents" domid="contents-de"><input <?php echo ($lang === 'de') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-de" class="styles-module_input_3SzMJ"><label for="contents-de" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="vi">
-               <label for="contents-vi" class="styles-module_label_3C1G0 ">
+            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="vn">
+               <label for="contents-vn" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>3 Series</span></p>
                </label>
-               <div name="contents" domid="contents-vi"><input type="checkbox" name="contents" id="contents-vi" class="styles-module_input_3SzMJ"><label for="contents-vi" class="styles-module_checkbox_2pXpO"></label></div>
+               <div name="contents" domid="contents-vn"><input <?php echo ($lang === 'vn') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-vn" class="styles-module_input_3SzMJ"><label for="contents-vn" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
          </div>
       </div>
    </div>
 </div>
 <script>
-  $('.styles-module_languageSettingBtn_1MrGF').on('click', function() {
-    $('.styles-module_setting_6Uurn').toggle();
-  })
-</script> 
+  $(document).ready(function(){ 
+    $('.styles-module_languageSettingBtn_1MrGF').on('click', function() {
+      $('.styles-module_setting_6Uurn').toggle();
+    })
+    var lang = <?php echo json_encode($lang) ?>;
+    $('.lang_item').on('click', function(e) {
+      e.stopPropagation();
+      let newLang = $(this).attr('domid');
+      if(lang !== newLang) {
+        lang = newLang;
+        $.ajax({
+	       url:'page/ajax/language/change.php',
+	       type:'POST',
+	       cache:false,
+	       data:{'Lang': newLang},
+	       success:function(kq){
+	        console.log(kq);
+          location.reload();
+	       }
+	      })
+      }
+    })
+
+  });
+</script>

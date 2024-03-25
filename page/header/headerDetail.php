@@ -89,7 +89,6 @@ if ($(window).width() > 1023) {
 }
 });
 </script>
-    <?php require_once(__DIR__.'/../language/index.php'); ?>
     <div class="Updates-module_fluidImage_1NMT9 <?= $On?>"></div>
     <span class="logo mobile">
         <a href="<?= $linkOption?>">
