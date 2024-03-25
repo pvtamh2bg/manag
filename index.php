@@ -9,9 +9,16 @@ $linkOption = siteURL();
 $linkOption1 = $linkOption . "page/";
 $banner = $db->GetAdvertisement();
 $domain = $_SERVER['SERVER_NAME'];
+
+// Lang change
+$lang = 'en';
+if(isset($_SESSION["lang"])) {
+ $lang = $_SESSION["lang"];
+}
+
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $lang; ?>">
 
 <head>
   <meta name="6f6d1a1d5ee75d55481fddfedc089a218f60c43d" content="6f6d1a1d5ee75d55481fddfedc089a218f60c43d" />
@@ -57,7 +64,7 @@ $domain = $_SERVER['SERVER_NAME'];
 	<script src="<?php echo $linkOption1; ?>js/main.min.js"></script>
 	<?php require_once('page/googleAnalytics.php'); ?>
 </head>
-<body oncontextmenu="return true;">
+<body oncontextmenu="return false;">
 	<?php require_once('page/language/index.php'); ?>
 	<input type="hidden" id="keyword-default" value="black">
 	<div class="outsite ">
@@ -242,8 +249,8 @@ $domain = $_SERVER['SERVER_NAME'];
 					<div class="caption" id="list-update"><a href="<?php echo $linkOption; ?>truyen-tranh-hay.html"><span
 								class="starts-icon"></span>Daily Updates</a></div>
 					<?php
-					$arrLatest = $db->GetLatest();
-					storiesList($arrLatest, $linkOption);
+					$arrLatest = $db->GetLatest($lang);
+					storiesList($lang, $arrLatest, $linkOption);
 
 					?>
 					<!-- /.list-stories -->

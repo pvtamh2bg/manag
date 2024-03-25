@@ -262,70 +262,6 @@ function newsList($arr,$linkOption){
 	}
 			
 }
-function storiesList($arr,$linkOption){
-	 $db=new config();
-     $db->config();	
-	if(count($arr)>0){
-	echo '<ul class="list-stories grid-6">';
-	 foreach($arr as $arr3) {
-		   $nameChap=$arr3["NameUpdate_Chap"];
-		   //echo $arr3["DateUpdate_Chap"];
-		   //if()
-		   $dateChap=$db->convert_timer1($arr3["DateUpdate_Chap"]);
-		   $countView=$arr3["Sum_Views"];
-		   $countSubscribe=$arr3["Sum_Subscribe"];
-		   //$db->dis_connect();//ngat ket noi mysql
-		    $color="";
-			$the_loai="truyen-tranh/";
-			if($arr3["Male"]==1){
-			 $the_loai="tieu-thuyet/";
-			 $color='style="background-color:red;"';
-			}
-	   echo '<li>';
-			echo '<div class="story-item">';
-				 echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"]."-"."en".'" title="'.$arr3["Name"].'">';						
-				echo '<img class="story-cover lazy_cover" src="'.$linkOption.'page/'.$arr3["ImgAvatar"].'" alt="'.$arr3["Name"].'" style="width:190px;height:247px;"/>';
-				echo '</a>';
-				echo '<div class="top-notice">';
-					echo '<span class="time-ago" '.$color.'>'.$dateChap.'</span>';
-					if($arr3["Badge"]=="Hot")
-					 echo '<span class="type-label hot">Hot</span>';
-					else if($arr3["Badge"]=="New")
-					 echo '<span class="type-label New">New</span>';
-					
-				echo '</div>';
-				echo '<h3 class="title-book">';
-					echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"]."-"."en".'" title="'.$arr3["Name"].'">'.ConvertStr($arr3["Name"],0).'</a>';
-				echo '</h3>';
-				echo '<div class="episode-book">';
-					echo '<a href="'.$linkOption.$the_loai.vn_str_filter($arr3["Name"])."-".$arr3["Id"]."-chap-".tofloat($nameChap).'-en.html">'.$nameChap.'</a>';
-				echo '</div>';
-				echo '<div class="more-info">';
-					echo '<div class="title-more">'.$arr3["Name"].'</div>';
-					echo '<p class="info">Status: '.$arr3["story_Status"].'</p>';
-					echo '<p class="info">Views: '.$countView.'</p>';
-					echo '<p class="info">Subscriber: '.$countSubscribe.'</p>';
-					echo '<div class="list-tags">';
-					$genreArr=ConvertStrToArr($arr3["Genre"]);
-					for($i=0;$i<count($genreArr);$i++){
-						$genre12=$db->GetIdGenre($genreArr[$i]);
-						echo '<a class="blue" href="'.$linkOption.'the-loai/'.vn_str_filter($genreArr[$i]).'-'.$genre12.'.html">'.$genreArr[$i].'</a>';
-					}
-						
-					echo '</div>';
-					echo '<div class="excerpt">'.ConvertStr($arr3["Content"],1).'</div>';
-				echo '</div>';
-			echo '</div>';
-			
-		echo '</li>';
-	 }
-	echo '</ul>';
-	}else{
-		
-		echo '<div class="warning-list box">Sorry, no results found!!</div>';
-	}
-			
-}
 
 function ConvertStrToArr($str){
 	
@@ -505,6 +441,169 @@ switch ($lang) {
 }
 return $result;
 
+}
+function changeTextLang($lang) {
+	$langTitle = '';
+	if ($lang === 'en') {
+		$langTitle = 'English';
+	} else if( $lang === 'jp') {
+		$langTitle = '日本語';
+	} else if( $lang === 'vn') {
+		$langTitle = 'Tiếng việt';
+	}else if( $lang === 'th') {
+		$langTitle = 'Thai';
+	}else if( $lang === 'es') {
+		$langTitle = 'Español';
+	}else if( $lang === 'ind') {
+		$langTitle = 'Bahasa';
+	}else if( $lang === 'br') {
+		$langTitle = 'PORTUGUÊS';
+	}else if( $lang === 'fr') {
+		$langTitle = 'Français';
+	}else if( $lang === 'ru') {
+		$langTitle = 'Русский';
+	}
+	return $langTitle;
+}
+function __switchNameStoryByLang($lang, $story) {
+	$result = array();
+	switch ($lang) {
+		case 'en': {
+			$result['Name'] = $story['Name'];
+			$result['NameChap'] = $story["NameUpdate_Chap"];
+			$result['Content'] = $story["Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['Name']);
+			break;
+		}
+		case 'jp': {
+			$result['Name'] = $story['JP_Name'];
+			$result['NameChap'] = '第' . tofloat($story["NameUpdate_Chap"]) . '話';
+			$result['Content'] = $story["JP_Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['JP_Name']);
+			break;
+		}
+		case 'vn': {
+			$result['Name'] = $story['VN_Name'];
+			$result['NameChap'] = 'Chương '.tofloat($story["NameUpdate_Chap"]);
+			$result['Content'] = $story["VN_Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['VN_Name']);
+			break;
+		}
+		case 'th': {
+			$result['Name'] = $story['TH_Name'];
+			$result['NameChap'] = 'ตอนที่ '.tofloat($story["NameUpdate_Chap"]);
+			$result['Content'] = $story["TH_Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['TH_Name']);
+			break;
+		}
+		case 'es': {
+			$result['Name'] = $story['ES_Name'];
+			$result['NameChap'] = 'Capítulo '.tofloat($story["NameUpdate_Chap"]);
+			$result['Content'] = $story["ES_Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['ES_Name']);
+			break;
+		}
+		case 'ind': {
+			$result['Name'] = $story['IND_Name'];
+			$result['NameChap'] = $story["NameUpdate_Chap"];
+			$result['Content'] = $story["IND_Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['IND_Name']);
+			break;
+		}
+		case 'br': {
+			$result['Name'] = $story['BR_Name'];
+			$result['NameChap'] = 'Capítulo '. tofloat($story["NameUpdate_Chap"]);
+			$result['Content'] = $story["BR_Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['BR_Name']);
+			break;
+		}
+		case 'ru': {
+			$result['Name'] = $story['RU_Name'];
+			$result['NameChap'] = 'Глава '.tofloat($story["NameUpdate_Chap"]);
+			$result['Content'] = $story["RU_Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['RU_Name']);
+			break;
+		}
+		case 'fr': {
+			$result['Name'] = $story['FR_Name'];
+			$result['NameChap'] = 'Chapitre '.tofloat($story["NameUpdate_Chap"]);
+			$result['Content'] = $story["FR_Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['FR_Name']);
+			break;
+		}
+		default:
+			$result['Name'] = $story['Name'];
+			$result['NameChap'] = $story["NameUpdate_Chap"];
+			$result['Content'] = $story["Content"];
+			$result['Url'] = __switchLangUrl($lang, $story['Name']);
+			break;
+	}
+	return $result;
+}
+function storiesList($lang = 'en',$arr,$linkOption){
+	 $db=new config();
+     $db->config();	
+	if(count($arr)>0){
+	echo '<ul class="list-stories grid-6">';
+	 foreach($arr as $arr3) {
+		   $NameByLang = __switchNameStoryByLang($lang, $arr3);
+
+		   //echo $arr3["DateUpdate_Chap"];
+		   //if()
+		   $dateChap=$db->convert_timer1($arr3["DateUpdate_Chap"]);
+		   $countView=$arr3["Sum_Views"];
+		   $countSubscribe=$arr3["Sum_Subscribe"];
+		   //$db->dis_connect();//ngat ket noi mysql
+		    $color="";
+			$the_loai="truyen-tranh/";
+			if($arr3["Male"]==1){
+			 $the_loai="tieu-thuyet/";
+			 $color='style="background-color:red;"';
+			}
+	   echo '<li>';
+			echo '<div class="story-item">';
+				 echo '<a href="'.$linkOption.$the_loai.$NameByLang['Url']."-".$arr3["Id"]."-"."$lang".'" title="'.$NameByLang['Name'].'">';						
+				echo '<img class="story-cover lazy_cover" src="'.$linkOption.'page/'.$arr3["ImgAvatar"].'" alt="'.$NameByLang['Name'].'" style="width:190px;height:247px;"/>';
+				echo '</a>';
+				echo '<div class="top-notice">';
+					echo '<span class="time-ago" '.$color.'>'.$dateChap.'</span>';
+					if($arr3["Badge"]=="Hot")
+					 echo '<span class="type-label hot">Hot</span>';
+					else if($arr3["Badge"]=="New")
+					 echo '<span class="type-label New">New</span>';
+					
+				echo '</div>';
+				echo '<h3 class="title-book">';
+					echo '<a href="'.$linkOption.$the_loai.$NameByLang['Url']."-".$arr3["Id"]."-"."$lang".'" title="'.$NameByLang['Name'].'">'.ConvertStr($NameByLang['Name'],0).'</a>';
+				echo '</h3>';
+				echo '<div class="episode-book">';
+					echo '<a href="'.$linkOption.$the_loai.$NameByLang['Url']."-".$arr3["Id"]."-chap-".tofloat($NameByLang['NameChap']).'-'.$lang.'.html">'.$NameByLang['NameChap'].'</a>';
+				echo '</div>';
+				echo '<div class="more-info">';
+					echo '<div class="title-more">'.$NameByLang['Name'].'</div>';
+					echo '<p class="info">Status: '.$arr3["story_Status"].'</p>';
+					echo '<p class="info">Views: '.$countView.'</p>';
+					echo '<p class="info">Subscriber: '.$countSubscribe.'</p>';
+					echo '<div class="list-tags">';
+					$genreArr=ConvertStrToArr($arr3["Genre"]);
+					for($i=0;$i<count($genreArr);$i++){
+						$genre12=$db->GetIdGenre($genreArr[$i]);
+						echo '<a class="blue" href="'.$linkOption.'the-loai/'.vn_str_filter($genreArr[$i]).'-'.$genre12.'.html">'.$genreArr[$i].'</a>';
+					}
+						
+					echo '</div>';
+					echo '<div class="excerpt">'.ConvertStr($NameByLang['Content'],1).'</div>';
+				echo '</div>';
+			echo '</div>';
+			
+		echo '</li>';
+	 }
+	echo '</ul>';
+	}else{
+		
+		echo '<div class="warning-list box">Sorry, no results found!!</div>';
+	}
+			
 }
 function findTop($type)
 {

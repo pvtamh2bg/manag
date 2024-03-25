@@ -1807,9 +1807,39 @@ class config
 		$query = "UPDATE qq_chapter SET Content='$Content1' WHERE IdStory='$IdStory' and Name='$Name'";
 		$result = mysqli_query($this->_conn, $query);
 	}
-	function GetLatest()
+	function GetLatest($lang = 'en')
 	{
-		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload ,a.DateUpload FROM qq_story a where a.hide_view=0  ORDER BY a.DateUpdate_Chap DESC LIMIT 42";
+		$where = '';
+		switch($lang) {
+			case 'en':
+				$where = 'a.Name IS NOT NULL';
+				break;
+		  case 'jp':
+				$where = 'a.JP_Name IS NOT NULL';
+				break;
+			case 'vn':
+				$where = 'a.VN_Name IS NOT NULL';
+				break;
+			case 'th':
+				$where = 'a.TH_Name IS NOT NULL';
+				break;
+			case 'es':
+				$where = 'a.ES_Name IS NOT NULL';
+				break;
+			case 'ind':
+				$where = 'a.IND_Name IS NOT NULL';
+				break;
+			case 'br':
+				$where = 'a.BR_Name IS NOT NULL';
+				break;
+			case 'ru':
+				$where = 'a.RU_Name IS NOT NULL';
+				break;
+			case 'fr':
+				$where = 'a.FR_Name IS NOT NULL';
+				break;
+		}
+		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload ,a.DateUpload FROM qq_story a where a.hide_view=0 AND $where ORDER BY a.DateUpdate_Chap DESC LIMIT 42";
 		$rr = mysqli_query($this->_conn,$sql);		
 		$arr = array();
 		while($a = mysqli_fetch_array($rr,MYSQLI_ASSOC))
@@ -1828,7 +1858,7 @@ class config
 		{
 			$arr[] = $a;
 		}	
-		return $arr;
+		return $sql;
 	}
 	function GetMaleIndex()
 	{		

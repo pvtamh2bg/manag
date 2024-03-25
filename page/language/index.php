@@ -3,6 +3,7 @@
  if(isset($_SESSION["lang"])) {
   $lang = $_SESSION["lang"];
  }
+$langTitle = changeTextLang($lang);
 ?>
 <style>
 @import url(https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap);
@@ -1363,7 +1364,7 @@ small {
 
 <div class="styles-module_settingBtn_2xojh">
    <div class="styles-module_languageSettingBtn_1MrGF">
-      <p class="styles-module_text_NZjpR" _size="s">LANGUAGE: <span><b>English</b></span></p>
+      <p class="styles-module_text_NZjpR" _size="s">LANGUAGE: <span><b><?php echo $langTitle ?></b></span></p>
       <span class="styles-module_triangle_7ngq6"></span>
    </div>
 </div>
@@ -1421,12 +1422,12 @@ small {
                </label>
                <div name="315ff4c2" domid="315ff4c2-fr"><input <?php echo ($lang === 'fr') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-fr" class="styles-module_input_1_xZD"><label for="315ff4c2-fr" class="styles-module_radio_311JI"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="de">
+            <!-- <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="de">
                <label for="315ff4c2-de" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">Deutsch&nbsp;&nbsp;</p>
                </label>
                <div name="315ff4c2" domid="315ff4c2-de"><input <?php echo ($lang === 'de') ? 'checked="checked"' : ''; ?> type="radio" name="315ff4c2" id="315ff4c2-de" class="styles-module_input_1_xZD"><label for="315ff4c2-de" class="styles-module_radio_311JI"></label></div>
-            </div>
+            </div> -->
             <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u lang_item" name="315ff4c2" domid="vn">
                <label for="315ff4c2-vn" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF">Tiếng Việt&nbsp;&nbsp;</p>
@@ -1486,12 +1487,12 @@ small {
                </label>
                <div name="contents" domid="contents-fr"><input <?php echo ($lang === 'fr') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-fr" class="styles-module_input_3SzMJ"><label for="contents-fr" class="styles-module_checkbox_2pXpO"></label></div>
             </div>
-            <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="de">
+            <!-- <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="de">
                <label for="contents-de" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>2 Series</span></p>
                </label>
                <div name="contents" domid="contents-de"><input <?php echo ($lang === 'de') ? 'checked="checked"' : ''; ?> type="checkbox" name="contents" id="contents-de" class="styles-module_input_3SzMJ"><label for="contents-de" class="styles-module_checkbox_2pXpO"></label></div>
-            </div>
+            </div> -->
             <div class="styles-module_wrapper_HMi7g styles-module_item_3w45u" name="contents" domid="vn">
                <label for="contents-vn" class="styles-module_label_3C1G0 ">
                   <p class="styles-module_l_2xDvF"><span>3 Series</span></p>
