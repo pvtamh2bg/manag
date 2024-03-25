@@ -284,6 +284,30 @@ $db->dis_connect();//ngat ket noi mysql
 <script src="dist/js/adminlte.min.js"></script>
 <script src="toastr/toastr.min.js"></script>
 <script>
+  function getNameStory(story) {
+    if(story.Name !== null) return story.Name
+    if(story.JP_Name !== null) return story.JP_Name
+    if(story.VN_Name !== null) return story.VN_Name
+    if(story.TH_Name !== null) return story.TH_Name
+    if(story.ES_Name !== null) return story.ES_Name
+    if(story.IND_Name !== null) return story.IND_Name
+    if(story.BR_Name !== null) return story.BR_Name
+    if(story.RU_Name !== null) return story.RU_Name
+    if(story.FR_Name !== null) return story.FR_Name
+  }
+  function getLangList(story) {
+    let langList = '';
+    if(story.Name !== null) langList += ', EN'
+    if(story.JP_Name !== null) langList += ', JA'
+    if(story.VN_Name !== null) langList += ', VN'
+    if(story.TH_Name !== null) langList += ', THAI'
+    if(story.ES_Name !== null) langList += ', ES'
+    if(story.IND_Name !== null) langList += ', IND'
+    if(story.BR_Name !== null) langList += ', BR'
+    if(story.RU_Name !== null) langList += ', RU'
+    if(story.FR_Name !== null) langList += ', FR'
+    return langList.substring(1);
+  }
  paginationEvent();
 function paginationEvent(per_page=5,page=1){
 	  var key=document.getElementById("SearchStory").value;
@@ -300,6 +324,7 @@ function paginationEvent(per_page=5,page=1){
 					  html1+='<tr>';
 						html1+='<th>Avatar</th>';
 						html1+='<th>Name</th>'
+            html1+='<th>Language</th>'
 						html1+='<th>Status</th>';
 						html1+='<th>DateUpload</th>';
 					  html1+='</tr>';
@@ -311,8 +336,8 @@ function paginationEvent(per_page=5,page=1){
 					{
 							   html1+='<tr>';
 								 html1+='<td class="project-actions text-left"><img src="../page/'+k[0][i].ImgAvatar+'" class="table-avatar" style="width:70px;height:70px;"/></td>';
-								 html1+='<td class="project-actions text-left">'+k[0][i].Name+'</td>';
-							
+								 html1+='<td class="project-actions text-left">'+getNameStory(k[0][i])+'</td>';
+							   html1+='<td class="project-actions text-left">'+getLangList(k[0][i])+'</td>';
 								 html1+='<td class="project-actions text-left">'+k[0][i].story_Status+'</td>';
 								 html1+='<td class="project-actions text-left">'+k[0][i].DateUpload+'</td>';
 								 html1+='<td class="project-actions text-right"> <a class="btn btn-info btn-sm" href="editStory.php?idStory='+k[0][i].Id+'"><i class="fas fa-pencil-alt"></i></a>';

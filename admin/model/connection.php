@@ -1605,7 +1605,7 @@ class config
 		$offset = ($page - 1) * $per_page;
 		if($type==0)
 			$l="LIMIT ".$per_page." OFFSET ".$offset;
-		   $sql = "SELECT * from qq_story WHERE concat(`Name`,`NameOther`,`Content`,`story_Status`,`DateUpload`) like '%$kk%' ".$l;
+		   $sql = "SELECT * from qq_story WHERE concat(COALESCE(`Name`,''),COALESCE(`JP_Name`,''),COALESCE(`VN_Name`,''),COALESCE(`TH_Name`,''),COALESCE(`ES_Name`,''),COALESCE(`IND_Name`,''),COALESCE(`BR_Name`,''),COALESCE(`RU_Name`,''),COALESCE(`FR_Name`,''),`NameOther`,COALESCE(`Content`,''),COALESCE(`JP_Content`,''),COALESCE(`VN_Content`,''),COALESCE(`TH_Content`,''),COALESCE(`ES_Content`,''),COALESCE(`IND_Content`,''),COALESCE(`BR_Content`,''),COALESCE(`RU_Content`,''),COALESCE(`FR_Content`,''),`story_Status`,`DateUpload`) like '%$kk%' ".$l;
 		   
 		   $r3 = mysqli_query($this->_conn,$sql);		
 			
