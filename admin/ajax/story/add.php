@@ -42,12 +42,13 @@ for ($i = 0; $i < count($au1); $i++) {
 }
 $Country = $_POST['Country'];
 $Status = $_POST['Status'];
+$lang = $_POST['Lang'];
 $error = "";
 
 date_default_timezone_set("Asia/Ho_Chi_Minh");
 $DateUpload = date('Y-m-d h:i:s');
 
-$error = $db->AddStory($Name, $NameOther, $Status, $Content, $Avatar, $Badge, $Waning, implode(",", $Author), $Genre, $NameEncodeGenres, $Country, $DateUpload, $URL1, $URL, $female, $male);
+$error = $db->AddStory($lang, $Name, $NameOther, $Status, $Content, $Avatar, $Badge, $Waning, implode(",", $Author), $Genre, $NameEncodeGenres, $Country, $DateUpload, $URL1, $URL, $female, $male);
 $db->dis_connect(); //ngat ket noi mysql
 $array = array("Error" => "$error");
 

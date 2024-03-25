@@ -24,6 +24,7 @@ $(document).ready(function () {
     }
     var Country = $("#Country :selected").text();
     var Waning = $("#Waning :selected").text();
+    var lang = $("#language :selected").val();
 
     var NameOther = $("#NameOther").val();
     var Content = $("#Content").val();
@@ -51,7 +52,8 @@ $(document).ready(function () {
             Waning: Waning,
             Author: Author,
             Genre: Genre.toString(),
-            Country: Country
+            Country: Country,
+            Lang: lang,
           },
           success: function (kq) {
             var o = JSON.parse(kq);

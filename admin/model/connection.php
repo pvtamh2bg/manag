@@ -2366,16 +2366,34 @@ class config
 			 $sql="UPDATE qq_replys SET Avatar='$img' WHERE IdUser='$email' and Title='Thành Viên'";
 			mysqli_query($this->_conn, $sql);
 	}
-	function AddStory($Name,$NameOther,$Status,$Content,$Avatar,$Badge,$Waning,$Author,$Genre,$NameEncodeGenres,$Country,$DateUpload,$URL1,$URL2,$female,$male)
+	function AddStory($lang='en', $Name,$NameOther,$Status,$Content,$Avatar,$Badge,$Waning,$Author,$Genre,$NameEncodeGenres,$Country,$DateUpload,$URL1,$URL2,$female,$male)
 	{
 		$Name1=mysqli_real_escape_string($this->_conn,$Name);
 		$NameOther1=mysqli_real_escape_string($this->_conn,$NameOther);
 		$Content1=mysqli_real_escape_string($this->_conn,$Content);
 		$Author1=mysqli_real_escape_string($this->_conn,$Author);
 		$error="Thêm thất bại";
-			$sql="INSERT INTO qq_story (Name,NameOther,story_Status,Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
-			mysqli_query($this->_conn, $sql);	
-		  if(mysqli_affected_rows($this->_conn)==1)
+		if($lang == 'en')
+		  $sql="INSERT INTO qq_story (Name,NameOther,story_Status,Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
+		if($lang == 'jp')
+			$sql="INSERT INTO qq_story (JP_Name,NameOther,story_Status,JP_Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
+		if($lang == 'vn')
+			$sql="INSERT INTO qq_story (VN_Name,NameOther,story_Status,VN_Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
+		if($lang == 'th')
+			$sql="INSERT INTO qq_story (TH_Name,NameOther,story_Status,TH_Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
+		if($lang == 'es')
+			$sql="INSERT INTO qq_story (ES_Name,NameOther,story_Status,ES_Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
+		if($lang == 'ind')
+			$sql="INSERT INTO qq_story (IND_Name,NameOther,story_Status,IND_Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
+		if($lang == 'br')
+			$sql="INSERT INTO qq_story (BR_Name,NameOther,story_Status,BR_Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
+		if($lang == 'ru')
+			$sql="INSERT INTO qq_story (RU_Name,NameOther,story_Status,RU_Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
+		if($lang == 'fr')
+			$sql="INSERT INTO qq_story (FR_Name,NameOther,story_Status,FR_Content,ImgAvatar,Badge,Waning,Author,Genre,NameEncodeGenres,Country,DateUpload,Url1,Url2,Female,Male) VALUES ('$Name1','$NameOther1','$Status','$Content1','$Avatar','$Badge','$Waning','$Author1','$Genre','$NameEncodeGenres','$Country','$DateUpload','$URL1','$URL2','$female','$male')";
+
+		mysqli_query($this->_conn, $sql);
+		if(mysqli_affected_rows($this->_conn)==1)
 			$error="Thêm thành công";
 		return $error;
 	}
