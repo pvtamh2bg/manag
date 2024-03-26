@@ -39,7 +39,7 @@ $(document).ready(function () {
     for (var i = 0; i < temp2.length; i++) {
       temp3.push(temp2[i].path);
     }
-    if (Content_04 != "" && temp2 != "") {
+    if (Content_04 != "") {
       temp3 = Content_04.split(",");
     }
     if (Name != "") {

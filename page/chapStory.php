@@ -84,7 +84,7 @@ $numChap = $_GET["IdChapter"];
 
 //require_once('getChap3.php');
 $images = $db->GetImagePathChap($IdChapter, $IdStory, $lang);
-$NameStory = $db->GetNameStory2($IdStory);
+$NameStory = $db->GetNameStory2($IdStory, $lang);
 
 if ($NameStory == "")
 	header("location:" . $linkOption);

@@ -2455,25 +2455,26 @@ class config
 		$Content1=mysqli_real_escape_string($this->_conn,$Content);
 		$Content_03_1=mysqli_real_escape_string($this->_conn,$Content_03);
 		$Title1=mysqli_real_escape_string($this->_conn,$Title);
+		$idChap = 'Chapter '.tofloat($Name1);
 		$error="Thêm thất bại";
 		if($lang == 'en')
 			$sql="INSERT INTO qq_chapter (Name,Content,Notify,Summary,DateUpload,IdStory,Path,Content_01,Content_02,Content_03,Content_04,Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 	  if($lang == 'jp')
-		  $sql="INSERT INTO qq_chapter (JP_Name,JP_Content,Notify,Summary,DateUpload,IdStory,JP_Path,Content_01,Content_02,Content_03,Content_04,JP_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		  $sql="INSERT INTO qq_chapter (Name,JP_Name,JP_Content,Notify,Summary,DateUpload,IdStory,JP_Path,Content_01,Content_02,Content_03,Content_04,JP_Title,url1) VALUES ('$idChap','$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 		if($lang == 'vn')
-		  $sql="INSERT INTO qq_chapter (VN_Name,VN_Content,Notify,Summary,DateUpload,IdStory,VN_Path,Content_01,Content_02,Content_03,Content_04,VN_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		  $sql="INSERT INTO qq_chapter (Name,VN_Name,VN_Content,Notify,Summary,DateUpload,IdStory,VN_Path,Content_01,Content_02,Content_03,Content_04,VN_Title,url1) VALUES ('$idChap','$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 		if($lang == 'th')
-			$sql="INSERT INTO qq_chapter (TH_Name,TH_Content,Notify,Summary,DateUpload,IdStory,TH_Path,Content_01,Content_02,Content_03,Content_04,TH_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+			$sql="INSERT INTO qq_chapter (Name,TH_Name,TH_Content,Notify,Summary,DateUpload,IdStory,TH_Path,Content_01,Content_02,Content_03,Content_04,TH_Title,url1) VALUES ('$idChap','$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 	  if($lang == 'es')
-		  $sql="INSERT INTO qq_chapter (ES_Name,ES_Content,Notify,Summary,DateUpload,IdStory,ES_Path,Content_01,Content_02,Content_03,Content_04,ES_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		  $sql="INSERT INTO qq_chapter (Name,ES_Name,ES_Content,Notify,Summary,DateUpload,IdStory,ES_Path,Content_01,Content_02,Content_03,Content_04,ES_Title,url1) VALUES ('$idChap','$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 		if($lang == 'ind')
-		  $sql="INSERT INTO qq_chapter (IND_Name,IND_Content,Notify,Summary,DateUpload,IdStory,IND_Path,Content_01,Content_02,Content_03,Content_04,IND_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		  $sql="INSERT INTO qq_chapter (Name,IND_Name,IND_Content,Notify,Summary,DateUpload,IdStory,IND_Path,Content_01,Content_02,Content_03,Content_04,IND_Title,url1) VALUES ('$idChap','$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 			if($lang == 'br')
-			$sql="INSERT INTO qq_chapter (BR_Name,BR_Content,Notify,Summary,DateUpload,IdStory,BR_Path,Content_01,Content_02,Content_03,Content_04,BR_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+			$sql="INSERT INTO qq_chapter (Name,BR_Name,BR_Content,Notify,Summary,DateUpload,IdStory,BR_Path,Content_01,Content_02,Content_03,Content_04,BR_Title,url1) VALUES ('$idChap','$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 	  if($lang == 'ru')
-		  $sql="INSERT INTO qq_chapter (RU_Name,RU_Content,Notify,Summary,DateUpload,IdStory,RU_Path,Content_01,Content_02,Content_03,Content_04,RU_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
+		  $sql="INSERT INTO qq_chapter (Name,RU_Name,RU_Content,Notify,Summary,DateUpload,IdStory,RU_Path,Content_01,Content_02,Content_03,Content_04,RU_Title,url1) VALUES ('$idChap','$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";
 		if($lang == 'fr')
-		  $sql="INSERT INTO qq_chapter (FR_Name,FR_Content,Notify,Summary,DateUpload,IdStory,FR_Path,Content_01,Content_02,Content_03,Content_04,FR_Title,url1) VALUES ('$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";		
+		  $sql="INSERT INTO qq_chapter (Name,FR_Name,FR_Content,Notify,Summary,DateUpload,IdStory,FR_Path,Content_01,Content_02,Content_03,Content_04,FR_Title,url1) VALUES ('$idChap','$Name1','$Content1','$Notify','$Summary','$DateUpload','$IdStory','$Path','$Content_01','$Content_02','$Content_03_1','$Content_04','$Title1','$url1')";		
 		mysqli_query($this->_conn, $sql);	
 		if(mysqli_affected_rows($this->_conn)==1)
 		  $error="Thêm thành công";

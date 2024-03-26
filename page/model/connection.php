@@ -1801,7 +1801,7 @@ class config
 		}
         return $b;		
 	}
-	function GetNameStory2($Id)
+	function GetNameStory2($Id, $lang)
 	{
 		
 		$sql = "SELECT * FROM qq_story where Id='$Id' and hide_view=0";
@@ -1814,9 +1814,37 @@ class config
 			$arr[] = $a;
 		}		
 		foreach($arr as $muc){
-			$b=$muc["Name"];
+			switch($lang) {
+				case 'en':
+					$b=$muc["Name"];
+					break;
+				case 'jp':
+					$b=$muc["JP_Name"];
+					break;
+				case 'vn':
+					$b=$muc["VN_Name"];
+					break;
+				case 'th':
+					$b=$muc["TH_Name"];
+					break;
+				case 'es':
+					$b=$muc["ES_Name"];
+					break;
+				case 'ind':
+					$b=$muc["IND_Name"];
+					break;
+				case 'br':
+					$b=$muc["BR_Name"];
+					break;
+				case 'ru':
+					$b=$muc["RU_Name"];
+					break;
+				case 'fr':
+					$b=$muc["FR_Name"];
+					break;
+			}
 		}
-        return $b;		
+        return $b;
 	}
 	function GetNameChap2($Id)
 	{

@@ -64,6 +64,7 @@ $arr_name_o = $db->GetIdStory($IdStory)
 ?>
 <?php
 $arr2 = $db->GetChapter2($IdStory, $lang);
+$arr2 = $db->GetChapter2($IdStory, $lang); 
 $lastElement = reset($arr2)['Name'];
 $lastElement = str_replace("Chương", "Chap", $lastElement);
 $linkUrl = __switchLangUrl($lang, $arr[1]);
@@ -354,7 +355,7 @@ require_once("language/lang.".$languages.".php");
 							<h2 class="story-detail-title">Chapter List</h2>
 						</div>
 						<div class="TitleDetail-module_languages_87lPm" style="display: flex;justify-content: space-between;-ms-flex-wrap: wrap;flex-wrap: wrap;">
-							<?php if($arr[1] !== '' && $arr[1] !== Null): ?>
+							<?php if($arr[21] !== '' && $arr[21] !== Null): ?>
 								<a href="<?= $linkOption . $the_loai .  $linkEnUrl . "-" . $IdStory ."-en"  ?>" aria-current="page" class="<?php echo $lang==='en' ? 'TitleDetail-module_active_1rFIx' : ''; ?>" title="Read in English">English</a>
 							<?php endif; ?>
 							<?php if($arr[22] !== '' && $arr[22] !== Null): ?>
