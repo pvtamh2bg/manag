@@ -124,7 +124,11 @@ if (isset($_SESSION['text_font']))
 if (isset($_SESSION['text_size']))
 	$text_size = $_SESSION['text_size'];
 
-
+$languages = 'en';
+if(isset($_SESSION["lang"])) {
+	$languages = $_SESSION["lang"];
+}
+require_once("language/lang.".$languages.".php");
 ?>
 
 <!DOCTYPE html>
