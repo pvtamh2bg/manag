@@ -1145,6 +1145,14 @@ small {
     padding: 0 10px
 }
 
+.short-keyword {
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  display: none;
+  text-transform: uppercase;
+}
+
 @media (max-width: 768px) {
     .styles-module_languageSettingBtn_1MrGF {
         height:35px
@@ -1161,6 +1169,9 @@ small {
 
     .styles-module_languageSettingBtn_1MrGF:hover .styles-module_triangle_7ngq6,.styles-module_triangle_7ngq6 {
         padding: 3px 20px 0 10px
+    }
+    .short-keyword {
+      display: block;
     }
 }
 
@@ -1317,6 +1328,7 @@ small {
 
 <div class="styles-module_settingBtn_2xojh">
    <div class="styles-module_languageSettingBtn_1MrGF">
+      <span class="short-keyword"><span style="font-size: 5px; color: #fff;">Keyword:</span> Shueisha TV </span>
       <p class="styles-module_text_NZjpR" _size="s">LANGUAGE: <span><b><?php echo $langTitle ?></b></span></p>
       <span class="styles-module_triangle_7ngq6"></span>
    </div>
