@@ -900,7 +900,7 @@ input+label {
   .styles-module_setting_6Uurn {
       z-index:4;
       overflow: hidden;
-      top: 35px;
+      top: 111px;
       -webkit-box-shadow: 0 25px 50px rgb(0 0 0);
       box-shadow: 0 25px 50px rgb(0 0 0);
       background: -webkit-gradient(linear,right top,left top,color-stop(65%,#5d0914),color-stop(150%,rgba(93,9,20,0)));
