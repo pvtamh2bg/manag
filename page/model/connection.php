@@ -1049,7 +1049,7 @@ class config
         return $b;	
        
 	}
-	function GetFind($category_notcategory,$country,$status,$min,$sort,$type,$item_per_page,$current_page)
+	function GetFind($lang = 'en', $category_notcategory,$country,$status,$min,$sort,$type,$item_per_page,$current_page)
 	{
 		$k="";
 		//echo 
@@ -1093,24 +1093,54 @@ class config
 			$k.=" and story_Status LIKE '%".$status."%'";
 		}
 		$k.=" and CAST(SUBSTRING(NameUpdate_Chap,8) AS DECIMAL(30,5))>".$min;
+		$where = '';
+		switch($lang) {
+			case 'en':
+				$where = 'Name IS NOT NULL';
+				break;
+		  case 'jp':
+				$where = 'JP_Name IS NOT NULL';
+				break;
+			case 'vn':
+				$where = 'VN_Name IS NOT NULL';
+				break;
+			case 'th':
+				$where = 'TH_Name IS NOT NULL';
+				break;
+			case 'es':
+				$where = 'ES_Name IS NOT NULL';
+				break;
+			case 'ind':
+				$where = 'IND_Name IS NOT NULL';
+				break;
+			case 'br':
+				$where = 'BR_Name IS NOT NULL';
+				break;
+			case 'ru':
+				$where = 'RU_Name IS NOT NULL';
+				break;
+			case 'fr':
+				$where = 'FR_Name IS NOT NULL';
+				break;
+		}
 		if($sort==3){
 		//ngay cap nhat tang dan dan				
-		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap ASC";				
+		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap ASC";				
 		}else if($sort==0){
 		//ngay dang giam dan				
-		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpload DESC ";		
+		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpload DESC ";		
 		}else if($sort==1){
 		//ngay dang tang dan dan			
-		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpload ASC ";
+		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpload ASC ";
 		}else if($sort==5){
 		//luot xem tang dan			
-		$sql="SELECT d.Male,d.NameUpdate_Chap,d.DateUpdate_Chap,d.Sum_Subscribe,d.Sum_Like,d.Sum_Views,d.Id,d.Name,d.ImgAvatar,d.Badge,d.Country,d.Genre,d.Content,d.story_Status,d.DateUpload FROM qq_story d WHERE d.hide_view=0 ".$k." ORDER BY d.Sum_Views ASC";
+		$sql="SELECT d.Male,d.NameUpdate_Chap,d.DateUpdate_Chap,d.Sum_Subscribe,d.Sum_Like,d.Sum_Views,d.Id,d.Name,d.JP_Name,d.VN_Name,d.TH_Name,d.ES_Name,d.IND_Name,d.BR_Name,d.RU_Name,d.FR_Name,d.ImgAvatar,d.Badge,d.Country,d.Genre,d.Content,d.JP_Content,d.VN_Content,d.TH_Content,d.ES_Content,d.IND_Content,d.BR_Content,d.RU_Content,d.FR_Content,d.story_Status,d.DateUpload FROM qq_story d WHERE $where and d.hide_view=0 ".$k." ORDER BY d.Sum_Views ASC";
 		}else if($sort==4){
 		//luot xem giam dan			
-		$sql="SELECT d.Male,d.NameUpdate_Chap,d.DateUpdate_Chap,d.Sum_Subscribe,d.Sum_Like,d.Sum_Views,d.Id,d.Name,d.ImgAvatar,d.Badge,d.Country,d.Genre,d.Content,d.story_Status,d.DateUpload FROM qq_story d WHERE d.hide_view=0 ".$k." ORDER BY d.Sum_Views DESC";
+		$sql="SELECT d.Male,d.NameUpdate_Chap,d.DateUpdate_Chap,d.Sum_Subscribe,d.Sum_Like,d.Sum_Views,d.Id,d.Name,d.JP_Name,d.VN_Name,d.TH_Name,d.ES_Name,d.IND_Name,d.BR_Name,d.RU_Name,d.FR_Name,d.ImgAvatar,d.Badge,d.Country,d.Genre,d.Content,d.JP_Content,d.VN_Content,d.TH_Content,d.ES_Content,d.IND_Content,d.BR_Content,d.RU_Content,d.FR_Content,d.story_Status,d.DateUpload FROM qq_story d WHERE $where and d.hide_view=0 ".$k." ORDER BY d.Sum_Views DESC";
 		}else{			
 		//ngay cap nhat giam dan				
-		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap DESC ";	
+		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap DESC ";	
 		}
 		//echo $sort;
 		$sql6=$sql;
@@ -1147,7 +1177,7 @@ class config
 	
 	}
 	
-	function GetSortTop($country,$status,$sort,$date,$type,$item_per_page,$current_page)
+	function GetSortTop($lang = 'en', $country,$status,$sort,$date,$type,$item_per_page,$current_page)
 	{
 		$sql="";
 		$k="";		
@@ -1188,44 +1218,75 @@ class config
 			if($sort!="truyen-hoan-thanh")
 			$k.=" and story_Status LIKE '%".$status."%'";
 		}
+		$where = '';
+		switch($lang) {
+			case 'en':
+				$where = 'a.Name IS NOT NULL';
+				break;
+		  case 'jp':
+				$where = 'a.JP_Name IS NOT NULL';
+				break;
+			case 'vn':
+				$where = 'a.VN_Name IS NOT NULL';
+				break;
+			case 'th':
+				$where = 'a.TH_Name IS NOT NULL';
+				break;
+			case 'es':
+				$where = 'a.ES_Name IS NOT NULL';
+				break;
+			case 'ind':
+				$where = 'a.IND_Name IS NOT NULL';
+				break;
+			case 'br':
+				$where = 'a.BR_Name IS NOT NULL';
+				break;
+			case 'ru':
+				$where = 'a.RU_Name IS NOT NULL';
+				break;
+			case 'fr':
+				$where = 'a.FR_Name IS NOT NULL';
+				break;
+		}
+		
 		$sql = "SELECT * FROM qq_story where 1 ";
 		switch ($sort) {
 		  case "truyen-hot":	
-			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content, a.story_Status, a.DateUpload FROM qq_story a WHERE a.Badge='Hot' and a.hide_view=0 ".$k." ORDER BY `Sum_Views` DESC ";
+			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content, a.story_Status, a.DateUpload FROM qq_story a WHERE a.Badge='Hot' and a.hide_view=0 ".$k." and $where ORDER BY `Sum_Views` DESC ";
 			break;
 		  case "top-ngay":	
-			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content, a.story_Status, a.DateUpload FROM qq_story a WHERE a.Badge='Hot' and a.hide_view=0 ".$k." ORDER BY `Sum_Views` DESC ";
+			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content, a.story_Status, a.DateUpload FROM qq_story a WHERE a.Badge='Hot' and a.hide_view=0 ".$k." and $where ORDER BY `Sum_Views` DESC ";
 			break; 
 		  case "xem-nhieu-nhat":	
-			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content, a.story_Status, a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY `Sum_Views` DESC ";
+			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content, a.story_Status, a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." and $where ORDER BY `Sum_Views` DESC ";
 			break;  	
 		  case "top-ngay":	
-			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content, a.story_Status, a.DateUpload, COUNT(a.Id) as topDay FROM qq_story a, qq_viewschap c WHERE a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date."' AND '".$date."'  GROUP BY c.IdStory UNION SELECT Male,NameUpdate_Chap,DateUpdate_Chap,Sum_Subscribe,Sum_Like,Sum_Views,Id, Name, ImgAvatar, Badge, Country, Genre, Content, story_Status, DateUpload, 0 AS topDay FROM qq_story WHERE Id NOT IN( SELECT a.Id FROM qq_story a, qq_viewschap c WHERE a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date."' AND '".$date."'  GROUP BY c.IdStory ) and hide_view=0 ".$k."";
+			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content, a.story_Status, a.DateUpload, COUNT(a.Id) as topDay FROM qq_story a, qq_viewschap c WHERE $where and a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date."' AND '".$date."'  GROUP BY c.IdStory UNION SELECT Male,NameUpdate_Chap,DateUpdate_Chap,Sum_Subscribe,Sum_Like,Sum_Views,Id, Name,JP_Name,VN_Name,TH_Name,ES_Name,IND_Name,BR_Name,RU_Name,FR_Name, ImgAvatar, Badge, Country, Genre, Content,JP_Content,VN_Content,TH_Content,ES_Content,IND_Content,BR_Content,RU_Content,FR_Content, story_Status, DateUpload, 0 AS topDay FROM qq_story a WHERE $where and Id NOT IN( SELECT a.Id FROM qq_story a, qq_viewschap c WHERE $where and a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date."' AND '".$date."'  GROUP BY c.IdStory ) and hide_view=0 ".$k."";
 			break;
 		  case "top-tuan":
-			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content, a.story_Status, a.DateUpload, COUNT(a.Id) as topWeek FROM qq_story a, qq_viewschap c WHERE a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date[0]."' AND '".$date[1]."'  GROUP BY c.IdStory UNION SELECT Male,NameUpdate_Chap,DateUpdate_Chap,Sum_Subscribe,Sum_Like,Sum_Views,Id, Name, ImgAvatar, Badge, Country, Genre, Content, story_Status, DateUpload, 0 AS topWeek FROM qq_story WHERE Id NOT IN( SELECT a.Id FROM qq_story a, qq_viewschap c WHERE a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date[0]."' AND '".$date[1]."'  GROUP BY c.IdStory ) and hide_view=0 ".$k."";
+			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content, a.story_Status, a.DateUpload, COUNT(a.Id) as topWeek FROM qq_story a, qq_viewschap c WHERE $where and a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date[0]."' AND '".$date[1]."'  GROUP BY c.IdStory UNION SELECT Male,NameUpdate_Chap,DateUpdate_Chap,Sum_Subscribe,Sum_Like,Sum_Views,Id, Name,JP_Name,VN_Name,TH_Name,ES_Name,IND_Name,BR_Name,RU_Name,FR_Name, ImgAvatar, Badge, Country, Genre, Content,JP_Content,VN_Content,TH_Content,ES_Content,IND_Content,BR_Content,RU_Content,FR_Content, story_Status, DateUpload, 0 AS topWeek FROM qq_story a WHERE $where and Id NOT IN( SELECT a.Id FROM qq_story a, qq_viewschap c WHERE $where and a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date[0]."' AND '".$date[1]."'  GROUP BY c.IdStory ) and hide_view=0 ".$k."";
 			break;
 		  case "top-thang":
-			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content, a.story_Status, a.DateUpload, COUNT(a.Id) as topDate FROM qq_story a, qq_viewschap c WHERE a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date[0]."' AND '".$date[1]."'  GROUP BY c.IdStory UNION SELECT Male,NameUpdate_Chap,DateUpdate_Chap,Sum_Subscribe,Sum_Like,Sum_Views,Id, Name, ImgAvatar, Badge, Country, Genre, Content, story_Status, DateUpload, 0 AS topDate FROM qq_story WHERE Id NOT IN( SELECT a.Id FROM qq_story a, qq_viewschap c WHERE a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date[0]."' AND '".$date[1]."'  GROUP BY c.IdStory ) and hide_view=0 ".$k."";
+			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id, a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name, a.ImgAvatar, a.Badge, a.Country, a.Genre, a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content, a.story_Status, a.DateUpload, COUNT(a.Id) as topDate FROM qq_story a, qq_viewschap c WHERE $where and a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date[0]."' AND '".$date[1]."'  GROUP BY c.IdStory UNION SELECT Male,NameUpdate_Chap,DateUpdate_Chap,Sum_Subscribe,Sum_Like,Sum_Views,Id, Name,JP_Name,VN_Name,TH_Name,ES_Name,IND_Name,BR_Name,RU_Name,FR_Name, ImgAvatar, Badge, Country, Genre, Content,JP_Content,VN_Content,TH_Content,ES_Content,IND_Content,BR_Content,RU_Content,FR_Content, story_Status, DateUpload, 0 AS topDate FROM qq_story a WHERE $where and Id NOT IN( SELECT a.Id FROM qq_story a, qq_viewschap c WHERE $where and a.hide_view=0 and a.Id = c.IdStory and c.DateInsert BETWEEN '".$date[0]."' AND '".$date[1]."'  GROUP BY c.IdStory ) and hide_view=0 ".$k."";
 			break;
 		  case "truyen-yeu-thich":
-			$sql="SELECT * FROM qq_story WHERE hide_view=0 ".$k." ORDER BY `Sum_Subscribe` DESC ";
+			$sql="SELECT a.* FROM qq_story a WHERE $where and hide_view=0 ".$k." ORDER BY `Sum_Subscribe` DESC ";
 			break;
 		  case "truyen-moi-cap-nhat":
-			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap DESC";
+			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap DESC";
 			//echo $sql;
 			break;
 		  case "truyen-tranh-moi":
-			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpload DESC";
+			$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpload DESC";
 			break;
 		  case "truyen-hoan-thanh":
-		    $sql="SELECT * FROM qq_story where hide_view=0 and story_Status='Finished' ".$k." ORDER BY DateUpdate_Chap DESC";
+		    $sql="SELECT a.* FROM qq_story a where $where and hide_view=0 and story_Status='Finished' ".$k." ORDER BY DateUpdate_Chap DESC";
 		    break;
 		  case "truyen-tranh-hay":
-		    $sql = "SELECT * FROM qq_story where hide_view=0 and Female=0 ".$k." ORDER BY DateUpdate_Chap DESC";
+		    $sql = "SELECT a.* FROM qq_story a where $where and hide_view=0 and Female=0 ".$k." ORDER BY DateUpdate_Chap DESC";
 		    break;
 		  case "tieu-thuyet-hay":
-			$sql = "SELECT * FROM qq_story where hide_view=0 and Male=1 ".$k." ORDER BY DateUpdate_Chap DESC";
+			$sql = "SELECT a.* FROM qq_story a where $where and hide_view=0 and Male=1 ".$k." ORDER BY DateUpdate_Chap DESC";
 		    break;
 		}		
 		$sql6=$sql;		
@@ -1257,7 +1318,7 @@ class config
 		return $arr;
 	
 	}
-	function GetGenreTop($country,$status,$sort,$Genre,$type,$item_per_page,$current_page)
+	function GetGenreTop($lang, $country,$status,$sort,$Genre,$type,$item_per_page,$current_page)
 	{
 	    //echo "status:".$status;
 		
@@ -1306,24 +1367,54 @@ class config
 			$k.=" and story_Status LIKE '%".$status."%' ";
 				
 		}
+		$where = '';
+		switch($lang) {
+			case 'en':
+				$where = 'Name IS NOT NULL';
+				break;
+		  case 'jp':
+				$where = 'JP_Name IS NOT NULL';
+				break;
+			case 'vn':
+				$where = 'VN_Name IS NOT NULL';
+				break;
+			case 'th':
+				$where = 'TH_Name IS NOT NULL';
+				break;
+			case 'es':
+				$where = 'ES_Name IS NOT NULL';
+				break;
+			case 'ind':
+				$where = 'IND_Name IS NOT NULL';
+				break;
+			case 'br':
+				$where = 'BR_Name IS NOT NULL';
+				break;
+			case 'ru':
+				$where = 'RU_Name IS NOT NULL';
+				break;
+			case 'fr':
+				$where = 'FR_Name IS NOT NULL';
+				break;
+		}
 		if($sort==4){
 		//ngay cap nhat tang dan dan				
-		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap ASC";				
+		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap ASC";				
 		}else if($sort==1){
 		//ngay dang giam dan				
-		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpload DESC ";		
+		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpload DESC ";		
 		}else if($sort==2){
 		//ngay dang tang dan dan			
-		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpload ASC ";
+		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpload ASC ";
 		}else if($sort==6){
 		//luot xem tang dan			
-		$sql="SELECT d.Male,d.NameUpdate_Chap,d.DateUpdate_Chap,d.Sum_Subscribe,d.Sum_Like,d.Sum_Views,d.Id,d.Name,d.ImgAvatar,d.Badge,d.Country,d.Genre,d.Content,d.story_Status,d.DateUpload FROM qq_story d WHERE d.hide_view=0 ".$k." ORDER BY d.Sum_Views ASC";
+		$sql="SELECT d.Male,d.NameUpdate_Chap,d.DateUpdate_Chap,d.Sum_Subscribe,d.Sum_Like,d.Sum_Views,d.Id,d.Name,d.JP_Name,d.VN_Name,d.TH_Name,d.ES_Name,d.IND_Name,d.BR_Name,d.RU_Name,d.FR_Name,d.ImgAvatar,d.Badge,d.Country,d.Genre,d.Content,d.JP_Content,d.VN_Content,d.TH_Content,d.ES_Content,d.IND_Content,d.BR_Content,d.RU_Content,d.FR_Content,d.story_Status,d.DateUpload FROM qq_story d WHERE $where and d.hide_view=0 ".$k." ORDER BY d.Sum_Views ASC";
 		}else if($sort==5){
 		//luot xem giam dan			
-		$sql="SELECT d.Male,d.NameUpdate_Chap,d.DateUpdate_Chap,d.Sum_Subscribe,d.Sum_Like,d.Sum_Views,d.Id,d.Name,d.ImgAvatar,d.Badge,d.Country,d.Genre,d.Content,d.story_Status,d.DateUpload FROM qq_story d WHERE d.hide_view=0 ".$k." ORDER BY d.Sum_Views DESC";
+		$sql="SELECT d.Male,d.NameUpdate_Chap,d.DateUpdate_Chap,d.Sum_Subscribe,d.Sum_Like,d.Sum_Views,d.Id,d.Name,d.JP_Name,d.VN_Name,d.TH_Name,d.ES_Name,d.IND_Name,d.BR_Name,d.RU_Name,d.FR_Name,d.ImgAvatar,d.Badge,d.Country,d.Genre,d.Content,d.JP_Content,d.VN_Content,d.TH_Content,d.ES_Content,d.IND_Content,d.BR_Content,d.RU_Content,d.FR_Content,d.story_Status,d.DateUpload FROM qq_story d WHERE $where and d.hide_view=0 ".$k." ORDER BY d.Sum_Views DESC";
 		}else{			
 		//ngay cap nhat giam dan				
-		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.story_Status,a.DateUpload FROM qq_story a WHERE a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap DESC ";	
+		$sql="SELECT a.Male,a.NameUpdate_Chap,a.DateUpdate_Chap,a.Sum_Subscribe,a.Sum_Like,a.Sum_Views,a.Id,a.Name,a.JP_Name,a.VN_Name,a.TH_Name,a.ES_Name,a.IND_Name,a.BR_Name,a.RU_Name,a.FR_Name,a.ImgAvatar,a.Badge,a.Country,a.Genre,a.Content,a.JP_Content,a.VN_Content,a.TH_Content,a.ES_Content,a.IND_Content,a.BR_Content,a.RU_Content,a.FR_Content,a.story_Status,a.DateUpload FROM qq_story a WHERE $where and a.hide_view=0 ".$k." ORDER BY a.DateUpdate_Chap DESC ";	
 		}
 	
 		$sql6=$sql;		

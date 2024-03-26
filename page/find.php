@@ -16,7 +16,11 @@ if (session_status() == PHP_SESSION_NONE) {
 		$domain=$_SERVER['SERVER_NAME'];
 		$banner=$db->GetAdvertisement();
 		
-		
+// Lang change
+$lang = 'en';
+if(isset($_SESSION["lang"])) {
+ $lang = $_SESSION["lang"];
+}
 ?>
 
 <!DOCTYPE html>
@@ -268,10 +272,10 @@ if (session_status() == PHP_SESSION_NONE) {
 								
 							}
 						}
-						$arr=$db->GetFind($category_notcategory,$country,$status,$minchapter,$sort,"",$item_per_page,$current_page);
-						storiesList($arr,$linkOption);
+						$arr=$db->GetFind($lang, $category_notcategory,$country,$status,$minchapter,$sort,"",$item_per_page,$current_page);
+						storiesList($lang, $arr,$linkOption);
 						
-						$totalRecords = $db->GetFind($category_notcategory,$country,$status,$minchapter,$sort,"total",$item_per_page,$current_page);	
+						$totalRecords = $db->GetFind($lang, $category_notcategory,$country,$status,$minchapter,$sort,"total",$item_per_page,$current_page);	
 						$db->dis_connect();//ngat ket noi mysql		
 				?>
 				</div>

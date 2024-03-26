@@ -217,10 +217,10 @@ if(isset($_SESSION["lang"])) {
 								$date = findTop("month");
 								break;
 						}
+					
+						storiesList($lang, $db->GetSortTop($lang, $country1, $status1, $sort1, $date, "", $item_per_page, $current_page), $linkOption);
 
-						storiesList($lang, $db->GetSortTop($country1, $status1, $sort1, $date, "", $item_per_page, $current_page), $linkOption);
-
-						$totalRecords = $db->GetSortTop($country1, $status1, $sort1, $date, "total", $item_per_page, $current_page);
+						$totalRecords = $db->GetSortTop($lang, $country1, $status1, $sort1, $date, "total", $item_per_page, $current_page);
 						$db->dis_connect(); //ngat ket noi mysql	
 						?>
 					</div>

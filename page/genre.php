@@ -85,7 +85,11 @@
 	if(isset($_GET["country"]) && isset($_GET["status"]) && isset($_GET["sort"])) {
 		$canonical .= $country .'&'. $status .'&'. $sort;
 	}
-
+// Lang change
+$lang = 'en';
+if(isset($_SESSION["lang"])) {
+ $lang = $_SESSION["lang"];
+}
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -224,10 +228,10 @@ require_once('header/headerDetail.php');
 			$current_page = !empty($_GET['page'])?tofloat($_GET['page']):1; //Trang hiện tại
 			
 			$Genre_1=$db->GetGenresByIdAndNameCode($IdGenre);	
-			storiesList($db->GetGenreTop($country1,$status1,$sort1,$Genre_1,"",$item_per_page,$current_page),$linkOption);
+			storiesList($lang, $db->GetGenreTop($lang, $country1,$status1,$sort1,$Genre_1,"",$item_per_page,$current_page),$linkOption);
 
 			$offset = ($current_page - 1) * $item_per_page;			
-			$totalRecords = $db->GetGenreTop($country1,$status1,$sort1,$Genre_1,"total",$item_per_page,$current_page);
+			$totalRecords = $db->GetGenreTop($lang, $country1,$status1,$sort1,$Genre_1,"total",$item_per_page,$current_page);
 			$db->dis_connect();
 		?>
 		</div>
