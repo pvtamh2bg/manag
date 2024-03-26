@@ -15,7 +15,12 @@
 			$q=$_GET["q"];			
 		}
 		$domain=$_SERVER['SERVER_NAME'];	
-		
+// Lang change
+$lang = 'en';
+if(isset($_SESSION["lang"])) {
+ $lang = $_SESSION["lang"];
+}
+require_once("language/lang.".$lang.".php");
 ?>
 <!DOCTYPE html>
 <html lang="vi" class="">
@@ -58,7 +63,7 @@
           <div class="tile is-ancestor">
             <div class="tile is-vertical is-parent">
               <?php
-			    storiesList($arr,$linkOption);
+			    storiesList('en', $arr,$linkOption);
 				$totalRecords =$db->GetSearchFull($q,"total",$item_per_page,$current_page);	
 				$db->dis_connect();//ngat ket noi mysql		
 			  ?>

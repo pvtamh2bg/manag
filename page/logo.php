@@ -15,7 +15,12 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
 	}else{
 		header("location:".$linkOption);
 	}
-	$logo=$db->GetLogo();	
+	$logo=$db->GetLogo();
+	$languages = 'en';
+	if(isset($_SESSION["lang"])) {
+		$languages = $_SESSION["lang"];
+	}
+	require_once("language/lang.".$languages.".php");
 ?>
 <!DOCTYPE html>
 <html lang="vi">

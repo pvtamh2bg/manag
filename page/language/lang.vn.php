@@ -1,3 +1,8 @@
 <?php
-$language['LIST_TITLE'] = 'Popular Tutorial';
-$language["NOTIFY_NO_RESULT"] = "No Results Found";
+$language['Home'] = 'Trang chủ';
+$language["Genres"] = "Thể loại";
+$language['Ranking'] = 'Ranking';
+$language['Comic'] = 'Truyện tranh';
+$language['Novel'] = 'Truyện chữ';
+$language['Fanpage'] = 'Fanpage';
+$language['Advance_Search'] = 'Tìm kiếm';

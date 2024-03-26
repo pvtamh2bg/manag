@@ -76,6 +76,12 @@ $linkIndUrl = __switchLangUrl('ind', $arr[26]);
 $linkBrUrl = __switchLangUrl('br', $arr[27]);
 $linkRuUrl = __switchLangUrl('ru', $arr[28]);
 $linkFrUrl = __switchLangUrl('fr', $arr[29]);
+
+$languages = 'en';
+if(isset($_SESSION["lang"])) {
+	$languages = $_SESSION["lang"];
+}
+require_once("language/lang.".$languages.".php");
 ?>
 
 <!DOCTYPE html>

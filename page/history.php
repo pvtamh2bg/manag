@@ -30,6 +30,11 @@
 	 // session_destroy(); 
 	
 	//print_r($history);
+	$languages = 'en';
+	if(isset($_SESSION["lang"])) {
+		$languages = $_SESSION["lang"];
+	}
+	require_once("language/lang.".$languages.".php");
 ?>
 <!DOCTYPE html>
 <html lang="vi">

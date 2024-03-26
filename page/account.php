@@ -28,6 +28,11 @@ if(isset($_SESSION['email'])){
 		header("location:../");
 	}
 	$banner=$db->GetAdvertisement();
+$languages = 'en';
+if(isset($_SESSION["lang"])) {
+    $languages = $_SESSION["lang"];
+}
+require_once("language/lang.".$languages.".php");    
 ?>
 <!DOCTYPE html>
 <html lang="vi">

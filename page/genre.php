@@ -90,6 +90,7 @@ $lang = 'en';
 if(isset($_SESSION["lang"])) {
  $lang = $_SESSION["lang"];
 }
+require_once("language/lang.".$lang.".php");
 ?>
 <!DOCTYPE html>
 <html lang="vi">

@@ -329,9 +329,9 @@ if ($(window).width() > 1023) {
                         <div class="list-results">
                         </div>
                     </div>
-                    <a href="<?= $linkOption?>" class="navbar-item">Home</a>
+                    <a href="<?= $linkOption?>" class="navbar-item"><?= $language['Home'] ?></a>
                     <div class="navbar-item has-dropdown is-hoverable is-mega">
-                        <div class="navbar-link">Genres</div>
+                        <div class="navbar-link"><?= $language['Genres'] ?></div>
                         <div class="navbar-dropdown ">
                             <div class="container">
                                 <div class="level">
@@ -348,7 +348,7 @@ if ($(window).width() > 1023) {
                         </div>
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable is-mega">
-                        <div class="navbar-link">Ranking</div>
+                        <div class="navbar-link"><?= $language['Ranking'] ?></div>
                         <div class="navbar-dropdown ">
                             <div class="container">
                                 <div class="level">
@@ -363,11 +363,11 @@ if ($(window).width() > 1023) {
                             </div>
                         </div>
                     </div>
-                    <a href="<?= $linkOption."truyen-tranh-hay.html"?>" class="navbar-item">Comic</a>
-                    <a href="<?= $linkOption."tieu-thuyet-hay.html"?>" class="navbar-item">Novel</a>
+                    <a href="<?= $linkOption."truyen-tranh-hay.html"?>" class="navbar-item"><?= $language['Comic'] ?></a>
+                    <a href="<?= $linkOption."tieu-thuyet-hay.html"?>" class="navbar-item"><?= $language['Novel'] ?></a>
 
-                    <a rel="nofollow" href="https://www.facebook.com/shueishatv" target="_blank" class="navbar-item">Fanpage</a>
-                    <a rel="nofollow" href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item">Advance Search</a>
+                    <a rel="nofollow" href="https://www.facebook.com/shueishatv" target="_blank" class="navbar-item"><?= $language['Fanpage'] ?></a>
+                    <a rel="nofollow" href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item"><?= $language['Advance_Search'] ?></a>
                 </div>
             </div>
         </nav>

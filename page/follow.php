@@ -28,6 +28,11 @@ session_status() === PHP_SESSION_ACTIVE ?: session_start();
 	}
 	$domain=$_SERVER['SERVER_NAME'];
 	$banner=$db->GetAdvertisement();
+	$languages = 'en';
+	if(isset($_SESSION["lang"])) {
+		$languages = $_SESSION["lang"];
+	}
+	require_once("language/lang.".$languages.".php");
 ?>
 
 <!DOCTYPE html>

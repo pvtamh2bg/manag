@@ -12,6 +12,11 @@
 		header("location:".$linkOption);
 	}
 	//$arr_story=$db->GetStory();
+	$languages = 'en';
+	if(isset($_SESSION["lang"])) {
+		$languages = $_SESSION["lang"];
+	}
+	require_once("language/lang.".$languages.".php");
 	
 ?>
 <!DOCTYPE html>
