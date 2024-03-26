@@ -224,54 +224,6 @@ html {
   }
 }
 
-@media (max-width: 768px) {
-  .styles-module_header_2_n3A {
-      padding:0
-  }
-
-  .styles-module_header_2_n3A a div {
-      text-align: center;
-      margin: 0 auto
-  }
-
-  .styles-module_header_2_n3A a {
-      width: 100%;
-      text-align: center;
-      margin: 0 20%
-  }
-
-  .styles-module_navigation_YdAIm,.styles-module_settingBtn_2xojh {
-      display: none
-  }
-
-  .styles-module_searchForm_rhCn- {
-      margin-right: 20px
-  }
-
-  .styles-module_hamburger_22tm_ {
-      margin: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      padding: 30px 10px 0 30px;
-      z-index: 4
-  }
-
-  .styles-module_hamburger_22tm_ img {
-      height: 24px
-  }
-
-  .styles-module_modal_3F4WT {
-      display: none
-  }
-
-  .styles-module_menu_3I6fb {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex
-  }
-}
-
 .styles-module_hamburger_12E6I {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -957,7 +909,7 @@ input+label {
 
   .styles-module_menuSP_1GO2v,.styles-module_setting_6Uurn {
       padding: 0;
-      position: fixed;
+      /* position: fixed; */
       width: 100%;
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px)
@@ -994,7 +946,7 @@ input+label {
 
 @media (max-width: 460px) {
   .styles-module_setting_6Uurn {
-      top:75px
+      top:111px /* normal 75 */
   }
 }
 
@@ -1029,6 +981,7 @@ input+label {
 
     .styles-module_navigation_YdAIm,.styles-module_settingBtn_2xojh {
         display: block;
+        top: 75px;
     }
 
     .styles-module_searchForm_rhCn- {
@@ -1213,7 +1166,7 @@ small {
 
 @media (max-width: 460px) {
     .styles-module_languageSettingBtn_1MrGF {
-        height:75px
+        height:35px /* normal 75 */
     }
 }
 
