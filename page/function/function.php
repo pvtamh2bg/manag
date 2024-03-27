@@ -551,8 +551,8 @@ function storiesList($lang = 'en',$arr,$linkOption){
 		   //echo $arr3["DateUpdate_Chap"];
 		   //if()
 		   $dateChap=$db->convert_timer1($arr3["DateUpdate_Chap"]);
-		   $countView=$arr3["Sum_Views"];
-		   $countSubscribe=$arr3["Sum_Subscribe"];
+		   $countView=number_format($arr3["Sum_Views"]);
+		   $countSubscribe=number_format($arr3["Sum_Subscribe"]);
 		   //$db->dis_connect();//ngat ket noi mysql
 		    $color="";
 			$the_loai="truyen-tranh/";

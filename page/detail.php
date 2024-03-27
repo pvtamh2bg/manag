@@ -238,13 +238,13 @@ require_once("language/lang.".$languages.".php");
 							<div>
 								<span>Statistics:</span>
 								<span class="sp01"><i class="fas fa-thumbs-up"></i> <span class="sp02 number-like">
-										<?= $Sum_Like ?>
+										<?= number_format($Sum_Like) ?>
 									</span></span>
 								<span class="sp01"><i class="fas fa-heart"></i> <span class="sp02">
-										<?= $Sum_Subscribe ?>
+										<?= number_format($Sum_Subscribe) ?>
 									</span></span>
 								<span class="sp01"><i class="fas fa-eye"></i> <span class="sp02">
-										<?= $Sum_Views ?>
+										<?= number_format($Sum_Views) ?>
 									</span></span>
 							</div>
 						</div>
