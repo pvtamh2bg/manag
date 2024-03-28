@@ -6,3 +6,4 @@ $language['Comic'] = 'Truyện tranh';
 $language['Novel'] = 'Truyện chữ';
 $language['Fanpage'] = 'Fanpage';
 $language['Advance_Search'] = 'Tìm kiếm';
+$language['Manhwa'] = 'Manhwa';

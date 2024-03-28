@@ -6,3 +6,4 @@ $language['Comic'] = '漫画';
 $language['Novel'] = '小説';
 $language['Fanpage'] = 'ファンページ';
 $language['Advance_Search'] = '高度な検索';
+$language['Manhwa'] = 'Manhwa';
