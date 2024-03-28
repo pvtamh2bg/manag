@@ -66,6 +66,7 @@ $DateUpload = date('Y-m-d H:i:s');
 
 $error = $db->AddChap($Lang, $Name, $Content, $Notify, $Summary, $DateUpload, $IdStory, $Path, $Content_01, $Content_02, $Content_03, $Content_04, $Title);
 
+$Name="Chapter ".tofloat($_POST['Name']);
 $db->UpdateChapToStory($IdStory, $Name, $DateUpload);
 $db->dis_connect(); //ngat ket noi mysql	
 $array = array("Error" => "$error");
