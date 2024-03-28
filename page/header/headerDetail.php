@@ -368,7 +368,7 @@ if ($(window).width() > 1023) {
 
                     <a rel="nofollow" href="https://www.facebook.com/shueishatv" target="_blank" class="navbar-item"><?= $language['Fanpage'] ?></a>
                     <a rel="nofollow" href="<?= $linkOption."tim-kiem-nang-cao.html"?>" class="navbar-item"><?= $language['Advance_Search'] ?></a>
-                    <a rel="nofollow" href="http://hentai.shueisha.tv" class="navbar-item"><?= $language['Manhwa']. ' 21+'; ?></a>
+                    <a rel="nofollow" href="http://hentai.shueisha.tv" class="navbar-item" target="_blank"><?= $language['Manhwa']. ' 21+'; ?></a>
                 </div>
             </div>
         </nav>
