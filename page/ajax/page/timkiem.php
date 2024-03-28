@@ -14,10 +14,21 @@
 		$NameOther1=array();
 		$ImgAvatar1=array();
 		$NameChap=array();
+		function getNameStory(story) {
+			if(story['Name'] !== null) return story.Name
+			if(story['JP_Name'] !== null) return story.JP_Name
+			if(story['VN_Name'] !== null) return story.VN_Name
+			if(story['TH_Name'] !== null) return story.TH_Name
+			if(story['ES_Name'] !== null) return story.ES_Name
+			if(story['IND_Name'] !== null) return story.IND_Name
+			if(story['BR_Name'] !== null) return story.BR_Name
+			if(story['RU_Name'] !== null) return story.RU_Name
+			if(story['FR_Name'] !== null) return story.FR_Name
+		}
 		foreach($arr as $muc)
 		{
 			array_push($Id1,$muc['Id']);	
-			array_push($Name1,$muc['Name']);
+			array_push($Name1,getNameStory($muc));
 			array_push($NameEncode1,vn_str_filter($muc['Name']));				
 			array_push($NameOther1,$muc['NameOther']);	
 			array_push($ImgAvatar1,$muc['ImgAvatar']);	
